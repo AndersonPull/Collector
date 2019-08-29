@@ -1,11 +1,93 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Collector.Views.Login.LoginView">
+             x:Class="Collector.Views.Login.LoginView"
+             xmlns:custom="clr-namespace:Collector.Controls"
+             BackgroundImageSource="Background.png">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Pagina de login" VerticalOptions="CenterAndExpand"
-                   HorizontalOptions="CenterAndExpand"/> 
+        <StackLayout Margin="10">
+
+            <ScrollView>
+
+                <StackLayout Spacing="0">
+
+                    <StackLayout HorizontalOptions="FillAndExpand"
+                                 VerticalOptions="StartAndExpand" HeightRequest="200">
+
+                        <Image Source="Logo.png" HorizontalOptions="CenterAndExpand"
+                               VerticalOptions="CenterAndExpand" WidthRequest="100"
+                               HeightRequest="100"/>
+
+                    </StackLayout>
+
+                    <StackLayout HorizontalOptions="FillAndExpand"
+                                 VerticalOptions="CenterAndExpand">
+
+                        <StackLayout Orientation="Horizontal">
+
+                            <Label Text="Entrar" TextColor="#ffffff" FontSize="30"
+                                   HorizontalOptions="FillAndExpand"
+                                   VerticalTextAlignment="Center" FontAttributes="Bold"/>
+
+                            <Button Text="Criar conta" TextColor="#00BB54"  
+                                    BackgroundColor="#EBEBEB" WidthRequest="100"
+                                    HeightRequest="20" CornerRadius="15" FontSize="Micro"
+                                    FontAttributes="Bold" />
+
+                        </StackLayout>
+
+                        <Label Text="Por favor entre com suas credenciais"
+                               TextColor="#ffffff" FontSize="Medium"/>
+
+                        <custom:CustomEntry Placeholder="Email" BackgroundColor="{OnPlatform iOS=#EBEBEB}"
+                                            CornerRadius="18" IsCurvedCornersEnabled="True"
+                                            HorizontalOptions="FillAndExpand"
+                                            FontSize="17" HeightRequest="45"
+                                            Margin="0,15,0,0" TextColor="{OnPlatform iOS=#575757, Android=#EBEBEB}"
+                                            FontAttributes="Bold" BorderColor="#EBEBEB"
+                                            />
+
+                        <custom:CustomEntry Placeholder="Senha" BackgroundColor="{OnPlatform iOS=#EBEBEB}"
+                                            CornerRadius="18" IsCurvedCornersEnabled="True"
+                                            HorizontalOptions="FillAndExpand"
+                                            FontSize="17" HeightRequest="45"
+                                            Margin="0,15,0,0" IsPassword="True"
+                                            TextColor="{OnPlatform iOS=#575757, Android=#EBEBEB}"
+                                            FontAttributes="Bold" BorderColor="#EBEBEB"/>
+
+                        <Button Text="Entrar" TextColor="#00BB54"  Margin="0,15,0,0"
+                                BackgroundColor="#EBEBEB" WidthRequest="45"
+                                VerticalOptions="FillAndExpand" HeightRequest="45"
+                                CornerRadius="18" FontSize="Large" FontAttributes="Bold" />
+
+                    </StackLayout>
+
+                    <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="EndAndExpand">
+
+                        <Label Text="ou faça o login com" TextColor="#ffffff" FontSize="20"
+                               HorizontalOptions="FillAndExpand" VerticalTextAlignment="Center"
+                               FontAttributes="Bold" Margin="0,15,0,0"/>
+
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+
+                            <ImageButton Source="ButomFacebook.png" Margin="0,15,15,15"
+                                    BackgroundColor="#EBEBEB" HorizontalOptions="FillAndExpand"
+                                    WidthRequest="45" VerticalOptions="FillAndExpand"
+                                    HeightRequest="45" CornerRadius="18"/>
+
+                            <ImageButton Source="ButomGoogle.png" Margin="15,15,0,15"
+                                BackgroundColor="#EBEBEB" WidthRequest="45"
+                                VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"
+                                HeightRequest="45" CornerRadius="18" />
+
+                        </StackLayout>
+
+                    </StackLayout>
+
+                </StackLayout>
+
+            </ScrollView>
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

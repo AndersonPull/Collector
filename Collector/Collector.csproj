@@ -27,6 +27,7 @@
     <Folder Include="ViewModels\ViewModelLocator\" />
     <Folder Include="Views\Login\" />
     <Folder Include="ViewModels\Login\" />
+    <Folder Include="Controls\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="AssemblyInfo.cs" />

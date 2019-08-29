@@ -12,8 +12,15 @@ namespace Collector.Droid
     [Activity(Label = "Collector", Icon = "@mipmap/icon", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
     {
+
         protected override void OnCreate(Bundle savedInstanceState)
         {
+            if (Build.VERSION.SdkInt >= Build.VERSION_CODES.Lollipop)
+            {
+                Window.AddFlags(WindowManagerFlags.LayoutNoLimits);
+                Window.AddFlags(WindowManagerFlags.LayoutInScreen);
+                Window.DecorView.SetFitsSystemWindows(true);
+            }
             TabLayoutResource = Resource.Layout.Tabbar;
             ToolbarResource = Resource.Layout.Toolbar;
 
