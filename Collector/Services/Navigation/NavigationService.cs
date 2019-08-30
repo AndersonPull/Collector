@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Collector.ViewModels;
+using Collector.ViewModels.Home;
 using Collector.ViewModels.Login;
 using Collector.ViewModels.ViewModelLocator;
+using Collector.Views.Home;
 using Collector.Views.Login;
 using Xamarin.Forms;
 
@@ -28,7 +30,7 @@ namespace Collector.Services.Navigation
 
         public Task InitializeAsync()
         {
-            return NavigateToAsync<LoginViewModel>();
+            return NavigateToAsync<MainMapaViewModel>();
         }
 
         public Task NavigateToAsync<TViewModel>() where TViewModel : BaseVM
@@ -101,10 +103,10 @@ namespace Collector.Services.Navigation
             {
                 CurrentApplication.MainPage = page;
             }
-            //else if (page is HomeView)
-            //{
-            //    CurrentApplication.MainPage = new NavigationPage(page);
-            //}
+            else if (page is MainMapaView)
+            {
+                CurrentApplication.MainPage = new NavigationPage(page);
+            }
             else
             {
                 var nav = CurrentApplication.MainPage as NavigationPage;
@@ -150,6 +152,8 @@ namespace Collector.Services.Navigation
         public void CreatePageViewModelMappings()
         {
             _mappings.Add(typeof(LoginViewModel), typeof(LoginView));
+            _mappings.Add(typeof(MainMapaViewModel), typeof(MainMapaView));
+
 
         }
     }

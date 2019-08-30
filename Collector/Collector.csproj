@@ -17,6 +17,7 @@
     <PackageReference Include="Unity" Version="5.11.1" />
     <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
     <PackageReference Include="DLToolkit.Forms.Controls.FlowListView" Version="2.0.11" />
+    <PackageReference Include="Xamarin.Forms.GoogleMaps" Version="3.2.1" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />
@@ -28,6 +29,8 @@
     <Folder Include="Views\Login\" />
     <Folder Include="ViewModels\Login\" />
     <Folder Include="Controls\" />
+    <Folder Include="Views\Home\" />
+    <Folder Include="ViewModels\Home\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="AssemblyInfo.cs" />

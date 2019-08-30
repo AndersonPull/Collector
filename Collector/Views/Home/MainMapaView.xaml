@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Collector.Views.Home.MainMapaView"
+             xmlns:maps="clr-namespace:Xamarin.Forms.GoogleMaps;assembly=Xamarin.Forms.GoogleMaps"
+             NavigationPage.HasNavigationBar="false">
+    <ContentPage.Content>
+        <StackLayout>
+             <maps:Map x:Name="map"
+                      VerticalOptions="FillAndExpand"
+                       HorizontalOptions="FillAndExpand"/>
+            <!--<Label Text="teste" VerticalOptions="CenterAndExpand"
+                   HorizontalOptions="CenterAndExpand"/>-->
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -23,6 +23,7 @@ namespace Collector.iOS
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
             global::Xamarin.Forms.Forms.Init();
+            Xamarin.FormsGoogleMaps.Init("AIzaSyDtdF0zxGRimUItAvXe8MB4SIxhXuXGHIU");
             LoadApplication(new App());
 
             return base.FinishedLaunching(app, options);
