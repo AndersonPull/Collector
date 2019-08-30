@@ -39,7 +39,8 @@
                         <Label Text="Por favor entre com suas credenciais"
                                TextColor="#ffffff" FontSize="Medium"/>
 
-                        <custom:CustomEntry Placeholder="Email" BackgroundColor="{OnPlatform iOS=#EBEBEB}"
+                        <custom:CustomEntry Placeholder="Digite seu email"  PlaceholderColor="{OnPlatform Android=#EBEBEB}"
+                                            BackgroundColor="{OnPlatform iOS=#EBEBEB}"
                                             CornerRadius="18" IsCurvedCornersEnabled="True"
                                             HorizontalOptions="FillAndExpand"
                                             FontSize="17" HeightRequest="45"
@@ -47,7 +48,8 @@
                                             FontAttributes="Bold" BorderColor="#EBEBEB"
                                             />
 
-                        <custom:CustomEntry Placeholder="Senha" BackgroundColor="{OnPlatform iOS=#EBEBEB}"
+                        <custom:CustomEntry Placeholder="Digite sua senha" PlaceholderColor="{OnPlatform Android=#EBEBEB}"
+                                            BackgroundColor="{OnPlatform iOS=#EBEBEB}"
                                             CornerRadius="18" IsCurvedCornersEnabled="True"
                                             HorizontalOptions="FillAndExpand"
                                             FontSize="17" HeightRequest="45"
