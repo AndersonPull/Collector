@@ -80,8 +80,8 @@
     <PackageReference Include="Xamarin.Forms.GoogleMaps">
       <Version>3.2.1</Version>
     </PackageReference>
-    <PackageReference Include="ThriveGmbH.BottomNavigationBar.XF">
-      <Version>1.0.2</Version>
+    <PackageReference Include="BottomNavigationBar">
+      <Version>1.4.0.2</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
@@ -125,6 +125,18 @@
       <Generator></Generator>
     </AndroidResource>
     <AndroidResource Include="Resources\drawable\Logo.png">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable\ic_info.png">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable\ic_materiais.png">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable\ic_mapa.png">
       <SubType></SubType>
       <Generator></Generator>
     </AndroidResource>

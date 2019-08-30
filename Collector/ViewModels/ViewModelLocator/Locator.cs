@@ -1,5 +1,6 @@
 ﻿using System;
 using Collector.Services.Navigation;
+using Collector.ViewModels.Home;
 using Collector.ViewModels.Login;
 using Unity;
 
@@ -24,6 +25,9 @@ namespace Collector.ViewModels.ViewModelLocator
 
             //registro de ViewModel
             _container.RegisterType<LoginViewModel>();
+            _container.RegisterType<MainTabbedPageViewModel>();
+            _container.RegisterType<MainMapaViewModel>();
+
         }
 
         public T Resolve<T>()

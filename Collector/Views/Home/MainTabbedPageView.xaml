@@ -1,21 +1,20 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<xf1:BottomBarPage  xmlns:xf1="clr-namespace:BottomBar.XamarinForms;assembly=BottomBar.XamarinForms"
-                    xmlns="http://xamarin.com/schemas/2014/forms"
-                    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-                    xmlns:local="clr-namespace:Collector.Views.Home"
-                    x:Class="Collector.Views.Home.MainTabbedPageView">
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:local="clr-namespace:Collector.Views.Home"
+            x:Class="Collector.Views.Home.MainTabbedPageView"
+            BarBackgroundColor="#00bb54"
+            BarTextColor="#ffffff"
+            SelectedTabColor="#ffffff"
+            UnselectedTabColor="#ffffff">
 
     <local:MainInfoView Title="Info"
-                        Icon="ic_favorites.png"
-                        xf1:BottomBarPageExtensions.TabColor="#00BB54"/>
+                        Icon="ic_info.png"/>
 
     <local:MainMapaView Title="Mapa"
-                       Icon="ic_friends.png"
-                       xf1:BottomBarPageExtensions.TabColor="#00BB54"/>
+                       Icon="ic_mapa.png"/>
 
-    <local:MainMapaView Title="Materias"
-                       Icon="ic_friends.png"
-                       xf1:BottomBarPageExtensions.TabColor="#00BB54"/>
+    <local:MainMateriasView Title="Materias"
+                       Icon="ic_materiais.png"/>
 
-
-</xf1:BottomBarPage>
+</TabbedPage>
