@@ -31,6 +31,7 @@
     <Folder Include="Controls\" />
     <Folder Include="Views\Home\" />
     <Folder Include="ViewModels\Home\" />
+    <Folder Include="Models\Login\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="AssemblyInfo.cs" />

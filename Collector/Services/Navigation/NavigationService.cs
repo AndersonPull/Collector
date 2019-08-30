@@ -30,7 +30,7 @@ namespace Collector.Services.Navigation
 
         public Task InitializeAsync()
         {
-            return NavigateToAsync<MainMapaViewModel>();
+            return NavigateToAsync<LoginViewModel>();
         }
 
         public Task NavigateToAsync<TViewModel>() where TViewModel : BaseVM

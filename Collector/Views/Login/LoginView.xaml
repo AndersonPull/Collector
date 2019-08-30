@@ -4,7 +4,9 @@
              x:Class="Collector.Views.Login.LoginView"
              xmlns:custom="clr-namespace:Collector.Controls"
              BackgroundImageSource="Background.png">
+
     <ContentPage.Content>
+
         <StackLayout Margin="10">
 
             <ScrollView>
@@ -39,7 +41,8 @@
                         <Label Text="Por favor entre com suas credenciais"
                                TextColor="#ffffff" FontSize="Medium"/>
 
-                        <custom:CustomEntry Placeholder="Digite seu email"  PlaceholderColor="{OnPlatform Android=#EBEBEB}"
+                        <custom:CustomEntry Placeholder="Digite seu email"
+                                            PlaceholderColor="{OnPlatform Android=#EBEBEB}"
                                             BackgroundColor="{OnPlatform iOS=#EBEBEB}"
                                             CornerRadius="18" IsCurvedCornersEnabled="True"
                                             HorizontalOptions="FillAndExpand"
@@ -48,7 +51,8 @@
                                             FontAttributes="Bold" BorderColor="#EBEBEB"
                                             />
 
-                        <custom:CustomEntry Placeholder="Digite sua senha" PlaceholderColor="{OnPlatform Android=#EBEBEB}"
+                        <custom:CustomEntry Placeholder="Digite sua senha"
+                                            PlaceholderColor="{OnPlatform Android=#EBEBEB}"
                                             BackgroundColor="{OnPlatform iOS=#EBEBEB}"
                                             CornerRadius="18" IsCurvedCornersEnabled="True"
                                             HorizontalOptions="FillAndExpand"
@@ -60,7 +64,8 @@
                         <Button Text="Entrar" TextColor="#00BB54"  Margin="0,15,0,0"
                                 BackgroundColor="#EBEBEB" WidthRequest="45"
                                 VerticalOptions="FillAndExpand" HeightRequest="45"
-                                CornerRadius="18" FontSize="Large" FontAttributes="Bold" />
+                                CornerRadius="18" FontSize="Large" FontAttributes="Bold"
+                                Command="{Binding LoginCommand}"/>
 
                     </StackLayout>
 
@@ -91,5 +96,7 @@
             </ScrollView>
 
         </StackLayout>
+
     </ContentPage.Content>
+
 </ContentPage>
