@@ -9,8 +9,6 @@
              <maps:Map x:Name="map"
                       VerticalOptions="FillAndExpand"
                        HorizontalOptions="FillAndExpand"/>
-            <!--<Label Text="teste" VerticalOptions="CenterAndExpand"
-                   HorizontalOptions="CenterAndExpand"/>-->
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

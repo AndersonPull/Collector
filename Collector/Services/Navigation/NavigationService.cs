@@ -103,7 +103,7 @@ namespace Collector.Services.Navigation
             {
                 CurrentApplication.MainPage = page;
             }
-            else if (page is MainMapaView)
+            else if (page is MainTabbedPageView)
             {
                 CurrentApplication.MainPage = new NavigationPage(page);
             }
@@ -153,8 +153,7 @@ namespace Collector.Services.Navigation
         {
             _mappings.Add(typeof(LoginViewModel), typeof(LoginView));
             _mappings.Add(typeof(MainMapaViewModel), typeof(MainMapaView));
-
-
+            _mappings.Add(typeof(MainTabbedPageViewModel), typeof(MainTabbedPageView));
         }
     }
 }

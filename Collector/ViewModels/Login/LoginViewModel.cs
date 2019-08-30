@@ -20,7 +20,7 @@ namespace Collector.ViewModels.Login
             {
                 return new Command(async () =>
                 {
-                    await _serviceNavigation.NavigateToAsync<MainMapaViewModel>();
+                    await _serviceNavigation.NavigateToAsync<MainTabbedPageViewModel>();
 
                 });
             }
