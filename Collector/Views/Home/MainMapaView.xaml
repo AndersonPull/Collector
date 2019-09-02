@@ -2,13 +2,49 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Collector.Views.Home.MainMapaView"
+             xmlns:Custom="clr-namespace:Collector.Controls"
              xmlns:maps="clr-namespace:Xamarin.Forms.GoogleMaps;assembly=Xamarin.Forms.GoogleMaps"
              NavigationPage.HasNavigationBar="false">
     <ContentPage.Content>
-        <StackLayout>
-             <maps:Map x:Name="map"
-                      VerticalOptions="FillAndExpand"
-                       HorizontalOptions="FillAndExpand"/>
-        </StackLayout>
+        <Grid>
+                            
+            <maps:Map Grid.Row="0" x:Name="map" VerticalOptions="FillAndExpand"
+                    HorizontalOptions="FillAndExpand"/>
+
+            <FlexLayout Grid.Row="0" VerticalOptions="Start" HeightRequest="45"
+                        Margin="20,60,10,0" HorizontalOptions="FillAndExpand" >
+
+                <ImageButton Source="MenuMapa.png" BackgroundColor="Transparent"
+                             WidthRequest="{OnPlatform Android=55, iOS=45}"
+                             HeightRequest="{OnPlatform Android=55, iOS=45}"
+                             VerticalOptions="CenterAndExpand"/>
+
+                <Frame BackgroundColor="#ffffff" WidthRequest="315" HeightRequest="45"
+                       CornerRadius="8" Padding="0" Margin="10,0,0,0"
+                       HasShadow="{OnPlatform iOS=false, Android=true}">    
+
+                    <StackLayout Orientation="Horizontal" VerticalOptions="Center"
+                                 HorizontalOptions="StartAndExpand">
+
+                        <Custom:CustomEntry  Placeholder="Endreço"
+                                             WidthRequest="{OnPlatform Android=210, iOS=250}"
+                                             HorizontalOptions="StartAndExpand"
+                                             VerticalOptions="FillAndExpand"
+                                             BorderColor="#ffffff"/>
+
+                        <BoxView WidthRequest="1" HeightRequest="35"
+                                 BackgroundColor="#ACACAC" VerticalOptions="Center"/>
+
+                        <Label Text="Filtrar" FontSize="Medium"  TextColor="#ACACAC"
+                               VerticalOptions="Center" />
+
+                    </StackLayout>
+             
+                </Frame>
+
+            </FlexLayout>
+
+         </Grid>
+
     </ContentPage.Content>
 </ContentPage>

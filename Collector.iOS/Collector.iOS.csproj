@@ -160,6 +160,7 @@
     <BundleResource Include="Resources\ic_materiais.png" />
     <BundleResource Include="Resources\ic_info.png" />
     <BundleResource Include="Resources\ic_mapa.png" />
+    <BundleResource Include="Resources\MenuMapa.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Renderers\" />
