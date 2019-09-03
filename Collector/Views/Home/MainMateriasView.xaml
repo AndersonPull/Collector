@@ -3,11 +3,13 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:flv="clr-namespace:DLToolkit.Forms.Controls;assembly=DLToolkit.Forms.Controls.FlowListView"
              x:Class="Collector.Views.Home.MainMateriasView">
+
     <ContentPage.Content>
 
         <StackLayout>
 
-            <StackLayout VerticalOptions="EndAndExpand" HorizontalOptions="CenterAndExpand">
+            <StackLayout Margin="0,60,0,0" VerticalOptions="StartAndExpand"
+                         HorizontalOptions="CenterAndExpand">
 
                  <flv:FlowListView RowHeight="130" FlowColumnCount="3"
                                    FlowColumnExpand="First"
@@ -16,13 +18,13 @@
                                    FlowItemTappedCommand="{Binding ItemSelectedCommand}"
                                    FlowItemsSource="{Binding ItensMenu}">
 
-                    <flv:FlowListView.FlowColumnTemplate>
+                     <flv:FlowListView.FlowColumnTemplate>
 
-                        <DataTemplate>
+                         <DataTemplate>
 
-                            <Frame BackgroundColor="Transparent" CornerRadius="8"
-                                   BorderColor="#00BB54" HasShadow="False" Padding="10"
-                                   Margin="5">
+                             <Frame BackgroundColor="Transparent" CornerRadius="8"
+                                    BorderColor="#00BB54" HasShadow="False" Padding="10"
+                                    Margin="5">
 
                                  <StackLayout>
 
@@ -34,18 +36,24 @@
                                             HorizontalOptions="CenterAndExpand"
                                             HorizontalTextAlignment="Center"/>
 
-                                </StackLayout>
+                                 </StackLayout>
 
-                            </Frame>
+                             </Frame>
 
-                        </DataTemplate>
+                         </DataTemplate>
 
-                    </flv:FlowListView.FlowColumnTemplate>
+                     </flv:FlowListView.FlowColumnTemplate>
+
                 </flv:FlowListView>
 
             </StackLayout>
 
+            <Button Text="Indentificar item" TextColor="#00BB54" BorderColor="#00BB54"
+                    BackgroundColor="Transparent" BorderWidth="2" CornerRadius="8"
+                    Margin="5" HeightRequest="45"/>
+
         </StackLayout>
 
     </ContentPage.Content>
+
 </ContentPage>
