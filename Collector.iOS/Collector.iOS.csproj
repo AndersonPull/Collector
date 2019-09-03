@@ -161,6 +161,19 @@
     <BundleResource Include="Resources\ic_info.png" />
     <BundleResource Include="Resources\ic_mapa.png" />
     <BundleResource Include="Resources\MenuMapa.png" />
+    <BundleResource Include="Resources\ic_podas.png" />
+    <BundleResource Include="Resources\ic_metal.png" />
+    <BundleResource Include="Resources\ic_diversos.png" />
+    <BundleResource Include="Resources\ic_bateria.png" />
+    <BundleResource Include="Resources\ic_oleo.png" />
+    <BundleResource Include="Resources\ic_plastico.png" />
+    <BundleResource Include="Resources\ic_vidro.png" />
+    <BundleResource Include="Resources\ic_aluminio.png" />
+    <BundleResource Include="Resources\ic_entulho.png" />
+    <BundleResource Include="Resources\ic_eletronicos.png" />
+    <BundleResource Include="Resources\ic_papel.png" />
+    <BundleResource Include="Resources\BackgroundPerfil.png" />
+    <BundleResource Include="Resources\ic_moveis.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Renderers\" />

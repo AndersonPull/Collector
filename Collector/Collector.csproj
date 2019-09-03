@@ -32,6 +32,8 @@
     <Folder Include="Views\Home\" />
     <Folder Include="ViewModels\Home\" />
     <Folder Include="Models\Login\" />
+    <Folder Include="Models\Home\" />
+    <Folder Include="Services\Home\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="AssemblyInfo.cs" />
@@ -39,6 +41,8 @@
     <Compile Remove="Views\Home\MainTabbedPageView.cs" />
     <Compile Remove="Controls\BottomBar\BottomBarPage.cs" />
     <Compile Remove="Controls\BottomBar\BottomBarPageExtensions.cs" />
+    <Compile Remove="Controls\BottomBarPage.cs" />
+    <Compile Remove="Controls\BottomBarPageExtensions.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Remove="MainPage.xaml" />

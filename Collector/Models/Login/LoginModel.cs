@@ -1,5 +1,4 @@
-﻿using System;
-
+﻿
 namespace Collector.Models.Login
 {
     public class LoginModel
