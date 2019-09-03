@@ -175,6 +175,9 @@
     <BundleResource Include="Resources\BackgroundPerfil.png" />
     <BundleResource Include="Resources\ic_moveis.png" />
     <BundleResource Include="Resources\fotoPerfil.png" />
+    <BundleResource Include="Resources\ic_colabore.png" />
+    <BundleResource Include="Resources\ic_vamos.png" />
+    <BundleResource Include="Resources\ic_somos.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Renderers\" />
