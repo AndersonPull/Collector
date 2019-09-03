@@ -1,11 +1,51 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:flv="clr-namespace:DLToolkit.Forms.Controls;assembly=DLToolkit.Forms.Controls.FlowListView"
              x:Class="Collector.Views.Home.MainMateriasView">
     <ContentPage.Content>
+
         <StackLayout>
-             <Label Text="Materiais" HorizontalOptions="CenterAndExpand"
-                   VerticalOptions="CenterAndExpand"/>
+
+            <StackLayout VerticalOptions="EndAndExpand" HorizontalOptions="CenterAndExpand">
+
+                 <flv:FlowListView RowHeight="130" FlowColumnCount="3"
+                                   FlowColumnExpand="First"
+                                   SeparatorVisibility="None" BackgroundColor="Transparent"
+                                   HasUnevenRows="false" IsInNativeLayout="true"
+                                   FlowItemTappedCommand="{Binding ItemSelectedCommand}"
+                                   FlowItemsSource="{Binding ItensMenu}">
+
+                    <flv:FlowListView.FlowColumnTemplate>
+
+                        <DataTemplate>
+
+                            <Frame BackgroundColor="Transparent" CornerRadius="8"
+                                   BorderColor="#00BB54" HasShadow="False" Padding="10"
+                                   Margin="5">
+
+                                 <StackLayout>
+
+                                     <Image Source="{Binding Imagem}" Aspect="AspectFit"
+                                            WidthRequest="60" HeightRequest="60" />
+
+                                     <Label Text="{Binding Texto}" FontSize="17"
+                                            TextColor="#00BB54" FontAttributes="Bold"
+                                            HorizontalOptions="CenterAndExpand"
+                                            HorizontalTextAlignment="Center"/>
+
+                                </StackLayout>
+
+                            </Frame>
+
+                        </DataTemplate>
+
+                    </flv:FlowListView.FlowColumnTemplate>
+                </flv:FlowListView>
+
+            </StackLayout>
+
         </StackLayout>
+
     </ContentPage.Content>
 </ContentPage>

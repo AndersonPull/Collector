@@ -26,7 +26,9 @@ namespace Collector.ViewModels.ViewModelLocator
             //registro de ViewModel
             _container.RegisterType<LoginViewModel>();
             _container.RegisterType<MainTabbedPageViewModel>();
+            _container.RegisterType<MainInfoViewModel>();
             _container.RegisterType<MainMapaViewModel>();
+            _container.RegisterType<MainMateriaisViewModel>();
 
         }
 

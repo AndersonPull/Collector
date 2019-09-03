@@ -8,7 +8,6 @@ namespace Collector.Services.Home
     {
         public List<BotoesMateriaisModel> ItensMenu()
         {
-
             return new List<BotoesMateriaisModel>
             {
                 new BotoesMateriaisModel { Id=1, Imagem = "ic_papel.png", Texto="Papel" },
@@ -23,10 +22,7 @@ namespace Collector.Services.Home
                 new BotoesMateriaisModel { Id=10, Imagem = "ic_entulho.png" , Texto="Entulho"},
                 new BotoesMateriaisModel { Id=11, Imagem = "ic_vidro.png" , Texto="Vidro"},
                 new BotoesMateriaisModel { Id=12, Imagem = "ic_bateria" , Texto="Bateria"},
-
             };
-
         }
-
     }
 }
