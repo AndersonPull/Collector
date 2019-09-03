@@ -1,9 +1,62 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Collector.Views.Home.MainInfoView">
+             x:Class="Collector.Views.Home.MainInfoView"
+             >
     <ContentPage.Content>
-        <StackLayout>
+        <StackLayout >
+            <StackLayout >
+                    <Image Source="BackgroundPerfil.png" Aspect="AspectFill" />
+
+                <StackLayout Margin="10,-160,10,0">
+
+                    <StackLayout Orientation="Horizontal"
+                                 HorizontalOptions="FillAndExpand">
+
+                        <Frame BackgroundColor="Red"  HorizontalOptions="Start"
+                               VerticalOptions="Start" WidthRequest="60" HasShadow="False"
+                               HeightRequest="60" Padding="0" CornerRadius="30"
+                               IsClippedToBounds="true">
+
+                            <Image Source="fotoPerfil.png" WidthRequest="80"
+                                   HeightRequest="80" Aspect="AspectFill" />
+
+                        </Frame>
+
+                        <StackLayout Orientation="Vertical">
+
+                            <Label Text="Marcia Catadora" TextColor="#ffffff"
+                                   FontSize="Medium" FontAttributes="Bold"/>
+
+                            <Label Text="Marcia Silva Santos" TextColor="#ffffff"
+                                   FontSize="Medium" FontAttributes="None"/>
+
+                            <StackLayout Orientation="Horizontal">
+
+                                <Image Source="ic_mapa.png"  WidthRequest="7"
+                                       HeightRequest="5" Aspect="AspectFill"/>
+
+                                <Label Text="Osasco" TextColor="#ffffff"
+                                   FontSize="Micro" FontAttributes="None"/>
+
+                            </StackLayout>
+
+                        </StackLayout>
+
+                        <Button Text="Sair" TextColor="#00BB54"  
+                                BackgroundColor="#EBEBEB" WidthRequest="80"
+                                HeightRequest="30" CornerRadius="10" FontSize="Micro"
+                                FontAttributes="Bold" VerticalOptions="Start"
+                                HorizontalOptions="EndAndExpand"
+                                Command="{Binding SairCommand}"/>
+
+                    </StackLayout>
+
+                </StackLayout>
+                               
+            </StackLayout>
+
+
             <Label Text="Info" HorizontalOptions="CenterAndExpand"
                    VerticalOptions="CenterAndExpand"/>
         </StackLayout>
