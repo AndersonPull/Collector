@@ -72,37 +72,13 @@
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json">
       <Visible>false</Visible>
     </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon1024.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon180.png">
-      <Visible>false</Visible>
-    </ImageAsset>
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon167.png">
       <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon152.png">
       <Visible>false</Visible>
     </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon120.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon87.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon80.png">
-      <Visible>false</Visible>
-    </ImageAsset>
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon76.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon60.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon58.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon40.png">
       <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon29.png">
@@ -111,6 +87,20 @@
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon20.png">
       <Visible>false</Visible>
     </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\icon.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\icon-1.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Sem Título.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\icon-2.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Sem Título-1.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Sem Título-2.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Sem Título-3.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Sem Título-4.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\icon-3.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\icon-4.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\icon-5.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Sem Título-5.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Sem Título-6.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -178,6 +168,7 @@
     <BundleResource Include="Resources\ic_colabore.png" />
     <BundleResource Include="Resources\ic_vamos.png" />
     <BundleResource Include="Resources\ic_somos.png" />
+    <BundleResource Include="Resources\splashscreen.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Renderers\" />
