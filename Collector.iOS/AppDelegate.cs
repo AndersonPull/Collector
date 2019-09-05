@@ -24,6 +24,7 @@ namespace Collector.iOS
         {
             global::Xamarin.Forms.Forms.Init();
             Xamarin.FormsGoogleMaps.Init("AIzaSyDtdF0zxGRimUItAvXe8MB4SIxhXuXGHIU");
+            Rg.Plugins.Popup.Popup.Init();
             LoadApplication(new App());
             BuildStyles();
 

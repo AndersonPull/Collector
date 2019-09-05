@@ -2,6 +2,8 @@
 using System.Windows.Input;
 using Collector.Services.Navigation;
 using Collector.ViewModels.Home;
+using Collector.Views.Home.PopUpMateriais;
+using Rg.Plugins.Popup.Services;
 using Xamarin.Forms;
 
 namespace Collector.ViewModels.Login
@@ -12,6 +14,7 @@ namespace Collector.ViewModels.Login
         public LoginViewModel(INavigationService serviceNavigation)
         {
             _serviceNavigation = serviceNavigation;
+
         }
 
         public ICommand LoginCommand
@@ -20,10 +23,9 @@ namespace Collector.ViewModels.Login
             {
                 return new Command(async () =>
                 {
-                    await _serviceNavigation.NavigateToAsync<MainTabbedPageViewModel>();
+            PopupNavigation.Instance.PushAsync(new MaterialPopUp(), true);
                 });
             }
         }
-
     }
 }

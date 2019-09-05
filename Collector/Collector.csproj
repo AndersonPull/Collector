@@ -18,6 +18,7 @@
     <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
     <PackageReference Include="Xamarin.Forms.GoogleMaps" Version="3.2.1" />
     <PackageReference Include="DLToolkit.Forms.Controls.FlowListView" Version="2.0.11" />
+    <PackageReference Include="Rg.Plugins.Popup" Version="1.1.5.188" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />
@@ -36,6 +37,8 @@
     <Folder Include="Services\Home\" />
     <Folder Include="ViewModels\Home\Usuarios\" />
     <Folder Include="Views\Home\Usuarios\" />
+    <Folder Include="Views\Home\PopUpMateriais\" />
+    <Folder Include="ViewModels\Home\PopUpMateriais\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="AssemblyInfo.cs" />
