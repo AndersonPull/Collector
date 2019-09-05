@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Collector.Views.Home.Usuarios.ListaDeUsuariosView"
+             Title="Catadores">
+    <ContentPage.Content>
+
+        <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+
+            <Frame  WidthRequest="300" HeightRequest="100" CornerRadius="20"
+                    HasShadow="False" VerticalOptions="Center" BackgroundColor="#00BB54"
+                    Margin="10" IsClippedToBounds="true">
+                <StackLayout Orientation="Horizontal" >
+
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand"
+                                 VerticalOptions="FillAndExpand">
+
+                        <Frame BackgroundColor="Red"  HorizontalOptions="Start"
+                                VerticalOptions="Start" WidthRequest="60" HasShadow="False"
+                                HeightRequest="60" Padding="0" CornerRadius="30"
+                                IsClippedToBounds="true">
+
+                            <Image Source="fotoPerfil.png" WidthRequest="70"
+                                    HeightRequest="70" Aspect="AspectFill" />
+                        </Frame>
+
+                        <StackLayout Orientation="Vertical">
+
+                            <Label Text="Marcia Catadora" TextColor="#ffffff"
+                                    FontSize="Small" FontAttributes="Bold"/>
+
+                            <Label Text="Marcia Silva Santos" TextColor="#ffffff"
+                                    FontSize="Micro" FontAttributes="None"/>
+
+                            <FlexLayout Margin="0,20,0,0">
+
+                                <Image Source="carButton.png" WidthRequest="30"
+                                       HeightRequest="30" Margin="2"/>
+                                <Image Source="carButton.png" WidthRequest="30"
+                                       HeightRequest="30" Margin="2"/>
+                                <Image Source="carButton.png" WidthRequest="30"
+                                       HeightRequest="30" Margin="2"/>
+                                <Image Source="carButton.png" WidthRequest="30"
+                                       HeightRequest="30" Margin="2"/>
+                            </FlexLayout>
+
+                        </StackLayout>
+
+                    </StackLayout>
+
+                    <StackLayout >
+                        <ImageButton Source="dotButton.png" BackgroundColor="transparent"
+                                     WidthRequest="35"
+                            />
+
+                        <Image Source="carButton.png" WidthRequest="50"
+                                     HeightRequest="50"/>
+
+                        <Label Text="1.6 Km" TextColor="#ffffff" FontSize="Micro"
+                               HorizontalTextAlignment="Center"/>
+
+                        <Label Text="da sua localização" TextColor="#ffffff" FontSize="Micro"
+                               HorizontalTextAlignment="Center"/>
+
+                    </StackLayout>
+
+                </StackLayout>
+
+            </Frame>
+        </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>

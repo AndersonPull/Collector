@@ -1,6 +1,7 @@
 ﻿using System;
 using Collector.Services.Navigation;
 using Collector.ViewModels.Home;
+using Collector.ViewModels.Home.Usuarios;
 using Collector.ViewModels.Login;
 using Unity;
 
@@ -29,7 +30,7 @@ namespace Collector.ViewModels.ViewModelLocator
             _container.RegisterType<MainInfoViewModel>();
             _container.RegisterType<MainMapaViewModel>();
             _container.RegisterType<MainMateriaisViewModel>();
-
+            _container.RegisterType<ListaDeUsuariosViewModel>();
         }
 
         public T Resolve<T>()

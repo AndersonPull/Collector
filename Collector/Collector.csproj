@@ -34,6 +34,8 @@
     <Folder Include="Models\Login\" />
     <Folder Include="Models\Home\" />
     <Folder Include="Services\Home\" />
+    <Folder Include="ViewModels\Home\Usuarios\" />
+    <Folder Include="Views\Home\Usuarios\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="AssemblyInfo.cs" />
@@ -43,8 +45,11 @@
     <Compile Remove="Controls\BottomBar\BottomBarPageExtensions.cs" />
     <Compile Remove="Controls\BottomBarPage.cs" />
     <Compile Remove="Controls\BottomBarPageExtensions.cs" />
+    <Compile Remove="ViewModels\Home\Usuarios.cs" />
+    <Compile Remove="ViewModels\Home\Usuarios\ListaUsuariosView.xaml.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Remove="MainPage.xaml" />
+    <EmbeddedResource Remove="ViewModels\Home\Usuarios\ListaUsuariosView.xaml" />
   </ItemGroup>
 </Project>

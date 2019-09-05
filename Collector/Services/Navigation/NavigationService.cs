@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using Collector.ViewModels;
 using Collector.ViewModels.Home;
+using Collector.ViewModels.Home.Usuarios;
 using Collector.ViewModels.Login;
 using Collector.ViewModels.ViewModelLocator;
 using Collector.Views.Home;
+using Collector.Views.Home.Usuarios;
 using Collector.Views.Login;
 using Xamarin.Forms;
 
@@ -154,6 +156,7 @@ namespace Collector.Services.Navigation
             _mappings.Add(typeof(LoginViewModel), typeof(LoginView));
             _mappings.Add(typeof(MainMapaViewModel), typeof(MainMapaView));
             _mappings.Add(typeof(MainTabbedPageViewModel), typeof(MainTabbedPageView));
+            _mappings.Add(typeof(ListaDeUsuariosViewModel), typeof(ListaDeUsuariosView));
         }
     }
 }

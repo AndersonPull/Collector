@@ -169,6 +169,8 @@
     <BundleResource Include="Resources\ic_vamos.png" />
     <BundleResource Include="Resources\ic_somos.png" />
     <BundleResource Include="Resources\splashscreen.png" />
+    <BundleResource Include="Resources\carButton.png" />
+    <BundleResource Include="Resources\dotButton.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Renderers\" />

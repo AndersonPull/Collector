@@ -17,7 +17,8 @@
                 <ImageButton Source="MenuMapa.png" BackgroundColor="Transparent"
                              WidthRequest="{OnPlatform Android=55, iOS=45}"
                              HeightRequest="{OnPlatform Android=55, iOS=45}"
-                             VerticalOptions="CenterAndExpand"/>
+                             VerticalOptions="CenterAndExpand"
+                             Command="{Binding NavegarLista}"/>
 
                 <Frame BackgroundColor="#ffffff" WidthRequest="315" HeightRequest="45"
                        CornerRadius="8" Padding="0" Margin="10,0,0,0"
