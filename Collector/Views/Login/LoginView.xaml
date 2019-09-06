@@ -65,7 +65,7 @@
                                 BackgroundColor="#EBEBEB" WidthRequest="45"
                                 VerticalOptions="FillAndExpand" HeightRequest="45"
                                 CornerRadius="18" FontSize="Large" FontAttributes="Bold"
-                                Command="{Binding LoginCommand}"/>
+                                Command="{Binding LoginCommand}" Padding="0"/>
 
                     </StackLayout>
 
