@@ -6,9 +6,9 @@
                  x:Class="Collector.Views.Home.PopUpMateriais.MaterialPopUp">
      <pages:PopupPage.Animation>
 
-        <animations:ScaleAnimation PositionIn="Bottom" PositionOut="Center"
-            ScaleIn="1" ScaleOut="0.8" DurationIn="500"  EasingIn="SinOut"
-            EasingOut="SinIn" HasBackgroundAnimation="True" />
+        <animations:ScaleAnimation PositionIn="Bottom" PositionOut="Bottom" 
+            ScaleIn="1" ScaleOut="0.8" DurationIn="500" DurationOut="500" EasingIn="SinOut"
+            EasingOut="SinIn" HasBackgroundAnimation="True"  />
 
     </pages:PopupPage.Animation>
     

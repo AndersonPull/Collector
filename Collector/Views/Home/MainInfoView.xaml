@@ -45,7 +45,7 @@
 
                             </StackLayout>
 
-                            <Button Text="Sair" TextColor="#00BB54"  
+                            <Button Text="Sair" TextColor="#00BB54"  Padding="0"
                                     BackgroundColor="#EBEBEB" WidthRequest="80"
                                     HeightRequest="30" CornerRadius="10" FontSize="Micro"
                                     FontAttributes="Bold" VerticalOptions="Start"
@@ -96,7 +96,7 @@
                                                                 WidthRequest="30" HeightRequest="30" 
                                                                 BackgroundColor="#00BB54" VerticalOptions="End"
                                                                 HorizontalOptions="End" CornerRadius="15"
-                                                                TextColor="#ffffff" />
+                                                                TextColor="#ffffff" Padding="0" />
                                  
                                                     </StackLayout>
                            
