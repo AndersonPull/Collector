@@ -15,7 +15,10 @@
         <StackLayout VerticalOptions="Center" 
                      HorizontalOptions="Center">
 
-            <Frame HeightRequest="460"  WidthRequest="300" Padding="0" BorderColor="Transparent" IsClippedToBounds="False" CornerRadius="10" HasShadow="True" HorizontalOptions="EndAndExpand" BackgroundColor="#FFFFFF" VerticalOptions="Start">
+            <Frame HeightRequest="460"  WidthRequest="300" Padding="0" BorderColor="Transparent"
+                   IsClippedToBounds="False" CornerRadius="15" HasShadow="False"
+                   HorizontalOptions="EndAndExpand" BackgroundColor="#FFFFFF"
+                   VerticalOptions="Start">
 
                 <StackLayout Margin="15"
                             HorizontalOptions="FillAndExpand"
@@ -27,14 +30,14 @@
                     <Image Source="ic_podas.png" HeightRequest="200" WidthRequest="200"/>
                        
                     <Label Text="Podas de árvore podem ser compostadas e produzir energia" TextColor="#464646" FontSize="16"
-                           FontAttributes="Bold"/>
+                           FontAttributes="Bold" HorizontalTextAlignment="Center"/>
 
                     <Label Text="   Em eventos e festas, organize a separação dos recicláveis secos em sacos grandes grandes avalie e combine com o catador a coleta dos residuos não listados neste aplicativo."
-                           TextColor="#A2A2A2" FontSize="14"/>
+                           TextColor="#A2A2A2" FontSize="14" HorizontalTextAlignment="Center"/>
 
                     <Button Text="Ok" BackgroundColor="#00BB54"  FontAttributes="Bold"
                             VerticalOptions="EndAndExpand" Padding="0" TextColor="#ffffff"
-                            CornerRadius="10" FontSize="Large"/>
+                            CornerRadius="10" FontSize="Large" />
 
                 </StackLayout>
             </Frame>

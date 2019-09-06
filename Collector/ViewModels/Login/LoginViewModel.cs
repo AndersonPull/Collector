@@ -23,7 +23,7 @@ namespace Collector.ViewModels.Login
             {
                 return new Command(async () =>
                 {
-            PopupNavigation.Instance.PushAsync(new MaterialPopUp(), true);
+                    await _serviceNavigation.NavigateToAsync<MainTabbedPageViewModel>();
                 });
             }
         }
