@@ -13,12 +13,12 @@ namespace Collector.ViewModels.Home
     {
         INavigationService _serviceNavigation;
         MenuService _service;
-        public FlowObservableCollection<BotoesMateriaisModel> ItensMenu { get; set; }
+        public FlowObservableCollection<MateriaisModel> ItensMenu { get; set; }
 
         public MainMateriaisViewModel(INavigationService serviceNavigation)
         {
 
-            ItensMenu = new FlowObservableCollection<BotoesMateriaisModel>();
+            ItensMenu = new FlowObservableCollection<MateriaisModel>();
             _service = new MenuService();
             _serviceNavigation = serviceNavigation;
 
@@ -39,29 +39,18 @@ namespace Collector.ViewModels.Home
             {
                 return new Command(async (value) =>
                 {
-                    BotoesMateriaisModel item = value as BotoesMateriaisModel;
-                    switch (item.Id)
-                    {
-                        case 1:
-                            PopupNavigation.Instance.PushAsync(new MaterialPopUp(), true);
-                            break;
-                        case 2:
-                            PopupNavigation.Instance.PushAsync(new MaterialPopUp(), true);
-                            break;
-                        case 3:
-                            PopupNavigation.Instance.PushAsync(new MaterialPopUp(), true);
-                            break;
-                        case 4:
-                            PopupNavigation.Instance.PushAsync(new MaterialPopUp(), true);
-                            break;
-                        case 5:
-                            PopupNavigation.Instance.PushAsync(new MaterialPopUp(), true);
-                            break;
-                        default:
-                            break;
-                    }
+                    MateriaisModel item = value as MateriaisModel;
+                    ShowPopup(item);
+                    
                 });
             }
+        }
+
+        public async void ShowPopup(MateriaisModel item)
+        {
+            var pop = new MaterialPopUp(item);
+
+            await PopupNavigation.Instance.PushAsync(pop, true);
         }
     }
 }

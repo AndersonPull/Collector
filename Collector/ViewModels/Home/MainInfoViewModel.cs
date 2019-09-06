@@ -13,12 +13,12 @@ namespace Collector.ViewModels.Home
     {
         INavigationService _serviceNavigation;
         MenuService _service;
-        public FlowObservableCollection<BotoesMateriaisModel> ItensMenu { get; set; }
+        public FlowObservableCollection<MateriaisModel> ItensMenu { get; set; }
 
         public MainInfoViewModel(INavigationService serviceNavigation)
         {
 
-            ItensMenu = new FlowObservableCollection<BotoesMateriaisModel>();
+            ItensMenu = new FlowObservableCollection<MateriaisModel>();
             _service = new MenuService();
             _serviceNavigation = serviceNavigation;
 
