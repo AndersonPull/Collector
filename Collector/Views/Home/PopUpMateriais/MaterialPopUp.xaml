@@ -6,24 +6,37 @@
                  x:Class="Collector.Views.Home.PopUpMateriais.MaterialPopUp">
      <pages:PopupPage.Animation>
 
-        <animations:ScaleAnimation PositionIn="Top" PositionOut="Top"
+        <animations:ScaleAnimation PositionIn="Bottom" PositionOut="Center"
             ScaleIn="1" ScaleOut="0.8" DurationIn="500"  EasingIn="SinOut"
             EasingOut="SinIn" HasBackgroundAnimation="True" />
 
     </pages:PopupPage.Animation>
     
-        <StackLayout VerticalOptions="StartAndExpand" 
-                     HorizontalOptions="FillAndExpand"
-                     BackgroundColor="#FFFFFF">
+        <StackLayout VerticalOptions="Center" 
+                     HorizontalOptions="Center">
 
-            <StackLayout HeightRequest="40" Margin="25,25,25,0"
-                        BackgroundColor="#FFFFFF"
-                        Orientation="Horizontal"
-                        HorizontalOptions="FillAndExpand">
+            <Frame HeightRequest="460"  WidthRequest="300" Padding="0" BorderColor="Transparent" IsClippedToBounds="False" CornerRadius="10" HasShadow="True" HorizontalOptions="EndAndExpand" BackgroundColor="#FFFFFF" VerticalOptions="Start">
 
-              <Label Text="teste" HorizontalOptions="Center" VerticalOptions="Center"/>
-        
+                <StackLayout Margin="15"
+                            HorizontalOptions="FillAndExpand"
+                            VerticalOptions="FillAndExpand">
 
-            </StackLayout>
+                    <Label Text="Podas de árvores" TextColor="#00BB54" FontSize="24"
+                           FontAttributes="Bold"/>
+
+                    <Image Source="ic_podas.png" HeightRequest="200" WidthRequest="200"/>
+                       
+                    <Label Text="Podas de árvore podem ser compostadas e produzir energia" TextColor="#464646" FontSize="16"
+                           FontAttributes="Bold"/>
+
+                    <Label Text="   Em eventos e festas, organize a separação dos recicláveis secos em sacos grandes grandes avalie e combine com o catador a coleta dos residuos não listados neste aplicativo."
+                           TextColor="#A2A2A2" FontSize="14"/>
+
+                    <Button Text="Ok" BackgroundColor="#00BB54"  FontAttributes="Bold"
+                            VerticalOptions="EndAndExpand" Padding="0" TextColor="#ffffff"
+                            CornerRadius="10" FontSize="Large"/>
+
+                </StackLayout>
+            </Frame>
         </StackLayout>
 </pages:PopupPage>
