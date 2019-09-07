@@ -5,9 +5,13 @@
              xmlns:flv="clr-namespace:DLToolkit.Forms.Controls;assembly=DLToolkit.Forms.Controls.FlowListView"
              BackgroundColor="#EBEBEB">
     <ContentPage.Content>
+
         <ScrollView Padding="0" >
+
             <StackLayout >
+
                 <StackLayout >
+
                         <Image Source="BackgroundPerfil.png" Aspect="AspectFill" />
 
                     <StackLayout Margin="10,-150,10,0" HeightRequest="175">
