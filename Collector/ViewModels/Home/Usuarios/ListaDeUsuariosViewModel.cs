@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Windows.Input;
 using Collector.Services.Navigation;
 using DLToolkit.Forms.Controls;
 using Xamarin.Forms;
@@ -16,6 +17,17 @@ namespace Collector.ViewModels.Home.Usuarios
             //_service = new UsuarioService();
             _serviceNavigation = serviceNavigation;
 
+        }
+
+        public ICommand NavegarParaDetalhes
+        {
+            get
+            {
+                return new Command(async () =>
+                {
+                    await _serviceNavigation.NavigateToAsync<DetalhesDosUsuarioViewModel>();
+                });
+            }
         }
     }
 }

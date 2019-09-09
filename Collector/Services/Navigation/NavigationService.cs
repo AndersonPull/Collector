@@ -157,6 +157,7 @@ namespace Collector.Services.Navigation
             _mappings.Add(typeof(MainMapaViewModel), typeof(MainMapaView));
             _mappings.Add(typeof(MainTabbedPageViewModel), typeof(MainTabbedPageView));
             _mappings.Add(typeof(ListaDeUsuariosViewModel), typeof(ListaDeUsuariosView));
+            _mappings.Add(typeof(DetalhesDosUsuarioViewModel), typeof(DetalhesDosUsuariosView));
         }
     }
 }

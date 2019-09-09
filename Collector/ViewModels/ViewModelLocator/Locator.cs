@@ -33,7 +33,7 @@ namespace Collector.ViewModels.ViewModelLocator
             _container.RegisterType<MainMateriaisViewModel>();
             _container.RegisterType<ListaDeUsuariosViewModel>();
             _container.RegisterType<MaterialPopUpViewModel>();
-
+            _container.RegisterType<DetalhesDosUsuarioViewModel>();
         }
 
         public T Resolve<T>()

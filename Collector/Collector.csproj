@@ -50,9 +50,17 @@
     <Compile Remove="Controls\BottomBarPageExtensions.cs" />
     <Compile Remove="ViewModels\Home\Usuarios.cs" />
     <Compile Remove="ViewModels\Home\Usuarios\ListaUsuariosView.xaml.cs" />
+    <Compile Remove="Views\Home\Usuarios\DetalhesUsuario.xaml.cs" />
+    <Compile Remove="Views\Home\Usuarios\DetalhesUsuarioView.cs" />
+    <Compile Remove="Views\Home\Usuarios\DetalhesUsuarioView.xaml.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Remove="MainPage.xaml" />
     <EmbeddedResource Remove="ViewModels\Home\Usuarios\ListaUsuariosView.xaml" />
+    <EmbeddedResource Remove="Views\Home\Usuarios\DetalhesUsuario.xaml" />
+    <EmbeddedResource Remove="Views\Home\Usuarios\DetalhesUsuario.xaml" />
+    <EmbeddedResource Remove="Views\Home\Usuarios\DetalhesUsuario.xaml" />
+    <EmbeddedResource Remove="Views\Home\Usuarios\DetalhesUsuario.xaml" />
+    <EmbeddedResource Remove="Views\Home\Usuarios\DetalhesUsuarioView.xaml" />
   </ItemGroup>
 </Project>

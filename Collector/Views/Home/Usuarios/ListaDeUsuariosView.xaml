@@ -42,6 +42,7 @@
                                        HeightRequest="30" Margin="2"/>
                                 <Image Source="carButton.png" WidthRequest="30"
                                        HeightRequest="30" Margin="2"/>
+
                             </FlexLayout>
 
                         </StackLayout>
@@ -50,7 +51,7 @@
 
                     <StackLayout >
                         <ImageButton Source="dotButton.png" BackgroundColor="transparent"
-                                     WidthRequest="35"
+                                     WidthRequest="35" Command="{Binding NavegarParaDetalhes}"
                             />
 
                         <Image Source="carButton.png" WidthRequest="50"

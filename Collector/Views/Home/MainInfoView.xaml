@@ -4,13 +4,14 @@
              x:Class="Collector.Views.Home.MainInfoView"
              xmlns:flv="clr-namespace:DLToolkit.Forms.Controls;assembly=DLToolkit.Forms.Controls.FlowListView"
              BackgroundColor="#EBEBEB">
+
     <ContentPage.Content>
 
         <ScrollView Padding="0" >
 
-            <StackLayout >
+            <StackLayout>
 
-                <StackLayout >
+                <StackLayout>
 
                         <Image Source="BackgroundPerfil.png" Aspect="AspectFill" />
 
@@ -121,6 +122,7 @@
                 </StackLayout>
 
                 <StackLayout Margin="10">
+
                     <Editor Placeholder="Como você se descreveria?"
                             HeightRequest="120" 
                             />
@@ -151,7 +153,6 @@
                             </StackLayout>
 
                         </Frame>
-
 
                          <Frame BackgroundColor="Transparent" CornerRadius="8"
                                 BorderColor="#00BB54" HasShadow="False" Padding="10"
@@ -190,10 +191,13 @@
                         </Frame>
 
                     </StackLayout>
+
                 </ScrollView>
+
             </StackLayout>
 
         </ScrollView>
 
     </ContentPage.Content>
+
 </ContentPage>
