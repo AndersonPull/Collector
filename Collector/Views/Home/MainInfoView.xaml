@@ -6,7 +6,6 @@
              BackgroundColor="#EBEBEB">
      <ContentPage.Content>
 
-        <ScrollView Padding="0" >
 
             <StackLayout>
 
@@ -61,7 +60,8 @@
                     </StackLayout>
                                
                 </StackLayout>
-
+                <ScrollView>
+                    <StackLayout>
                 <StackLayout>
 
                     <ScrollView Orientation="Horizontal" >
@@ -192,10 +192,10 @@
                     </StackLayout>
 
                 </ScrollView>
-
+                        </StackLayout>
+                    </ScrollView>
             </StackLayout>
 
-        </ScrollView>
 
     </ContentPage.Content>
 

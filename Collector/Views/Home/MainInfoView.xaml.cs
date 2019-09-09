@@ -13,7 +13,6 @@ namespace Collector.Views.Home
         public MainInfoView()
         {
             InitializeComponent();
-            On<iOS>().SetUseSafeArea(false);
             BindingContext = Locator.Instance.Resolve<MainInfoViewModel>();
 
         }
