@@ -14,7 +14,6 @@ namespace Collector.ViewModels.Home
         INavigationService _serviceNavigation;
         MenuService _service;
         public FlowObservableCollection<MateriaisModel> ItensMenu { get; set; }
-
         public MainInfoViewModel(INavigationService serviceNavigation)
         {
 

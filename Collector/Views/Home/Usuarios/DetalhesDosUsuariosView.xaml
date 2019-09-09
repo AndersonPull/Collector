@@ -1,8 +1,202 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Collector.Views.Home.Usuarios.DetalhesDosUsuariosView">
+             x:Class="Collector.Views.Home.Usuarios.DetalhesDosUsuariosView"
+             xmlns:flv="clr-namespace:DLToolkit.Forms.Controls;assembly=DLToolkit.Forms.Controls.FlowListView"
+             BackgroundColor="#EBEBEB">
     <ContentPage.Content>
-        <Label Text="detalhes" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+
+          <ScrollView Padding="0" >
+
+            <StackLayout>
+
+                <StackLayout>
+
+                        <Image Source="BackgroundCatador.png" Aspect="AspectFill" />
+
+                    <StackLayout Margin="10,-150,10,0" HeightRequest="175">
+
+                        <StackLayout Orientation="Horizontal"
+                                     HorizontalOptions="FillAndExpand">
+
+                            <Frame BackgroundColor="Red"  HorizontalOptions="Start"
+                                   VerticalOptions="Start" WidthRequest="60" HasShadow="False"
+                                   HeightRequest="60" Padding="0" CornerRadius="30"
+                                   IsClippedToBounds="true">
+
+                                <Image Source="fotoPerfil.png" WidthRequest="80"
+                                       HeightRequest="80" Aspect="AspectFill" />
+
+                            </Frame>
+
+                            <StackLayout Orientation="Vertical">
+
+                                <Label Text="Marcia Catadora" TextColor="#ffffff"
+                                       FontSize="Medium" FontAttributes="Bold"/>
+
+                                <Label Text="Marcia Silva Santos" TextColor="#ffffff"
+                                       FontSize="Medium" FontAttributes="None"/>
+
+                                <StackLayout Orientation="Horizontal">
+
+                                    <Image Source="ic_mapa.png"  WidthRequest="7"
+                                           HeightRequest="5" Aspect="AspectFill"/>
+
+                                    <Label Text="Osasco" TextColor="#ffffff"
+                                       FontSize="Micro" FontAttributes="None"/>
+
+                                </StackLayout>
+
+                            </StackLayout>
+
+                            <Button Text="Editar" TextColor="#00BB54"  Padding="0"
+                                    BackgroundColor="#EBEBEB" WidthRequest="80"
+                                    HeightRequest="30" CornerRadius="10" FontSize="Micro"
+                                    FontAttributes="Bold" VerticalOptions="Start"
+                                    HorizontalOptions="EndAndExpand"
+                                    Command="{Binding SairCommand}"/>
+
+                        </StackLayout>
+
+                    </StackLayout>
+                               
+                </StackLayout>
+
+                <StackLayout>
+
+                    <ScrollView Orientation="Horizontal" >
+
+                        <StackLayout WidthRequest="2600">
+                    
+                            <flv:FlowListView RowHeight="130" FlowColumnCount="12"
+                                           FlowColumnExpand="First"
+                                           SeparatorVisibility="None" BackgroundColor="Transparent"
+                                           HasUnevenRows="false" IsInNativeLayout="true"
+                                           FlowItemTappedCommand="{Binding ItemSelectedCommand}"
+                                           FlowItemsSource="{Binding ItensMenu}">
+
+                                <flv:FlowListView.FlowColumnTemplate>
+
+                                     <DataTemplate>
+
+                                         <Frame BorderColor="#ffffff" BackgroundColor="#ffffff"
+                                                HasShadow="False" Padding="0" Margin="5" WidthRequest="160"
+                                                HeightRequest="90" CornerRadius="15">
+
+                                                <StackLayout Margin="10" HeightRequest="180">
+
+                                                    <StackLayout Orientation="Horizontal" VerticalOptions="FillAndExpand">
+
+                                                        <Image Source="{Binding Imagem}" Aspect="AspectFit"
+                                                               WidthRequest="60" HeightRequest="60" />
+
+                                                        <Label Text="{Binding Texto}" FontSize="14"
+                                                               TextColor="#00BB54" FontAttributes="Bold"
+                                                               HorizontalOptions="CenterAndExpand"
+                                                               HorizontalTextAlignment="Center"
+                                                               Margin="0,10,0,0"/>
+
+                                                        <Button Text="+" FontSize="Large" FontAttributes="Bold"
+                                                                WidthRequest="30" HeightRequest="30" 
+                                                                BackgroundColor="#00BB54" VerticalOptions="End"
+                                                                HorizontalOptions="End" CornerRadius="15"
+                                                                TextColor="#ffffff" Padding="0" />
+                                 
+                                                    </StackLayout>
+                           
+                                                </StackLayout>
+                        
+                                         </Frame>
+
+                                     </DataTemplate>
+
+                                </flv:FlowListView.FlowColumnTemplate>
+
+                            </flv:FlowListView>
+
+                        </StackLayout>
+
+                    </ScrollView>
+
+                </StackLayout>
+
+                <StackLayout Margin="10">
+
+                    <Editor Placeholder="Como você se descreveria?"
+                            HeightRequest="120" 
+                            />
+
+                    <Editor Placeholder="Conte um pouco da sua história"
+                            HeightRequest="120"
+                            />
+                </StackLayout>
+
+                <ScrollView Orientation="Horizontal">
+
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+
+                        <Frame BackgroundColor="Transparent" CornerRadius="8"
+                               BorderColor="#00BB54" HasShadow="False" Padding="10"
+                               Margin="5" WidthRequest="100">
+
+                            <StackLayout>
+
+                                <Image Source="ic_somos" Aspect="AspectFit"
+                                    WidthRequest="60" HeightRequest="60" />
+
+                                <Label Text="Quem somos" FontSize="17"
+                                    TextColor="#00BB54" FontAttributes="Bold"
+                                    HorizontalOptions="CenterAndExpand"
+                                    HorizontalTextAlignment="Center"/>
+
+                            </StackLayout>
+
+                        </Frame>
+
+                         <Frame BackgroundColor="Transparent" CornerRadius="8"
+                                BorderColor="#00BB54" HasShadow="False" Padding="10"
+                                Margin="5"  WidthRequest="100">
+
+                             <StackLayout>
+
+                                 <Image Source="ic_vamos" Aspect="AspectFit"
+                                        WidthRequest="60" HeightRequest="60" />
+
+                                 <Label Text="Para onde vamos" FontSize="17"
+                                        TextColor="#00BB54" FontAttributes="Bold"
+                                        HorizontalOptions="CenterAndExpand"
+                                        HorizontalTextAlignment="Center"/>
+
+                             </StackLayout>
+
+                        </Frame>
+
+                         <Frame BackgroundColor="Transparent" CornerRadius="8"
+                                BorderColor="#00BB54" HasShadow="False" Padding="10"
+                                Margin="5"  WidthRequest="100">
+
+                             <StackLayout>
+
+                                 <Image Source="ic_colabore" Aspect="AspectFit"
+                                        WidthRequest="60" HeightRequest="60" />
+
+                                 <Label Text="Colabore" FontSize="17"
+                                        TextColor="#00BB54" FontAttributes="Bold"
+                                        HorizontalOptions="CenterAndExpand"
+                                        HorizontalTextAlignment="Center"/>
+
+                             </StackLayout>
+
+                        </Frame>
+
+                    </StackLayout>
+
+                </ScrollView>
+
+            </StackLayout>
+
+        </ScrollView>
+
     </ContentPage.Content>
+
 </ContentPage>
