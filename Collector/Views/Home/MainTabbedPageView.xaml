@@ -4,15 +4,15 @@
             xmlns:local="clr-namespace:Collector.Views.Home"
             x:Class="Collector.Views.Home.MainTabbedPageView"
             BarBackgroundColor="#00bb54"
-            BarTextColor="#ffffff"
             SelectedTabColor="#ffffff"
-            UnselectedTabColor="#ffffff">
+            UnselectedTabColor="#a2a2a2">
 
     <local:MainInfoView Title="Info"
                         Icon="ic_info.png"/>
 
     <local:MainMapaView Title="Mapa"
-                       Icon="ic_mapa.png"/>
+                        TabIndex="0"
+                        Icon="ic_mapa.png"/>
 
     <local:MainMateriasView Title="Materias"
                        Icon="ic_materiais.png"/>
