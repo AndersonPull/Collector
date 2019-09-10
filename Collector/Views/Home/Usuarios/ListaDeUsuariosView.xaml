@@ -54,8 +54,8 @@
                                      WidthRequest="35" Command="{Binding NavegarParaDetalhes}"
                             />
 
-                        <Image Source="carButton.png" WidthRequest="50"
-                                     HeightRequest="50"/>
+                        <ImageButton Source="carButton.png" WidthRequest="50"
+                                     HeightRequest="50" Clicked="DetalhesModal"/>
 
                         <Label Text="1.6 Km" TextColor="#ffffff" FontSize="Micro"
                                HorizontalTextAlignment="Center"/>
@@ -67,6 +67,44 @@
 
                 </StackLayout>
 
+                
+            </Frame>
+
+            <Frame  x:Name="ModalDetalhes" WidthRequest="300" HeightRequest="100" CornerRadius="20"
+                    HasShadow="False" VerticalOptions="Center" BackgroundColor="#04C85C"
+                    Margin="10,-16,10,10" IsClippedToBounds="true" IsVisible="false">
+
+                <StackLayout >
+
+                    <Label Text="Minha historia" FontSize="Small" TextColor="#ffffff"
+                           FontAttributes="Bold" VerticalTextAlignment="Start"
+                           HorizontalTextAlignment="Center"/>
+
+                    <Label Text="Sou catadora e amo o que faço, e não tem preço ajuda nosso mundo a melhorar."
+                           FontSize="Small" TextColor="#ffffff" FontAttributes="None"
+                           VerticalTextAlignment="Start" HorizontalTextAlignment="Center"/>
+
+                    <StackLayout Orientation="Horizontal" VerticalOptions="EndAndExpand"
+                                 HorizontalOptions="End">
+
+                        <Image Source="ic_telefone.png" WidthRequest="30"
+                                       HeightRequest="20" Margin="2"/>
+
+                        <Label Text="(11) 947743829" FontSize="Small" TextColor="#ffffff"
+                           FontAttributes="Bold" VerticalTextAlignment="Center"
+                           HorizontalTextAlignment="Start"/>
+
+                        <Image Source="ic_whatsapp.png" WidthRequest="30"
+                                       HeightRequest="20" Margin="2"/>
+
+                        <Label Text="(11) 947743829" FontSize="Small" TextColor="#ffffff"
+                           FontAttributes="Bold" VerticalTextAlignment="Center"
+                           HorizontalTextAlignment="Start"/>
+
+                    </StackLayout>
+                </StackLayout>
+
+                
             </Frame>
         </StackLayout>
 

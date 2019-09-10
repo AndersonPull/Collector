@@ -175,6 +175,8 @@
     <BundleResource Include="Resources\carButton.png" />
     <BundleResource Include="Resources\dotButton.png" />
     <BundleResource Include="Resources\BackgroundCatador.png" />
+    <BundleResource Include="Resources\ic_telefone.png" />
+    <BundleResource Include="Resources\ic_whatsapp.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Renderers\" />
