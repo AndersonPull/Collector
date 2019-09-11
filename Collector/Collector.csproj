@@ -40,6 +40,8 @@
     <Folder Include="Views\Home\Usuarios\" />
     <Folder Include="Views\Home\PopUpMateriais\" />
     <Folder Include="ViewModels\Home\PopUpMateriais\" />
+    <Folder Include="Models\Usuarios\" />
+    <Folder Include="Services\Usuarios\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="AssemblyInfo.cs" />

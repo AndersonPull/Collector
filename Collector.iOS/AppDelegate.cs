@@ -26,7 +26,6 @@ namespace Collector.iOS
             Rg.Plugins.Popup.Popup.Init();
             LoadApplication(new App());
             BuildStyles();
-
             return base.FinishedLaunching(app, options);
         }
 

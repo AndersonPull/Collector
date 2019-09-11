@@ -25,10 +25,7 @@ namespace Collector.ViewModels.Home.Usuarios
         public void CarregarMenu()
         {
             var collection = _service.ItensMenu();
-            foreach (var item in collection)
-            {
-                ItensMenu.Add(item);
-            }
+                ItensMenu.AddRange(collection);
         }
     }
 }

@@ -12,16 +12,5 @@ namespace Collector.Views.Home.Usuarios
              NavigationPage.SetBackButtonTitle(this, "");
              InitializeComponent();
         }
-        public void DetalhesModal(object sender, EventArgs args)
-        {
-            if(ModalDetalhes.IsVisible == true)
-            {
-                ModalDetalhes.IsVisible = false;
-            }
-            else
-            {
-                ModalDetalhes.IsVisible = true;
-            }
-        }
     }
 }
