@@ -11,5 +11,6 @@
 	<application android:label="Collector.Android">
 		<meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="AIzaSyDtdF0zxGRimUItAvXe8MB4SIxhXuXGHIU" />
 		<uses-library android:name="org.apache.http.legacy" android:required="false" />
+        
 	</application>
 </manifest>
