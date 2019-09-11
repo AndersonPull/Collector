@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "646890540145",
+    "firebase_url": "https://colletor.firebaseio.com",
+    "project_id": "colletor",
+    "storage_bucket": "colletor.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:646890540145:android:14f3c27043ceb8deff1fd0",
+        "android_client_info": {
+          "package_name": "com.collector.collector"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "646890540145-l88r8gj4hqk5mt895vtvl1ul0nalbbj7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDzRlbkpj9rm2CKf9pyNZnGYpLryr7RKow"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "646890540145-l88r8gj4hqk5mt895vtvl1ul0nalbbj7.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "646890540145-shagsd3o37f1kvc747oghj44vkd2vt9a.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.Collector.Collector"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
