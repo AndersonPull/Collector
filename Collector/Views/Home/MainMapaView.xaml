@@ -35,7 +35,7 @@
                         <BoxView WidthRequest="1" HeightRequest="35"
                                  BackgroundColor="#ACACAC" VerticalOptions="Center"/>
 
-                        <Label Text="Filtrar" FontSize="Medium"  TextColor="#ACACAC"
+                        <Label Text="Filtrar" FontSize="Small"  TextColor="#ACACAC"
                                VerticalOptions="Center" />
 
                     </StackLayout>

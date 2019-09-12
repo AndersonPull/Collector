@@ -4,42 +4,42 @@
                  xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
                  xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup"
                  x:Class="Collector.Views.Home.PopUpMateriais.MaterialPopUp">
-     <pages:PopupPage.Animation>
+    <pages:PopupPage.Animation>
 
-        <animations:ScaleAnimation PositionIn="Bottom" PositionOut="Bottom" 
-            ScaleIn="1" ScaleOut="0.8" DurationIn="500" DurationOut="500" EasingIn="SinOut"
-            EasingOut="SinIn" HasBackgroundAnimation="True"  />
+        <animations:ScaleAnimation PositionIn="Top" PositionOut="Bottom" 
+                                   ScaleIn="1" ScaleOut="0.8" DurationIn="200" DurationOut="200" EasingIn="SinOut"
+                                   EasingOut="SinIn" HasBackgroundAnimation="True"  />
 
     </pages:PopupPage.Animation>
     
-        <StackLayout VerticalOptions="Center" 
-                     HorizontalOptions="Center">
+    <StackLayout VerticalOptions="Center" 
+                    HorizontalOptions="Center">
 
-            <Frame HeightRequest="460"  WidthRequest="300" Padding="0" BorderColor="Transparent"
-                   IsClippedToBounds="False" CornerRadius="15" HasShadow="False"
-                   HorizontalOptions="EndAndExpand" BackgroundColor="#FFFFFF"
-                   VerticalOptions="Start">
+        <Frame HeightRequest="460"  WidthRequest="300" Padding="0" BorderColor="Transparent"
+                IsClippedToBounds="False" CornerRadius="15" HasShadow="False"
+                HorizontalOptions="EndAndExpand" BackgroundColor="#FFFFFF"
+                VerticalOptions="Start">
 
-                <StackLayout Margin="15"
-                            HorizontalOptions="FillAndExpand"
-                            VerticalOptions="FillAndExpand">
+            <StackLayout Margin="15"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand">
 
-                    <Label x:Name="TituloPrincipal" TextColor="#00BB54" FontSize="24"
-                           FontAttributes="Bold"/>
+                <Label x:Name="TituloPrincipal" TextColor="#00BB54" FontSize="24"
+                        FontAttributes="Bold"/>
 
-                    <Image x:Name="Imagem" HeightRequest="200" WidthRequest="200"/>
+                <Image x:Name="Imagem" HeightRequest="200" WidthRequest="200"/>
                        
-                    <Label x:Name="Titulo" TextColor="#464646" FontSize="16"
-                           FontAttributes="Bold" HorizontalTextAlignment="Center"/>
+                <Label x:Name="Titulo" TextColor="#464646" FontSize="16"
+                        FontAttributes="Bold" HorizontalTextAlignment="Center"/>
 
-                    <Label x:Name="Descricao" TextColor="#A2A2A2" FontSize="14"
-                           HorizontalTextAlignment="Center"/>
+                <Label x:Name="Descricao" TextColor="#A2A2A2" FontSize="14"
+                        HorizontalTextAlignment="Center"/>
 
-                    <Button Text="Ok" BackgroundColor="#00BB54"  FontAttributes="Bold"
-                            VerticalOptions="EndAndExpand" Padding="0" TextColor="#ffffff"
-                            CornerRadius="10" FontSize="Large"  Clicked="FecharModal"/>
+                <Button Text="Ok" BackgroundColor="#00BB54"  FontAttributes="Bold"
+                        VerticalOptions="EndAndExpand" Padding="0" TextColor="#ffffff"
+                        CornerRadius="10" FontSize="Large"  Clicked="FecharModal"/>
 
-                </StackLayout>
-            </Frame>
-        </StackLayout>
+            </StackLayout>
+        </Frame>
+    </StackLayout>
 </pages:PopupPage>

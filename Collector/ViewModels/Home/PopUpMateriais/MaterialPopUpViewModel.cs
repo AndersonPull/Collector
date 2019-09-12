@@ -24,7 +24,6 @@ namespace Collector.ViewModels.Home.PopUpMateriais
             return base.InitializeAsync(navigationData);
         }
 
-
         private string tituloPrincipal = string.Empty;
         public string TituloPrincipal { get { return tituloPrincipal; } set { this.Set("TituloPrincipal", ref tituloPrincipal, value); } }
 
