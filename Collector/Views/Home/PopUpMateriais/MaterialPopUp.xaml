@@ -40,6 +40,9 @@
                         CornerRadius="10" FontSize="Large"  Clicked="FecharModal"/>
 
             </StackLayout>
+
         </Frame>
+
     </StackLayout>
+
 </pages:PopupPage>
