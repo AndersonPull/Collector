@@ -9,8 +9,8 @@ namespace Collector.Views.Home.Usuarios
     {
         public ListaDeUsuariosView()
         {
-             NavigationPage.SetBackButtonTitle(this, "");
-             InitializeComponent();
+            NavigationPage.SetBackButtonTitle(this, "");
+            InitializeComponent();
         }
     }
 }
