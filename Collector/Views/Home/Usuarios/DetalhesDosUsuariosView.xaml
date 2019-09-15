@@ -23,14 +23,14 @@
                                 IsClippedToBounds="true">
 
                             <Image Source="fotoPerfil.png" WidthRequest="80"
-                                    HeightRequest="80" Aspect="AspectFill" />
+                                   HeightRequest="80" Aspect="AspectFill" />
 
                         </Frame>
 
                         <StackLayout Orientation="Vertical">
 
                             <Label Text="Marcia Catadora" TextColor="#ffffff"
-                                    FontSize="Medium" FontAttributes="Bold"/>
+                                   FontSize="Medium" FontAttributes="Bold"/>
 
                             <Label Text="Marcia Silva Santos" TextColor="#ffffff"
                                     FontSize="Medium" FontAttributes="None"/>
@@ -38,10 +38,10 @@
                             <StackLayout Orientation="Horizontal">
 
                                 <Image Source="ic_mapa.png"  WidthRequest="7"
-                                        HeightRequest="5" Aspect="AspectFill"/>
+                                       HeightRequest="5" Aspect="AspectFill"/>
 
                                 <Label Text="Osasco" TextColor="#ffffff"
-                                    FontSize="Micro" FontAttributes="None"/>
+                                       FontSize="Micro" FontAttributes="None"/>
 
                             </StackLayout>
 
