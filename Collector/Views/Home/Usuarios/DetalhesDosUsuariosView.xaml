@@ -59,8 +59,11 @@
                 </StackLayout>
                                
             </StackLayout>
+
             <ScrollView >
+
                 <StackLayout>
+
                     <StackLayout>
 
                         <ScrollView Orientation="Horizontal" >
