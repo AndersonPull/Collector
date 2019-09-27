@@ -15,12 +15,12 @@
                 <StackLayout Margin="10,-150,10,0" HeightRequest="175">
 
                     <StackLayout Orientation="Horizontal"
-                                    HorizontalOptions="FillAndExpand">
+                                 HorizontalOptions="FillAndExpand">
 
                         <Frame BackgroundColor="Red"  HorizontalOptions="Start"
-                                VerticalOptions="Start" WidthRequest="60" HasShadow="False"
-                                HeightRequest="60" Padding="0" CornerRadius="30"
-                                IsClippedToBounds="true">
+                               VerticalOptions="Start" WidthRequest="60" HasShadow="False"
+                               HeightRequest="60" Padding="0" CornerRadius="30"
+                               IsClippedToBounds="true">
 
                             <Image Source="fotoPerfil.png" WidthRequest="80"
                                    HeightRequest="80" Aspect="AspectFill" />
@@ -71,26 +71,26 @@
                             <StackLayout WidthRequest="2600">
                     
                                 <flv:FlowListView RowHeight="130" FlowColumnCount="12"
-                                                FlowColumnExpand="First"
-                                                SeparatorVisibility="None" BackgroundColor="Transparent"
-                                                HasUnevenRows="false" IsInNativeLayout="true"
-                                                FlowItemTappedCommand="{Binding ItemSelectedCommand}"
-                                                FlowItemsSource="{Binding ItensMenu}">
+                                                  FlowColumnExpand="First"
+                                                  SeparatorVisibility="None" BackgroundColor="Transparent"
+                                                  HasUnevenRows="false" IsInNativeLayout="true"
+                                                  FlowItemTappedCommand="{Binding ItemSelectedCommand}"
+                                                  FlowItemsSource="{Binding ItensMenu}">
 
                                     <flv:FlowListView.FlowColumnTemplate>
 
                                             <DataTemplate>
 
                                                 <Frame BorderColor="#ffffff" BackgroundColor="#ffffff"
-                                                    HasShadow="False" Padding="0" Margin="5" WidthRequest="160"
-                                                    HeightRequest="90" CornerRadius="15">
+                                                       HasShadow="False" Padding="0" Margin="5" WidthRequest="160"
+                                                       HeightRequest="90" CornerRadius="15">
 
                                                     <StackLayout Margin="10" HeightRequest="180">
 
                                                         <StackLayout Orientation="Horizontal" VerticalOptions="FillAndExpand">
 
                                                             <Image Source="{Binding Imagem}" Aspect="AspectFit"
-                                                                    WidthRequest="60" HeightRequest="60" />
+                                                                   WidthRequest="60" HeightRequest="60" />
 
                                                             <Label Text="{Binding Texto}" FontSize="14"
                                                                     TextColor="#00BB54" FontAttributes="Bold"
@@ -136,54 +136,54 @@
                         <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
 
                             <Frame BackgroundColor="Transparent" CornerRadius="8"
-                                    BorderColor="#00BB54" HasShadow="False" Padding="10"
-                                    Margin="5" WidthRequest="100">
+                                   BorderColor="#00BB54" HasShadow="False" Padding="10"
+                                   Margin="5" WidthRequest="100">
 
                                 <StackLayout>
 
                                     <Image Source="ic_somos" Aspect="AspectFit"
-                                        WidthRequest="60" HeightRequest="60" />
+                                           WidthRequest="60" HeightRequest="60" />
 
                                     <Label Text="Quem somos" FontSize="17"
-                                        TextColor="#00BB54" FontAttributes="Bold"
-                                        HorizontalOptions="CenterAndExpand"
-                                        HorizontalTextAlignment="Center"/>
+                                           TextColor="#00BB54" FontAttributes="Bold"
+                                           HorizontalOptions="CenterAndExpand"
+                                           HorizontalTextAlignment="Center"/>
 
                                 </StackLayout>
 
                             </Frame>
 
                                 <Frame BackgroundColor="Transparent" CornerRadius="8"
-                                    BorderColor="#00BB54" HasShadow="False" Padding="10"
-                                    Margin="5"  WidthRequest="100">
+                                       BorderColor="#00BB54" HasShadow="False" Padding="10"
+                                       Margin="5"  WidthRequest="100">
 
                                     <StackLayout>
 
                                         <Image Source="ic_vamos" Aspect="AspectFit"
-                                            WidthRequest="60" HeightRequest="60" />
+                                               WidthRequest="60" HeightRequest="60" />
 
                                         <Label Text="Para onde vamos" FontSize="17"
-                                            TextColor="#00BB54" FontAttributes="Bold"
-                                            HorizontalOptions="CenterAndExpand"
-                                            HorizontalTextAlignment="Center"/>
+                                               TextColor="#00BB54" FontAttributes="Bold"
+                                               HorizontalOptions="CenterAndExpand"
+                                               HorizontalTextAlignment="Center"/>
 
                                     </StackLayout>
 
                             </Frame>
 
                                 <Frame BackgroundColor="Transparent" CornerRadius="8"
-                                    BorderColor="#00BB54" HasShadow="False" Padding="10"
-                                    Margin="5"  WidthRequest="100">
+                                       BorderColor="#00BB54" HasShadow="False" Padding="10"
+                                       Margin="5"  WidthRequest="100">
 
                                     <StackLayout>
 
                                         <Image Source="ic_colabore" Aspect="AspectFit"
-                                            WidthRequest="60" HeightRequest="60" />
+                                               WidthRequest="60" HeightRequest="60" />
 
                                         <Label Text="Colabore" FontSize="17"
-                                            TextColor="#00BB54" FontAttributes="Bold"
-                                            HorizontalOptions="CenterAndExpand"
-                                            HorizontalTextAlignment="Center"/>
+                                               TextColor="#00BB54" FontAttributes="Bold"
+                                               HorizontalOptions="CenterAndExpand"
+                                               HorizontalTextAlignment="Center"/>
 
                                     </StackLayout>
 
