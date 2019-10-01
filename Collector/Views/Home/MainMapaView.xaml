@@ -6,6 +6,7 @@
              xmlns:maps="clr-namespace:Xamarin.Forms.GoogleMaps;assembly=Xamarin.Forms.GoogleMaps"
              NavigationPage.HasNavigationBar="false">
     <ContentPage.Content>
+
         <Grid>
                             
             <maps:Map Grid.Row="0" x:Name="map" VerticalOptions="FillAndExpand"
