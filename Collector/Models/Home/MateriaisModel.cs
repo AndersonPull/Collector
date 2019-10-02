@@ -14,4 +14,3 @@ namespace Collector.Models.Home
         public string Descricao { get; set; }
     }
 }
-
