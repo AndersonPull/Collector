@@ -6,7 +6,9 @@
              mc:Ignorable="d"
              x:Class="Collector.App">
     <Application.Resources>
+
         <Color x:Key="MainColor">#00BB54</Color>
         <Color x:Key="MainBarTextColor">#FFFFFF</Color>
+
     </Application.Resources>
 </Application>
