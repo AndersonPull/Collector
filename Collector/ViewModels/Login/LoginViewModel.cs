@@ -14,7 +14,6 @@ namespace Collector.ViewModels.Login
         public LoginViewModel(INavigationService serviceNavigation)
         {
             _serviceNavigation = serviceNavigation;
-
         }
 
         public ICommand LoginCommand
