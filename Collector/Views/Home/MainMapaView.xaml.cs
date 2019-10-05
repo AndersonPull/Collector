@@ -11,6 +11,8 @@ namespace Collector.Views.Home
         public MainMapaView()
         {
             InitializeComponent();
+            map.MyLocationEnabled = true;
+            map.UiSettings.MyLocationButtonEnabled = true;
             BindingContext = Locator.Instance.Resolve<MainMapaViewModel>();
         }
     }
