@@ -42,6 +42,7 @@
     <Folder Include="ViewModels\Home\PopUpMateriais\" />
     <Folder Include="Models\Usuarios\" />
     <Folder Include="Services\Usuarios\" />
+    <Folder Include="Controls\CustomEntry\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="AssemblyInfo.cs" />

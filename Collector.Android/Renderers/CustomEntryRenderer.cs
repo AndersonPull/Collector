@@ -1,6 +1,6 @@
 ﻿using System;
 using Android.Graphics.Drawables;
-using Collector.Controls;
+using Collector.Controls.CustomEntry;
 using Collector.Droid.Renderers;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Android;

@@ -1,5 +1,5 @@
 ﻿using System;
-using Collector.Controls;
+using Collector.Controls.CustomEntry;
 using Collector.iOS.Renderers;
 using CoreGraphics;
 using UIKit;

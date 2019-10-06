@@ -1,7 +1,7 @@
 ﻿using System;
 using Xamarin.Forms;
 
-namespace Collector.Controls
+namespace Collector.Controls.CustomEntry
 {
     public class CustomEntry : Entry
     {

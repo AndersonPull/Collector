@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Collector.Views.Home.MainMapaView"
-             xmlns:Custom="clr-namespace:Collector.Controls"
+             xmlns:CustomEntry="clr-namespace:Collector.Controls.CustomEntry"
              xmlns:maps="clr-namespace:Xamarin.Forms.GoogleMaps;assembly=Xamarin.Forms.GoogleMaps"
              NavigationPage.HasNavigationBar="false">
     <ContentPage.Content>
@@ -27,7 +27,7 @@
                     <StackLayout Orientation="Horizontal" VerticalOptions="Center"
                                  HorizontalOptions="StartAndExpand">
 
-                        <Custom:CustomEntry  Placeholder="Endreço"
+                        <CustomEntry:CustomEntry  Placeholder="Endreço"
                                              WidthRequest="{OnPlatform Android=210, iOS=250}"
                                              HorizontalOptions="StartAndExpand"
                                              VerticalOptions="FillAndExpand"

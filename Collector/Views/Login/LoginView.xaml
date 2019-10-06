@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Collector.Views.Login.LoginView"
-             xmlns:Custom="clr-namespace:Collector.Controls"
+             xmlns:CustomEntry="clr-namespace:Collector.Controls.CustomEntry"
              BackgroundImageSource="Background.png">
 
     <ContentPage.Content>
@@ -41,7 +41,7 @@
                         <Label Text="Por favor entre com suas credenciais"
                                TextColor="#ffffff" FontSize="Medium"/>
 
-                        <Custom:CustomEntry Placeholder="Digite seu email"
+                        <CustomEntry:CustomEntry Placeholder="Digite seu email"
                                             PlaceholderColor="{OnPlatform Android=#EBEBEB}"
                                             BackgroundColor="{OnPlatform iOS=#EBEBEB}"
                                             CornerRadius="18" IsCurvedCornersEnabled="True"
@@ -51,7 +51,7 @@
                                             FontAttributes="Bold" BorderColor="#EBEBEB"
                                             />
 
-                        <Custom:CustomEntry Placeholder="Digite sua senha"
+                        <CustomEntry:CustomEntry Placeholder="Digite sua senha"
                                             PlaceholderColor="{OnPlatform Android=#EBEBEB}"
                                             BackgroundColor="{OnPlatform iOS=#EBEBEB}"
                                             CornerRadius="18" IsCurvedCornersEnabled="True"
