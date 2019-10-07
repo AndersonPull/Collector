@@ -13,6 +13,7 @@ namespace Collector.Views.Home
         public MainInfoView()
         {
             InitializeComponent();
+
             BindingContext = Locator.Instance.Resolve<MainInfoViewModel>();
 
         }
