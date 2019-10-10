@@ -27,10 +27,7 @@ namespace Collector.ViewModels.Home
         public void CarregarMenu()
         {
             var collection = _service.ItensMenu();
-            foreach (var item in collection)
-            {
-                ItensMenu.Add(item);
-            }
+            ItensMenu.AddRange(collection);
         }
 
         public ICommand SairCommand
