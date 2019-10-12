@@ -1,5 +1,4 @@
-﻿using System;
-using System.Windows.Input;
+﻿using System.Windows.Input;
 using Collector.Services.Navigation;
 using Collector.ViewModels.Home.Usuarios;
 using Xamarin.Forms;

@@ -1,5 +1,4 @@
-﻿
-namespace Collector.Models.Home
+﻿namespace Collector.Models.Home
 {
     public class MateriaisModel
     {

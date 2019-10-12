@@ -1,5 +1,4 @@
-﻿using System;
-using Collector.Services.Navigation;
+﻿using Collector.Services.Navigation;
 
 namespace Collector.ViewModels.Home
 {

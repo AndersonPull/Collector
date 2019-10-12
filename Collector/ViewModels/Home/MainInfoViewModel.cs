@@ -1,5 +1,4 @@
-﻿using System;
-using System.Windows.Input;
+﻿using System.Windows.Input;
 using Collector.Models.Home;
 using Collector.Services.Home;
 using Collector.Services.Navigation;

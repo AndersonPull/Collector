@@ -1,5 +1,4 @@
-﻿
-namespace Collector.Models.Login
+﻿namespace Collector.Models.Login
 {
     public class LoginModel
     {

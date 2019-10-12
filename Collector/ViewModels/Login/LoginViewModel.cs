@@ -1,9 +1,6 @@
-﻿using System;
-using System.Windows.Input;
+﻿using System.Windows.Input;
 using Collector.Services.Navigation;
 using Collector.ViewModels.Home;
-using Collector.Views.Home.PopUpMateriais;
-using Rg.Plugins.Popup.Services;
 using Xamarin.Forms;
 
 namespace Collector.ViewModels.Login
