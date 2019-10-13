@@ -123,12 +123,10 @@
                         <StackLayout Margin="10">
 
                             <Editor Placeholder="Como você se descreveria?"
-                                    HeightRequest="120" 
-                                    />
+                                    HeightRequest="120" BackgroundColor="Transparent"/>
 
                             <Editor Placeholder="Conte um pouco da sua história"
-                                    HeightRequest="120"
-                                    />
+                                    HeightRequest="120" BackgroundColor="Transparent"/>
                         </StackLayout>
 
                         <ScrollView Orientation="Horizontal">
