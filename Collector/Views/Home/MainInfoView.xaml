@@ -4,6 +4,7 @@
              x:Class="Collector.Views.Home.MainInfoView"
              xmlns:flv="clr-namespace:DLToolkit.Forms.Controls;assembly=DLToolkit.Forms.Controls.FlowListView"
              BackgroundColor="#EBEBEB">
+
      <ContentPage.Content>
 
             <StackLayout>
