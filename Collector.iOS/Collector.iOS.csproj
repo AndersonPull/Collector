@@ -140,6 +140,9 @@
     <PackageReference Include="Microsoft.AppCenter.Push">
       <Version>2.1.1</Version>
     </PackageReference>
+    <PackageReference Include="Xam.Plugin.Geolocator">
+      <Version>4.5.0.6</Version>
+    </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
@@ -181,6 +184,9 @@
     <BundleResource Include="Resources\ic_telefone.png" />
     <BundleResource Include="Resources\ic_whatsapp.png" />
     <BundleResource Include="Resources\launchscreen.png" />
+    <BundleResource Include="Resources\pin_car.png" />
+    <BundleResource Include="Resources\pin_carroça.png" />
+    <BundleResource Include="Resources\pin_coperativa.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Renderers\" />
