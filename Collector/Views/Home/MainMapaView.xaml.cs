@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using Collector.ViewModels.Home;
 using Collector.ViewModels.ViewModelLocator;
 using Plugin.Geolocator;
@@ -16,7 +17,7 @@ namespace Collector.Views.Home
             Type = PinType.Place,
             Label = "Tokyo SKYTREE",
             Address = "Sumida-ku, Tokyo, Japan",
-            Position = new Position(35.71d, 139.81d)
+            Position = new Position(-23.558419, -46.660071)
         };
 
         readonly Pin _pinTokyo2 = new Pin()
@@ -24,7 +25,7 @@ namespace Collector.Views.Home
             Icon = BitmapDescriptorFactory.FromBundle("pin_car.png"),
             Type = PinType.Place,
             Label = "Second Pin",
-            Position = new Position(35.71d, 139.815d),
+            Position = new Position(-23.557969, -46.660549),
             ZIndex = 5
         };
 
@@ -33,26 +34,36 @@ namespace Collector.Views.Home
             Icon = BitmapDescriptorFactory.FromBundle("pin_coperativa.png"),
             Type = PinType.Place,
             Label = "Second Pin",
-            Position = new Position(35.71d, 139.818d),
+            Position = new Position(-23.559064, -46.661170),
             ZIndex = 5
         };
 
         public MainMapaView()
         {
+            ObterPosicaoAtual();
+
             InitializeComponent();
             map.MyLocationEnabled = true;
-            map.UiSettings.MyLocationButtonEnabled = true;
-           
+
             map.Pins.Add(_pinTokyo);
             map.Pins.Add(_pinTokyo2);
-
             map.Pins.Add(_pinTokyo3);
 
             var locator = CrossGeolocator.Current;
-            map.MoveToRegion(MapSpan.FromCenterAndRadius(new Position(35.71d, 139.815d),
-                                                         Distance.FromMiles(2)));
+            locator.DesiredAccuracy = 100;
+
             
-                        BindingContext = Locator.Instance.Resolve<MainMapaViewModel>();
+            BindingContext = Locator.Instance.Resolve<MainMapaViewModel>();
+        }
+
+        public async Task ObterPosicaoAtual()
+        {
+            var userLocation = await Xamarin.Essentials.Geolocation.GetLocationAsync();
+
+            var userPosition = new Position(userLocation.Latitude, userLocation.Longitude);
+
+            map.MoveToRegion(MapSpan.FromCenterAndRadius(userPosition, Distance.FromMeters(100)));
+            
         }
     }
 }
