@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using Collector.ViewModels.Home;
 using Collector.ViewModels.ViewModelLocator;
-using Plugin.Geolocator;
 using Xamarin.Forms;
 using Xamarin.Forms.GoogleMaps;
 
@@ -49,10 +46,6 @@ namespace Collector.Views.Home
             map.Pins.Add(_pinTokyo2);
             map.Pins.Add(_pinTokyo3);
 
-            var locator = CrossGeolocator.Current;
-            locator.DesiredAccuracy = 100;
-
-            
             BindingContext = Locator.Instance.Resolve<MainMapaViewModel>();
         }
 
