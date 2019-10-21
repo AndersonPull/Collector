@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Collector.Views.Login.LoginView"
              xmlns:CustomEntry="clr-namespace:Collector.Controls.CustomEntry"
-             BackgroundImageSource="Background.png">
+             BackgroundColor="#00BB54">
 
     <ContentPage.Content>
 
@@ -42,24 +42,23 @@
                                TextColor="#ffffff" FontSize="Medium"/>
 
                         <CustomEntry:CustomEntry Placeholder="Digite seu email"
-                                            PlaceholderColor="{OnPlatform Android=#EBEBEB}"
-                                            BackgroundColor="{OnPlatform iOS=#EBEBEB}"
-                                            CornerRadius="18" IsCurvedCornersEnabled="True"
-                                            HorizontalOptions="FillAndExpand"
-                                            FontSize="17" HeightRequest="45"
-                                            Margin="0,15,0,0" TextColor="{OnPlatform iOS=#575757, Android=#EBEBEB}"
-                                            FontAttributes="Bold" BorderColor="#EBEBEB"
-                                            />
+                                                 PlaceholderColor="{OnPlatform Android=#EBEBEB}"
+                                                 BackgroundColor="{OnPlatform iOS=#EBEBEB}"
+                                                 CornerRadius="18" IsCurvedCornersEnabled="True"
+                                                 HorizontalOptions="FillAndExpand"
+                                                 FontSize="17" HeightRequest="45"
+                                                 Margin="0,15,0,0" TextColor="{OnPlatform iOS=#575757, Android=#EBEBEB}"
+                                                 FontAttributes="Bold" BorderColor="#EBEBEB" />
 
                         <CustomEntry:CustomEntry Placeholder="Digite sua senha"
-                                            PlaceholderColor="{OnPlatform Android=#EBEBEB}"
-                                            BackgroundColor="{OnPlatform iOS=#EBEBEB}"
-                                            CornerRadius="18" IsCurvedCornersEnabled="True"
-                                            HorizontalOptions="FillAndExpand"
-                                            FontSize="17" HeightRequest="45"
-                                            Margin="0,15,0,0" IsPassword="True"
-                                            TextColor="{OnPlatform iOS=#575757, Android=#EBEBEB}"
-                                            FontAttributes="Bold" BorderColor="#EBEBEB"/>
+                                                 PlaceholderColor="{OnPlatform Android=#EBEBEB}"
+                                                 BackgroundColor="{OnPlatform iOS=#EBEBEB}"
+                                                 CornerRadius="18" IsCurvedCornersEnabled="True"
+                                                 HorizontalOptions="FillAndExpand"
+                                                 FontSize="17" HeightRequest="45"
+                                                 Margin="0,15,0,0" IsPassword="True"
+                                                 TextColor="{OnPlatform iOS=#575757, Android=#EBEBEB}"
+                                                 FontAttributes="Bold" BorderColor="#EBEBEB"/>
 
                         <Button Text="Entrar" TextColor="#00BB54"  Margin="0,15,0,0"
                                 BackgroundColor="#EBEBEB" WidthRequest="45"
@@ -71,21 +70,21 @@
 
                     <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="EndAndExpand">
 
-                        <Label Text="ou faça o login com" TextColor="#ffffff" FontSize="20"
+                        <Label Text="ou faça o login com" TextColor="#ffffff" 
                                HorizontalOptions="FillAndExpand" VerticalTextAlignment="Center"
-                               FontAttributes="Bold" Margin="0,15,0,0"/>
+                               FontAttributes="Bold" Margin="0,15,0,0" FontSize="20"/>
 
                         <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
 
                             <ImageButton Source="ButomFacebook.png" Margin="0,15,15,15"
-                                    BackgroundColor="#EBEBEB" HorizontalOptions="FillAndExpand"
-                                    WidthRequest="45" VerticalOptions="FillAndExpand"
-                                    HeightRequest="45" CornerRadius="18"/>
+                                         BackgroundColor="#EBEBEB" HorizontalOptions="FillAndExpand"
+                                         WidthRequest="45" VerticalOptions="FillAndExpand"
+                                         HeightRequest="45" CornerRadius="18"/>
 
                             <ImageButton Source="ButomGoogle.png" Margin="15,15,0,15"
-                                BackgroundColor="#EBEBEB" WidthRequest="45"
-                                VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"
-                                HeightRequest="45" CornerRadius="18" />
+                                         BackgroundColor="#EBEBEB" WidthRequest="45"
+                                         VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"
+                                         HeightRequest="45" CornerRadius="18" />
 
                         </StackLayout>
 
