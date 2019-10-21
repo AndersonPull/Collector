@@ -182,8 +182,10 @@
     <BundleResource Include="Resources\ic_whatsapp.png" />
     <BundleResource Include="Resources\launchscreen.png" />
     <BundleResource Include="Resources\pin_car.png" />
-    <BundleResource Include="Resources\pin_carroça.png" />
+    <BundleResource Include="Resources\pin_carroca.png" />
     <BundleResource Include="Resources\pin_coperativa.png" />
+    <BundleResource Include="Resources\pin_PEV.png" />
+    <BundleResource Include="Resources\pin_ferroVelho.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Renderers\" />

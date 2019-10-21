@@ -266,18 +266,6 @@
       <SubType></SubType>
       <Generator></Generator>
     </AndroidResource>
-    <AndroidResource Include="Resources\drawable\pin_car.png">
-      <SubType></SubType>
-      <Generator></Generator>
-    </AndroidResource>
-    <AndroidResource Include="Resources\drawable\pin_carroça.png">
-      <SubType></SubType>
-      <Generator></Generator>
-    </AndroidResource>
-    <AndroidResource Include="Resources\drawable\pin_coperativa.png">
-      <SubType></SubType>
-      <Generator></Generator>
-    </AndroidResource>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable\" />
@@ -292,6 +280,19 @@
       <Project>{764F45FF-4882-4B14-AE8F-FB6D0D1B8192}</Project>
       <Name>Collector</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pin_car.png">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\pin_coperativa.png">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\pin_carroca.png" />
+    <AndroidAsset Include="Assets\pin_ferroVelho.png" />
+    <AndroidAsset Include="Assets\pin_PEV.png" />
   </ItemGroup>
  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

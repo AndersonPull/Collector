@@ -8403,16 +8403,13 @@ namespace Collector.Droid
 			public const int notify_panel_notification_icon_bg = 2131165549;
 			
 			// aapt resource value: 0x7F07016E
-			public const int pin_car = 2131165550;
+			public const int splashscreen = 2131165550;
 			
 			// aapt resource value: 0x7F07016F
-			public const int splashscreen = 2131165551;
+			public const int tooltip_frame_dark = 2131165551;
 			
 			// aapt resource value: 0x7F070170
-			public const int tooltip_frame_dark = 2131165552;
-			
-			// aapt resource value: 0x7F070171
-			public const int tooltip_frame_light = 2131165553;
+			public const int tooltip_frame_light = 2131165552;
 			
 			static Drawable()
 			{

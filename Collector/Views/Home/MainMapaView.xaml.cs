@@ -8,12 +8,13 @@ namespace Collector.Views.Home
 {
     public partial class MainMapaView : ContentPage
     {
+
+
         readonly Pin _pinTokyo = new Pin()
         {
-            Icon = BitmapDescriptorFactory.FromBundle("pin_carroça.png"),
+            Icon = BitmapDescriptorFactory.FromBundle("pin_carroca.png"),
             Type = PinType.Place,
             Label = "Tokyo SKYTREE",
-            Address = "Sumida-ku, Tokyo, Japan",
             Position = new Position(-23.558419, -46.660071)
         };
 
@@ -51,11 +52,12 @@ namespace Collector.Views.Home
 
         public async Task ObterPosicaoAtual()
         {
+
             var userLocation = await Xamarin.Essentials.Geolocation.GetLocationAsync();
 
             var userPosition = new Position(userLocation.Latitude, userLocation.Longitude);
 
-            map.MoveToRegion(MapSpan.FromCenterAndRadius(userPosition, Distance.FromMeters(100)));
+            map.MoveToRegion(MapSpan.FromCenterAndRadius(userPosition, Distance.FromMeters(300)));
             
         }
     }
