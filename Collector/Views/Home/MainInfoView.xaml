@@ -11,7 +11,7 @@
 
                 <StackLayout>
 
-                        <Image Source="BackgroundPerfil.png" Aspect="AspectFill" />
+                    <Image Source="BackgroundPerfil.png" Aspect="AspectFill" />
 
                     <StackLayout Margin="10,-150,10,0" HeightRequest="175">
 
@@ -72,11 +72,11 @@
                                 <StackLayout WidthRequest="2600">
                     
                                     <flv:FlowListView RowHeight="130" FlowColumnCount="12"
-                                                   FlowColumnExpand="First"
-                                                   SeparatorVisibility="None" BackgroundColor="Transparent"
-                                                   HasUnevenRows="false" IsInNativeLayout="true"
-                                                   FlowItemTappedCommand="{Binding ItemSelectedCommand}"
-                                                   FlowItemsSource="{Binding ItensMenu}">
+                                                      FlowColumnExpand="First"
+                                                      SeparatorVisibility="None" BackgroundColor="Transparent"
+                                                      HasUnevenRows="false" IsInNativeLayout="true"
+                                                      FlowItemTappedCommand="{Binding ItemSelectedCommand}"
+                                                      FlowItemsSource="{Binding ItensMenu}">
 
                                         <flv:FlowListView.FlowColumnTemplate>
 
@@ -130,6 +130,7 @@
 
                             <Editor Placeholder="Conte um pouco da sua história"
                                     HeightRequest="120" BackgroundColor="Transparent"/>
+
                         </StackLayout>
 
                         <ScrollView Orientation="Horizontal">
@@ -146,9 +147,9 @@
                                             WidthRequest="60" HeightRequest="60" />
 
                                         <Label Text="Quem somos" FontSize="17"
-                                            TextColor="#00BB54" FontAttributes="Bold"
-                                            HorizontalOptions="CenterAndExpand"
-                                            HorizontalTextAlignment="Center"/>
+                                               TextColor="#00BB54" FontAttributes="Bold"
+                                               HorizontalOptions="CenterAndExpand"
+                                               HorizontalTextAlignment="Center"/>
 
                                     </StackLayout>
 

@@ -10,7 +10,7 @@
         <Grid>
                             
             <maps:Map Grid.Row="0" x:Name="map" VerticalOptions="FillAndExpand"
-                    HorizontalOptions="FillAndExpand"/>
+                      HorizontalOptions="FillAndExpand"/>
 
             <FlexLayout Grid.Row="0" VerticalOptions="Start" HeightRequest="45"
                         Margin="20,60,10,0" HorizontalOptions="FillAndExpand" >
@@ -28,13 +28,13 @@
                                  HorizontalOptions="StartAndExpand">
 
                         <CustomEntry:CustomEntry  Placeholder="Endreço"
-                                             WidthRequest="{OnPlatform Android=210, iOS=250}"
-                                             HorizontalOptions="StartAndExpand"
-                                             VerticalOptions="FillAndExpand"
-                                             BorderColor="#ffffff"
-                                             TextColor="#ACACAC"
-                                             PlaceholderColor="#A2A2A2"
-                                             BackgroundColor="Transparent"/>
+                                                  WidthRequest="{OnPlatform Android=210, iOS=250}"
+                                                  HorizontalOptions="StartAndExpand"
+                                                  VerticalOptions="FillAndExpand"
+                                                  BorderColor="#ffffff"
+                                                  TextColor="#ACACAC"
+                                                  PlaceholderColor="#A2A2A2"
+                                                  BackgroundColor="Transparent"/>
 
                         <BoxView WidthRequest="1" HeightRequest="35"
                                  BackgroundColor="#ACACAC" VerticalOptions="Center"/>
