@@ -11,6 +11,7 @@ namespace Collector.ViewModels.ViewModelLocator
     public class Locator
     {
         private readonly IUnityContainer _container;
+
         private static readonly Locator _instance = new Locator();
 
         public static Locator Instance
