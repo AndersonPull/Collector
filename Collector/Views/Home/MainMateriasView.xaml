@@ -11,38 +11,38 @@
             <StackLayout Margin="0,60,0,0" VerticalOptions="StartAndExpand"
                          HorizontalOptions="CenterAndExpand">
 
-                 <flv:FlowListView RowHeight="130" FlowColumnCount="3"
+                <flv:FlowListView RowHeight="130" FlowColumnCount="3"
                                    FlowColumnExpand="First"
                                    SeparatorVisibility="None" BackgroundColor="Transparent"
                                    HasUnevenRows="false" IsInNativeLayout="true"
                                    FlowItemTappedCommand="{Binding ItemSelectedCommand}"
                                    FlowItemsSource="{Binding ItensMenu}">
 
-                     <flv:FlowListView.FlowColumnTemplate>
+                    <flv:FlowListView.FlowColumnTemplate>
 
-                         <DataTemplate>
+                        <DataTemplate>
 
-                             <Frame BackgroundColor="Transparent" CornerRadius="8"
-                                    BorderColor="#00BB54" HasShadow="False" Padding="10"
-                                    Margin="5">
+                            <Frame BackgroundColor="Transparent" CornerRadius="8"
+                                BorderColor="#00BB54" HasShadow="False" Padding="10"
+                                Margin="5">
 
-                                 <StackLayout>
+                                <StackLayout>
 
-                                     <Image Source="{Binding Imagem}" Aspect="AspectFit"
-                                            WidthRequest="60" HeightRequest="60" />
+                                    <Image Source="{Binding Imagem}" Aspect="AspectFit"
+                                        WidthRequest="60" HeightRequest="60" />
 
-                                     <Label Text="{Binding Texto}" FontSize="17"
-                                            TextColor="#00BB54" FontAttributes="Bold"
-                                            HorizontalOptions="CenterAndExpand"
-                                            HorizontalTextAlignment="Center"/>
+                                    <Label Text="{Binding Texto}" FontSize="17"
+                                        TextColor="#00BB54" FontAttributes="Bold"
+                                        HorizontalOptions="CenterAndExpand"
+                                        HorizontalTextAlignment="Center"/>
 
-                                 </StackLayout>
+                                </StackLayout>
 
-                             </Frame>
+                            </Frame>
 
-                         </DataTemplate>
+                        </DataTemplate>
 
-                     </flv:FlowListView.FlowColumnTemplate>
+                    </flv:FlowListView.FlowColumnTemplate>
 
                 </flv:FlowListView>
 
