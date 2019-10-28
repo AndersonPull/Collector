@@ -9,7 +9,7 @@ namespace Collector.Views.Home
     public partial class MainMapaView : ContentPage
     {
 
-
+        //TODO ARRUMAR ESSA BAGUNÇA
         readonly Pin _pin1 = new Pin()
         {
             Icon = BitmapDescriptorFactory.FromBundle("pin_carroca.png"),
