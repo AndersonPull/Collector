@@ -1,4 +1,5 @@
-﻿using System.Windows.Input;
+﻿using System.Threading.Tasks;
+using System.Windows.Input;
 using Collector.Models.Home;
 using Collector.Services.Home;
 using Collector.Services.Navigation;
@@ -42,7 +43,7 @@ namespace Collector.ViewModels.Home
             }
         }
 
-        public async void ShowPopup(MateriaisModel item)
+        public async Task ShowPopup(MateriaisModel item)
         {
             var pop = new MaterialPopUp(item);
 
