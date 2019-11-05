@@ -3,8 +3,6 @@ using Collector.Services.Navigation;
 using Collector.ViewModels.ViewModelLocator;
 using DLToolkit.Forms.Controls;
 using Xamarin.Forms;
-using Microsoft.AppCenter;
-using Microsoft.AppCenter.Push;
 
 namespace Collector
 {
@@ -25,8 +23,7 @@ namespace Collector
 
         protected override void OnStart()
         {
-            //AppCenter.Start("98dc8fdf-10c1-4139-9758-0bbd010791e4", typeof(Push));
-            //AppCenter.Start("5274d462-e66f-4fc6-95f8-61bdc822d6c0", typeof(Push));
+
         }
 
         protected override void OnSleep()
