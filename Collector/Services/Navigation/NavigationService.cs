@@ -25,7 +25,6 @@ namespace Collector.Services.Navigation
 
         public NavigationService()
         {
-
             _mappings = new Dictionary<Type, Type>();
             CreatePageViewModelMappings();
         }
