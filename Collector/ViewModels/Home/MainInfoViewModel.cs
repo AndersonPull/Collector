@@ -19,7 +19,6 @@ namespace Collector.ViewModels.Home
             ItensMenu = new FlowObservableCollection<MateriaisModel>();
             _service = new MenuService();
             _serviceNavigation = serviceNavigation;
-
             CarregarMenu();
         }
 
