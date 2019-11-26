@@ -152,10 +152,12 @@
                                             HorizontalTextAlignment="Center"/>
 
                                 </StackLayout>
+
                                 <Frame.GestureRecognizers>
                                     <TapGestureRecognizer Command="{Binding QuemSomosCommand}"
                                                           NumberOfTapsRequired="1"/>
                                 </Frame.GestureRecognizers>
+
                             </Frame>
 
                             <Frame BackgroundColor="Transparent" CornerRadius="8"
@@ -174,6 +176,10 @@
 
                                 </StackLayout>
 
+                                <Frame.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding ParaOndeVamosCommand}"
+                                                          NumberOfTapsRequired="1"/>
+                                </Frame.GestureRecognizers>
                             </Frame>
 
                             <Frame BackgroundColor="Transparent" CornerRadius="8"

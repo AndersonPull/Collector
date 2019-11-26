@@ -37,6 +37,7 @@ namespace Collector.ViewModels.ViewModelLocator
             _container.RegisterType<MaterialPopUpViewModel>();
             _container.RegisterType<DetalhesDosUsuarioViewModel>();
             _container.RegisterType<QuemSomosViewModel>();
+            _container.RegisterType<ParaOndeVAmosViewModel>();
         }
 
         public T Resolve<T>()

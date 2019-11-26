@@ -49,5 +49,27 @@ namespace Collector.ViewModels.Home
                 });
             }
         }
+
+        public ICommand ParaOndeVamosCommand
+        {
+            get
+            {
+                return new Command(async () =>
+                {
+                    await _serviceNavigation.NavigateToAsync<ParaOndeVAmosViewModel>();
+                });
+            }
+        }
+
+        public ICommand ColaboreCommand
+        {
+            get
+            {
+                return new Command(async () =>
+                {
+                    await _serviceNavigation.NavigateToAsync<QuemSomosViewModel>();
+                });
+            }
+        }
     }
 }
