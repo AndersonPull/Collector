@@ -168,7 +168,6 @@
     <BundleResource Include="Resources\ic_entulho.png" />
     <BundleResource Include="Resources\ic_eletronicos.png" />
     <BundleResource Include="Resources\ic_papel.png" />
-    <BundleResource Include="Resources\BackgroundPerfil.png" />
     <BundleResource Include="Resources\ic_moveis.png" />
     <BundleResource Include="Resources\fotoPerfil.png" />
     <BundleResource Include="Resources\ic_colabore.png" />

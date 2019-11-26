@@ -11,7 +11,7 @@
 
             <StackLayout>
 
-                <Image Source="BackgroundPerfil.png" Aspect="AspectFill" />
+                <Image Source="BackgroundCatador.png" Aspect="AspectFill" />
 
                 <StackLayout Margin="10,-150,10,0" HeightRequest="175">
 
@@ -152,7 +152,10 @@
                                             HorizontalTextAlignment="Center"/>
 
                                 </StackLayout>
-
+                                <Frame.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding QuemSomosCommand}"
+                                                          NumberOfTapsRequired="1"/>
+                                </Frame.GestureRecognizers>
                             </Frame>
 
                             <Frame BackgroundColor="Transparent" CornerRadius="8"

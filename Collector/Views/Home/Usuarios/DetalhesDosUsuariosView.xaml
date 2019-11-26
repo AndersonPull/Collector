@@ -3,7 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Collector.Views.Home.Usuarios.DetalhesDosUsuariosView"
              xmlns:flv="clr-namespace:DLToolkit.Forms.Controls;assembly=DLToolkit.Forms.Controls.FlowListView"
-             BackgroundColor="#EBEBEB">
+             BackgroundColor="#EBEBEB"
+             Title="Detalhes">
     <ContentPage.Content>
 
         <StackLayout>

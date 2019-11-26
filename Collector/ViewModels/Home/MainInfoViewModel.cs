@@ -2,6 +2,7 @@
 using Collector.Models.Home;
 using Collector.Services.Home;
 using Collector.Services.Navigation;
+using Collector.ViewModels.Home.QuemSomos;
 using Collector.ViewModels.Login;
 using DLToolkit.Forms.Controls;
 using Xamarin.Forms;
@@ -34,6 +35,17 @@ namespace Collector.ViewModels.Home
                 return new Command(async () =>
                 {
                     await _serviceNavigation.NavigateToAsync<LoginViewModel>();
+                });
+            }
+        }
+
+        public ICommand QuemSomosCommand
+        {
+            get
+            {
+                return new Command(async () =>
+                {
+                    await _serviceNavigation.NavigateToAsync<QuemSomosViewModel>();
                 });
             }
         }

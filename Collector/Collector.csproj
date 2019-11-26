@@ -43,6 +43,8 @@
     <Folder Include="Models\Usuarios\" />
     <Folder Include="Services\Usuarios\" />
     <Folder Include="Controls\CustomEntry\" />
+    <Folder Include="Views\Home\QuemSomos\" />
+    <Folder Include="ViewModels\Home\QuemSomos\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="AssemblyInfo.cs" />

@@ -2,6 +2,7 @@
 using Collector.Services.Navigation;
 using Collector.ViewModels.Home;
 using Collector.ViewModels.Home.PopUpMateriais;
+using Collector.ViewModels.Home.QuemSomos;
 using Collector.ViewModels.Home.Usuarios;
 using Collector.ViewModels.Login;
 using Unity;
@@ -35,6 +36,7 @@ namespace Collector.ViewModels.ViewModelLocator
             _container.RegisterType<ListaDeUsuariosViewModel>();
             _container.RegisterType<MaterialPopUpViewModel>();
             _container.RegisterType<DetalhesDosUsuarioViewModel>();
+            _container.RegisterType<QuemSomosViewModel>();
         }
 
         public T Resolve<T>()

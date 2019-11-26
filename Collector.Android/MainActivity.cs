@@ -11,12 +11,12 @@ namespace Collector.Droid
     {
         protected override void OnCreate(Bundle savedInstanceState)
         {
-            if (Build.VERSION.SdkInt >= Build.VERSION_CODES.Lollipop)
-            {
-                Window.AddFlags(WindowManagerFlags.LayoutNoLimits);
-                Window.AddFlags(WindowManagerFlags.LayoutInScreen);
-                Window.DecorView.SetFitsSystemWindows(true);
-            }
+            //if (Build.VERSION.SdkInt >= Build.VERSION_CODES.Lollipop)
+            //{
+            //    Window.AddFlags(WindowManagerFlags.LayoutNoLimits);
+            //    Window.AddFlags(WindowManagerFlags.LayoutInScreen);
+            //    Window.DecorView.SetFitsSystemWindows(true);
+            //}
             TabLayoutResource = Resource.Layout.Tabbar;
             ToolbarResource = Resource.Layout.Toolbar;
 
