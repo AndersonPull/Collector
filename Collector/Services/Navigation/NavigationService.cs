@@ -161,6 +161,7 @@ namespace Collector.Services.Navigation
             _mappings.Add(typeof(DetalhesDosUsuarioViewModel), typeof(DetalhesDosUsuariosView));
             _mappings.Add(typeof(QuemSomosViewModel), typeof(QuemSomosView));
             _mappings.Add(typeof(ParaOndeVAmosViewModel), typeof(ParaOndeVamosView));
+            _mappings.Add(typeof(ColaboreViewModel), typeof(ColaboreView));
 
 
         }

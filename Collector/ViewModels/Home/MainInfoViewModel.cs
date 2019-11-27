@@ -67,7 +67,7 @@ namespace Collector.ViewModels.Home
             {
                 return new Command(async () =>
                 {
-                    await _serviceNavigation.NavigateToAsync<QuemSomosViewModel>();
+                    await _serviceNavigation.NavigateToAsync<ColaboreViewModel>();
                 });
             }
         }

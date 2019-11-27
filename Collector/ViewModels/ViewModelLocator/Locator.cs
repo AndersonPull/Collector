@@ -38,6 +38,7 @@ namespace Collector.ViewModels.ViewModelLocator
             _container.RegisterType<DetalhesDosUsuarioViewModel>();
             _container.RegisterType<QuemSomosViewModel>();
             _container.RegisterType<ParaOndeVAmosViewModel>();
+            _container.RegisterType<ColaboreViewModel>();
         }
 
         public T Resolve<T>()

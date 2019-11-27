@@ -180,6 +180,7 @@
                                     <TapGestureRecognizer Command="{Binding ParaOndeVamosCommand}"
                                                           NumberOfTapsRequired="1"/>
                                 </Frame.GestureRecognizers>
+
                             </Frame>
 
                             <Frame BackgroundColor="Transparent" CornerRadius="8"
@@ -197,6 +198,11 @@
                                         HorizontalTextAlignment="Center"/>
 
                                 </StackLayout>
+
+                                <Frame.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding ColaboreCommand}"
+                                                          NumberOfTapsRequired="1"/>
+                                </Frame.GestureRecognizers>
 
                             </Frame>
 
