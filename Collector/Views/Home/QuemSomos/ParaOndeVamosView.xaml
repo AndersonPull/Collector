@@ -5,7 +5,7 @@
              Title="Para onde vamos">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="txt"/>
+            <Label Text="Para onde vamos"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

@@ -5,7 +5,7 @@
              Title="Quem Somos">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Teste"/>
+            <Label Text="Quem Somos"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
