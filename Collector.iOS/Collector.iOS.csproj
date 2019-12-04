@@ -140,6 +140,9 @@
     <PackageReference Include="Microsoft.AppCenter.Push">
       <Version>2.1.1</Version>
     </PackageReference>
+    <PackageReference Include="Xamarin.Forms.Skeleton">
+      <Version>1.0.0</Version>
+    </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>

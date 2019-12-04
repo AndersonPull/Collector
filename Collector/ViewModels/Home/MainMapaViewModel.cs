@@ -1,6 +1,7 @@
 ﻿using System.Windows.Input;
 using Collector.Services.Navigation;
 using Collector.ViewModels.Home.Usuarios;
+using Collector.Views.Home.Usuarios;
 using Xamarin.Forms;
 
 namespace Collector.ViewModels.Home

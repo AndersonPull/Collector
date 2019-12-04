@@ -3,22 +3,33 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Collector.Views.Home.Usuarios.ListaDeUsuariosView"
              xmlns:flv="clr-namespace:DLToolkit.Forms.Controls;assembly=DLToolkit.Forms.Controls.FlowListView"
+             xmlns:shimmer="clr-namespace:Xamarin.Forms.Skeleton;assembly=Xamarin.Forms.Skeleton"
              Title="Catadores">
+    
     <ContentPage.Content>
 
         <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+
             <flv:FlowListView FlowItemsSource="{Binding Usuarios}" 
                               HasUnevenRows="True" FlowColumnCount="1" 
                               BackgroundColor="Transparent" VerticalOptions="FillAndExpand"
                               FlowItemTappedCommand="{Binding UsuarioSelecionado}"
-                              x:Name="usuarios">
+                              x:Name="usuarios"
+                              shimmer:Skeleton.IsParent="True"
+                              shimmer:Skeleton.IsBusy="{Binding IsBusy}"
+                              shimmer:Skeleton.Animation="Fade">
 
                 <flv:FlowListView.FlowColumnTemplate >
                     <DataTemplate>
                         <StackLayout>
                             <Frame  WidthRequest="300" HeightRequest="100" CornerRadius="20"
                                     HasShadow="False" VerticalOptions="Center" BackgroundColor="#00BB54"
-                                    Margin="10" IsClippedToBounds="true">
+                                    Margin="10" IsClippedToBounds="true"
+                                    shimmer:Skeleton.IsParent="True"
+                                    shimmer:Skeleton.Animation="Fade"
+                                    shimmer:Skeleton.AnimationParameter="1.1"
+                                    shimmer:Skeleton.IsBusy="{Binding IsBusy}"
+                                    shimmer:Skeleton.BackgroundColor="#D3D3D3">
 
                                 <StackLayout Orientation="Horizontal" >
 

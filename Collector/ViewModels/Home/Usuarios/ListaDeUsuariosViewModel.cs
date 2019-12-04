@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using System;
+using System.Threading.Tasks;
 using System.Windows.Input;
 using Collector.Models.Usuarios;
 using Collector.Services.Navigation;
@@ -58,10 +59,45 @@ namespace Collector.ViewModels.Home.Usuarios
         }
 
         public void Animar(UsuarioModel usuario)
-        { 
+        {
             var index = Usuarios.IndexOf(usuario);
             Usuarios.Remove(usuario);
             Usuarios.Insert(index, usuario);
+        }
+
+        bool isBusy = false;
+        public bool IsBusy
+        {
+            get { return isBusy; }
+            set
+            {
+                isBusy = value;
+                //OnPropertyChanged();
+            }
+        }
+
+        
+
+        private async Task PerformShimmerTaskAsync()
+        {
+
+            var usuariosProximos = await _service.UsuariosProximos();
+            foreach (var usuario in usuariosProximos)
+            {
+                Usuarios.Add(usuario);
+            }
+
+            this.IsBusy = true;
+
+            await Task.Delay(3000);
+
+            this.IsBusy = false;
+
+            var usuariosProximos1 = await _service.UsuariosProximos();
+            foreach (var usuario in usuariosProximos1)
+            {
+                Usuarios.Add(usuario);
+            }
         }
     }
 }
