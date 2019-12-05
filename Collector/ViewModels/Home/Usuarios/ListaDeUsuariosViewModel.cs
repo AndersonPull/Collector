@@ -9,17 +9,16 @@ using Xamarin.Forms;
 
 namespace Collector.ViewModels.Home.Usuarios
 {
-    public class ListaDeUsuariosViewModel : BaseVM
+    public class ListaDeUsuariosViewModel : BindableObject
     {
         INavigationService _serviceNavigation;
         UsuariosService _service;
         public FlowObservableCollection<UsuarioModel> Usuarios { get; set; }
-        public ListaDeUsuariosViewModel(INavigationService serviceNavigation)
+        public ListaDeUsuariosViewModel()
         {
             Usuarios = new FlowObservableCollection<UsuarioModel>();
             _service = new UsuariosService();
-            _serviceNavigation = serviceNavigation;
-            CarregarListaUsuarios();
+            PerformShimmerTaskAsync();
         }
 
         public async Task CarregarListaUsuarios()
@@ -72,16 +71,14 @@ namespace Collector.ViewModels.Home.Usuarios
             set
             {
                 isBusy = value;
-                //OnPropertyChanged();
+                OnPropertyChanged();
             }
-        }
-
-        
+        }        
 
         private async Task PerformShimmerTaskAsync()
         {
 
-            var usuariosProximos = await _service.UsuariosProximos();
+            var usuariosProximos = await _service.UsuariosProximos1();
             foreach (var usuario in usuariosProximos)
             {
                 Usuarios.Add(usuario);
@@ -94,8 +91,10 @@ namespace Collector.ViewModels.Home.Usuarios
             this.IsBusy = false;
 
             var usuariosProximos1 = await _service.UsuariosProximos();
+            Usuarios.Clear();
             foreach (var usuario in usuariosProximos1)
             {
+                
                 Usuarios.Add(usuario);
             }
         }

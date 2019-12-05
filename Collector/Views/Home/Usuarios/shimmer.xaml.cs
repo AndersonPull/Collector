@@ -5,14 +5,12 @@ using Xamarin.Forms;
 
 namespace Collector.Views.Home.Usuarios
 {
-    public partial class ListaDeUsuariosView : ContentPage
+    public partial class shimmer : ContentPage
     {
-        public ListaDeUsuariosView()
+        public shimmer()
         {
-            NavigationPage.SetBackButtonTitle(this, "");
             InitializeComponent();
-            BindingContext = new ListaDeUsuariosViewModel();
-
+            BindingContext = new shimmerViewModel();
 
         }
     }

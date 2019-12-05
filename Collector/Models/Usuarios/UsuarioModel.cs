@@ -20,5 +20,8 @@ namespace Collector.Models.Usuarios
         public string Telefone { get; set; }
 
         public bool MaisDetalhes { get; set; }
+
+        public bool IsBusy { get; set; }
+
     }
 }
