@@ -20,9 +20,9 @@ namespace Collector.Services.Usuarios
         {
             return new List<UsuarioModel>
             {
-                new UsuarioModel { Id = 0 },
-                new UsuarioModel { Id = 1 },
-                new UsuarioModel { Id = 2  },
+                new UsuarioModel { Id = 0, IsBusy = true },
+                new UsuarioModel { Id = 1, IsBusy = true },
+                new UsuarioModel { Id = 2, IsBusy = true },
             };
         }
     }

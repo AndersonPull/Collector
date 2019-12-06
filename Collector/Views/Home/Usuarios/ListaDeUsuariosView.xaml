@@ -23,20 +23,20 @@
                     <DataTemplate>
                         <StackLayout>
                             <Frame  WidthRequest="300" HeightRequest="100" CornerRadius="20"
-                                    HasShadow="False" VerticalOptions="Center" BackgroundColor="#00BB54"
+                                    HasShadow="False" VerticalOptions="Center" BackgroundColor="#04C85C"
                                     Margin="10" IsClippedToBounds="true"
                                     extension:Skeleton.IsParent="True"
                                     extension:Skeleton.Animation="Fade"
                                     extension:Skeleton.AnimationParameter="1.1"
                                     extension:Skeleton.IsBusy="{Binding IsBusy}"
-                                    extension:Skeleton.BackgroundColor="#D3D3D3">
+                                    extension:Skeleton.BackgroundColor="#04C85C">
 
                                 <StackLayout Orientation="Horizontal" >
 
                                     <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand"
                                                  VerticalOptions="FillAndExpand">
 
-                                        <Frame BackgroundColor="Gray"  HorizontalOptions="Start"
+                                        <Frame  HorizontalOptions="Start" BackgroundColor="#018A3E"
                                                VerticalOptions="Start" WidthRequest="60" HasShadow="False"
                                                HeightRequest="60" Padding="0" CornerRadius="30"
                                                IsClippedToBounds="true">
@@ -52,12 +52,12 @@
                                             <Label Text="{Binding Apelido}" TextColor="#ffffff"
                                                    FontSize="Small" FontAttributes="Bold"
                                                    extension:Skeleton.IsBusy="{Binding IsBusy}"
-                                                   extension:Skeleton.BackgroundColor="#C0C0C0"/>
+                                                   extension:Skeleton.BackgroundColor="#018A3E"/>
 
                                             <Label Text="{Binding Nome}" TextColor="#ffffff"
                                                    FontSize="Micro" FontAttributes="None"
                                                    extension:Skeleton.IsBusy="{Binding IsBusy}"
-                                                   extension:Skeleton.BackgroundColor="#C0C0C0"/>
+                                                   extension:Skeleton.BackgroundColor="#018A3E"/>
 
                                             <FlexLayout Margin="0,20,0,0">
 
@@ -77,8 +77,13 @@
                                     </StackLayout>
 
                                     <StackLayout >
-                                        <Image  Source="dotButton.png" BackgroundColor="transparent"
-                                                     WidthRequest="35">
+
+                                        <Image  Source="dotButton.png"
+                                                BackgroundColor="transparent"
+                                                WidthRequest="35"
+                                                extension:Skeleton.IsBusy="{Binding IsBusy}"
+                                                extension:Skeleton.Hide="True"
+                                                extension:Skeleton.BackgroundColor="#018A3E">
                                             <Image.GestureRecognizers>
                                                 <TapGestureRecognizer   Command="{Binding Path=BindingContext.NavegarParaDetalhes, Source={x:Reference usuarios}}"
                                                                         CommandParameter="{Binding .}"
@@ -87,13 +92,20 @@
                                         </Image>
 
                                         <Image Source="carButton.png" WidthRequest="50"
-                                               HeightRequest="50"/>
+                                               HeightRequest="50"
+                                               extension:Skeleton.IsBusy="{Binding IsBusy}"
+                                                extension:Skeleton.Hide="True"
+                                                extension:Skeleton.BackgroundColor="#018A3E"/>
 
                                         <Label Text="1.6 Km" TextColor="#ffffff" FontSize="Micro"
-                                               HorizontalTextAlignment="Center"/>
+                                               HorizontalTextAlignment="Center"
+                                               extension:Skeleton.IsBusy="{Binding IsBusy}"
+                                               extension:Skeleton.BackgroundColor="#018A3E"/>
 
                                         <Label Text="da sua localização" TextColor="#ffffff" FontSize="Micro"
-                                               HorizontalTextAlignment="Center"/>
+                                               HorizontalTextAlignment="Center"
+                                               extension:Skeleton.IsBusy="{Binding IsBusy}"
+                                               extension:Skeleton.BackgroundColor="#018A3E"/>
 
                                     </StackLayout>
 
