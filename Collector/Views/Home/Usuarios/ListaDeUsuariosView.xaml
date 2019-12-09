@@ -29,7 +29,7 @@
                                     extension:Skeleton.Animation="Fade"
                                     extension:Skeleton.AnimationParameter="1.1"
                                     extension:Skeleton.IsBusy="{Binding IsBusy}"
-                                    extension:Skeleton.BackgroundColor="#04C85C">
+                                    extension:Skeleton.BackgroundColor="#2CD076">
 
                                 <StackLayout Orientation="Horizontal" >
 
@@ -128,7 +128,10 @@
                                            VerticalTextAlignment="Start" HorizontalTextAlignment="Center"/>
 
                                     <StackLayout Orientation="Horizontal" VerticalOptions="EndAndExpand"
-                                                 HorizontalOptions="End">
+                                                 HorizontalOptions="End"
+                                                 extension:Skeleton.IsBusy="{Binding IsBusy}"
+                                                 extension:Skeleton.BackgroundColor="#018A3E"
+                                                 >
 
                                         <Image Source="ic_telefone.png" WidthRequest="30"
                                                HeightRequest="20" Margin="2"/>

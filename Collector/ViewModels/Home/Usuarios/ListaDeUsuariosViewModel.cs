@@ -78,9 +78,10 @@ namespace Collector.ViewModels.Home.Usuarios
         private async Task PerformShimmerTaskAsync()
         {
 
-            var usuariosProximos = await _service.UsuariosProximos1();
+            var usuariosProximos = await _service.UsuariosProximos();
             foreach (var usuario in usuariosProximos)
             {
+                usuario.IsBusy = true;
                 Usuarios.Add(usuario);
             }
 
