@@ -12,8 +12,6 @@ namespace Collector.Views.Home.Usuarios
             NavigationPage.SetBackButtonTitle(this, "");
             InitializeComponent();
             BindingContext = new ListaDeUsuariosViewModel();
-
-
         }
     }
 }
