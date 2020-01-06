@@ -9,9 +9,11 @@ namespace Collector.Views.Home.Usuarios
     {
         public ListaDeUsuariosView()
         {
+
             NavigationPage.SetBackButtonTitle(this, "");
             InitializeComponent();
             BindingContext = new ListaDeUsuariosViewModel();
+
         }
     }
 }
