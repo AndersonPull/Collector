@@ -11,12 +11,13 @@ namespace Collector.ViewModels.Home.Usuarios
 {
     public class ListaDeUsuariosViewModel : BindableObject
     {
-        INavigationService _serviceNavigation;
+        NavigationService _serviceNavigation;
         UsuariosService _service;
         public FlowObservableCollection<UsuarioModel> Usuarios { get; set; }
         public ListaDeUsuariosViewModel()
         {
             Usuarios = new FlowObservableCollection<UsuarioModel>();
+            _serviceNavigation = new NavigationService();
             _service = new UsuariosService();
             PerformShimmerTaskAsync();
         }
@@ -39,7 +40,7 @@ namespace Collector.ViewModels.Home.Usuarios
         {
             get
             {
-                return new Command((value) =>
+                return new Command( (value) =>
                 {
                     UsuarioModel _usuario = value as UsuarioModel;
 
