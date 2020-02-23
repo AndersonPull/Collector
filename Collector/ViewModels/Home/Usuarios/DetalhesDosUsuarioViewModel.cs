@@ -1,10 +1,8 @@
-﻿using System;
-using System.Windows.Input;
+﻿
 using Collector.Models.Home;
 using Collector.Services.Home;
 using Collector.Services.Navigation;
 using DLToolkit.Forms.Controls;
-using Xamarin.Forms;
 
 namespace Collector.ViewModels.Home.Usuarios
 {

@@ -39,7 +39,7 @@ namespace Collector.ViewModels.Home.Usuarios
         {
             get
             {
-                return new Command(async (value) =>
+                return new Command((value) =>
                 {
                     UsuarioModel _usuario = value as UsuarioModel;
 

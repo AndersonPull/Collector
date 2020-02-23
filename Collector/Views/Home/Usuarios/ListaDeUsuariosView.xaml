@@ -3,7 +3,6 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Collector.Views.Home.Usuarios.ListaDeUsuariosView"
              xmlns:flv="clr-namespace:DLToolkit.Forms.Controls;assembly=DLToolkit.Forms.Controls.FlowListView"
-             xmlns:extension="clr-namespace:Xamarin.Forms.Skeleton;assembly=Xamarin.Forms.Skeleton"
              Title="Catadores">
     
     <ContentPage.Content>
@@ -15,21 +14,14 @@
                               BackgroundColor="Transparent" VerticalOptions="FillAndExpand"
                               FlowItemTappedCommand="{Binding UsuarioSelecionado}"
                               x:Name="usuarios"
-                              extension:Skeleton.IsParent="True"
-                              extension:Skeleton.IsBusy="{Binding IsBusy}"
-                              extension:Skeleton.Animation="Fade">
+                              >
 
                 <flv:FlowListView.FlowColumnTemplate >
                     <DataTemplate>
                         <StackLayout>
                             <Frame  WidthRequest="300" HeightRequest="100" CornerRadius="20"
                                     HasShadow="False" VerticalOptions="Center" BackgroundColor="#04C85C"
-                                    Margin="10" IsClippedToBounds="true"
-                                    extension:Skeleton.IsParent="True"
-                                    extension:Skeleton.Animation="Fade"
-                                    extension:Skeleton.AnimationParameter="1.1"
-                                    extension:Skeleton.IsBusy="{Binding IsBusy}"
-                                    extension:Skeleton.BackgroundColor="#2CD076">
+                                    Margin="10" IsClippedToBounds="true">
 
                                 <StackLayout Orientation="Horizontal" >
 
@@ -42,22 +34,16 @@
                                                IsClippedToBounds="true">
 
                                             <Image Source="{Binding Imagem}" WidthRequest="70"
-                                                   HeightRequest="70" Aspect="AspectFill"
-                                                   extension:Skeleton.IsBusy="{Binding IsBusy}"
-                                                   extension:Skeleton.Hide="True"/>
+                                                   HeightRequest="70" Aspect="AspectFill"/>
                                         </Frame>
 
                                         <StackLayout Orientation="Vertical">
 
                                             <Label Text="{Binding Apelido}" TextColor="#ffffff"
-                                                   FontSize="Small" FontAttributes="Bold"
-                                                   extension:Skeleton.IsBusy="{Binding IsBusy}"
-                                                   extension:Skeleton.BackgroundColor="#018A3E"/>
+                                                   FontSize="Small" FontAttributes="Bold"/>
 
                                             <Label Text="{Binding Nome}" TextColor="#ffffff"
-                                                   FontSize="Micro" FontAttributes="None"
-                                                   extension:Skeleton.IsBusy="{Binding IsBusy}"
-                                                   extension:Skeleton.BackgroundColor="#018A3E"/>
+                                                   FontSize="Micro" FontAttributes="None"/>
 
                                             <FlexLayout Margin="0,20,0,0">
 
@@ -80,10 +66,7 @@
 
                                         <Image  Source="dotButton.png"
                                                 BackgroundColor="transparent"
-                                                WidthRequest="35"
-                                                extension:Skeleton.IsBusy="{Binding IsBusy}"
-                                                extension:Skeleton.Hide="True"
-                                                extension:Skeleton.BackgroundColor="#018A3E">
+                                                WidthRequest="35">
                                             <Image.GestureRecognizers>
                                                 <TapGestureRecognizer   Command="{Binding Path=BindingContext.NavegarParaDetalhes, Source={x:Reference usuarios}}"
                                                                         CommandParameter="{Binding .}"
@@ -92,20 +75,13 @@
                                         </Image>
 
                                         <Image Source="carButton.png" WidthRequest="50"
-                                               HeightRequest="50"
-                                               extension:Skeleton.IsBusy="{Binding IsBusy}"
-                                                extension:Skeleton.Hide="True"
-                                                extension:Skeleton.BackgroundColor="#018A3E"/>
+                                               HeightRequest="50"/>
 
                                         <Label Text="1.6 Km" TextColor="#ffffff" FontSize="Micro"
-                                               HorizontalTextAlignment="Center"
-                                               extension:Skeleton.IsBusy="{Binding IsBusy}"
-                                               extension:Skeleton.BackgroundColor="#018A3E"/>
+                                               HorizontalTextAlignment="Center"/>
 
                                         <Label Text="da sua localização" TextColor="#ffffff" FontSize="Micro"
-                                               HorizontalTextAlignment="Center"
-                                               extension:Skeleton.IsBusy="{Binding IsBusy}"
-                                               extension:Skeleton.BackgroundColor="#018A3E"/>
+                                               HorizontalTextAlignment="Center"/>
 
                                     </StackLayout>
 
@@ -119,32 +95,37 @@
 
                                 <StackLayout >
 
-                                    <Label Text="Minha historia" FontSize="Small" TextColor="#ffffff"
-                                           FontAttributes="Bold" VerticalTextAlignment="Start"
+                                    <Label Text="Minha historia" FontSize="Small"
+                                           TextColor="#ffffff"
+                                           FontAttributes="Bold"
+                                           VerticalTextAlignment="Start"
                                            HorizontalTextAlignment="Center"/>
 
                                     <Label Text="{Binding Historia}"
-                                           FontSize="Small" TextColor="#ffffff" FontAttributes="None"
-                                           VerticalTextAlignment="Start" HorizontalTextAlignment="Center"/>
+                                           FontSize="Small" TextColor="#ffffff"
+                                           FontAttributes="None"
+                                           VerticalTextAlignment="Start"
+                                           HorizontalTextAlignment="Center"/>
 
-                                    <StackLayout Orientation="Horizontal" VerticalOptions="EndAndExpand"
-                                                 HorizontalOptions="End"
-                                                 extension:Skeleton.IsBusy="{Binding IsBusy}"
-                                                 extension:Skeleton.BackgroundColor="#018A3E"
-                                                 >
+                                    <StackLayout Orientation="Horizontal"
+                                                 VerticalOptions="EndAndExpand"
+                                                 HorizontalOptions="End">
 
-                                        <Image Source="ic_telefone.png" WidthRequest="30"
+                                        <Image Source="ic_telefone.png"
+                                               WidthRequest="30"
                                                HeightRequest="20" Margin="2"/>
 
-                                        <Label Text="{Binding Telefone}" FontSize="Small" TextColor="#ffffff"
-                                               FontAttributes="Bold" VerticalTextAlignment="Center"
+                                        <Label Text="{Binding Telefone}" FontSize="Small"
+                                               TextColor="#ffffff" FontAttributes="Bold"
+                                               VerticalTextAlignment="Center"
                                                HorizontalTextAlignment="Start"/>
 
                                         <Image Source="ic_whatsapp.png" WidthRequest="30"
                                                HeightRequest="20" Margin="2"/>
 
-                                        <Label Text="{Binding Telefone}" FontSize="Small" TextColor="#ffffff"
-                                               FontAttributes="Bold" VerticalTextAlignment="Center"
+                                        <Label Text="{Binding Telefone}" FontSize="Small"
+                                               TextColor="#ffffff" FontAttributes="Bold"
+                                               VerticalTextAlignment="Center"
                                                HorizontalTextAlignment="Start"/>
 
                                     </StackLayout>
