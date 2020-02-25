@@ -20,6 +20,7 @@
     <PackageReference Include="DLToolkit.Forms.Controls.FlowListView" Version="2.0.11" />
     <PackageReference Include="Rg.Plugins.Popup" Version="1.1.5.188" />
     <PackageReference Include="Microsoft.AppCenter.Push" Version="2.1.1" />
+    <PackageReference Include="Plugin.Multilingual" Version="1.0.2" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />
@@ -45,6 +46,8 @@
     <Folder Include="Controls\CustomEntry\" />
     <Folder Include="Views\Home\QuemSomos\" />
     <Folder Include="ViewModels\Home\QuemSomos\" />
+    <Folder Include="_Helpers\" />
+    <Folder Include="_Helpers\_Translations\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="AssemblyInfo.cs" />
@@ -59,6 +62,7 @@
     <Compile Remove="Views\Home\Usuarios\DetalhesUsuario.xaml.cs" />
     <Compile Remove="Views\Home\Usuarios\DetalhesUsuarioView.cs" />
     <Compile Remove="Views\Home\Usuarios\DetalhesUsuarioView.xaml.cs" />
+    <Compile Remove="_Translation\Resources.Designer.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Remove="MainPage.xaml" />
@@ -68,5 +72,26 @@
     <EmbeddedResource Remove="Views\Home\Usuarios\DetalhesUsuario.xaml" />
     <EmbeddedResource Remove="Views\Home\Usuarios\DetalhesUsuario.xaml" />
     <EmbeddedResource Remove="Views\Home\Usuarios\DetalhesUsuarioView.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="_Helpers\_Translations\AppResources.pt-BR" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Update="_Helpers\_Translations\AppResources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>AppResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="_Helpers\_Translations\AppResources.pt-br.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>AppResources.pt-br.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="_Helpers\_Translations\AppResources.Designer.cs">
+      <DependentUpon>AppResources.resx</DependentUpon>
+    </Compile>
+    <Compile Update="_Helpers\_Translations\AppResources.pt-br.Designer.cs">
+      <DependentUpon>AppResources.pt-BR.resx</DependentUpon>
+    </Compile>
   </ItemGroup>
 </Project>

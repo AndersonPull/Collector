@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Collector.Views.Login.LoginView"
              xmlns:CustomEntry="clr-namespace:Collector.Controls.CustomEntry"
+             xmlns:translator="clr-namespace:Collector._Helpers"
              BackgroundColor="#00BB54">
 
     <ContentPage.Content>
@@ -27,21 +28,21 @@
 
                         <StackLayout Orientation="Horizontal">
 
-                            <Label Text="Entrar" TextColor="#ffffff" FontSize="30"
+                            <Label Text="{translator:Translate Login}" TextColor="#ffffff" FontSize="30"
                                    HorizontalOptions="FillAndExpand"
                                    VerticalTextAlignment="Center" FontAttributes="Bold"/>
 
-                            <Button Text="Criar conta" TextColor="#00BB54"  
-                                    BackgroundColor="#EBEBEB" WidthRequest="100"
-                                    HeightRequest="20" CornerRadius="15" FontSize="Micro"
-                                    FontAttributes="Bold" />
+                            <Button Text="{translator:Translate CreateAccount}" TextColor="#00BB54"  
+                                    BackgroundColor="#EBEBEB" HeightRequest="20"
+                                    CornerRadius="15" FontSize="Micro"
+                                    FontAttributes="Bold" Padding="5"/>
 
                         </StackLayout>
 
-                        <Label Text="Por favor entre com suas credenciais"
+                        <Label Text="{translator:Translate PleaseEnterYourCredentials}"
                                TextColor="#ffffff" FontSize="Medium"/>
 
-                        <CustomEntry:CustomEntry Placeholder="Digite seu email"
+                        <CustomEntry:CustomEntry Placeholder="{translator:Translate TypeYourEmail}"
                                                  PlaceholderColor="{OnPlatform Android=#EBEBEB}"
                                                  BackgroundColor="{OnPlatform iOS=#EBEBEB}"
                                                  CornerRadius="18" IsCurvedCornersEnabled="True"
@@ -50,7 +51,7 @@
                                                  Margin="0,15,0,0" TextColor="{OnPlatform iOS=#575757, Android=#EBEBEB}"
                                                  FontAttributes="Bold" BorderColor="#EBEBEB" />
 
-                        <CustomEntry:CustomEntry Placeholder="Digite sua senha"
+                        <CustomEntry:CustomEntry Placeholder="{translator:Translate TypeYourPassword}"
                                                  PlaceholderColor="{OnPlatform Android=#EBEBEB}"
                                                  BackgroundColor="{OnPlatform iOS=#EBEBEB}"
                                                  CornerRadius="18" IsCurvedCornersEnabled="True"
@@ -60,7 +61,7 @@
                                                  TextColor="{OnPlatform iOS=#575757, Android=#EBEBEB}"
                                                  FontAttributes="Bold" BorderColor="#EBEBEB"/>
 
-                        <Button Text="Entrar" TextColor="#00BB54"  Margin="0,15,0,0"
+                        <Button Text="{translator:Translate Login}" TextColor="#00BB54"  Margin="0,15,0,0"
                                 BackgroundColor="#EBEBEB" WidthRequest="45"
                                 VerticalOptions="FillAndExpand" HeightRequest="45"
                                 CornerRadius="18" FontSize="Large" FontAttributes="Bold"
@@ -70,7 +71,7 @@
 
                     <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="EndAndExpand">
 
-                        <Label Text="ou faça o login com" TextColor="#ffffff" 
+                        <Label Text="{translator:Translate OrLoginWith}" TextColor="#ffffff" 
                                HorizontalOptions="FillAndExpand" VerticalTextAlignment="Center"
                                FontAttributes="Bold" Margin="0,15,0,0" FontSize="20"/>
 

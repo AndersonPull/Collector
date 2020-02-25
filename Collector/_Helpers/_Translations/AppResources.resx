@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>2.0</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    
+    <data name="Login" xml:space="preserve">
+        <value>Log in</value>
+    </data>
+    
+    <data name="PleaseEnterYourCredentials" xml:space="preserve">
+        <value>Please enter your credentials</value>
+    </data>
+    
+    <data name="CreateAccount" xml:space="preserve">
+        <value>Create an account</value>
+    </data>
+    
+    <data name="TypeYourEmail" xml:space="preserve">
+        <value>Type your e-mail</value>
+    </data>
+    
+    <data name="TypeYourPassword" xml:space="preserve">
+        <value>Type your password</value>
+    </data>
+    
+    <data name="OrLoginWith" xml:space="preserve">
+        <value>or login with</value>
+    </data>
+    
+</root>

@@ -1,7 +1,9 @@
 ﻿using System.Threading.Tasks;
+using Collector._Helpers._Translations;
 using Collector.Services.Navigation;
 using Collector.ViewModels.ViewModelLocator;
 using DLToolkit.Forms.Controls;
+using Plugin.Multilingual;
 using Xamarin.Forms;
 
 namespace Collector
@@ -11,6 +13,7 @@ namespace Collector
         public App()
         {
             InitializeComponent();
+            AppResources.Culture = CrossMultilingual.Current.DeviceCultureInfo;
             FlowListView.Init();
             InitNavigation();
         }
