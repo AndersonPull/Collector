@@ -85,6 +85,14 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>AppResources.pt-br.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Update="_Helpers\_Translations\AppResources.fr.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>AppResources.fr.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="_Helpers\_Translations\AppResources.pt.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>AppResources.pt.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Compile Update="_Helpers\_Translations\AppResources.Designer.cs">
@@ -92,6 +100,12 @@
     </Compile>
     <Compile Update="_Helpers\_Translations\AppResources.pt-br.Designer.cs">
       <DependentUpon>AppResources.pt-BR.resx</DependentUpon>
+    </Compile>
+    <Compile Update="_Helpers\_Translations\AppResources.fr.Designer.cs">
+      <DependentUpon>AppResources.fr.resx</DependentUpon>
+    </Compile>
+    <Compile Update="_Helpers\_Translations\AppResources.pt.Designer.cs">
+      <DependentUpon>AppResources.pt.resx</DependentUpon>
     </Compile>
   </ItemGroup>
 </Project>
