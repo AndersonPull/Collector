@@ -28,14 +28,15 @@
 
                         <StackLayout Orientation="Horizontal">
 
-                            <Label Text="{translator:Translate Login}" TextColor="#ffffff" FontSize="30"
-                                   HorizontalOptions="FillAndExpand"
+                            <Label Text="{translator:Translate Login}" TextColor="#ffffff"
+                                   FontSize="30" HorizontalOptions="FillAndExpand"
                                    VerticalTextAlignment="Center" FontAttributes="Bold"/>
 
-                            <Button Text="{translator:Translate CreateAccount}" TextColor="#00BB54"  
-                                    BackgroundColor="#EBEBEB" HeightRequest="20"
+                            <Button Text="{translator:Translate CreateAccount}"
+                                    TextColor="#00BB54" BackgroundColor="#EBEBEB"
                                     CornerRadius="15" FontSize="Micro"
-                                    FontAttributes="Bold" Padding="5"/>
+                                    FontAttributes="Bold" Padding="5"
+                                    HeightRequest="20"/>
 
                         </StackLayout>
 
@@ -61,11 +62,12 @@
                                                  TextColor="{OnPlatform iOS=#575757, Android=#EBEBEB}"
                                                  FontAttributes="Bold" BorderColor="#EBEBEB"/>
 
-                        <Button Text="{translator:Translate Login}" TextColor="#00BB54"  Margin="0,15,0,0"
+                        <Button Text="{translator:Translate Login}" TextColor="#00BB54"  
                                 BackgroundColor="#EBEBEB" WidthRequest="45"
                                 VerticalOptions="FillAndExpand" HeightRequest="45"
                                 CornerRadius="18" FontSize="Large" FontAttributes="Bold"
-                                Command="{Binding LoginCommand}" Padding="0"/>
+                                Command="{Binding LoginCommand}" Padding="0"
+                                Margin="0,15,0,0"/>
 
                     </StackLayout>
 
@@ -84,7 +86,8 @@
 
                             <ImageButton Source="ButomGoogle.png" Margin="15,15,0,15"
                                          BackgroundColor="#EBEBEB" WidthRequest="45"
-                                         VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"
+                                         VerticalOptions="FillAndExpand"
+                                         HorizontalOptions="FillAndExpand"
                                          HeightRequest="45" CornerRadius="18" />
 
                         </StackLayout>
