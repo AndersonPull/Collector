@@ -148,5 +148,35 @@ namespace Collector._Helpers._Translations {
                 return ResourceManager.GetString("Collaborate", resourceCulture);
             }
         }
+        
+        internal static string Collectors {
+            get {
+                return ResourceManager.GetString("Collectors", resourceCulture);
+            }
+        }
+        
+        internal static string Detail {
+            get {
+                return ResourceManager.GetString("Detail", resourceCulture);
+            }
+        }
+        
+        internal static string Location {
+            get {
+                return ResourceManager.GetString("Location", resourceCulture);
+            }
+        }
+        
+        internal static string MyHistory {
+            get {
+                return ResourceManager.GetString("MyHistory", resourceCulture);
+            }
+        }
+        
+        internal static string Edit {
+            get {
+                return ResourceManager.GetString("Edit", resourceCulture);
+            }
+        }
     }
 }

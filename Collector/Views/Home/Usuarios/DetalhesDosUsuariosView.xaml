@@ -3,8 +3,9 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Collector.Views.Home.Usuarios.DetalhesDosUsuariosView"
              xmlns:flv="clr-namespace:DLToolkit.Forms.Controls;assembly=DLToolkit.Forms.Controls.FlowListView"
+             xmlns:translator="clr-namespace:Collector._Helpers"
              BackgroundColor="#EBEBEB"
-             Title="Detalhes">
+             Title="{translator:Translate Detail}">
     <ContentPage.Content>
 
         <StackLayout>
@@ -48,7 +49,7 @@
 
                         </StackLayout>
 
-                        <Button Text="Editar" TextColor="#00BB54"  Padding="0"
+                        <Button Text="{translator:Translate Edit}" TextColor="#00BB54"  Padding="0"
                                 BackgroundColor="#EBEBEB" WidthRequest="80"
                                 HeightRequest="30" CornerRadius="10" FontSize="Micro"
                                 FontAttributes="Bold" VerticalOptions="Start"
@@ -125,68 +126,83 @@
 
                     <StackLayout Margin="10">
 
-                        <Editor Placeholder="Como você se descreveria?"
-                                HeightRequest="120" />
+                        <Editor Placeholder="{translator:Translate YourDescription}"
+                                HeightRequest="120" BackgroundColor="Transparent"/>
 
-                        <Editor Placeholder="Conte um pouco da sua história"
-                                HeightRequest="120" />
+                        <Editor Placeholder="{translator:Translate YourStory}"
+                                HeightRequest="120" BackgroundColor="Transparent"/>
                     </StackLayout>
 
                     <ScrollView Orientation="Horizontal">
 
-                        <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                       <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
 
                             <Frame BackgroundColor="Transparent" CornerRadius="8"
-                                   BorderColor="#00BB54" HasShadow="False" Padding="10"
-                                   Margin="5" WidthRequest="100">
+                                    BorderColor="#00BB54" HasShadow="False" Padding="10"
+                                    Margin="5" WidthRequest="100">
 
                                 <StackLayout>
 
                                     <Image Source="ic_somos" Aspect="AspectFit"
-                                           WidthRequest="60" HeightRequest="60" />
+                                        WidthRequest="60" HeightRequest="60" />
 
-                                    <Label Text="Quem somos" FontSize="17"
-                                           TextColor="#00BB54" FontAttributes="Bold"
-                                           HorizontalOptions="CenterAndExpand"
-                                           HorizontalTextAlignment="Center"/>
+                                    <Label Text="{translator:Translate WhoWeAre}" FontSize="17"
+                                            TextColor="#00BB54" FontAttributes="Bold"
+                                            HorizontalOptions="CenterAndExpand"
+                                            HorizontalTextAlignment="Center"/>
 
                                 </StackLayout>
 
-                            </Frame>
-
-                                <Frame BackgroundColor="Transparent" CornerRadius="8"
-                                       BorderColor="#00BB54" HasShadow="False" Padding="10"
-                                       Margin="5"  WidthRequest="100">
-
-                                    <StackLayout>
-
-                                        <Image Source="ic_vamos" Aspect="AspectFit"
-                                               WidthRequest="60" HeightRequest="60" />
-
-                                        <Label Text="Para onde vamos" FontSize="17"
-                                               TextColor="#00BB54" FontAttributes="Bold"
-                                               HorizontalOptions="CenterAndExpand"
-                                               HorizontalTextAlignment="Center"/>
-
-                                    </StackLayout>
+                                <Frame.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding QuemSomosCommand}"
+                                                          NumberOfTapsRequired="1"/>
+                                </Frame.GestureRecognizers>
 
                             </Frame>
 
-                                <Frame BackgroundColor="Transparent" CornerRadius="8"
-                                       BorderColor="#00BB54" HasShadow="False" Padding="10"
-                                       Margin="5"  WidthRequest="100">
+                            <Frame BackgroundColor="Transparent" CornerRadius="8"
+                                BorderColor="#00BB54" HasShadow="False" Padding="10"
+                                Margin="5"  WidthRequest="100">
 
-                                    <StackLayout>
+                                <StackLayout>
 
-                                        <Image Source="ic_colabore" Aspect="AspectFit"
-                                               WidthRequest="60" HeightRequest="60" />
+                                    <Image Source="ic_vamos" Aspect="AspectFit"
+                                        WidthRequest="60" HeightRequest="60" />
 
-                                        <Label Text="Colabore" FontSize="17"
-                                               TextColor="#00BB54" FontAttributes="Bold"
-                                               HorizontalOptions="CenterAndExpand"
-                                               HorizontalTextAlignment="Center"/>
+                                    <Label Text="{translator:Translate WhereAreWeGoing}" FontSize="17"
+                                        TextColor="#00BB54" FontAttributes="Bold"
+                                        HorizontalOptions="CenterAndExpand"
+                                        HorizontalTextAlignment="Center"/>
 
-                                    </StackLayout>
+                                </StackLayout>
+
+                                <Frame.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding ParaOndeVamosCommand}"
+                                                          NumberOfTapsRequired="1"/>
+                                </Frame.GestureRecognizers>
+
+                            </Frame>
+
+                            <Frame BackgroundColor="Transparent" CornerRadius="8"
+                                BorderColor="#00BB54" HasShadow="False" Padding="10"
+                                Margin="5"  WidthRequest="100">
+
+                                <StackLayout>
+
+                                    <Image Source="ic_colabore" Aspect="AspectFit"
+                                        WidthRequest="60" HeightRequest="60" />
+
+                                    <Label Text="{translator:Translate Collaborate}" FontSize="17"
+                                        TextColor="#00BB54" FontAttributes="Bold"
+                                        HorizontalOptions="CenterAndExpand"
+                                        HorizontalTextAlignment="Center"/>
+
+                                </StackLayout>
+
+                                <Frame.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding ColaboreCommand}"
+                                                          NumberOfTapsRequired="1"/>
+                                </Frame.GestureRecognizers>
 
                             </Frame>
 

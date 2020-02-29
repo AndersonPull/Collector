@@ -80,7 +80,29 @@
     <data name="WhereAreWeGoing" xml:space="preserve">
         <value>Where are we going</value>
     </data>
+    
     <data name="Collaborate" xml:space="preserve">
         <value>Collaborate</value>
+    </data>
+    
+    <!--Paginas dos Catadores-->
+    <data name="Collectors" xml:space="preserve">
+        <value>Collectors</value>
+    </data>
+    
+    <data name="Detail" xml:space="preserve">
+        <value>Detail</value>
+    </data>
+    
+    <data name="Location" xml:space="preserve">
+        <value>from your location</value>
+    </data>
+    
+    <data name="MyHistory" xml:space="preserve">
+        <value>My history</value>
+    </data>
+    
+    <data name="Edit" xml:space="preserve">
+        <value>Edit</value>
     </data>
 </root>

@@ -3,7 +3,9 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Collector.Views.Home.Usuarios.ListaDeUsuariosView"
              xmlns:flv="clr-namespace:DLToolkit.Forms.Controls;assembly=DLToolkit.Forms.Controls.FlowListView"
-             Title="Catadores">
+             xmlns:translator="clr-namespace:Collector._Helpers"
+             BackgroundColor="#EBEBEB"
+             Title="{translator:Translate Collectors}">
     
     <ContentPage.Content>
 
@@ -80,7 +82,7 @@
                                         <Label Text="1.6 Km" TextColor="#ffffff" FontSize="Micro"
                                                HorizontalTextAlignment="Center"/>
 
-                                        <Label Text="da sua localização" TextColor="#ffffff" FontSize="Micro"
+                                        <Label Text="{translator:Translate Location}" TextColor="#ffffff" FontSize="Micro"
                                                HorizontalTextAlignment="Center"/>
 
                                     </StackLayout>
@@ -95,7 +97,7 @@
 
                                 <StackLayout >
 
-                                    <Label Text="Minha historia" FontSize="Small"
+                                    <Label Text="{translator:Translate MyHistory}" FontSize="Small"
                                            TextColor="#ffffff"
                                            FontAttributes="Bold"
                                            VerticalTextAlignment="Start"
