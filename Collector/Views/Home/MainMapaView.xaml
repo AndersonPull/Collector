@@ -4,6 +4,7 @@
              x:Class="Collector.Views.Home.MainMapaView"
              xmlns:CustomEntry="clr-namespace:Collector.Controls.CustomEntry"
              xmlns:maps="clr-namespace:Xamarin.Forms.GoogleMaps;assembly=Xamarin.Forms.GoogleMaps"
+             xmlns:translator="clr-namespace:Collector._Helpers"
              NavigationPage.HasNavigationBar="false">
     <ContentPage.Content>
 
@@ -27,8 +28,8 @@
                     <StackLayout Orientation="Horizontal" VerticalOptions="Center"
                                  HorizontalOptions="StartAndExpand">
 
-                        <CustomEntry:CustomEntry  Placeholder="Endreço"
-                                                  WidthRequest="{OnPlatform Android=210, iOS=250}"
+                        <CustomEntry:CustomEntry  Placeholder="{translator:Translate Address}"
+                                                  WidthRequest="{OnPlatform Android=210, iOS=240}"
                                                   HorizontalOptions="StartAndExpand"
                                                   VerticalOptions="FillAndExpand"
                                                   BorderColor="#ffffff"
@@ -39,7 +40,7 @@
                         <BoxView WidthRequest="1" HeightRequest="35"
                                  BackgroundColor="#ACACAC" VerticalOptions="Center"/>
 
-                        <Label Text="Filtrar" FontSize="Small"  TextColor="#ACACAC"
+                        <Label Text="{translator:Translate Search}" FontSize="Small"  TextColor="#ACACAC"
                                VerticalOptions="Center" />
 
                     </StackLayout>

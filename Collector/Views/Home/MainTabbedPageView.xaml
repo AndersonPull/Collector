@@ -5,12 +5,13 @@
             x:Class="Collector.Views.Home.MainTabbedPageView"
             BarBackgroundColor="#00bb54"
             SelectedTabColor="#ffffff"
+            xmlns:translator="clr-namespace:Collector._Helpers"
             UnselectedTabColor="#a2a2a2">
 
-    <local:MainInfoView Title="Info" Icon="ic_info.png"/>
+    <local:MainInfoView Title="{translator:Translate Info}" Icon="ic_info.png"/>
 
-    <local:MainMapaView Title="Mapa" TabIndex="0" Icon="ic_mapa.png"/>
+    <local:MainMapaView Title="{translator:Translate Map}" TabIndex="0" Icon="ic_mapa.png"/>
 
-    <local:MainMateriasView Title="Materias" Icon="ic_materiais.png"/>
+    <local:MainMateriasView Title="{translator:Translate Materials}" Icon="ic_materiais.png"/>
 
 </TabbedPage>

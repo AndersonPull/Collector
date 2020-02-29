@@ -13,6 +13,7 @@
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
     
+    <!--Login-->
     <data name="Login" xml:space="preserve">
         <value>Log in</value>
     </data>
@@ -35,6 +36,28 @@
     
     <data name="OrLoginWith" xml:space="preserve">
         <value>or login with</value>
+    </data>
+    
+    <!--Menu principal rodape-->
+    <data name="Info" xml:space="preserve">
+        <value>Info</value>
+    </data>
+    
+    <data name="Map" xml:space="preserve">
+        <value>Map</value>
+    </data>
+    
+    <data name="Materials" xml:space="preserve">
+        <value>Materials</value>
+    </data>
+    
+    <!--Barra de pesquisa-->
+    <data name="Address" xml:space="preserve">
+        <value>Address</value>
+    </data>
+    
+    <data name="Search" xml:space="preserve">
+        <value>Search</value>
     </data>
     
 </root>

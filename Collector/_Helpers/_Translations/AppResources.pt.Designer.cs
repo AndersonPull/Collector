@@ -82,5 +82,35 @@ namespace Collector._Helpers._Translations {
                 return ResourceManager.GetString("OrLoginWith", resourceCulture);
             }
         }
+        
+        internal static string Info {
+            get {
+                return ResourceManager.GetString("Info", resourceCulture);
+            }
+        }
+        
+        internal static string Map {
+            get {
+                return ResourceManager.GetString("Map", resourceCulture);
+            }
+        }
+        
+        internal static string Materials {
+            get {
+                return ResourceManager.GetString("Materials", resourceCulture);
+            }
+        }
+        
+        internal static string Address {
+            get {
+                return ResourceManager.GetString("Address", resourceCulture);
+            }
+        }
+        
+        internal static string Search {
+            get {
+                return ResourceManager.GetString("Search", resourceCulture);
+            }
+        }
     }
 }
