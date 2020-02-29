@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Collector.Views.Home.MainInfoView"
              xmlns:flv="clr-namespace:DLToolkit.Forms.Controls;assembly=DLToolkit.Forms.Controls.FlowListView"
+             xmlns:translator="clr-namespace:Collector._Helpers"
              BackgroundColor="#EBEBEB">
 
     <ContentPage.Content>
@@ -48,7 +49,7 @@
 
                         </StackLayout>
 
-                        <Button Text="Sair" TextColor="#00BB54"  Padding="0"
+                        <Button Text="{translator:Translate SingOut}" TextColor="#00BB54"  Padding="0"
                                 BackgroundColor="#EBEBEB" WidthRequest="80"
                                 HeightRequest="30" CornerRadius="10" FontSize="Micro"
                                 FontAttributes="Bold" VerticalOptions="Start"
@@ -125,10 +126,10 @@
 
                     <StackLayout Margin="10">
 
-                        <Editor Placeholder="Como você se descreveria?"
+                        <Editor Placeholder="{translator:Translate YourDescription}"
                                 HeightRequest="120" BackgroundColor="Transparent"/>
 
-                        <Editor Placeholder="Conte um pouco da sua história"
+                        <Editor Placeholder="{translator:Translate YourStory}"
                                 HeightRequest="120" BackgroundColor="Transparent"/>
 
                     </StackLayout>
@@ -146,7 +147,7 @@
                                     <Image Source="ic_somos" Aspect="AspectFit"
                                         WidthRequest="60" HeightRequest="60" />
 
-                                    <Label Text="Quem somos" FontSize="17"
+                                    <Label Text="{translator:Translate WhoWeAre}" FontSize="17"
                                             TextColor="#00BB54" FontAttributes="Bold"
                                             HorizontalOptions="CenterAndExpand"
                                             HorizontalTextAlignment="Center"/>
@@ -169,7 +170,7 @@
                                     <Image Source="ic_vamos" Aspect="AspectFit"
                                         WidthRequest="60" HeightRequest="60" />
 
-                                    <Label Text="Para onde vamos" FontSize="17"
+                                    <Label Text="{translator:Translate WhereAreWeGoing}" FontSize="17"
                                         TextColor="#00BB54" FontAttributes="Bold"
                                         HorizontalOptions="CenterAndExpand"
                                         HorizontalTextAlignment="Center"/>
@@ -192,7 +193,7 @@
                                     <Image Source="ic_colabore" Aspect="AspectFit"
                                         WidthRequest="60" HeightRequest="60" />
 
-                                    <Label Text="Colabore" FontSize="17"
+                                    <Label Text="{translator:Translate Collaborate}" FontSize="17"
                                         TextColor="#00BB54" FontAttributes="Bold"
                                         HorizontalOptions="CenterAndExpand"
                                         HorizontalTextAlignment="Center"/>

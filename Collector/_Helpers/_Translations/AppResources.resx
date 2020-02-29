@@ -60,4 +60,27 @@
         <value>Search</value>
     </data>
     
+    <!--Aba info-->
+    <data name="SingOut" xml:space="preserve">
+        <value>Sing out</value>
+    </data>
+    
+    <data name="YourDescription" xml:space="preserve">
+        <value>How would you describe yourself?</value>
+    </data>
+    
+    <data name="YourStory" xml:space="preserve">
+        <value>Tell a little about your story</value>
+    </data>
+    
+    <data name="WhoWeAre" xml:space="preserve">
+        <value>Who we are</value>
+    </data>
+    
+    <data name="WhereAreWeGoing" xml:space="preserve">
+        <value>Where are we going</value>
+    </data>
+    <data name="Collaborate" xml:space="preserve">
+        <value>Collaborate</value>
+    </data>
 </root>

@@ -112,5 +112,41 @@ namespace Collector._Helpers._Translations {
                 return ResourceManager.GetString("Search", resourceCulture);
             }
         }
+        
+        internal static string SingOut {
+            get {
+                return ResourceManager.GetString("SingOut", resourceCulture);
+            }
+        }
+        
+        internal static string YourDescription {
+            get {
+                return ResourceManager.GetString("YourDescription", resourceCulture);
+            }
+        }
+        
+        internal static string YourStory {
+            get {
+                return ResourceManager.GetString("YourStory", resourceCulture);
+            }
+        }
+        
+        internal static string WhoWeAre {
+            get {
+                return ResourceManager.GetString("WhoWeAre", resourceCulture);
+            }
+        }
+        
+        internal static string WhereAreWeGoing {
+            get {
+                return ResourceManager.GetString("WhereAreWeGoing", resourceCulture);
+            }
+        }
+        
+        internal static string Collaborate {
+            get {
+                return ResourceManager.GetString("Collaborate", resourceCulture);
+            }
+        }
     }
 }

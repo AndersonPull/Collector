@@ -58,4 +58,28 @@
     <data name="Search" xml:space="preserve">
         <value>Filtrar</value>
     </data>
+    
+     <!--Aba info-->
+    <data name="SingOut" xml:space="preserve">
+        <value>Sair</value>
+    </data>
+    
+    <data name="YourDescription" xml:space="preserve">
+        <value>Como você se descreveria?</value>
+    </data>
+    
+    <data name="YourStory" xml:space="preserve">
+        <value>Conte um pouco da sua história</value>
+    </data>
+    
+    <data name="WhoWeAre" xml:space="preserve">
+        <value>Quem Somos</value>
+    </data>
+    
+    <data name="WhereAreWeGoing" xml:space="preserve">
+        <value>Para onde Vamos</value>
+    </data>
+    <data name="Collaborate" xml:space="preserve">
+        <value>Colabore</value>
+    </data>
 </root>
