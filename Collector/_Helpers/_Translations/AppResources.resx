@@ -248,7 +248,39 @@
     </data>
     
     <data name="BatteryText" xml:space="preserve">
-        <value>
-They are on cell phones, cordless phones, cameras, camcorders, laptops, toys and watches, they cannot be mixed apart and notify the collector before collection.</value>
+        <value>They are on cell phones, cordless phones, cameras, camcorders, laptops, toys and watches, they cannot be mixed apart and notify the collector before collection.</value>
+    </data>
+    
+    <!--Pagina Colabore-->
+    <data name="Introduction" xml:space="preserve">
+        <value>Open collaborative and non-profit, Collector needs your help.</value>
+    </data>
+    
+    <data name="IntroductionPartTwo" xml:space="preserve">
+        <value>You can:</value>
+    </data>
+    
+    <data name="HelpOne" xml:space="preserve">
+        <value>1. Support a Collector and pay for the service</value>
+    </data>
+    
+    <data name="HelpTwo" xml:space="preserve">
+        <value>2. Register collectors on Collectors</value>
+    </data>
+    
+    <data name="HelpThree" xml:space="preserve">
+        <value>3. Organize your condominium or company to use the app</value>
+    </data>
+    
+    <data name="HelpFour" xml:space="preserve">
+        <value>4. Offer voluntary work in: content production; orgazination and administration; app development and design, and other things ...</value>
+    </data>
+    
+    <data name="CreatedBy" xml:space="preserve">
+        <value>A non-profit association</value>
+    </data>
+    
+    <data name="OpenSource" xml:space="preserve">
+        <value>We have collaborative DNA. Our code is, and will always be free. Then, more arrives. Write us an email:</value>
     </data>
 </root>

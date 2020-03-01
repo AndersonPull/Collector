@@ -140,14 +140,14 @@
 
                             <Frame BackgroundColor="Transparent" CornerRadius="8"
                                     BorderColor="#00BB54" HasShadow="False" Padding="10"
-                                    Margin="5" WidthRequest="100">
+                                    Margin="5" WidthRequest="90">
 
                                 <StackLayout>
 
                                     <Image Source="ic_somos" Aspect="AspectFit"
                                         WidthRequest="60" HeightRequest="60" />
 
-                                    <Label Text="{translator:Translate WhoWeAre}" FontSize="17"
+                                    <Label Text="{translator:Translate WhoWeAre}" FontSize="15"
                                             TextColor="#00BB54" FontAttributes="Bold"
                                             HorizontalOptions="CenterAndExpand"
                                             HorizontalTextAlignment="Center"/>
@@ -163,14 +163,14 @@
 
                             <Frame BackgroundColor="Transparent" CornerRadius="8"
                                 BorderColor="#00BB54" HasShadow="False" Padding="10"
-                                Margin="5"  WidthRequest="100">
+                                Margin="5"  WidthRequest="90">
 
                                 <StackLayout>
 
                                     <Image Source="ic_vamos" Aspect="AspectFit"
                                         WidthRequest="60" HeightRequest="60" />
 
-                                    <Label Text="{translator:Translate WhereAreWeGoing}" FontSize="17"
+                                    <Label Text="{translator:Translate WhereAreWeGoing}" FontSize="15"
                                         TextColor="#00BB54" FontAttributes="Bold"
                                         HorizontalOptions="CenterAndExpand"
                                         HorizontalTextAlignment="Center"/>
@@ -186,14 +186,14 @@
 
                             <Frame BackgroundColor="Transparent" CornerRadius="8"
                                 BorderColor="#00BB54" HasShadow="False" Padding="10"
-                                Margin="5"  WidthRequest="100">
+                                Margin="5"  WidthRequest="90">
 
                                 <StackLayout>
 
                                     <Image Source="ic_colabore" Aspect="AspectFit"
                                         WidthRequest="60" HeightRequest="60" />
 
-                                    <Label Text="{translator:Translate Collaborate}" FontSize="17"
+                                    <Label Text="{translator:Translate Collaborate}" FontSize="15"
                                         TextColor="#00BB54" FontAttributes="Bold"
                                         HorizontalOptions="CenterAndExpand"
                                         HorizontalTextAlignment="Center"/>

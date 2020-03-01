@@ -394,5 +394,53 @@ namespace Collector._Helpers._Translations {
                 return ResourceManager.GetString("BatteryText", resourceCulture);
             }
         }
+        
+        internal static string Introduction {
+            get {
+                return ResourceManager.GetString("Introduction", resourceCulture);
+            }
+        }
+        
+        internal static string IntroductionPartTwo {
+            get {
+                return ResourceManager.GetString("IntroductionPartTwo", resourceCulture);
+            }
+        }
+        
+        internal static string HelpOne {
+            get {
+                return ResourceManager.GetString("HelpOne", resourceCulture);
+            }
+        }
+        
+        internal static string HelpTwo {
+            get {
+                return ResourceManager.GetString("HelpTwo", resourceCulture);
+            }
+        }
+        
+        internal static string HelpThree {
+            get {
+                return ResourceManager.GetString("HelpThree", resourceCulture);
+            }
+        }
+        
+        internal static string HelpFour {
+            get {
+                return ResourceManager.GetString("HelpFour", resourceCulture);
+            }
+        }
+        
+        internal static string CreatedBy {
+            get {
+                return ResourceManager.GetString("CreatedBy", resourceCulture);
+            }
+        }
+        
+        internal static string OpenSource {
+            get {
+                return ResourceManager.GetString("OpenSource", resourceCulture);
+            }
+        }
     }
 }

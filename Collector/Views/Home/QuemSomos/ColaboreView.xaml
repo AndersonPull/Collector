@@ -2,10 +2,60 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Collector.Views.Home.QuemSomos.ColaboreView"
-             Title="Colabore">
+             xmlns:translator="clr-namespace:Collector._Helpers"
+             BackgroundColor="#EBEBEB"
+             Title="{translator:Translate Collaborate}">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="COLABORE"/>
-        </StackLayout>
+
+        <ScrollView>
+
+            <StackLayout Margin="15">
+
+                <Label Text="{translator:Translate Introduction}"
+                       TextColor="#747474"
+                       FontAttributes="None"/>
+
+                <Label Text="{translator:Translate IntroductionPartTwo}"
+                       TextColor="#747474"
+                       FontAttributes="None"/>
+
+                <StackLayout Margin="20,40,20,40" Spacing="30">
+
+                    <Label Text="{translator:Translate HelpOne}"
+                       TextColor="#00BB54"
+                       FontAttributes="Bold"/>
+
+                    <Label Text="{translator:Translate HelpTwo}"
+                       TextColor="#00BB54"
+                       FontAttributes="Bold"/>
+
+                    <Label Text="{translator:Translate HelpThree}"
+                       TextColor="#00BB54"
+                       FontAttributes="Bold"/>
+
+                    <Label Text="{translator:Translate HelpFour}"
+                       TextColor="#00BB54"
+                       FontAttributes="Bold"/>
+
+                </StackLayout>
+
+                <Label Text="{translator:Translate CreatedBy}"
+                       TextColor="#747474"
+                       FontAttributes="None"/>
+
+                <Label Text="{translator:Translate OpenSource}"
+                       TextColor="#747474"
+                       FontAttributes="None"/>
+
+                <Button Text="Collectors@outlook.com" TextColor="#EBEBEB"  
+                                BackgroundColor="#00BB54" HeightRequest="45"
+                                CornerRadius="18" FontSize="Large" FontAttributes="Bold"
+                                Command="{Binding EmailCommand}" 
+                                Margin="0,20,0,0"/>
+            </StackLayout>
+
+        </ScrollView>
+
     </ContentPage.Content>
+
 </ContentPage>

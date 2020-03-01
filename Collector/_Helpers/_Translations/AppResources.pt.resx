@@ -249,4 +249,37 @@
     <data name="BatteryText" xml:space="preserve">
         <value>Estão nos celulares, telefones  sem fio, máquinas fotograficas, filmadoras, laptops, brinquedos e relógios, não podem ser misturadas separe e avise o catador antes da coleta.</value>
     </data>
+    
+    <!--Pagina Colabore-->
+    <data name="Introduction" xml:space="preserve">
+        <value>Aberto colaborativo e sem fins lucrativos, o Collector precisa da sua ajuda.</value>
+    </data>
+    
+    <data name="IntroductionPartTwo" xml:space="preserve">
+        <value>Você pode:</value>
+    </data>
+    
+    <data name="HelpOne" xml:space="preserve">
+        <value>1. Apoiar um catador e o remunerar pelo serviço</value>
+    </data>
+    
+    <data name="HelpTwo" xml:space="preserve">
+        <value>2. Cadastrar catadores no Collectors</value>
+    </data>
+    
+    <data name="HelpThree" xml:space="preserve">
+        <value>3. Organizar seu condominio ou empresa para utilizar o app</value>
+    </data>
+    
+    <data name="HelpFour" xml:space="preserve">
+        <value>4. Oferecer trabalho voluntario em: produção de conteúdo; orgazinação e administração; desenvolvimento do app e design, e outras coisas...</value>
+    </data>
+    
+    <data name="CreatedBy" xml:space="preserve">
+        <value>Uma associação sem fins lucrativos</value>
+    </data>
+    
+    <data name="OpenSource" xml:space="preserve">
+        <value>Possuimos DNA de colaboração. Nosso código é, e sempre será livre. Então, chega mais. Escreva um e-mail para nós:</value>
+    </data>
 </root>
