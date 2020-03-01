@@ -9,7 +9,7 @@
 
         <ScrollView>
 
-            <StackLayout Margin="15">
+            <StackLayout Margin="15" HorizontalOptions="CenterAndExpand">
 
                 <Label Text="{translator:Translate Introduction}"
                        TextColor="#747474"
@@ -51,7 +51,7 @@
                                 BackgroundColor="#00BB54" HeightRequest="45"
                                 CornerRadius="18" FontSize="Large" FontAttributes="Bold"
                                 Command="{Binding EmailCommand}" 
-                                Margin="0,20,0,0"/>
+                                Margin="0,0,0,20" VerticalOptions="EndAndExpand"/>
             </StackLayout>
 
         </ScrollView>
