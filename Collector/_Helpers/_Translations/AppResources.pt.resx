@@ -105,4 +105,148 @@
         <value>Editar</value>
     </data>
     
+    <!--Materiais-->
+    <data name="PaperTitle" xml:space="preserve">
+        <value>Papel</value>
+    </data>
+    
+    <data name="PaperSubTitle" xml:space="preserve">
+        <value>100% reciclavel e biodegradavel</value>
+    </data>
+    
+    <data name="PaperText" xml:space="preserve">
+        <value>Reciclamos 1/3 do papel produzido, 1 tonelada reciclada poupa 22 árvoes, evite molhar, rasgar ou amassar não misture papel engordurado lave embalagens longa vida no enxágue da louça.</value>
+    </data>
+    
+    <data name="AluminumTitle" xml:space="preserve">
+        <value>Alumínio</value>
+    </data>
+    
+    <data name="AluminumSubTitle" xml:space="preserve">
+        <value>Em 60 dias, 1 lata é produzida, comprada, coletada reciclada e volta as prateleiras</value>
+    </data>
+    
+    <data name="AluminumText" xml:space="preserve">
+        <value>Reciclamos 98,4% das latinhas do Brasil, e apenass 33% dos outros itens de alumínio reciclar gastar 95% menos energia do que produzi-la</value>
+    </data>
+    
+    <data name="PlasticTitle" xml:space="preserve">
+        <value>Plastico</value>
+    </data>
+    
+    <data name="PlasticSubTitle" xml:space="preserve">
+        <value>O Brasil só recicla 20% da produção  8 bilhões de kg/ano poluem os oceanos</value>
+    </data>
+    
+    <data name="PlasticText" xml:space="preserve">
+        <value>Recicle sacolas, salgadinhos, sachês, canudos, isopor e todos os outros platicos limpe restosde alimentos com água do enxague da  louça ou guardanapo usado.</value>
+    </data>
+    
+    <data name="OilTitle" xml:space="preserve">
+        <value>Óleo</value>
+    </data>
+    
+    <data name="OilSubTitle" xml:space="preserve">
+        <value>1L no ralo = 25 mil L de água poluída</value>
+    </data>
+    
+    <data name="OilText" xml:space="preserve">
+        <value>Numca descarte na pia ou no vaso depois de usado e esfriado, o óleo deve ser coado numa garrafa PET com tampa peça ao catador para levar a um ponto de coleta ou cooperativa que produz sabão.</value>
+    </data>
+    
+    <data name="DiverseTitle" xml:space="preserve">
+        <value>Diversos</value>
+    </data>
+    
+    <data name="DiverseSubTitle" xml:space="preserve">
+        <value>É o pior metarial para os catadores, seu valor é muito baixo</value>
+    </data>
+    
+    <data name="DiverseText" xml:space="preserve">
+        <value>O Brasil perde R$ 8 bilhões/ano enterrando reciclaveis misturados remédios e suas embalagens laminadas devem ser descartados nas farmácias.</value>
+    </data>
+    
+    <data name="MetalTitle" xml:space="preserve">
+        <value>Metal</value>
+    </data>
+    
+    <data name="MetalSubTitle" xml:space="preserve">
+        <value>Aço é o material mais reciclado do mundo, é 100% reciclável, pode ser reciclado infinitas vezes</value>
+    </data>
+    
+    <data name="MetalText" xml:space="preserve">
+        <value>1/4 do aço no Brasil utiliza matérial reciclada, metais reciclado estão em latas de alimentos, ferramentas, arames, vigas, automóveis e utensílios domésticos.</value>
+    </data>
+    
+    <data name="TreePruningTitle" xml:space="preserve">
+        <value>Podas de árvores</value>
+    </data>
+    
+    <data name="TreePruningSubTitle" xml:space="preserve">
+        <value>Podas de árvore podem ser compostadas e produzir energia</value>
+    </data>
+    
+    <data name="TreePruningText" xml:space="preserve">
+        <value>Em eventos e festas, organize a separação dos recicláveis secos em sacos grandes  avalie e combine com o catador a coleta dos residuos não listados neste aplicativo.</value>
+    </data>
+    
+    <data name="FurnitureTitle" xml:space="preserve">
+        <value>Moveis</value>
+    </data>
+    
+    <data name="FurnitureSubTitle" xml:space="preserve">
+        <value>Cheque o tamanho da carroça</value>
+    </data>
+    
+    <data name="FurnitureText" xml:space="preserve">
+        <value>Combine com o catador o ponto de descarte dos móveis, garanta que o móvel não terminará em um terreno baldio ou na rua.</value>
+    </data>
+    
+    <data name="ElectronicsTitle" xml:space="preserve">
+        <value>Eletrônicos</value>
+    </data>
+    
+    <data name="ElectronicsSubTitle" xml:space="preserve">
+        <value>98% dos componentes de um eletronico podem ser reciclados</value>
+    </data>
+    
+    <data name="ElectronicsText" xml:space="preserve">
+        <value>Tem valor mais alto, mas so 15,5% é reciclado, falta infraestrutura no Brasil, são altamente contaminantes, busque a destinação correta.</value>
+    </data>
+    
+    <data name="RubbleTitle" xml:space="preserve">
+        <value>Entulho</value>
+    </data>
+    
+    <data name="RubbleSubTitle" xml:space="preserve">
+        <value>Pode-se aproveita 95% do material e sua reciclagem é obrigatoria</value>
+    </data>
+    
+    <data name="RubbleText" xml:space="preserve">
+        <value>Reutilizado em  ruas e estradas garanta que seu entulho não acabará em um terreno baldio cheque com sua prefeitura o local adequado.</value>
+    </data>
+    
+    <data name="GlassTitle" xml:space="preserve">
+        <value>Vidro</value>
+    </data>
+    
+    <data name="GlassSubTitle" xml:space="preserve">
+        <value>100% reciclável e dura para sempre preço baixo, poucos lugares reciclam</value>
+    </data>
+    
+    <data name="GlassText" xml:space="preserve">
+        <value>Vidro quebrado é ainda pior maior número de acidentes com catadores lâmpadas, TVs e espelhos prescisam de atenção especial.</value>
+    </data>
+    
+    <data name="BatteryTitle" xml:space="preserve">
+        <value>Bateria</value>
+    </data>
+    
+    <data name="BatterySubTitle" xml:space="preserve">
+        <value>São altamente contaminantes</value>
+    </data>
+    
+    <data name="BatteryText" xml:space="preserve">
+        <value>Estão nos celulares, telefones  sem fio, máquinas fotograficas, filmadoras, laptops, brinquedos e relógios, não podem ser misturadas separe e avise o catador antes da coleta.</value>
+    </data>
 </root>

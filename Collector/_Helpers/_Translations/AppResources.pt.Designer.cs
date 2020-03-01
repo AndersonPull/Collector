@@ -178,5 +178,221 @@ namespace Collector._Helpers._Translations {
                 return ResourceManager.GetString("Edit", resourceCulture);
             }
         }
+        
+        internal static string PaperTitle {
+            get {
+                return ResourceManager.GetString("PaperTitle", resourceCulture);
+            }
+        }
+        
+        internal static string PaperSubTitle {
+            get {
+                return ResourceManager.GetString("PaperSubTitle", resourceCulture);
+            }
+        }
+        
+        internal static string PaperText {
+            get {
+                return ResourceManager.GetString("PaperText", resourceCulture);
+            }
+        }
+        
+        internal static string AluminumTitle {
+            get {
+                return ResourceManager.GetString("AluminumTitle", resourceCulture);
+            }
+        }
+        
+        internal static string AluminumSubTitle {
+            get {
+                return ResourceManager.GetString("AluminumSubTitle", resourceCulture);
+            }
+        }
+        
+        internal static string AluminumText {
+            get {
+                return ResourceManager.GetString("AluminumText", resourceCulture);
+            }
+        }
+        
+        internal static string PlasticTitle {
+            get {
+                return ResourceManager.GetString("PlasticTitle", resourceCulture);
+            }
+        }
+        
+        internal static string PlasticSubTitle {
+            get {
+                return ResourceManager.GetString("PlasticSubTitle", resourceCulture);
+            }
+        }
+        
+        internal static string PlasticText {
+            get {
+                return ResourceManager.GetString("PlasticText", resourceCulture);
+            }
+        }
+        
+        internal static string OilTitle {
+            get {
+                return ResourceManager.GetString("OilTitle", resourceCulture);
+            }
+        }
+        
+        internal static string OilSubTitle {
+            get {
+                return ResourceManager.GetString("OilSubTitle", resourceCulture);
+            }
+        }
+        
+        internal static string OilText {
+            get {
+                return ResourceManager.GetString("OilText", resourceCulture);
+            }
+        }
+        
+        internal static string DiverseTitle {
+            get {
+                return ResourceManager.GetString("DiverseTitle", resourceCulture);
+            }
+        }
+        
+        internal static string DiverseSubTitle {
+            get {
+                return ResourceManager.GetString("DiverseSubTitle", resourceCulture);
+            }
+        }
+        
+        internal static string DiverseText {
+            get {
+                return ResourceManager.GetString("DiverseText", resourceCulture);
+            }
+        }
+        
+        internal static string MetalTitle {
+            get {
+                return ResourceManager.GetString("MetalTitle", resourceCulture);
+            }
+        }
+        
+        internal static string MetalSubTitle {
+            get {
+                return ResourceManager.GetString("MetalSubTitle", resourceCulture);
+            }
+        }
+        
+        internal static string MetalText {
+            get {
+                return ResourceManager.GetString("MetalText", resourceCulture);
+            }
+        }
+        
+        internal static string TreePruningTitle {
+            get {
+                return ResourceManager.GetString("TreePruningTitle", resourceCulture);
+            }
+        }
+        
+        internal static string TreePruningSubTitle {
+            get {
+                return ResourceManager.GetString("TreePruningSubTitle", resourceCulture);
+            }
+        }
+        
+        internal static string TreePruningText {
+            get {
+                return ResourceManager.GetString("TreePruningText", resourceCulture);
+            }
+        }
+        
+        internal static string FurnitureTitle {
+            get {
+                return ResourceManager.GetString("FurnitureTitle", resourceCulture);
+            }
+        }
+        
+        internal static string FurnitureSubTitle {
+            get {
+                return ResourceManager.GetString("FurnitureSubTitle", resourceCulture);
+            }
+        }
+        
+        internal static string FurnitureText {
+            get {
+                return ResourceManager.GetString("FurnitureText", resourceCulture);
+            }
+        }
+        
+        internal static string ElectronicsTitle {
+            get {
+                return ResourceManager.GetString("ElectronicsTitle", resourceCulture);
+            }
+        }
+        
+        internal static string ElectronicsSubTitle {
+            get {
+                return ResourceManager.GetString("ElectronicsSubTitle", resourceCulture);
+            }
+        }
+        
+        internal static string ElectronicsText {
+            get {
+                return ResourceManager.GetString("ElectronicsText", resourceCulture);
+            }
+        }
+        
+        internal static string RubbleTitle {
+            get {
+                return ResourceManager.GetString("RubbleTitle", resourceCulture);
+            }
+        }
+        
+        internal static string RubbleSubTitle {
+            get {
+                return ResourceManager.GetString("RubbleSubTitle", resourceCulture);
+            }
+        }
+        
+        internal static string RubbleText {
+            get {
+                return ResourceManager.GetString("RubbleText", resourceCulture);
+            }
+        }
+        
+        internal static string GlassTitle {
+            get {
+                return ResourceManager.GetString("GlassTitle", resourceCulture);
+            }
+        }
+        
+        internal static string GlassSubTitle {
+            get {
+                return ResourceManager.GetString("GlassSubTitle", resourceCulture);
+            }
+        }
+        
+        internal static string GlassText {
+            get {
+                return ResourceManager.GetString("GlassText", resourceCulture);
+            }
+        }
+        
+        internal static string BatteryTitle {
+            get {
+                return ResourceManager.GetString("BatteryTitle", resourceCulture);
+            }
+        }
+        
+        internal static string BatterySubTitle {
+            get {
+                return ResourceManager.GetString("BatterySubTitle", resourceCulture);
+            }
+        }
+        
+        internal static string BatteryText {
+            get {
+                return ResourceManager.GetString("BatteryText", resourceCulture);
+            }
+        }
     }
 }

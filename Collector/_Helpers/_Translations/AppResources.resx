@@ -105,4 +105,150 @@
     <data name="Edit" xml:space="preserve">
         <value>Edit</value>
     </data>
+    
+    <!--Materiais-->
+    <data name="PaperTitle" xml:space="preserve">
+        <value>Paper</value>
+    </data>
+    
+    <data name="PaperSubTitle" xml:space="preserve">
+        <value>100% recyclable and biodegradable</value>
+    </data>
+    
+    <data name="PaperText" xml:space="preserve">
+        <value>We recycle 1/3 of the paper produced, 1 ton recycled saves 22 sheets, avoid wetting, tearing or wrinkling do not mix embossed paper wash long life rinsing dishes.</value>
+    </data>
+    
+    <data name="AluminumTitle" xml:space="preserve">
+        <value>Aluminum</value>
+    </data>
+    
+    <data name="AluminumSubTitle" xml:space="preserve">
+        <value>In 60 days, 1 can is produced, purchased, collected and recycled and returns to the shelves</value>
+    </data>
+    
+    <data name="AluminumText" xml:space="preserve">
+        <value>We recycle 98.4% of cans in Brazil, and only 33% of other aluminum items to recycle spend 95% less energy than producing it</value>
+    </data>
+    
+    <data name="PlasticTitle" xml:space="preserve">
+        <value>Plastic</value>
+    </data>
+    
+    <data name="PlasticSubTitle" xml:space="preserve">
+        <value>Brazil only recycles 20% of production 8 billion kg / year pollute the oceans</value>
+    </data>
+    
+    <data name="PlasticText" xml:space="preserve">
+        <value>Recycle bags, snacks, sachets, straws, Styrofoam and all other platicos clean food scraps with rinsing water or used napkin.</value>
+    </data>
+    
+    <data name="OilTitle" xml:space="preserve">
+        <value>Oil</value>
+    </data>
+    
+    <data name="OilSubTitle" xml:space="preserve">
+        <value>1 liter down the drain = 25 thousand liters of polluted water</value>
+    </data>
+    
+    <data name="OilText" xml:space="preserve">
+        <value>In a discard in the sink or in the pot after being used and cooled, the oil should be strained into a PET bottle with a lid, ask the collector to take it to a collection point or cooperative that produces soap.</value>
+    </data>
+    
+    <data name="DiverseTitle" xml:space="preserve">
+        <value>Diverse</value>
+    </data>
+    
+    <data name="DiverseSubTitle" xml:space="preserve">
+        <value>It is the worst metarial for waste pickers, its value is very low</value>
+    </data>
+    
+    <data name="DiverseText" xml:space="preserve">
+        <value>Brazil loses R $ 8 billion / year introducing medicines and mixed recyclable medicines and its laminated packaging must be discarded in pharmacies.</value>
+    </data>
+    
+    <data name="MetalTitle" xml:space="preserve">
+        <value>Metal</value>
+    </data>
+    
+    <data name="MetalSubTitle" xml:space="preserve">
+        <value>Steel is the most recycled material in the world, it is 100% recyclable, it can be recycled endlessly</value>
+    </data>
+    
+    <data name="MetalText" xml:space="preserve">
+        <value>1/4 of the steel in Brazil uses recycled material, recycled metals are in food cans, tools, wires, beams, automobiles and household items.</value>
+    </data>
+    
+    <data name="TreePruningTitle" xml:space="preserve">
+        <value>Tree pruning</value>
+    </data>
+    
+    <data name="TreePruningSubTitle" xml:space="preserve">
+        <value>Tree pruning can be composted and produce energy</value>
+    </data>
+    
+    <data name="TreePruningText" xml:space="preserve">
+        <value>At events and parties, organize a selection of dry recyclables in large bags evaluate and arrange with the collector the collection of waste not listed in this application.</value>
+    </data>
+    
+    <data name="FurnitureTitle" xml:space="preserve">
+        <value>Furniture</value>
+    </data>
+    
+    <data name="FurnitureSubTitle" xml:space="preserve">
+        <value>Check the cart size</value>
+    </data>
+    
+    <data name="FurnitureText" xml:space="preserve">
+        <value>Combine with the picker the point of disposal of the furniture, ensure that the furniture will not end in a vacant lot or on the street.</value>
+    </data>
+    
+    <data name="ElectronicsTitle" xml:space="preserve">
+        <value>Electronics</value>
+    </data>
+    
+    <data name="ElectronicsSubTitle" xml:space="preserve">
+        <value>98% of electronic components can be recycled</value>
+    </data>
+    
+    <data name="ElectronicsText" xml:space="preserve">
+        <value>It has a higher value, but only 15.5% is recycled, there is a lack of infrastructure in Brazil, they are highly contaminants, seek the correct destination.</value>
+    </data>
+    
+    <data name="RubbleTitle" xml:space="preserve">
+        <value>Rubble</value>
+    </data>
+    
+    <data name="RubbleSubTitle" xml:space="preserve">
+        <value>You can use 95% of the material and recycling is mandatory</value>
+    </data>
+    
+    <data name="RubbleText" xml:space="preserve">
+        <value>Reused in streets and highways ensure that your rubbish does not end up in a vacant lot check with your city hall for the appropriate location.</value>
+    </data>
+    
+    <data name="GlassTitle" xml:space="preserve">
+        <value>Glass</value>
+    </data>
+    
+    <data name="GlassSubTitle" xml:space="preserve">
+        <value>100% recyclable and lasts forever low price, few places recycle</value>
+    </data>
+    
+    <data name="GlassText" xml:space="preserve">
+        <value>Broken glass is even worse, greater number of accidents with lamps, TVs and mirrors need special attention.</value>
+    </data>
+    
+    <data name="BatteryTitle" xml:space="preserve">
+        <value>Battery</value>
+    </data>
+    
+    <data name="BatterySubTitle" xml:space="preserve">
+        <value>They are highly contaminating</value>
+    </data>
+    
+    <data name="BatteryText" xml:space="preserve">
+        <value>
+They are on cell phones, cordless phones, cameras, camcorders, laptops, toys and watches, they cannot be mixed apart and notify the collector before collection.</value>
+    </data>
 </root>
