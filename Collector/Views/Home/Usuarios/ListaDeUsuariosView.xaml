@@ -6,7 +6,9 @@
              xmlns:translator="clr-namespace:Collector._Helpers"
              BackgroundColor="#EBEBEB"
              Title="{translator:Translate Collectors}">
-    
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Incluir" Priority="0" Order="Primary" Command="{Binding NewPregnantCommand}" />
+    </ContentPage.ToolbarItems>
     <ContentPage.Content>
 
         <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">

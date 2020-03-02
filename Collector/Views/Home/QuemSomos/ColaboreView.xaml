@@ -50,7 +50,7 @@
                 <Button Text="Collectors@outlook.com" TextColor="#EBEBEB"  
                                 BackgroundColor="#00BB54" HeightRequest="45"
                                 CornerRadius="18" FontSize="Large" FontAttributes="Bold"
-                                Command="{Binding EmailCommand}" 
+                                Command="{Binding EmailCommand}" Padding="0"
                                 Margin="0,0,0,20" VerticalOptions="EndAndExpand"/>
             </StackLayout>
 
