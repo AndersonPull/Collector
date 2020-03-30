@@ -9,7 +9,8 @@
 
         <ScrollView>
 
-            <StackLayout Margin="15" HorizontalOptions="CenterAndExpand">
+            <StackLayout Margin="15"
+                         HorizontalOptions="CenterAndExpand">
 
                 <Label Text="{translator:Translate Introduction}"
                        TextColor="#747474"
@@ -22,20 +23,20 @@
                 <StackLayout Margin="20,40,20,40" Spacing="30">
 
                     <Label Text="{translator:Translate HelpOne}"
-                       TextColor="#00BB54"
-                       FontAttributes="Bold"/>
+                           TextColor="#00BB54"
+                           FontAttributes="Bold"/>
 
                     <Label Text="{translator:Translate HelpTwo}"
-                       TextColor="#00BB54"
-                       FontAttributes="Bold"/>
+                           TextColor="#00BB54"
+                           FontAttributes="Bold"/>
 
                     <Label Text="{translator:Translate HelpThree}"
-                       TextColor="#00BB54"
-                       FontAttributes="Bold"/>
+                           TextColor="#00BB54"
+                           FontAttributes="Bold"/>
 
                     <Label Text="{translator:Translate HelpFour}"
-                       TextColor="#00BB54"
-                       FontAttributes="Bold"/>
+                           TextColor="#00BB54"
+                           FontAttributes="Bold"/>
 
                 </StackLayout>
 
@@ -47,11 +48,17 @@
                        TextColor="#747474"
                        FontAttributes="None"/>
 
-                <Button Text="Collectors@outlook.com" TextColor="#EBEBEB"  
-                                BackgroundColor="#00BB54" HeightRequest="45"
-                                CornerRadius="18" FontSize="Large" FontAttributes="Bold"
-                                Command="{Binding EmailCommand}" Padding="0"
-                                Margin="0,0,0,20" VerticalOptions="EndAndExpand"/>
+                <Button Text="Collectors@outlook.com"
+                        TextColor="#EBEBEB"  
+                        BackgroundColor="#00BB54"
+                        HeightRequest="45"
+                        CornerRadius="18"
+                        FontSize="Large"
+                        FontAttributes="Bold"
+                        Padding="0"
+                        Margin="0,0,0,20"
+                        VerticalOptions="EndAndExpand"
+                        Command="{Binding EmailCommand}"/>
             </StackLayout>
 
         </ScrollView>

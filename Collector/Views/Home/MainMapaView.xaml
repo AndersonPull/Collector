@@ -10,22 +10,35 @@
 
         <Grid>
                             
-            <maps:Map Grid.Row="0" x:Name="map" VerticalOptions="FillAndExpand"
+            <maps:Map Grid.Row="0"
+                      x:Name="map"
+                      VerticalOptions="FillAndExpand"
                       HorizontalOptions="FillAndExpand"/>
 
-            <FlexLayout Grid.Row="0" VerticalOptions="Start" HeightRequest="45"
-                        Margin="20,60,10,0" HorizontalOptions="FillAndExpand" >
+            <FlexLayout Grid.Row="0"
+                        VerticalOptions="Start"
+                        HeightRequest="45"
+                        Margin="20,60,10,0"
+                        HorizontalOptions="FillAndExpand" >
 
-                <ImageButton Source="MenuMapa.png" BackgroundColor="Transparent"
+                <ImageButton Source="MenuMapa.png"
+                             BackgroundColor="Transparent"
                              WidthRequest="{OnPlatform Android=75, iOS=45}"
                              HeightRequest="{OnPlatform Android=45, iOS=45}"
-                             Padding="0" Margin="0" Command="{Binding NavegarLista}"/>
+                             Padding="0"
+                             Margin="0"
+                             Command="{Binding NavegarLista}"/>
 
-                <Frame BackgroundColor="#ffffff" WidthRequest="315" HeightRequest="45"
-                       CornerRadius="8" Padding="0" Margin="10,0,0,0"
+                <Frame BackgroundColor="#ffffff"
+                       WidthRequest="315"
+                       HeightRequest="45"
+                       CornerRadius="8"
+                       Padding="0"
+                       Margin="10,0,0,0"
                        HasShadow="{OnPlatform iOS=false, Android=true}">    
 
-                    <StackLayout Orientation="Horizontal" VerticalOptions="Center"
+                    <StackLayout Orientation="Horizontal"
+                                 VerticalOptions="Center"
                                  HorizontalOptions="StartAndExpand">
 
                         <CustomEntry:CustomEntry  Placeholder="{translator:Translate Address}"
@@ -37,10 +50,14 @@
                                                   PlaceholderColor="#A2A2A2"
                                                   BackgroundColor="Transparent"/>
 
-                        <BoxView WidthRequest="1" HeightRequest="35"
-                                 BackgroundColor="#ACACAC" VerticalOptions="Center"/>
+                        <BoxView WidthRequest="1"
+                                 HeightRequest="35"
+                                 BackgroundColor="#ACACAC"
+                                 VerticalOptions="Center"/>
 
-                        <Label Text="{translator:Translate Search}" FontSize="Small"  TextColor="#ACACAC"
+                        <Label Text="{translator:Translate Search}"
+                               TextColor="#ACACAC"
+                               FontSize="Small"
                                VerticalOptions="Center" />
 
                     </StackLayout>

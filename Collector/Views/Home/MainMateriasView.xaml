@@ -9,33 +9,44 @@
 
         <StackLayout>
 
-            <StackLayout Margin="0,60,0,0" VerticalOptions="StartAndExpand"
+            <StackLayout Margin="0,60,0,0"
+                         VerticalOptions="StartAndExpand"
                          HorizontalOptions="CenterAndExpand">
 
-                <flv:FlowListView RowHeight="130" FlowColumnCount="3"
-                                   FlowColumnExpand="First"
-                                   SeparatorVisibility="None" BackgroundColor="Transparent"
-                                   HasUnevenRows="false" IsInNativeLayout="true"
-                                   FlowItemTappedCommand="{Binding ItemSelectedCommand}"
-                                   FlowItemsSource="{Binding ItensMenu}">
+                <flv:FlowListView RowHeight="130"
+                                  FlowColumnCount="3"
+                                  FlowColumnExpand="First"
+                                  SeparatorVisibility="None"
+                                  BackgroundColor="Transparent"
+                                  HasUnevenRows="false"
+                                  IsInNativeLayout="true"
+                                  FlowItemTappedCommand="{Binding ItemSelectedCommand}"
+                                  FlowItemsSource="{Binding ItensMenu}">
 
                     <flv:FlowListView.FlowColumnTemplate>
 
                         <DataTemplate>
 
-                            <Frame BackgroundColor="Transparent" CornerRadius="8"
-                                BorderColor="#00BB54" HasShadow="False" Padding="10"
-                                Margin="5">
+                            <Frame BackgroundColor="Transparent"
+                                   CornerRadius="8"
+                                   BorderColor="#00BB54"
+                                   HasShadow="False"
+                                   Padding="10"
+                                   Margin="5">
 
                                 <StackLayout>
 
-                                    <Image Source="{Binding Imagem}" Aspect="AspectFit"
-                                        WidthRequest="60" HeightRequest="60" />
+                                    <Image Source="{Binding Imagem}"
+                                           Aspect="AspectFit"
+                                           WidthRequest="60"
+                                           HeightRequest="60" />
 
-                                    <Label Text="{Binding Texto}" FontSize="17"
-                                        TextColor="#00BB54" FontAttributes="Bold"
-                                        HorizontalOptions="CenterAndExpand"
-                                        HorizontalTextAlignment="Center"/>
+                                    <Label Text="{Binding Texto}"
+                                           FontSize="17"
+                                           TextColor="#00BB54"
+                                           FontAttributes="Bold"
+                                           HorizontalOptions="CenterAndExpand"
+                                           HorizontalTextAlignment="Center"/>
 
                                 </StackLayout>
 
@@ -49,9 +60,14 @@
 
             </StackLayout>
 
-            <Button Text="Indentificar item" TextColor="#00BB54" BorderColor="#00BB54"
-                    BackgroundColor="Transparent" BorderWidth="2" CornerRadius="8"
-                    Margin="5" HeightRequest="45"/>
+            <Button Text="Indentificar item"
+                    TextColor="#00BB54"
+                    BorderColor="#00BB54"
+                    BackgroundColor="Transparent"
+                    BorderWidth="2"
+                    CornerRadius="8"
+                    Margin="5"
+                    HeightRequest="45"/>
 
         </StackLayout>
 

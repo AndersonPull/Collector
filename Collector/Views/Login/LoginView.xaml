@@ -15,10 +15,13 @@
                 <StackLayout Spacing="0">
 
                     <StackLayout HorizontalOptions="FillAndExpand"
-                                 VerticalOptions="StartAndExpand" HeightRequest="200">
+                                 VerticalOptions="StartAndExpand"
+                                 HeightRequest="200">
 
-                        <Image Source="Logo.png" HorizontalOptions="CenterAndExpand"
-                               VerticalOptions="CenterAndExpand" WidthRequest="100"
+                        <Image Source="Logo.png"
+                               HorizontalOptions="CenterAndExpand"
+                               VerticalOptions="CenterAndExpand"
+                               WidthRequest="100"
                                HeightRequest="100"/>
 
                     </StackLayout>
@@ -28,14 +31,20 @@
 
                         <StackLayout Orientation="Horizontal">
 
-                            <Label Text="{translator:Translate Login}" TextColor="#ffffff"
-                                   FontSize="30" HorizontalOptions="FillAndExpand"
-                                   VerticalTextAlignment="Center" FontAttributes="Bold"/>
+                            <Label Text="{translator:Translate Login}"
+                                   TextColor="#ffffff"
+                                   FontSize="30"
+                                   HorizontalOptions="FillAndExpand"
+                                   VerticalTextAlignment="Center"
+                                   FontAttributes="Bold"/>
 
                             <Button Text="{translator:Translate CreateAccount}"
-                                    TextColor="#00BB54" BackgroundColor="#EBEBEB"
-                                    CornerRadius="15" FontSize="Micro"
-                                    FontAttributes="Bold" Padding="5"
+                                    TextColor="#00BB54"
+                                    BackgroundColor="#EBEBEB"
+                                    CornerRadius="15"
+                                    FontSize="Micro"
+                                    FontAttributes="Bold"
+                                    Padding="5"
                                     HeightRequest="20"/>
 
                         </StackLayout>
@@ -46,49 +55,76 @@
                         <CustomEntry:CustomEntry Placeholder="{translator:Translate TypeYourEmail}"
                                                  PlaceholderColor="{OnPlatform Android=#EBEBEB}"
                                                  BackgroundColor="{OnPlatform iOS=#EBEBEB}"
-                                                 CornerRadius="18" IsCurvedCornersEnabled="True"
+                                                 CornerRadius="18"
+                                                 IsCurvedCornersEnabled="True"
                                                  HorizontalOptions="FillAndExpand"
-                                                 FontSize="17" HeightRequest="45"
-                                                 Margin="0,15,0,0" TextColor="{OnPlatform iOS=#575757, Android=#EBEBEB}"
-                                                 FontAttributes="Bold" BorderColor="#EBEBEB" />
+                                                 FontSize="17"
+                                                 HeightRequest="45"
+                                                 Margin="0,15,0,0"
+                                                 TextColor="{OnPlatform iOS=#575757, Android=#EBEBEB}"
+                                                 FontAttributes="Bold"
+                                                 BorderColor="#EBEBEB" />
 
                         <CustomEntry:CustomEntry Placeholder="{translator:Translate TypeYourPassword}"
                                                  PlaceholderColor="{OnPlatform Android=#EBEBEB}"
                                                  BackgroundColor="{OnPlatform iOS=#EBEBEB}"
-                                                 CornerRadius="18" IsCurvedCornersEnabled="True"
+                                                 CornerRadius="18"
+                                                 IsCurvedCornersEnabled="True"
                                                  HorizontalOptions="FillAndExpand"
-                                                 FontSize="17" HeightRequest="45"
-                                                 Margin="0,15,0,0" IsPassword="True"
+                                                 FontSize="17"
+                                                 HeightRequest="45"
+                                                 Margin="0,15,0,0"
+                                                 IsPassword="True"
                                                  TextColor="{OnPlatform iOS=#575757, Android=#EBEBEB}"
-                                                 FontAttributes="Bold" BorderColor="#EBEBEB"/>
+                                                 FontAttributes="Bold"
+                                                 BorderColor="#EBEBEB"/>
 
-                        <Button Text="{translator:Translate Login}" TextColor="#00BB54"  
-                                BackgroundColor="#EBEBEB" WidthRequest="45"
-                                VerticalOptions="FillAndExpand" HeightRequest="45"
-                                CornerRadius="18" FontSize="Large" FontAttributes="Bold"
-                                Command="{Binding LoginCommand}" Padding="0"
+                        <Button Text="{translator:Translate Login}"
+                                TextColor="#00BB54"  
+                                BackgroundColor="#EBEBEB"
+                                WidthRequest="45"
+                                VerticalOptions="FillAndExpand"
+                                HeightRequest="45"
+                                CornerRadius="18"
+                                FontSize="Large"
+                                FontAttributes="Bold"
+                                Command="{Binding LoginCommand}"
+                                Padding="0"
                                 Margin="0,15,0,0"/>
 
                     </StackLayout>
 
-                    <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="EndAndExpand">
+                    <StackLayout HorizontalOptions="FillAndExpand"
+                                 VerticalOptions="EndAndExpand">
 
-                        <Label Text="{translator:Translate OrLoginWith}" TextColor="#ffffff" 
-                               HorizontalOptions="FillAndExpand" VerticalTextAlignment="Center"
-                               FontAttributes="Bold" Margin="0,15,0,0" FontSize="20"/>
+                        <Label Text="{translator:Translate OrLoginWith}"
+                               TextColor="#ffffff" 
+                               HorizontalOptions="FillAndExpand"
+                               VerticalTextAlignment="Center"
+                               FontAttributes="Bold"
+                               Margin="0,15,0,0"
+                               FontSize="20"/>
 
-                        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                        <StackLayout Orientation="Horizontal"
+                                     HorizontalOptions="FillAndExpand">
 
-                            <ImageButton Source="ButomFacebook.png" Margin="0,15,15,15"
-                                         BackgroundColor="#EBEBEB" HorizontalOptions="FillAndExpand"
-                                         WidthRequest="45" VerticalOptions="FillAndExpand"
-                                         HeightRequest="45" CornerRadius="18"/>
+                            <ImageButton Source="ButomFacebook.png"
+                                         Margin="0,15,15,15"
+                                         BackgroundColor="#EBEBEB"
+                                         HorizontalOptions="FillAndExpand"
+                                         WidthRequest="45"
+                                         VerticalOptions="FillAndExpand"
+                                         HeightRequest="45"
+                                         CornerRadius="18"/>
 
-                            <ImageButton Source="ButomGoogle.png" Margin="15,15,0,15"
-                                         BackgroundColor="#EBEBEB" WidthRequest="45"
+                            <ImageButton Source="ButomGoogle.png"
+                                         Margin="15,15,0,15"
+                                         BackgroundColor="#EBEBEB"
+                                         WidthRequest="45"
                                          VerticalOptions="FillAndExpand"
                                          HorizontalOptions="FillAndExpand"
-                                         HeightRequest="45" CornerRadius="18" />
+                                         HeightRequest="45"
+                                         CornerRadius="18" />
 
                         </StackLayout>
 

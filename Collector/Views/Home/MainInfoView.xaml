@@ -12,47 +12,70 @@
 
             <StackLayout>
 
-                <Image Source="BackgroundCatador.png" Aspect="AspectFill" />
+                <Image Source="BackgroundCatador.png"
+                       Aspect="AspectFill" />
 
-                <StackLayout Margin="10,-150,10,0" HeightRequest="175">
+                <StackLayout Margin="10,-150,10,0"
+                             HeightRequest="175">
 
                     <StackLayout Orientation="Horizontal"
                                  HorizontalOptions="FillAndExpand">
 
-                        <Frame BackgroundColor="Red"  HorizontalOptions="Start"
-                               VerticalOptions="Start" WidthRequest="60" HasShadow="False"
-                               HeightRequest="60" Padding="0" CornerRadius="30"
+                        <Frame BackgroundColor="Red"
+                               HorizontalOptions="Start"
+                               VerticalOptions="Start"
+                               WidthRequest="60"
+                               HeightRequest="60"
+                               HasShadow="False"
+                               Padding="0"
+                               CornerRadius="30"
                                IsClippedToBounds="true">
 
-                            <Image Source="fotoPerfil.png" WidthRequest="80"
-                                   HeightRequest="80" Aspect="AspectFill" />
+                            <Image Source="fotoPerfil.png"
+                                   WidthRequest="80"
+                                   HeightRequest="80"
+                                   Aspect="AspectFill" />
 
                         </Frame>
 
                         <StackLayout Orientation="Vertical">
 
-                            <Label Text="Marcia Catadora" TextColor="#ffffff"
-                                    FontSize="Medium" FontAttributes="Bold"/>
+                            <Label Text="Marcia Catadora"
+                                   TextColor="#ffffff"
+                                   FontSize="Medium"
+                                   FontAttributes="Bold"/>
 
-                            <Label Text="Marcia Silva Santos" TextColor="#ffffff"
-                                    FontSize="Medium" FontAttributes="None"/>
+                            <Label Text="Marcia Silva Santos"
+                                   TextColor="#ffffff"
+                                   FontSize="Medium"
+                                   FontAttributes="None"/>
 
                             <StackLayout Orientation="Horizontal">
 
-                                <Image Source="ic_mapa.png"  WidthRequest="7"
-                                        HeightRequest="5" Aspect="AspectFill"/>
+                                <Image Source="ic_mapa.png"
+                                       WidthRequest="7"
+                                       HeightRequest="5"
+                                       Aspect="AspectFill"/>
 
-                                <Label Text="Osasco" TextColor="#ffffff"
-                                    FontSize="Micro" FontAttributes="None"/>
+                                <Label Text="Osasco"
+                                       TextColor="#ffffff"
+                                       FontSize="Micro"
+                                       FontAttributes="None"/>
 
                             </StackLayout>
 
                         </StackLayout>
 
-                        <Button Text="{translator:Translate SingOut}" TextColor="#00BB54"  Padding="0"
-                                BackgroundColor="#EBEBEB" WidthRequest="80"
-                                HeightRequest="30" CornerRadius="10" FontSize="Micro"
-                                FontAttributes="Bold" VerticalOptions="Start"
+                        <Button Text="{translator:Translate SingOut}"
+                                TextColor="#00BB54"
+                                Padding="0"
+                                BackgroundColor="#EBEBEB"
+                                WidthRequest="80"
+                                HeightRequest="30"
+                                CornerRadius="10"
+                                FontSize="Micro"
+                                FontAttributes="Bold"
+                                VerticalOptions="Start"
                                 HorizontalOptions="EndAndExpand"
                                 Command="{Binding SairCommand}"/>
 
@@ -72,10 +95,13 @@
 
                             <StackLayout WidthRequest="2600">
                     
-                                <flv:FlowListView RowHeight="130" FlowColumnCount="12"
+                                <flv:FlowListView RowHeight="130"
+                                                  FlowColumnCount="12"
                                                   FlowColumnExpand="First"
-                                                  SeparatorVisibility="None" BackgroundColor="Transparent"
-                                                  HasUnevenRows="false" IsInNativeLayout="true"
+                                                  SeparatorVisibility="None"
+                                                  BackgroundColor="Transparent"
+                                                  HasUnevenRows="false"
+                                                  IsInNativeLayout="true"
                                                   FlowItemTappedCommand="{Binding ItemSelectedCommand}"
                                                   FlowItemsSource="{Binding ItensMenu}">
 
@@ -83,27 +109,43 @@
 
                                         <DataTemplate>
 
-                                            <Frame BorderColor="#ffffff" BackgroundColor="#ffffff"
-                                                HasShadow="False" Padding="0" Margin="5" WidthRequest="160"
-                                                HeightRequest="90" CornerRadius="15">
+                                            <Frame BorderColor="#ffffff"
+                                                   BackgroundColor="#ffffff"
+                                                   HasShadow="False"
+                                                   Padding="0"
+                                                   Margin="5"
+                                                   WidthRequest="160"
+                                                   HeightRequest="90"
+                                                   CornerRadius="15">
 
-                                                <StackLayout Margin="10" HeightRequest="180">
+                                                <StackLayout Margin="10"
+                                                             HeightRequest="180">
 
-                                                    <StackLayout Orientation="Horizontal" VerticalOptions="FillAndExpand">
+                                                    <StackLayout Orientation="Horizontal"
+                                                                 VerticalOptions="FillAndExpand">
 
-                                                        <Image Source="{Binding Imagem}" Aspect="AspectFit"
-                                                                WidthRequest="60" HeightRequest="60" />
+                                                        <Image Source="{Binding Imagem}"
+                                                               Aspect="AspectFit"
+                                                               WidthRequest="60"
+                                                               HeightRequest="60" />
 
-                                                        <Label Text="{Binding Texto}" FontSize="14"
-                                                                TextColor="#00BB54" FontAttributes="Bold"
-                                                                HorizontalOptions="CenterAndExpand"
-                                                                HorizontalTextAlignment="Center"
-                                                                Margin="0,10,0,0"/>
+                                                        <Label Text="{Binding Texto}"
+                                                               FontSize="14"
+                                                               TextColor="#00BB54"
+                                                               FontAttributes="Bold"
+                                                               HorizontalOptions="CenterAndExpand"
+                                                               HorizontalTextAlignment="Center"
+                                                               Margin="0,10,0,0"/>
 
-                                                        <Button Text="+" FontSize="Large" FontAttributes="Bold"
-                                                                WidthRequest="30" HeightRequest="30" 
-                                                                BackgroundColor="#00BB54" VerticalOptions="End"
-                                                                HorizontalOptions="End" CornerRadius="15"
+                                                        <Button Text="+"
+                                                                FontSize="Large"
+                                                                FontAttributes="Bold"
+                                                                WidthRequest="30"
+                                                                HeightRequest="30" 
+                                                                BackgroundColor="#00BB54"
+                                                                VerticalOptions="End"
+                                                                HorizontalOptions="End"
+                                                                CornerRadius="15"
                                                                 TextColor="#ffffff" Padding="0" />
                                  
                                                     </StackLayout>
@@ -127,53 +169,74 @@
                     <StackLayout Margin="10">
 
                         <Editor Placeholder="{translator:Translate YourDescription}"
-                                HeightRequest="120" BackgroundColor="Transparent"/>
+                                HeightRequest="120"
+                                BackgroundColor="Transparent"/>
 
                         <Editor Placeholder="{translator:Translate YourStory}"
-                                HeightRequest="120" BackgroundColor="Transparent"/>
+                                HeightRequest="120"
+                                BackgroundColor="Transparent"/>
 
                     </StackLayout>
 
                     <ScrollView Orientation="Horizontal">
 
-                        <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                        <StackLayout Orientation="Horizontal"
+                                     HorizontalOptions="CenterAndExpand">
 
-                            <Frame BackgroundColor="Transparent" CornerRadius="8"
-                                    BorderColor="#00BB54" HasShadow="False" Padding="10"
-                                    Margin="5" WidthRequest="90">
+                            <Frame BackgroundColor="Transparent"
+                                   CornerRadius="8"
+                                   BorderColor="#00BB54"
+                                   HasShadow="False"
+                                   Padding="10"
+                                   Margin="5"
+                                   WidthRequest="90">
 
                                 <StackLayout>
 
-                                    <Image Source="ic_somos" Aspect="AspectFit"
-                                        WidthRequest="60" HeightRequest="60" />
+                                    <Image Source="ic_somos"
+                                           Aspect="AspectFit"
+                                           WidthRequest="60"
+                                           HeightRequest="60" />
 
-                                    <Label Text="{translator:Translate WhoWeAre}" FontSize="15"
-                                            TextColor="#00BB54" FontAttributes="Bold"
-                                            HorizontalOptions="CenterAndExpand"
-                                            HorizontalTextAlignment="Center"/>
+                                    <Label Text="{translator:Translate WhoWeAre}"
+                                           FontSize="15"
+                                           TextColor="#00BB54"
+                                           FontAttributes="Bold"
+                                           HorizontalOptions="CenterAndExpand"
+                                           HorizontalTextAlignment="Center"/>
 
                                 </StackLayout>
 
                                 <Frame.GestureRecognizers>
+
                                     <TapGestureRecognizer Command="{Binding QuemSomosCommand}"
                                                           NumberOfTapsRequired="1"/>
+
                                 </Frame.GestureRecognizers>
 
                             </Frame>
 
-                            <Frame BackgroundColor="Transparent" CornerRadius="8"
-                                BorderColor="#00BB54" HasShadow="False" Padding="10"
-                                Margin="5"  WidthRequest="90">
+                            <Frame BackgroundColor="Transparent"
+                                   CornerRadius="8"
+                                   BorderColor="#00BB54"
+                                   HasShadow="False"
+                                   Padding="10"
+                                   Margin="5"
+                                   WidthRequest="90">
 
                                 <StackLayout>
 
-                                    <Image Source="ic_vamos" Aspect="AspectFit"
-                                        WidthRequest="60" HeightRequest="60" />
+                                    <Image Source="ic_vamos"
+                                           Aspect="AspectFit"
+                                           WidthRequest="60"
+                                           HeightRequest="60" />
 
-                                    <Label Text="{translator:Translate WhereAreWeGoing}" FontSize="15"
-                                        TextColor="#00BB54" FontAttributes="Bold"
-                                        HorizontalOptions="CenterAndExpand"
-                                        HorizontalTextAlignment="Center"/>
+                                    <Label Text="{translator:Translate WhereAreWeGoing}"
+                                           FontSize="15"
+                                           TextColor="#00BB54"
+                                           FontAttributes="Bold"
+                                           HorizontalOptions="CenterAndExpand"
+                                           HorizontalTextAlignment="Center"/>
 
                                 </StackLayout>
 
@@ -184,19 +247,27 @@
 
                             </Frame>
 
-                            <Frame BackgroundColor="Transparent" CornerRadius="8"
-                                BorderColor="#00BB54" HasShadow="False" Padding="10"
-                                Margin="5"  WidthRequest="90">
+                            <Frame BackgroundColor="Transparent"
+                                   CornerRadius="8"
+                                   BorderColor="#00BB54"
+                                   HasShadow="False"
+                                   Padding="10"
+                                   Margin="5"
+                                   WidthRequest="90">
 
                                 <StackLayout>
 
-                                    <Image Source="ic_colabore" Aspect="AspectFit"
-                                        WidthRequest="60" HeightRequest="60" />
+                                    <Image Source="ic_colabore"
+                                           Aspect="AspectFit"
+                                           WidthRequest="60"
+                                           HeightRequest="60" />
 
-                                    <Label Text="{translator:Translate Collaborate}" FontSize="15"
-                                        TextColor="#00BB54" FontAttributes="Bold"
-                                        HorizontalOptions="CenterAndExpand"
-                                        HorizontalTextAlignment="Center"/>
+                                    <Label Text="{translator:Translate Collaborate}"
+                                           FontSize="15"
+                                           TextColor="#00BB54"
+                                           FontAttributes="Bold"
+                                           HorizontalOptions="CenterAndExpand"
+                                           HorizontalTextAlignment="Center"/>
 
                                 </StackLayout>
 

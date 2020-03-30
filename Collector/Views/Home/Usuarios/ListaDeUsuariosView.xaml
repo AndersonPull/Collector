@@ -6,59 +6,96 @@
              xmlns:translator="clr-namespace:Collector._Helpers"
              BackgroundColor="#EBEBEB"
              Title="{translator:Translate Collectors}">
+
     <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Incluir" Priority="0" Order="Primary" Command="{Binding NewPregnantCommand}" />
+
+        <ToolbarItem Text="Incluir"
+                     Priority="0"
+                     Order="Primary"
+                     Command="{Binding NewPregnantCommand}" />
+
     </ContentPage.ToolbarItems>
+
     <ContentPage.Content>
 
-        <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+        <StackLayout VerticalOptions="FillAndExpand"
+                     HorizontalOptions="FillAndExpand">
 
             <flv:FlowListView FlowItemsSource="{Binding Usuarios}" 
-                              HasUnevenRows="True" FlowColumnCount="1" 
-                              BackgroundColor="Transparent" VerticalOptions="FillAndExpand"
+                              HasUnevenRows="True"
+                              FlowColumnCount="1" 
+                              BackgroundColor="Transparent"
+                              VerticalOptions="FillAndExpand"
                               FlowItemTappedCommand="{Binding UsuarioSelecionado}"
-                              x:Name="usuarios"
-                              >
+                              x:Name="usuarios">
 
                 <flv:FlowListView.FlowColumnTemplate >
                     <DataTemplate>
                         <StackLayout>
-                            <Frame  WidthRequest="300" HeightRequest="100" CornerRadius="20"
-                                    HasShadow="False" VerticalOptions="Center" BackgroundColor="#04C85C"
-                                    Margin="10" IsClippedToBounds="true">
+                            <Frame  WidthRequest="300"
+                                    HeightRequest="100"
+                                    CornerRadius="20"
+                                    HasShadow="False"
+                                    VerticalOptions="Center"
+                                    BackgroundColor="#04C85C"
+                                    Margin="10"
+                                    IsClippedToBounds="true">
 
                                 <StackLayout Orientation="Horizontal" >
 
-                                    <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand"
+                                    <StackLayout Orientation="Horizontal"
+                                                 HorizontalOptions="FillAndExpand"
                                                  VerticalOptions="FillAndExpand">
 
-                                        <Frame  HorizontalOptions="Start" BackgroundColor="#018A3E"
-                                               VerticalOptions="Start" WidthRequest="60" HasShadow="False"
-                                               HeightRequest="60" Padding="0" CornerRadius="30"
+                                        <Frame HorizontalOptions="Start"
+                                               BackgroundColor="#018A3E"
+                                               VerticalOptions="Start"
+                                               WidthRequest="60"
+                                               HasShadow="False"
+                                               HeightRequest="60"
+                                               Padding="0"
+                                               CornerRadius="30"
                                                IsClippedToBounds="true">
 
-                                            <Image Source="{Binding Imagem}" WidthRequest="70"
-                                                   HeightRequest="70" Aspect="AspectFill"/>
+                                            <Image Source="{Binding Imagem}"
+                                                   WidthRequest="70"
+                                                   HeightRequest="70"
+                                                   Aspect="AspectFill"/>
                                         </Frame>
 
                                         <StackLayout Orientation="Vertical">
 
-                                            <Label Text="{Binding Apelido}" TextColor="#ffffff"
-                                                   FontSize="Small" FontAttributes="Bold"/>
+                                            <Label Text="{Binding Apelido}"
+                                                   TextColor="#ffffff"
+                                                   FontSize="Small"
+                                                   FontAttributes="Bold"/>
 
-                                            <Label Text="{Binding Nome}" TextColor="#ffffff"
-                                                   FontSize="Micro" FontAttributes="None"/>
+                                            <Label Text="{Binding Nome}"
+                                                   TextColor="#ffffff"
+                                                   FontSize="Micro"
+                                                   FontAttributes="None"/>
 
                                             <FlexLayout Margin="0,20,0,0">
 
-                                                <Image Source="carButton.png" WidthRequest="30"
-                                                HeightRequest="30" Margin="2"/>
-                                                <Image Source="carButton.png" WidthRequest="30"
-                                                HeightRequest="30" Margin="2"/>
-                                                <Image Source="carButton.png" WidthRequest="30"
-                                                HeightRequest="30" Margin="2"/>
-                                                <Image Source="carButton.png" WidthRequest="30"
-                                                HeightRequest="30" Margin="2"/>
+                                                <Image Source="carButton.png"
+                                                       WidthRequest="30"
+                                                       HeightRequest="30"
+                                                       Margin="2"/>
+
+                                                <Image Source="carButton.png"
+                                                       WidthRequest="30"
+                                                       HeightRequest="30"
+                                                       Margin="2"/>
+
+                                                <Image Source="carButton.png"
+                                                       WidthRequest="30"
+                                                       HeightRequest="30"
+                                                       Margin="2"/>
+
+                                                <Image Source="carButton.png"
+                                                       WidthRequest="30"
+                                                       HeightRequest="30"
+                                                       Margin="2"/>
 
                                             </FlexLayout>
 
@@ -78,13 +115,18 @@
                                             </Image.GestureRecognizers>   
                                         </Image>
 
-                                        <Image Source="carButton.png" WidthRequest="50"
+                                        <Image Source="carButton.png"
+                                               WidthRequest="50"
                                                HeightRequest="50"/>
 
-                                        <Label Text="1.6 Km" TextColor="#ffffff" FontSize="Micro"
+                                        <Label Text="1.6 Km"
+                                               TextColor="#ffffff"
+                                               FontSize="Micro"
                                                HorizontalTextAlignment="Center"/>
 
-                                        <Label Text="{translator:Translate Location}" TextColor="#ffffff" FontSize="Micro"
+                                        <Label Text="{translator:Translate Location}"
+                                               TextColor="#ffffff"
+                                               FontSize="Micro"
                                                HorizontalTextAlignment="Center"/>
 
                                     </StackLayout>
@@ -93,20 +135,29 @@
 
                             </Frame>
 
-                            <Frame  x:Name="{Binding Name}" WidthRequest="300" HeightRequest="100" CornerRadius="20"
-                                    HasShadow="False" VerticalOptions="Center" BackgroundColor="#04C85C"
-                                    Margin="10,-16,10,10" IsClippedToBounds="true" IsVisible="{Binding MaisDetalhes}">
+                            <Frame  x:Name="{Binding Name}"
+                                    WidthRequest="300"
+                                    HeightRequest="100"
+                                    CornerRadius="20"
+                                    HasShadow="False"
+                                    VerticalOptions="Center"
+                                    BackgroundColor="#04C85C"
+                                    Margin="10,-16,10,10"
+                                    IsClippedToBounds="true"
+                                    IsVisible="{Binding MaisDetalhes}">
 
                                 <StackLayout >
 
-                                    <Label Text="{translator:Translate MyHistory}" FontSize="Small"
+                                    <Label Text="{translator:Translate MyHistory}"
+                                           FontSize="Small"
                                            TextColor="#ffffff"
                                            FontAttributes="Bold"
                                            VerticalTextAlignment="Start"
                                            HorizontalTextAlignment="Center"/>
 
                                     <Label Text="{Binding Historia}"
-                                           FontSize="Small" TextColor="#ffffff"
+                                           FontSize="Small"
+                                           TextColor="#ffffff"
                                            FontAttributes="None"
                                            VerticalTextAlignment="Start"
                                            HorizontalTextAlignment="Center"/>
@@ -117,18 +168,25 @@
 
                                         <Image Source="ic_telefone.png"
                                                WidthRequest="30"
-                                               HeightRequest="20" Margin="2"/>
+                                               HeightRequest="20"
+                                               Margin="2"/>
 
-                                        <Label Text="{Binding Telefone}" FontSize="Small"
-                                               TextColor="#ffffff" FontAttributes="Bold"
+                                        <Label Text="{Binding Telefone}"
+                                               FontSize="Small"
+                                               TextColor="#ffffff"
+                                               FontAttributes="Bold"
                                                VerticalTextAlignment="Center"
                                                HorizontalTextAlignment="Start"/>
 
-                                        <Image Source="ic_whatsapp.png" WidthRequest="30"
-                                               HeightRequest="20" Margin="2"/>
+                                        <Image Source="ic_whatsapp.png"
+                                               WidthRequest="30"
+                                               HeightRequest="20"
+                                               Margin="2"/>
 
-                                        <Label Text="{Binding Telefone}" FontSize="Small"
-                                               TextColor="#ffffff" FontAttributes="Bold"
+                                        <Label Text="{Binding Telefone}"
+                                               FontSize="Small"
+                                               TextColor="#ffffff"
+                                               FontAttributes="Bold"
                                                VerticalTextAlignment="Center"
                                                HorizontalTextAlignment="Start"/>
 

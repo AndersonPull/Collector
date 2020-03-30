@@ -8,10 +8,14 @@
             xmlns:translator="clr-namespace:Collector._Helpers"
             UnselectedTabColor="#a2a2a2">
 
-    <local:MainInfoView Title="{translator:Translate Info}" Icon="ic_info.png"/>
+    <local:MainInfoView Title="{translator:Translate Info}"
+                        Icon="ic_info.png"/>
 
-    <local:MainMapaView Title="{translator:Translate Map}" TabIndex="0" Icon="ic_mapa.png"/>
+    <local:MainMapaView Title="{translator:Translate Map}"
+                        Icon="ic_mapa.png"
+                        TabIndex="0"/>
 
-    <local:MainMateriasView Title="{translator:Translate Materials}" Icon="ic_materiais.png"/>
+    <local:MainMateriasView Title="{translator:Translate Materials}"
+                            Icon="ic_materiais.png"/>
 
 </TabbedPage>
