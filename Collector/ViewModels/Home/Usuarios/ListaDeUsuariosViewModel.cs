@@ -45,13 +45,9 @@ namespace Collector.ViewModels.Home.Usuarios
                     UsuarioModel _usuario = value as UsuarioModel;
 
                     if (_usuario.MaisDetalhes == false)
-                    {
                         _usuario.MaisDetalhes = true;
-                    }
                     else
-                    {
                         _usuario.MaisDetalhes = false;
-                    }
 
                     Animar(_usuario);
                 });
@@ -93,12 +89,11 @@ namespace Collector.ViewModels.Home.Usuarios
             this.IsBusy = false;
 
             var usuariosProximos1 = await _service.UsuariosProximos();
+
             Usuarios.Clear();
+
             foreach (var usuario in usuariosProximos1)
-            {
-                
                 Usuarios.Add(usuario);
-            }
         }
     }
 }
