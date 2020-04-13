@@ -85,7 +85,7 @@
                                
             </StackLayout>
 
-            <ScrollView>
+            <ScrollView Margin="0,-40,0,0">
 
                 <StackLayout>
 
