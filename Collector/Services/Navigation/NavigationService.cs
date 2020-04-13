@@ -33,7 +33,7 @@ namespace Collector.Services.Navigation
 
         public Task InitializeAsync()
         {
-            return NavigateToAsync<LoginViewModel>();
+            return NavigateToAsync<BannerViewModel>();
         }
 
         public Task NavigateToAsync<TViewModel>() where TViewModel : BaseVM
@@ -106,6 +106,10 @@ namespace Collector.Services.Navigation
             {
                 CurrentApplication.MainPage = page;
             }
+            else if(page is BannerView)
+            {
+                CurrentApplication.MainPage = page;
+            }
             else if (page is MainTabbedPageView)
             {
                 CurrentApplication.MainPage = new NavigationPage(page);
@@ -162,6 +166,7 @@ namespace Collector.Services.Navigation
             _mappings.Add(typeof(QuemSomosViewModel), typeof(QuemSomosView));
             _mappings.Add(typeof(ParaOndeVAmosViewModel), typeof(ParaOndeVamosView));
             _mappings.Add(typeof(ColaboreViewModel), typeof(ColaboreView));
+            _mappings.Add(typeof(BannerViewModel), typeof(BannerView));
 
 
         }

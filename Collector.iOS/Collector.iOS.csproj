@@ -185,6 +185,8 @@
     <BundleResource Include="Resources\pin_coperativa.png" />
     <BundleResource Include="Resources\pin_PEV.png" />
     <BundleResource Include="Resources\pin_ferroVelho.png" />
+    <BundleResource Include="Resources\planet.png" />
+    <BundleResource Include="Resources\BGBanner.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Renderers\" />

@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+             ios:Page.UseSafeArea="true"
+             x:Class="Collector.Views.Login.BannerView"
+             BackgroundImageSource="BGBanner.png"
+             BackgroundColor="Red">
+
+    <ContentPage.Content>
+
+        <StackLayout Margin="20">
+
+            <StackLayout Orientation="Horizontal">
+                
+                <ProgressBar x:Name="BarraProgresso" 
+                              HorizontalOptions="FillAndExpand"
+                              ProgressColor="#00BB54"/>
+
+                <ProgressBar x:Name="BarraProgresso2" 
+                             HorizontalOptions="FillAndExpand"
+                             ProgressColor="#00BB54"/>
+
+                <ProgressBar x:Name="BarraProgresso3" 
+                             HorizontalOptions="FillAndExpand"
+                             ProgressColor="#00BB54"/>
+       
+            </StackLayout>
+
+            <StackLayout HorizontalOptions="FillAndExpand"
+                         VerticalOptions="FillAndExpand">
+
+                <Grid VerticalOptions="FillAndExpand"
+                      HorizontalOptions="FillAndExpand">
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"  />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <StackLayout Grid.Row="0"
+                                 Grid.Column="0"
+                                 HorizontalOptions="FillAndExpand"
+                                 Margin="0,15,0,0"
+                                 x:Name="Text1">
+
+                        <Label Text="COLECTOR"
+                               FontSize="30"
+                               FontAttributes="Bold"/>
+
+                        <Label Text="Uma plataforma 100% digital"
+                               FontAttributes="None"/>
+
+                        <Label Text="Equilibrio entre o digital e o mundo real"
+                               FontSize="30"
+                               FontAttributes="None"/>
+
+
+                    </StackLayout>
+
+                    <StackLayout Grid.Row="0"
+                                 Grid.Column="1"
+                                 Margin="-500,15,0,0"
+                                 x:Name="Text2">
+
+                        <Label Text="O planeta é limitado"
+                                FontSize="30"
+                                FontAttributes="Bold"/>
+
+                        <Label Text="Recicle e colabore com o nosso planeta!"
+                                FontAttributes="None"/>
+
+                    </StackLayout>
+
+                    <StackLayout Grid.Row="1"
+                                 Grid.Column="0"
+                                 VerticalOptions="CenterAndExpand"
+                                 HorizontalOptions="FillAndExpand"
+                                 Margin="0,15,0,0"
+                                 x:Name="Text3">
+
+                        <Label Text="Um mundo melho!"
+                               FontAttributes="None"/>
+
+                        <Label Text="Ajude Compartilhe"
+                               FontSize="30"
+                               FontAttributes="Bold"/>
+
+                    </StackLayout>
+
+                    <StackLayout Grid.Row="0"
+                                 Grid.Column="0"
+                                 VerticalOptions="CenterAndExpand"
+                                 HorizontalOptions="FillAndExpand"
+                                 Margin="0,-550,0,0"
+                                 WidthRequest="100"
+                                 x:Name="Text4">
+
+                        <Label Text="Ajude à manter o mundo limpo"
+                               FontSize="30"
+                               FontAttributes="Bold"/>
+
+                        <Label Text="Nosso App pode ajudar!"
+                               FontAttributes="None"/>
+
+                        
+
+                    </StackLayout>
+                    
+                    <Image Source="planet.png"
+                           Grid.Row="1"
+                           Grid.Column="1"
+                           x:Name="Planet"/>
+                </Grid>
+
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal"
+                         VerticalOptions="End"
+                         HorizontalOptions="FillAndExpand">
+
+                <Button Text="Já tenho conta"
+                        TextColor="#FFFFFF"
+                        BackgroundColor="#2D3033"
+                        CornerRadius="5"
+                        WidthRequest="100"
+                        HeightRequest="45"
+                        HorizontalOptions="FillAndExpand"/>
+
+                <Button Text="Criar conta"
+                        TextColor="#FFFFFF"
+                        BackgroundColor="#00BB54"
+                        CornerRadius="5"
+                        WidthRequest="100"
+                        HeightRequest="45"
+                        HorizontalOptions="FillAndExpand"
+                        Command="{Binding LoginCommand}"/>
+
+            </StackLayout>
+        </StackLayout>
+
+    </ContentPage.Content>
+
+</ContentPage>
