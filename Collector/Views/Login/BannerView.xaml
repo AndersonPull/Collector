@@ -51,9 +51,7 @@
                                  Margin="0,15,0,0"
                                  x:Name="Text1">
 
-                        <Label Text="COLECTOR"
-                               FontSize="30"
-                               FontAttributes="Bold"/>
+                        <Image Source="LogoBanner.png"/>
 
                         <Label Text="{translator:Translate DigitalText1}"
                                FontAttributes="None"/>
@@ -64,8 +62,6 @@
 
 
                     </StackLayout>
-
-                    
 
                     <StackLayout Grid.Row="1"
                                  Grid.Column="0"

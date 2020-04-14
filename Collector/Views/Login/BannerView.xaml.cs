@@ -10,12 +10,12 @@ namespace Collector.Views.Login
         {
             InitializeComponent();
 
-            BarraProgresso.ProgressTo(1, 5000, Easing.Linear);
-
             Imagens.FadeTo(0, 0, Easing.SinInOut);
 
             icons1.FadeTo(0, 0, Easing.SinInOut);
             icons2.FadeTo(0, 0, Easing.SinInOut);
+
+            BarraProgresso.ProgressTo(1, 5000, Easing.Linear);
 
             Timer timer = new Timer();
 
@@ -27,16 +27,8 @@ namespace Collector.Views.Login
 
             timer.Enabled = true;
 
-            Timer timer1 = new Timer();
-
-            timer1.Interval = 10000;
-
-            timer1.Elapsed += OnTimedEvent2;
-
-            timer1.AutoReset = true;
-
-            timer1.Enabled = true;
         }
+
 
         private void OnTimedEvent1(object sender, ElapsedEventArgs e)
         {
@@ -54,6 +46,16 @@ namespace Collector.Views.Login
 
             Planet.TranslateTo(-80, 175, 500, Easing.Linear);
             Planet.ScaleTo(2.5, 500);
+
+            Timer timer = new Timer();
+
+            timer.Interval = 5000;
+
+            timer.Elapsed += OnTimedEvent2;
+
+            timer.AutoReset = true;
+
+            timer.Enabled = true;
         }
 
         private void OnTimedEvent2(object sender, ElapsedEventArgs e)
@@ -80,8 +82,6 @@ namespace Collector.Views.Login
             icons2.FadeTo(1, 700, Easing.SinInOut);
             icons2.ScaleTo(2, 1000);
             icons2.ScaleTo(1, 1000, Easing.SpringOut);
-
-
         }
     }
 }

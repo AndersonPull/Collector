@@ -191,6 +191,7 @@
     <BundleResource Include="Resources\icons_baner_2.png" />
     <BundleResource Include="Resources\setas_Banner.png" />
     <BundleResource Include="Resources\BGBannerPrincipal.png" />
+    <BundleResource Include="Resources\LogoBanner.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Renderers\" />
