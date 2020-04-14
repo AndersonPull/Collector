@@ -187,6 +187,9 @@
     <BundleResource Include="Resources\pin_ferroVelho.png" />
     <BundleResource Include="Resources\planet.png" />
     <BundleResource Include="Resources\BGBanner.png" />
+    <BundleResource Include="Resources\icons_baner_1.png" />
+    <BundleResource Include="Resources\icons_baner_2.png" />
+    <BundleResource Include="Resources\setas_Banner.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Renderers\" />
