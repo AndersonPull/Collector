@@ -47,6 +47,66 @@ namespace Collector._Helpers._Translations {
             }
         }
         
+        internal static string DigitalText1 {
+            get {
+                return ResourceManager.GetString("DigitalText1", resourceCulture);
+            }
+        }
+        
+        internal static string DigitalText2 {
+            get {
+                return ResourceManager.GetString("DigitalText2", resourceCulture);
+            }
+        }
+        
+        internal static string WorldTex1 {
+            get {
+                return ResourceManager.GetString("WorldTex1", resourceCulture);
+            }
+        }
+        
+        internal static string WorldText2 {
+            get {
+                return ResourceManager.GetString("WorldText2", resourceCulture);
+            }
+        }
+        
+        internal static string LimitedPlanetText1 {
+            get {
+                return ResourceManager.GetString("LimitedPlanetText1", resourceCulture);
+            }
+        }
+        
+        internal static string LimitedPlanetText2 {
+            get {
+                return ResourceManager.GetString("LimitedPlanetText2", resourceCulture);
+            }
+        }
+        
+        internal static string AppHelpText1 {
+            get {
+                return ResourceManager.GetString("AppHelpText1", resourceCulture);
+            }
+        }
+        
+        internal static string AppHelpText2 {
+            get {
+                return ResourceManager.GetString("AppHelpText2", resourceCulture);
+            }
+        }
+        
+        internal static string CreateAcount {
+            get {
+                return ResourceManager.GetString("CreateAcount", resourceCulture);
+            }
+        }
+        
+        internal static string IHaveAnAccount {
+            get {
+                return ResourceManager.GetString("IHaveAnAccount", resourceCulture);
+            }
+        }
+        
         internal static string Login {
             get {
                 return ResourceManager.GetString("Login", resourceCulture);

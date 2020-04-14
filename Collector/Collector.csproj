@@ -107,5 +107,8 @@
     <Compile Update="_Helpers\_Translations\AppResources.pt.Designer.cs">
       <DependentUpon>AppResources.pt.resx</DependentUpon>
     </Compile>
+    <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="Views\Login\BannerView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
 </Project>

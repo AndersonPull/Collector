@@ -12,6 +12,47 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
+     <!--Banner inico-->
+    <data name="DigitalText1" xml:space="preserve">
+        <value>Uma plataforma 100% digital</value>
+    </data>
+    
+    <data name="DigitalText2" xml:space="preserve">
+        <value>Equilibrio entre o digital e o mundo real</value>
+    </data>
+    
+    <data name="WorldTex1" xml:space="preserve">
+        <value>Um mundo melhor</value>
+    </data>
+    
+    <data name="WorldText2" xml:space="preserve">
+        <value>Ajude compartilhe</value>
+    </data>
+   
+    <data name="LimitedPlanetText1" xml:space="preserve">
+        <value>O planeta é limitado</value>
+    </data>
+    
+    <data name="LimitedPlanetText2" xml:space="preserve">
+        <value>Recicle e colabore com o nosso planeta!</value>
+    </data>
+        
+    <data name="AppHelpText1" xml:space="preserve">
+        <value>Ajude à manter o mundo limpo</value>
+    </data>
+    
+    <data name="AppHelpText2" xml:space="preserve">
+        <value>Nosso App pode ajudar!</value>
+    </data>
+    
+    <data name="CreateAcount" xml:space="preserve">
+        <value>Criar conta</value>
+    </data>
+    
+    <data name="IHaveAnAccount" xml:space="preserve">
+        <value>Já tenho conta</value>
+    </data>
+    
     <!--Login-->
     <data name="Login" xml:space="preserve">
         <value>Entrar</value>

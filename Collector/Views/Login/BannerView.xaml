@@ -4,13 +4,15 @@
              xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
              ios:Page.UseSafeArea="true"
              x:Class="Collector.Views.Login.BannerView"
+             xmlns:translator="clr-namespace:Collector._Helpers"
              BackgroundImageSource="BGBanner.png"
              BackgroundColor="Red">
 
     <ContentPage.Content>
 
         <StackLayout Margin="20">
-
+            
+                
             <StackLayout Orientation="Horizontal">
                 
                 <ProgressBar x:Name="BarraProgresso" 
@@ -53,29 +55,17 @@
                                FontSize="30"
                                FontAttributes="Bold"/>
 
-                        <Label Text="Uma plataforma 100% digital"
+                        <Label Text="{translator:Translate DigitalText1}"
                                FontAttributes="None"/>
 
-                        <Label Text="Equilibrio entre o digital e o mundo real"
+                        <Label Text="{translator:Translate DigitalText2}"
                                FontSize="30"
                                FontAttributes="None"/>
 
 
                     </StackLayout>
 
-                    <StackLayout Grid.Row="0"
-                                 Grid.Column="1"
-                                 Margin="-500,15,0,0"
-                                 x:Name="Text2">
-
-                        <Label Text="O planeta é limitado"
-                                FontSize="30"
-                                FontAttributes="Bold"/>
-
-                        <Label Text="Recicle e colabore com o nosso planeta!"
-                                FontAttributes="None"/>
-
-                    </StackLayout>
+                    
 
                     <StackLayout Grid.Row="1"
                                  Grid.Column="0"
@@ -84,12 +74,26 @@
                                  Margin="0,15,0,0"
                                  x:Name="Text3">
 
-                        <Label Text="Um mundo melho!"
+                        <Label Text="{translator:Translate WorldText1}"
                                FontAttributes="None"/>
 
-                        <Label Text="Ajude Compartilhe"
+                        <Label Text="{translator:Translate WorldText2}"
                                FontSize="30"
                                FontAttributes="Bold"/>
+
+                    </StackLayout>
+
+                    <StackLayout Grid.Row="0"
+                                 Grid.Column="1"
+                                 Margin="-500,15,0,0"
+                                 x:Name="Text2">
+
+                        <Label Text="{translator:Translate LimitedPlanetText1}"
+                               FontSize="30"
+                               FontAttributes="Bold"/>
+
+                        <Label Text="{translator:Translate LimitedPlanetText2}"
+                               FontAttributes="None"/>
 
                     </StackLayout>
 
@@ -101,11 +105,11 @@
                                  WidthRequest="100"
                                  x:Name="Text4">
 
-                        <Label Text="Ajude à manter o mundo limpo"
+                        <Label Text="{translator:Translate AppHelpText1}"
                                FontSize="30"
                                FontAttributes="Bold"/>
 
-                        <Label Text="Nosso App pode ajudar!"
+                        <Label Text="{translator:Translate AppHelpText2}"
                                FontAttributes="None"/>
 
                     </StackLayout>
@@ -163,16 +167,15 @@
                            Grid.Row="1"
                            Grid.Column="1"
                            x:Name="Planet"/>
-
                 </Grid>
-
+               
             </StackLayout>
 
             <StackLayout Orientation="Horizontal"
                          VerticalOptions="End"
                          HorizontalOptions="FillAndExpand">
 
-                <Button Text="Criar conta"
+                <Button Text="{translator:Translate CreateAcount}"
                         TextColor="#FFFFFF"
                         BackgroundColor="#2D3033"
                         CornerRadius="5"
@@ -180,7 +183,7 @@
                         HeightRequest="45"
                         HorizontalOptions="FillAndExpand"/>
 
-                <Button Text="Já tenho conta"
+                <Button Text="{translator:Translate IHaveAnAccount}"
                         TextColor="#FFFFFF"
                         BackgroundColor="#00BB54"
                         CornerRadius="5"
@@ -190,6 +193,7 @@
                         Command="{Binding LoginCommand}"/>
 
             </StackLayout>
+             
         </StackLayout>
 
     </ContentPage.Content>
