@@ -172,7 +172,7 @@
                          VerticalOptions="End"
                          HorizontalOptions="FillAndExpand">
 
-                <Button Text="Já tenho conta"
+                <Button Text="Criar conta"
                         TextColor="#FFFFFF"
                         BackgroundColor="#2D3033"
                         CornerRadius="5"
@@ -180,7 +180,7 @@
                         HeightRequest="45"
                         HorizontalOptions="FillAndExpand"/>
 
-                <Button Text="Criar conta"
+                <Button Text="Já tenho conta"
                         TextColor="#FFFFFF"
                         BackgroundColor="#00BB54"
                         CornerRadius="5"
