@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Collector.Views.Login.AccessView"
+             xmlns:CustomEntry="clr-namespace:Collector.Controls.CustomEntry"
+             xmlns:translator="clr-namespace:Collector._Helpers">
+    <ContentPage.Content>
+        <Grid>
+
+            <Image Aspect="AspectFill"
+                           Source="BGLogin.png"/>
+
+            <StackLayout Margin="20">
+            
+                <ScrollView VerticalOptions="FillAndExpand">
+                
+                    <StackLayout VerticalOptions="FillAndExpand">
+                    
+                        <StackLayout HorizontalOptions="FillAndExpand"
+                                     VerticalOptions="Start"
+                                     HeightRequest="130">
+
+                            <Image Source="LogoLogin.png"
+                                   HorizontalOptions="StartAndExpand"
+                                   VerticalOptions="CenterAndExpand"/>
+
+                        </StackLayout>
+
+                        <StackLayout HorizontalOptions="FillAndExpand"
+                                     VerticalOptions="Start"
+                                     Spacing="20">
+
+                            <StackLayout Orientation="Horizontal">
+
+                                <Label Text="{translator:Translate Login}"
+                                       TextColor="#ffffff"
+                                       FontSize="30"
+                                       HorizontalOptions="FillAndExpand"
+                                       VerticalTextAlignment="Center"
+                                       FontAttributes="Bold"/>
+
+                            </StackLayout>
+
+                            <Label Text="{translator:Translate PleaseEnterYourCredentials}"
+                                   TextColor="#ffffff"
+                                   FontSize="Medium"/>
+
+                            <Frame HorizontalOptions="FillAndExpand"
+                                   HeightRequest="60"
+                                   CornerRadius="6"
+                                   HasShadow="False"
+                                   BackgroundColor="#005124"
+                                   Opacity="0.7"
+                                   Padding="0">
+
+                                <StackLayout Margin="7">
+
+                                    <Label Text="{translator:Translate Email}"
+                                           TextColor="#FFFFFF"/>
+
+                                    <CustomEntry:CustomEntry TextColor="#FFFFFF"
+                                                             FontSize="Large"
+                                                             BackgroundColor="Transparent"
+                                                             x:Name="EmailEntry"/>
+                                </StackLayout>
+
+                                <Frame.GestureRecognizers>
+
+                                    <TapGestureRecognizer
+                                        Tapped="EmailFocus"
+                                        NumberOfTapsRequired="1"/>
+
+                                </Frame.GestureRecognizers>
+
+                            </Frame>
+
+                            <Frame HorizontalOptions="FillAndExpand"
+                                   HeightRequest="60"
+                                   CornerRadius="6"
+                                   HasShadow="False"
+                                   BackgroundColor="#005124"
+                                   Opacity="0.7"
+                                   Padding="0">
+
+                                <StackLayout Margin="7">
+
+                                    <Label Text="{translator:Translate Password}"
+                                           TextColor="#FFFFFF"/>
+
+                                     <CustomEntry:CustomEntry TextColor="#FFFFFF"
+                                                              IsPassword="True"
+                                                              FontSize="Large"
+                                                              BackgroundColor="Transparent"
+                                                              x:Name="PasswordEntry"/>
+                                </StackLayout>
+
+                                <Frame.GestureRecognizers>
+
+                                    <TapGestureRecognizer
+                                        Tapped="PasswordFocus"
+                                        NumberOfTapsRequired="1"/>
+
+                                </Frame.GestureRecognizers>
+
+                            </Frame>
+
+                        </StackLayout>
+
+                        <StackLayout Orientation="Horizontal"
+                                     Margin="20">
+
+                            <Label Text="{translator:Translate ForgotYourPassword}"
+                                   TextColor="#FFFFFF"
+                                   FontAttributes="Bold"
+                                   HorizontalOptions="EndAndExpand"/>
+
+                        </StackLayout>
+
+                        <Button Text="{translator:Translate Login}"
+                                TextColor="#FFFFFF"
+                                FontAttributes="Bold"
+                                BackgroundColor="#00BB54"
+                                CornerRadius="5"
+                                WidthRequest="100"
+                                HeightRequest="45"
+                                HorizontalOptions="FillAndExpand"
+                                VerticalOptions="EndAndExpand"
+                                Padding="0"
+                                Margin="0,0,0,20"
+                                Command="{Binding LoginCommand}"/>
+
+                    </StackLayout>
+
+                </ScrollView>
+
+            </StackLayout>
+
+        </Grid>
+
+    </ContentPage.Content>
+
+</ContentPage>

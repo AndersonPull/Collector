@@ -192,6 +192,10 @@
     <BundleResource Include="Resources\setas_Banner.png" />
     <BundleResource Include="Resources\BGBannerPrincipal.png" />
     <BundleResource Include="Resources\LogoBanner.png" />
+    <BundleResource Include="Resources\LogoLogin.png" />
+    <BundleResource Include="Resources\BGLogin.png" />
+    <BundleResource Include="Resources\BGLogin%402x.png" />
+    <BundleResource Include="Resources\BGLogin%403x.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Renderers\" />

@@ -1,14 +1,15 @@
-﻿using System.Windows.Input;
+﻿using System;
+using System.Windows.Input;
 using Collector.Services.Navigation;
 using Collector.ViewModels.Home;
 using Xamarin.Forms;
 
 namespace Collector.ViewModels.Login
 {
-    public class LoginViewModel : BaseVM
+    public class AccessViewModel : BaseVM
     {
         INavigationService _serviceNavigation;
-        public LoginViewModel(INavigationService serviceNavigation)
+        public AccessViewModel(INavigationService serviceNavigation)
         {
             _serviceNavigation = serviceNavigation;
         }

@@ -119,27 +119,21 @@ namespace Collector._Helpers._Translations {
             }
         }
         
-        internal static string CreateAccount {
+        internal static string Email {
             get {
-                return ResourceManager.GetString("CreateAccount", resourceCulture);
+                return ResourceManager.GetString("Email", resourceCulture);
             }
         }
         
-        internal static string TypeYourEmail {
+        internal static string Password {
             get {
-                return ResourceManager.GetString("TypeYourEmail", resourceCulture);
+                return ResourceManager.GetString("Password", resourceCulture);
             }
         }
         
-        internal static string TypeYourPassword {
+        internal static string ForgotYourPassword {
             get {
-                return ResourceManager.GetString("TypeYourPassword", resourceCulture);
-            }
-        }
-        
-        internal static string OrLoginWith {
-            get {
-                return ResourceManager.GetString("OrLoginWith", resourceCulture);
+                return ResourceManager.GetString("ForgotYourPassword", resourceCulture);
             }
         }
         

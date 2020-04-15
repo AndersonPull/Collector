@@ -102,7 +102,7 @@ namespace Collector.Services.Navigation
         {
             Page page = CreateAndBindPage(viewModelType, parameter);
 
-            if (page is LoginView)
+            if (page is AccessView)
             {
                 CurrentApplication.MainPage = page;
             }
@@ -158,7 +158,7 @@ namespace Collector.Services.Navigation
 
         public void CreatePageViewModelMappings()
         {
-            _mappings.Add(typeof(LoginViewModel), typeof(LoginView));
+            _mappings.Add(typeof(AccessViewModel), typeof(AccessView));
             _mappings.Add(typeof(MainMapaViewModel), typeof(MainMapaView));
             _mappings.Add(typeof(MainTabbedPageViewModel), typeof(MainTabbedPageView));
             _mappings.Add(typeof(ListaDeUsuariosViewModel), typeof(ListaDeUsuariosView));

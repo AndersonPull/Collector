@@ -28,7 +28,7 @@ namespace Collector.ViewModels.ViewModelLocator
             _container.RegisterType<INavigationService, NavigationService>();
 
             //registro de ViewModel
-            _container.RegisterType<LoginViewModel>();
+            _container.RegisterType<AccessViewModel>();
             _container.RegisterType<MainTabbedPageViewModel>();
             _container.RegisterType<MainInfoViewModel>();
             _container.RegisterType<MainMapaViewModel>();

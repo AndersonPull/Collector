@@ -19,7 +19,7 @@ namespace Collector.ViewModels.Login
             {
                 return new Command(async () =>
                 {
-                    await _serviceNavigation.NavigateToAsync<LoginViewModel>();
+                    await _serviceNavigation.NavigateToAsync<AccessViewModel>();
                 });
             }
         }

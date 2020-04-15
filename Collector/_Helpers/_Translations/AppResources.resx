@@ -62,20 +62,16 @@
         <value>Please enter your credentials</value>
     </data>
     
-    <data name="CreateAccount" xml:space="preserve">
-        <value>Create an account</value>
+    <data name="Email" xml:space="preserve">
+        <value>Email</value>
     </data>
     
-    <data name="TypeYourEmail" xml:space="preserve">
-        <value>Type your e-mail</value>
+    <data name="Password" xml:space="preserve">
+        <value>Password</value>
     </data>
     
-    <data name="TypeYourPassword" xml:space="preserve">
-        <value>Type your password</value>
-    </data>
-    
-    <data name="OrLoginWith" xml:space="preserve">
-        <value>or login with</value>
+    <data name="ForgotYourPassword" xml:space="preserve">
+        <value>Forgo your password?</value>
     </data>
     
     <!--Menu principal rodape-->

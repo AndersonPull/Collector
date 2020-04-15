@@ -45,7 +45,6 @@
                                                   WidthRequest="{OnPlatform Android=210, iOS=240}"
                                                   HorizontalOptions="StartAndExpand"
                                                   VerticalOptions="FillAndExpand"
-                                                  BorderColor="#ffffff"
                                                   TextColor="#ACACAC"
                                                   PlaceholderColor="#A2A2A2"
                                                   BackgroundColor="Transparent"/>
