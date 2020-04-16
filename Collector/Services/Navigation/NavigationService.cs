@@ -106,6 +106,10 @@ namespace Collector.Services.Navigation
             {
                 CurrentApplication.MainPage = page;
             }
+            else if (page is CreateAcounteView)
+            {
+                CurrentApplication.MainPage = page;
+            }
             else if(page is BannerView)
             {
                 CurrentApplication.MainPage = page;
@@ -158,6 +162,8 @@ namespace Collector.Services.Navigation
 
         public void CreatePageViewModelMappings()
         {
+            _mappings.Add(typeof(BannerViewModel), typeof(BannerView));
+            _mappings.Add(typeof(CreateAcounteViewModel), typeof(CreateAcounteView));
             _mappings.Add(typeof(AccessViewModel), typeof(AccessView));
             _mappings.Add(typeof(MainMapaViewModel), typeof(MainMapaView));
             _mappings.Add(typeof(MainTabbedPageViewModel), typeof(MainTabbedPageView));
@@ -166,7 +172,6 @@ namespace Collector.Services.Navigation
             _mappings.Add(typeof(QuemSomosViewModel), typeof(QuemSomosView));
             _mappings.Add(typeof(ParaOndeVAmosViewModel), typeof(ParaOndeVamosView));
             _mappings.Add(typeof(ColaboreViewModel), typeof(ColaboreView));
-            _mappings.Add(typeof(BannerViewModel), typeof(BannerView));
 
 
         }

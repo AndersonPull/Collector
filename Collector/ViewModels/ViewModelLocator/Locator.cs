@@ -28,6 +28,8 @@ namespace Collector.ViewModels.ViewModelLocator
             _container.RegisterType<INavigationService, NavigationService>();
 
             //registro de ViewModel
+            _container.RegisterType<BannerViewModel>();
+            _container.RegisterType<CreateAcounteViewModel>();
             _container.RegisterType<AccessViewModel>();
             _container.RegisterType<MainTabbedPageViewModel>();
             _container.RegisterType<MainInfoViewModel>();
@@ -39,7 +41,7 @@ namespace Collector.ViewModels.ViewModelLocator
             _container.RegisterType<QuemSomosViewModel>();
             _container.RegisterType<ParaOndeVAmosViewModel>();
             _container.RegisterType<ColaboreViewModel>();
-            _container.RegisterType<BannerViewModel>();
+
         }
 
         public T Resolve<T>()

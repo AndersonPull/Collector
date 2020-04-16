@@ -23,5 +23,16 @@ namespace Collector.ViewModels.Login
                 });
             }
         }
+
+        public ICommand CreateAcountCommand
+        {
+            get
+            {
+                return new Command(async () =>
+                {
+                    await _serviceNavigation.NavigateToAsync<CreateAcounteViewModel>();
+                });
+            }
+        }
     }
 }

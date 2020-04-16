@@ -60,7 +60,6 @@
 
                                     <CustomEntry:CustomEntry TextColor="#FFFFFF"
                                                              FontSize="Large"
-                                                             BackgroundColor="Transparent"
                                                              x:Name="EmailEntry"/>
                                 </StackLayout>
 
@@ -90,7 +89,6 @@
                                      <CustomEntry:CustomEntry TextColor="#FFFFFF"
                                                               IsPassword="True"
                                                               FontSize="Large"
-                                                              BackgroundColor="Transparent"
                                                               x:Name="PasswordEntry"/>
                                 </StackLayout>
 

@@ -10,25 +10,25 @@ namespace Collector.Views.Login
         {
             InitializeComponent();
 
-            Imagens.FadeTo(0, 0, Easing.SinInOut);
+            Splash.ScaleTo(6, 1000);
+            Splash.FadeTo(0, 2000, Easing.SinInOut);
 
+            Imagens.FadeTo(0, 0, Easing.SinInOut);
             icons1.FadeTo(0, 0, Easing.SinInOut);
             icons2.FadeTo(0, 0, Easing.SinInOut);
 
-            BarraProgresso.ProgressTo(1, 5000, Easing.Linear);
+            BarraProgresso.ProgressTo(1, 6000, Easing.Linear);
 
             Timer timer = new Timer();
 
-            timer.Interval = 5000;
+            timer.Interval = 6000;
 
             timer.Elapsed += OnTimedEvent1;
 
             timer.AutoReset = true;
 
             timer.Enabled = true;
-
         }
-
 
         private void OnTimedEvent1(object sender, ElapsedEventArgs e)
         {
