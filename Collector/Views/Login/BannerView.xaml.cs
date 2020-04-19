@@ -71,7 +71,7 @@ namespace Collector.Views.Login
             Planet.FadeTo(0, 600, Easing.SinInOut);
 
             Imagens.TranslateTo(0, 560, 5000, Easing.Linear);
-            Imagens.FadeTo(0, 300, Easing.SinInOut);
+            Imagens.FadeTo(0, 300);
 
             Setas.TranslateTo(130, 0, 500,Easing.Linear);
 

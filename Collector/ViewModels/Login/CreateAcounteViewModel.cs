@@ -13,12 +13,21 @@ namespace Collector.ViewModels.Login
     public class CreateAcounteViewModel : BaseVM
     {
         INavigationService _serviceNavigation;
+        public static FlowObservableCollection<MessageRegistrationModel> _message1 { get; set; }
         public FlowObservableCollection<MessageRegistrationModel> _message { get; set; }
         public CreateAcounteViewModel(INavigationService serviceNavigation)
         {
+
             _serviceNavigation = serviceNavigation;
             _message = new FlowObservableCollection<MessageRegistrationModel>();
+            _message1 = new FlowObservableCollection<MessageRegistrationModel>();
             _ = InitialMessage();
+
+            _message.CollectionChanged += (sender, e) =>
+            {
+                _message1 = _message;
+            };
+
         }
 
         private async Task InitialMessage()
@@ -78,5 +87,24 @@ namespace Collector.ViewModels.Login
                 });
             }
         }
+
+        public ICommand SendCommand
+        {
+            get
+            {
+                return new Command(async () =>
+                {
+
+                    _message.Add(new MessageRegistrationModel() {Message = textMenssage, Type1="false",Type2="true" , Type3="false"});
+                });
+            }
+        }
+
+        private string textMenssage;
+        public string TextMenssage { get { return textMenssage; } set { this.Set("TextMenssage", ref textMenssage, value); } }
+
+        private FlowListView listMassage;
+        public FlowListView ListMassage { get { return listMassage; } set { this.Set("ListMassage", ref listMassage, value); } }
+
     }
 }

@@ -2,7 +2,6 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:CustomEntry="clr-namespace:Collector.Controls.CustomEntry"
-             xmlns:flv="clr-namespace:DLToolkit.Forms.Controls;assembly=DLToolkit.Forms.Controls.FlowListView"
              x:Class="Collector.Views.Login.CreateAcounteView"
              BackgroundColor="#EBEBEB"
              NavigationPage.HasNavigationBar="false">
@@ -30,16 +29,18 @@
                     <StackLayout VerticalOptions="EndAndExpand"
                                  Margin="0,0,0,20">
 
-                        <flv:FlowListView FlowItemsSource="{Binding _message}" 
-                                          HasUnevenRows="True"
-                                          FlowColumnCount="1" 
-                                          BackgroundColor="Transparent"
-                                          VerticalOptions="FillAndExpand">
+                        <ListView ItemsSource="{Binding _message}" 
+                                  HasUnevenRows="True"
+                                  BackgroundColor="Transparent"
+                                  VerticalOptions="End"
+                                  SeparatorVisibility="None"
+                                  SelectionMode="None"
+                                  x:Name="MessagesListView">
 
-                            <flv:FlowListView.FlowColumnTemplate>
+                            <ListView.ItemTemplate>
 
                                 <DataTemplate>
-
+                                    <ViewCell>
                                     <StackLayout Margin="0,10,0,0"
                                                  BackgroundColor="Transparent">
 
@@ -108,12 +109,12 @@
                                         </Frame>
 
                                     </StackLayout>
-
+                                   </ViewCell>
                                 </DataTemplate>
 
-                            </flv:FlowListView.FlowColumnTemplate>
+                            </ListView.ItemTemplate>
 
-                        </flv:FlowListView>
+                        </ListView>
 
                     </StackLayout>
 
@@ -133,7 +134,8 @@
                                          VerticalOptions="FillAndExpand"
                                          Margin="5">
 
-                                <CustomEntry:CustomEntry TextColor="#000000"
+                                <CustomEntry:CustomEntry Text="{Binding TextMenssage}"
+                                                         TextColor="#000000"
                                                          Margin="10,0,0,0"
                                                          FontSize="Large"
                                                          VerticalOptions="CenterAndExpand"
@@ -141,7 +143,8 @@
 
                                 <ImageButton Source="ic_send.png"
                                              BackgroundColor="Transparent"
-                                             Command="{Binding SendCommand}"/>
+                                             Command="{Binding SendCommand}"
+                                             Clicked="ImageButton_Clicked"/>
 
                             </StackLayout>
 
