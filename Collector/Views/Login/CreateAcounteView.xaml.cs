@@ -16,7 +16,7 @@ namespace Collector.Views.Login
             NavigationPage.SetBackButtonTitle(this, "");
 
         }
-        void ImageButton_Clicked(System.Object sender, System.EventArgs e)
+        void ScrollEnd_Clicked(System.Object sender, System.EventArgs e)
         {
             var target = CreateAcounteViewModel._message1[CreateAcounteViewModel._message1.Count - 1];
             MessagesListView.ScrollTo(target, ScrollToPosition.End, false);

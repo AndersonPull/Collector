@@ -48,6 +48,7 @@
     <Folder Include="ViewModels\Home\QuemSomos\" />
     <Folder Include="_Helpers\" />
     <Folder Include="_Helpers\_Translations\" />
+    <Folder Include="Services\CreateAccount\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="AssemblyInfo.cs" />

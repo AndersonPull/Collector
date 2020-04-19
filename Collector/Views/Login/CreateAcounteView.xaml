@@ -144,7 +144,7 @@
                                 <ImageButton Source="ic_send.png"
                                              BackgroundColor="Transparent"
                                              Command="{Binding SendCommand}"
-                                             Clicked="ImageButton_Clicked"/>
+                                             Clicked="ScrollEnd_Clicked"/>
 
                             </StackLayout>
 
@@ -155,7 +155,8 @@
                                 HeightRequest="50"
                                 BackgroundColor="#00BB54"
                                 Command="{Binding AcceptTermCommand}"
-                                IsVisible="false"/>
+                                IsVisible="false"
+                                Clicked="ScrollEnd_Clicked"/>
 
                         <Button Text="Todos dados estão corretos"
                                 TextColor="#FFFFFF"

@@ -4,6 +4,7 @@ using System.Windows.Input;
 using Collector.Models.Login;
 using Collector.Models.Usuarios;
 using Collector.Services.Navigation;
+using Collector.Services.Usuarios;
 using Collector.Views;
 using DLToolkit.Forms.Controls;
 using Xamarin.Forms;
@@ -13,12 +14,19 @@ namespace Collector.ViewModels.Login
     public class CreateAcounteViewModel : BaseVM
     {
         INavigationService _serviceNavigation;
+
+        MessageRegistrationService _service;
+
         public static FlowObservableCollection<MessageRegistrationModel> _message1 { get; set; }
+
         public FlowObservableCollection<MessageRegistrationModel> _message { get; set; }
+
+
         public CreateAcounteViewModel(INavigationService serviceNavigation)
         {
 
             _serviceNavigation = serviceNavigation;
+            _service = new MessageRegistrationService();
             _message = new FlowObservableCollection<MessageRegistrationModel>();
             _message1 = new FlowObservableCollection<MessageRegistrationModel>();
             _ = InitialMessage();
@@ -32,38 +40,13 @@ namespace Collector.ViewModels.Login
 
         private async Task InitialMessage()
         {
-            MessageRegistrationModel mesageTeste = new MessageRegistrationModel();
-            mesageTeste.Message = "Olá 1😄";
-            mesageTeste.Type1 = "true";
-            mesageTeste.Type2 = "false";
-            mesageTeste.Type3 = "false";
+            var Messages = await _service.InitialsMessages();
 
-            MessageRegistrationModel mesageTeste1 = new MessageRegistrationModel();
-            mesageTeste1.Message = "Que bom ter você aqui, vamos criar sua conta?";
-            mesageTeste1.Type1 = "true";
-            mesageTeste1.Type2 = "false";
-            mesageTeste1.Type3 = "false";
-
-            MessageRegistrationModel mesageTeste2 = new MessageRegistrationModel();
-            mesageTeste2.Message = "Anderson Oliveira Bezerra";
-            mesageTeste2.Type1 = "false";
-            mesageTeste2.Type2 = "true";
-            mesageTeste2.Type3 = "false";
-
-            MessageRegistrationModel mesageTeste3 = new MessageRegistrationModel();
-            mesageTeste3.Message = "Para continuar você poderia ler e aceitar nossos termos de uso e politicas de privacidade?";
-            mesageTeste3.Type1 = "false";
-            mesageTeste3.Type2 = "false";
-            mesageTeste3.Type3 = "true";
-
-            _message.Add(mesageTeste);
-
-            _message.Add(mesageTeste1);
-
-            _message.Add(mesageTeste2);
-
-            _message.Add(mesageTeste3);
-
+            foreach(var message in Messages)
+            {
+                message.Id = _message.Count;
+                _message.Add(message);
+            }
         }
 
         public ICommand BackCommand
@@ -94,10 +77,46 @@ namespace Collector.ViewModels.Login
             {
                 return new Command(async () =>
                 {
-
-                    _message.Add(new MessageRegistrationModel() {Message = textMenssage, Type1="false",Type2="true" , Type3="false"});
+                    SendMessage(TextMenssage);
                 });
             }
+        }
+
+        public async Task SendMessage( string message = null)
+        {
+
+            if (message != null)
+            {
+                _message.Add(new MessageRegistrationModel()
+                {
+                    Id = _message.Count,
+                    Message = message,
+                    Type1 = "false",
+                    Type2 = "true",
+                    Type3 = "false"
+                });
+
+                TextMenssage = null;
+            }
+
+            switch (_message.Count)
+            {
+                case 4:
+                    var nameUser = _message[3].Message;
+                    var teste = nameUser;
+                    var termMessage = _service.MessageTerm();
+                    termMessage.Id = _message.Count;
+                    _message.Add(termMessage);
+                    break;
+                case 5:
+                    
+                    break;
+                default:
+                    Console.WriteLine("Default case");
+                    break;
+            }
+
+            
         }
 
         private string textMenssage;
