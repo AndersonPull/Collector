@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using Collector.ViewModels.Home.Usuarios;
+﻿using Collector.ViewModels.Home.Usuarios;
 using Xamarin.Forms;
 
 namespace Collector.Views.Home.Usuarios
@@ -9,11 +7,8 @@ namespace Collector.Views.Home.Usuarios
     {
         public ListaDeUsuariosView()
         {
-
             NavigationPage.SetBackButtonTitle(this, "");
             InitializeComponent();
-            BindingContext = new ListaDeUsuariosViewModel();
-
         }
     }
 }

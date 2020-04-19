@@ -7,6 +7,7 @@ using Collector.ViewModels.Home.QuemSomos;
 using Collector.ViewModels.Home.Usuarios;
 using Collector.ViewModels.Login;
 using Collector.ViewModels.ViewModelLocator;
+using Collector.Views;
 using Collector.Views.Home;
 using Collector.Views.Home.QuemSomos;
 using Collector.Views.Home.Usuarios;
@@ -108,7 +109,7 @@ namespace Collector.Services.Navigation
             }
             else if (page is CreateAcounteView)
             {
-                CurrentApplication.MainPage = page;
+                CurrentApplication.MainPage = new NavigationPage(page);
             }
             else if(page is BannerView)
             {
@@ -172,8 +173,7 @@ namespace Collector.Services.Navigation
             _mappings.Add(typeof(QuemSomosViewModel), typeof(QuemSomosView));
             _mappings.Add(typeof(ParaOndeVAmosViewModel), typeof(ParaOndeVamosView));
             _mappings.Add(typeof(ColaboreViewModel), typeof(ColaboreView));
-
-
+            _mappings.Add(typeof(TermsOfUseViewModel), typeof(TermsOfUseView));
         }
     }
 }

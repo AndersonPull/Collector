@@ -14,6 +14,17 @@ namespace Collector.ViewModels.Login
             _serviceNavigation = serviceNavigation;
         }
 
+        public ICommand BackCommand
+        {
+            get
+            {
+                return new Command(async () =>
+                {
+                    await _serviceNavigation.NavigateToAsync<BannerViewModel>();
+                });
+            }
+        }
+
         public ICommand LoginCommand
         {
             get

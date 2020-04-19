@@ -10,8 +10,8 @@ namespace Collector.Views.Login
         {
             InitializeComponent();
 
-            Splash.ScaleTo(6, 1000);
-            Splash.FadeTo(0, 2000, Easing.SinInOut);
+            //Splash.ScaleTo(6, 1000);
+            //Splash.FadeTo(0, 2000, Easing.SinInOut);
 
             Imagens.FadeTo(0, 0, Easing.SinInOut);
             icons1.FadeTo(0, 0, Easing.SinInOut);

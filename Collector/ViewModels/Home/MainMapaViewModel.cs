@@ -20,7 +20,7 @@ namespace Collector.ViewModels.Home
             {
                 return new Command(async () =>
                 {
-                    await Application.Current.MainPage.Navigation.PushAsync(new ListaDeUsuariosView());
+                    await _serviceNavigation.NavigateToAsync<ListaDeUsuariosViewModel>();
                 });
             }
         }

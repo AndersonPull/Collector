@@ -59,9 +59,9 @@ namespace Collector._Helpers._Translations {
             }
         }
         
-        internal static string WorldTex1 {
+        internal static string WorldText1 {
             get {
-                return ResourceManager.GetString("WorldTex1", resourceCulture);
+                return ResourceManager.GetString("WorldText1", resourceCulture);
             }
         }
         

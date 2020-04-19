@@ -41,6 +41,7 @@ namespace Collector.ViewModels.ViewModelLocator
             _container.RegisterType<QuemSomosViewModel>();
             _container.RegisterType<ParaOndeVAmosViewModel>();
             _container.RegisterType<ColaboreViewModel>();
+            _container.RegisterType<TermsOfUseViewModel>();
 
         }
 

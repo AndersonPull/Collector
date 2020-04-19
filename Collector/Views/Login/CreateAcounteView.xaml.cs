@@ -10,6 +10,7 @@ namespace Collector.Views.Login
         public CreateAcounteView()
         {
             InitializeComponent();
+            NavigationPage.SetBackButtonTitle(this, "");
         }
     }
 }

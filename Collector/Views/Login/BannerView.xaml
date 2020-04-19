@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Collector.Views.Login.BannerView"
              xmlns:translator="clr-namespace:Collector._Helpers"
-             >
+             BackgroundColor="#EBEBEB">
 
     <ContentPage.Content>
         <Grid>
@@ -194,9 +194,9 @@
              
             </StackLayout>
 
-            <Image Source="BGBannerPrincipal.png"
+            <!--<Image Source="BGBannerPrincipal.png"
                    Aspect="AspectFill"
-                   x:Name="Splash"/>
+                   x:Name="Splash"/>-->
             
         </Grid>
 

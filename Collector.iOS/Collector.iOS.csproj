@@ -196,6 +196,10 @@
     <BundleResource Include="Resources\BGLogin.png" />
     <BundleResource Include="Resources\BGLogin%402x.png" />
     <BundleResource Include="Resources\BGLogin%403x.png" />
+    <BundleResource Include="Resources\ic_back.png" />
+    <BundleResource Include="Resources\ic_send.png" />
+    <BundleResource Include="Resources\ic_close.png" />
+    <BundleResource Include="Resources\ic_edit.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Renderers\" />

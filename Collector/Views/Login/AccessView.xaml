@@ -16,12 +16,21 @@
                 
                     <StackLayout VerticalOptions="FillAndExpand">
                     
-                        <StackLayout HorizontalOptions="FillAndExpand"
+                        <StackLayout Orientation="Horizontal"
+                                     HorizontalOptions="FillAndExpand"
                                      VerticalOptions="Start"
                                      HeightRequest="130">
 
+                            <ImageButton Source="ic_back.png"
+                                         HorizontalOptions="Start"
+                                         VerticalOptions="CenterAndExpand"
+                                         BackgroundColor="Transparent"
+                                         WidthRequest="30"
+                                         Command="{Binding BackCommand}"/>
+
                             <Image Source="LogoLogin.png"
-                                   HorizontalOptions="StartAndExpand"
+                                   Margin="-40,0,0,0"
+                                   HorizontalOptions="CenterAndExpand"
                                    VerticalOptions="CenterAndExpand"/>
 
                         </StackLayout>
