@@ -1,6 +1,5 @@
 ﻿using System;
-using Xamarin.Forms;
-namespace Collector.Models.Login
+namespace Collector.Models.CreateAccount
 {
     public class MessageRegistrationModel
     {
@@ -13,5 +12,7 @@ namespace Collector.Models.Login
         public string Type2 { get; set; }
 
         public string Type3 { get; set; }
+
+        public string EditButton { get; set; }
     }
 }

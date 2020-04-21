@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Threading.Tasks;
 using System.Windows.Input;
+using Collector.Models.CreateAccount;
 using Collector.Models.Login;
 using Collector.Models.Usuarios;
 using Collector.Services.Navigation;
@@ -31,11 +32,14 @@ namespace Collector.ViewModels.Login
             _message1 = new FlowObservableCollection<MessageRegistrationModel>();
             _ = InitialMessage();
 
+            IsEntry = "true";
+            IsButtonTerm = "false";
+            IsButtonConfirm = "false";
+
             _message.CollectionChanged += (sender, e) =>
             {
                 _message1 = _message;
             };
-
         }
 
         private async Task InitialMessage()
@@ -47,6 +51,7 @@ namespace Collector.ViewModels.Login
                 message.Id = _message.Count;
                 _message.Add(message);
             }
+            IsEntry = "true";
         }
 
         public ICommand BackCommand
@@ -67,6 +72,7 @@ namespace Collector.ViewModels.Login
                 return new Command(async () =>
                 {
                     await _serviceNavigation.NavigateToAsync<TermsOfUseViewModel>();
+
                 });
             }
         }
@@ -102,28 +108,80 @@ namespace Collector.ViewModels.Login
             switch (_message.Count)
             {
                 case 4:
-                    var nameUser = _message[3].Message;
-                    var teste = nameUser;
                     var termMessage = _service.MessageTerm();
                     termMessage.Id = _message.Count;
                     _message.Add(termMessage);
+
+                    IsEntry = "false";
+
+                    IsButtonTerm = "true";
                     break;
-                case 5:
+
+                case 8:
+                    var passwordMessage = _service.PasswordMessage();
+                    passwordMessage.Id = _message.Count;
+                    _message.Add(passwordMessage);
+                    break;
+
+                case 10:
                     
+                    var cepMessage = _service.CepMessage();
+                    cepMessage.Id = _message.Count;
+                    _message.Add(cepMessage);
+
                     break;
+
+                case 12:
+
+                    IsEntry = "false";
+                    IsButtonConfirm = "true";
+                    break;
+
                 default:
                     Console.WriteLine("Default case");
                     break;
-            }
+            }            
+        }
 
-            
+        public ICommand AcceptTermCommand
+        {
+            get
+            {
+                return new Command(async () =>
+                {
+                    AcceptTerm();
+                });
+            }
+        }
+
+        private void AcceptTerm()
+        {
+            var ConfirmTermMessage = _service.ConfirmTerm();
+            ConfirmTermMessage.Id = _message.Count;
+            _message.Add(ConfirmTermMessage);
+
+
+            var ConfirmedTermMessage = _service.ConfirmedTerm();
+            ConfirmedTermMessage.Id = _message.Count;
+            _message.Add(ConfirmedTermMessage);
+
+            IsButtonTerm = "false";
+
+            IsEntry = "true";
+
         }
 
         private string textMenssage;
         public string TextMenssage { get { return textMenssage; } set { this.Set("TextMenssage", ref textMenssage, value); } }
 
-        private FlowListView listMassage;
-        public FlowListView ListMassage { get { return listMassage; } set { this.Set("ListMassage", ref listMassage, value); } }
+        private string isEntry;
+        public string IsEntry { get { return isEntry; } set { this.Set("IsEntry", ref isEntry, value); } }
+
+        private string isButtonTerm;
+        public string IsButtonTerm { get { return isButtonTerm; } set { this.Set("IsButtonTerm", ref isButtonTerm, value); } }
+
+        private string isButtonConfirm;
+        public string IsButtonConfirm { get { return isButtonConfirm; } set { this.Set("IsButtonConfirm", ref isButtonConfirm, value); } }
 
     }
 }

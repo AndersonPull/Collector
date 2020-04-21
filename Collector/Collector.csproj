@@ -49,6 +49,7 @@
     <Folder Include="_Helpers\" />
     <Folder Include="_Helpers\_Translations\" />
     <Folder Include="Services\CreateAccount\" />
+    <Folder Include="Models\CreateAccount\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="AssemblyInfo.cs" />

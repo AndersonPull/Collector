@@ -65,7 +65,8 @@
                                                      IsVisible="{Binding Type2}">
 
                                             <ImageButton Source="ic_edit.png"
-                                                         WidthRequest="30"/>
+                                                         WidthRequest="30"
+                                                         IsVisible="{Binding EditButton}"/>
                                                  
                                             <Frame HorizontalOptions="Start"
                                                    HasShadow="False"
@@ -128,42 +129,48 @@
                                HasShadow="False"
                                BackgroundColor="#FFFFFF"
                                Padding="0"
-                               IsVisible="true">
+                               IsVisible="{Binding IsEntry}">
 
                             <StackLayout Orientation="Horizontal"
                                          VerticalOptions="FillAndExpand"
                                          Margin="5">
 
                                 <CustomEntry:CustomEntry Text="{Binding TextMenssage}"
+                                                         Placeholder="Digite seu nome..."
+                                                         IsPassword="{Binding IsPassword}"
                                                          TextColor="#000000"
                                                          Margin="10,0,0,0"
                                                          FontSize="Large"
                                                          VerticalOptions="CenterAndExpand"
-                                                         HorizontalOptions="FillAndExpand"/>
+                                                         HorizontalOptions="FillAndExpand"
+                                                         x:Name="EntrySend"/>
 
                                 <ImageButton Source="ic_send.png"
                                              BackgroundColor="Transparent"
                                              Command="{Binding SendCommand}"
-                                             Clicked="ScrollEnd_Clicked"/>
+                                             Clicked="Send_Clicked"
+                                             />
 
                             </StackLayout>
 
                         </Frame>
 
-                        <Button Text="Aceito o termo de uso"
+                        <Button Text="Aceito os termo de uso"
                                 TextColor="#FFFFFF"
                                 HeightRequest="50"
                                 BackgroundColor="#00BB54"
                                 Command="{Binding AcceptTermCommand}"
-                                IsVisible="false"
-                                Clicked="ScrollEnd_Clicked"/>
+                                IsVisible="{Binding IsButtonTerm}"
+                                Clicked="Term_Clicked"
+                                x:Name="TermButton"/>
 
                         <Button Text="Todos dados estão corretos"
                                 TextColor="#FFFFFF"
                                 HeightRequest="50"
                                 BackgroundColor="#00BB54"
+                                IsVisible="{Binding IsButtonConfirm}"
                                 Command="{Binding AcceptCommand}"
-                                IsVisible="false"/>
+                                x:Name="ConfirmButton"/>
 
                     </StackLayout>
 
