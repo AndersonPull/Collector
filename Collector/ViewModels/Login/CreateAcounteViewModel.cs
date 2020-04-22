@@ -77,6 +77,18 @@ namespace Collector.ViewModels.Login
             }
         }
 
+        public ICommand AcceptCommand
+        {
+            get
+            {
+                return new Command(async () =>
+                {
+                    await _serviceNavigation.NavigateToAsync<AccessViewModel>();
+
+                });
+            }
+        }
+
         public ICommand SendCommand
         {
             get

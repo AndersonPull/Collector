@@ -66,6 +66,7 @@
 
                                             <ImageButton Source="ic_edit.png"
                                                          WidthRequest="30"
+                                                         BackgroundColor="Transparent"
                                                          IsVisible="{Binding EditButton}"/>
                                                  
                                             <Frame HorizontalOptions="Start"
@@ -104,6 +105,7 @@
                                                         BorderColor="#FFFFFF"
                                                         CornerRadius="15"
                                                         VerticalOptions="FillAndExpand"
+                                                        BackgroundColor="Transparent"
                                                         Command="{Binding TermsCommand}"/>
 
                                             </StackLayout>

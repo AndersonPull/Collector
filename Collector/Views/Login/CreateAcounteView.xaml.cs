@@ -19,7 +19,7 @@ namespace Collector.Views.Login
 
         void Send_Clicked(System.Object sender, System.EventArgs e)
         {
-            if (EntrySend.Placeholder == "Digite um apelido para fazer o login...")
+            if (EntrySend.Placeholder == "Digite um apelido para o login...")
             {
                 EntrySend.Placeholder = "Digite uma senha ...";
                 EntrySend.IsPassword = true;
@@ -43,7 +43,7 @@ namespace Collector.Views.Login
         {
             if (EntrySend.Placeholder == "Digite seu nome...")
             {
-                EntrySend.Placeholder = "Digite um apelido para fazer o login...";
+                EntrySend.Placeholder = "Digite um apelido para o login...";
                 
             }
 
