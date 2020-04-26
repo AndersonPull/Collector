@@ -21,6 +21,7 @@
     <PackageReference Include="Rg.Plugins.Popup" Version="1.1.5.188" />
     <PackageReference Include="Microsoft.AppCenter.Push" Version="2.1.1" />
     <PackageReference Include="Plugin.Multilingual" Version="1.0.2" />
+    <PackageReference Include="sqlite-net-pcl" Version="1.6.292" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />
@@ -50,6 +51,7 @@
     <Folder Include="_Helpers\_Translations\" />
     <Folder Include="Services\CreateAccount\" />
     <Folder Include="Models\CreateAccount\" />
+    <Folder Include="_Datas\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="AssemblyInfo.cs" />
