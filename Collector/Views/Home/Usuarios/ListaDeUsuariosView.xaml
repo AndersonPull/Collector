@@ -57,7 +57,7 @@
                                                CornerRadius="30"
                                                IsClippedToBounds="true">
 
-                                            <Image Source="{Binding Imagem}"
+                                            <Image Source="{Binding Image}"
                                                    WidthRequest="70"
                                                    HeightRequest="70"
                                                    Aspect="AspectFill"/>
@@ -65,12 +65,12 @@
 
                                         <StackLayout Orientation="Vertical">
 
-                                            <Label Text="{Binding Apelido}"
+                                            <Label Text="{Binding NickName}"
                                                    TextColor="#ffffff"
                                                    FontSize="Small"
                                                    FontAttributes="Bold"/>
 
-                                            <Label Text="{Binding Nome}"
+                                            <Label Text="{Binding Name}"
                                                    TextColor="#ffffff"
                                                    FontSize="Micro"
                                                    FontAttributes="None"/>
@@ -109,9 +109,9 @@
                                                 BackgroundColor="transparent"
                                                 WidthRequest="35">
                                             <Image.GestureRecognizers>
-                                                <TapGestureRecognizer   Command="{Binding Path=BindingContext.NavegarParaDetalhes, Source={x:Reference usuarios}}"
-                                                                        CommandParameter="{Binding .}"
-                                                                        NumberOfTapsRequired="1"/>
+                                                <TapGestureRecognizer Command="{Binding Path=BindingContext.NavegarParaDetalhes, Source={x:Reference usuarios}}"
+                                                                      CommandParameter="{Binding .}"
+                                                                      NumberOfTapsRequired="1"/>
                                             </Image.GestureRecognizers>   
                                         </Image>
 
@@ -144,7 +144,7 @@
                                     BackgroundColor="#04C85C"
                                     Margin="10,-16,10,10"
                                     IsClippedToBounds="true"
-                                    IsVisible="{Binding MaisDetalhes}">
+                                    IsVisible="{Binding Details}">
 
                                 <StackLayout >
 
@@ -155,7 +155,7 @@
                                            VerticalTextAlignment="Start"
                                            HorizontalTextAlignment="Center"/>
 
-                                    <Label Text="{Binding Historia}"
+                                    <Label Text="{Binding History}"
                                            FontSize="Small"
                                            TextColor="#ffffff"
                                            FontAttributes="None"
@@ -171,7 +171,7 @@
                                                HeightRequest="20"
                                                Margin="2"/>
 
-                                        <Label Text="{Binding Telefone}"
+                                        <Label Text="{Binding Phone}"
                                                FontSize="Small"
                                                TextColor="#ffffff"
                                                FontAttributes="Bold"
@@ -183,7 +183,7 @@
                                                HeightRequest="20"
                                                Margin="2"/>
 
-                                        <Label Text="{Binding Telefone}"
+                                        <Label Text="{Binding Phone}"
                                                FontSize="Small"
                                                TextColor="#ffffff"
                                                FontAttributes="Bold"

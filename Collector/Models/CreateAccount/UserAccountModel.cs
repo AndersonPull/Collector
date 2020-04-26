@@ -18,7 +18,5 @@ namespace Collector.Models.CreateAccount
         public string HouseNumber { get; set; }
 
         public bool Term { get; set; }
-
-        //Complete registrationsic
     }
 }

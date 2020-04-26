@@ -12,12 +12,12 @@ namespace Collector.ViewModels.Home.Usuarios
     public class ListaDeUsuariosViewModel : BaseVM
     {
         UsuariosService _service;
-        public FlowObservableCollection<UsuarioModel> Usuarios { get; set; }
+        public FlowObservableCollection<UserModel> Usuarios { get; set; }
         INavigationService _serviceNavigation;
         public ListaDeUsuariosViewModel(INavigationService serviceNavigation)
         {
             _serviceNavigation = serviceNavigation;
-            Usuarios = new FlowObservableCollection<UsuarioModel>();
+            Usuarios = new FlowObservableCollection<UserModel>();
             _service = new UsuariosService();
             _ = CarregarListaUsuarios();
         }
@@ -42,23 +42,23 @@ namespace Collector.ViewModels.Home.Usuarios
             {
                 return new Command( (value) =>
                 {
-                    UsuarioModel _usuario = value as UsuarioModel;
+                    UserModel user = value as UserModel;
 
-                    if (_usuario.MaisDetalhes == false)
-                        _usuario.MaisDetalhes = true;
+                    if (user.Details == false)
+                        user.Details = true;
                     else
-                        _usuario.MaisDetalhes = false;
+                        user.Details = false;
 
-                    Animar(_usuario);
+                    Animar(user);
                 });
             }
         }
 
-        public void Animar(UsuarioModel usuario)
+        public void Animar(UserModel user)
         {
-            var index = Usuarios.IndexOf(usuario);
-            Usuarios.Remove(usuario);
-            Usuarios.Insert(index, usuario);
+            var index = Usuarios.IndexOf(user);
+            Usuarios.Remove(user);
+            Usuarios.Insert(index, user);
         }
     }
 }
