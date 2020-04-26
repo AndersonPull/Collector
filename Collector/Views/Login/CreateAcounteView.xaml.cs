@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Threading.Tasks;
-using Collector.Services.Navigation;
-using Collector.ViewModels.Login;
-using Collector.ViewModels.ViewModelLocator;
+﻿using Collector.ViewModels.Login;
 using Xamarin.Forms;
 
 namespace Collector.Views.Login

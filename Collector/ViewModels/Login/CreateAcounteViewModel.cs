@@ -20,7 +20,6 @@ namespace Collector.ViewModels.Login
 
         public FlowObservableCollection<MessageRegistrationModel> Message { get; set; }
 
-
         public CreateAcounteViewModel(INavigationService serviceNavigation)
         {
 
@@ -125,13 +124,10 @@ namespace Collector.ViewModels.Login
             {
                 case 4:
                     await ShowPopup();
-
                     IsEntry = "false";
-
                     var termMessage = await _service.MessageTerm();
                     termMessage.Id = Message.Count;
                     Message.Add(termMessage);
-
                     IsButtonTerm = "true";
                     await RemovePopup();
                     break;
@@ -178,7 +174,6 @@ namespace Collector.ViewModels.Login
 
         private async Task AcceptTerm()
         {
-
             IsButtonTerm = "false";
 
             var ConfirmTermMessage = await _service.ConfirmTerm();

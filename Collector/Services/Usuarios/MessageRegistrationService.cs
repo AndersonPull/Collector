@@ -18,7 +18,6 @@ namespace Collector.Services.Usuarios
                 Type2 = "false",
                 Type3 = "false"
             };
-              
         }
 
         public async Task<MessageRegistrationModel> InitialsMessages2()
@@ -32,7 +31,6 @@ namespace Collector.Services.Usuarios
                 Type2 = "false",
                 Type3 = "false"
             };
-
         }
 
         public async Task<MessageRegistrationModel> InitialsMessages3()
@@ -46,7 +44,6 @@ namespace Collector.Services.Usuarios
                 Type2 = "false",
                 Type3 = "false"
             };
-
         }
 
         public async Task<MessageRegistrationModel> MessageTerm()
