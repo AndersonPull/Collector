@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:CustomEntry="clr-namespace:Collector.Controls.CustomEntry"
+             xmlns:flv="clr-namespace:DLToolkit.Forms.Controls;assembly=DLToolkit.Forms.Controls.FlowListView"
              x:Class="Collector.Views.Login.CreateAcounteView"
              BackgroundColor="#EBEBEB"
              NavigationPage.HasNavigationBar="false">
@@ -12,7 +13,6 @@
 
             <Image Source="BGBanner.png"
                     Aspect="AspectFill"/>
-
             <StackLayout Margin="20">
 
                 <StackLayout Margin="{OnPlatform Android=0, iOS='0,30,0,0'}">
@@ -29,7 +29,7 @@
                     <StackLayout VerticalOptions="EndAndExpand"
                                  Margin="0,0,0,20">
 
-                        <ListView ItemsSource="{Binding _message}" 
+                        <ListView ItemsSource="{Binding Message}" 
                                   HasUnevenRows="True"
                                   BackgroundColor="Transparent"
                                   VerticalOptions="End"
@@ -41,44 +41,72 @@
 
                                 <DataTemplate>
                                     <ViewCell>
-                                    <StackLayout Margin="0,10,0,0"
-                                                 BackgroundColor="Transparent">
+                                        <StackLayout Margin="0,10,0,0"
+                                                     BackgroundColor="Transparent">
 
-                                        <Frame HorizontalOptions="Start"
-                                               HasShadow="False"
-                                               CornerRadius="12"
-                                               BackgroundColor="#00BB54"
-                                               Opacity=".6"
-                                               Margin="0,0,80,0"
-                                               IsVisible="{Binding Type1}">
-
-                                            <StackLayout HorizontalOptions="Fill">
-
-                                                <Label Text="{Binding Message}"
-                                                        TextColor="#FFFFFF"/>
-                                            </StackLayout>
-                                        </Frame>
-
-                                        <StackLayout Orientation="Horizontal"
-                                                     HorizontalOptions="EndAndExpand"
-                                                     Margin="80,0,0,0"
-                                                     IsVisible="{Binding Type2}">
-
-                                            <ImageButton Source="ic_edit.png"
-                                                         WidthRequest="30"
-                                                         BackgroundColor="Transparent"
-                                                         IsVisible="{Binding EditButton}"/>
-                                                 
                                             <Frame HorizontalOptions="Start"
                                                    HasShadow="False"
                                                    CornerRadius="12"
-                                                   BackgroundColor="#FFFFFF">
+                                                   BackgroundColor="#00BB54"
+                                                   Opacity=".6"
+                                                   Margin="0,0,80,0"
+                                                   IsVisible="{Binding Type1}">
 
-                                                <StackLayout HorizontalOptions="Start">
+                                                <StackLayout HorizontalOptions="Fill">
 
                                                     <Label Text="{Binding Message}"
-                                                           TextColor="#0000000"
-                                                           FontAttributes="Bold"/>
+                                                            TextColor="#FFFFFF"/>
+                                                </StackLayout>
+                                            </Frame>
+
+                                            <StackLayout Orientation="Horizontal"
+                                                         HorizontalOptions="EndAndExpand"
+                                                         Margin="80,0,0,0"
+                                                         IsVisible="{Binding Type2}">
+
+                                                <ImageButton Source="ic_edit.png"
+                                                             WidthRequest="30"
+                                                             BackgroundColor="Transparent"
+                                                             IsVisible="{Binding EditButton}"/>
+                                                 
+                                                <Frame HorizontalOptions="Start"
+                                                       HasShadow="False"
+                                                       CornerRadius="12"
+                                                       BackgroundColor="#FFFFFF">
+
+                                                    <StackLayout HorizontalOptions="Start">
+
+                                                        <Label Text="{Binding Message}"
+                                                               TextColor="#0000000"
+                                                               FontAttributes="Bold"/>
+
+                                                    </StackLayout>
+
+                                                </Frame>
+
+                                            </StackLayout>
+
+                                            <Frame HorizontalOptions="Start"
+                                                   HasShadow="False"
+                                                   CornerRadius="12"
+                                                   BackgroundColor="#00BB54"
+                                                   Opacity=".6"
+                                                   Margin="0,0,80,0"
+                                                   IsVisible="{Binding Type3}">
+
+                                                <StackLayout HorizontalOptions="Fill">
+
+                                                    <Label Text="{Binding Message}"
+                                                           TextColor="#FFFFFF"/>
+
+                                                    <Button Text="ABRIR TERMO DE USO"
+                                                            TextColor="#FFFFFF"
+                                                            BorderWidth="2"
+                                                            BorderColor="#FFFFFF"
+                                                            CornerRadius="15"
+                                                            VerticalOptions="FillAndExpand"
+                                                            BackgroundColor="Transparent"
+                                                            Command="{Binding TermsCommand}"/>
 
                                                 </StackLayout>
 
@@ -86,33 +114,8 @@
 
                                         </StackLayout>
 
-                                        <Frame HorizontalOptions="Start"
-                                               HasShadow="False"
-                                               CornerRadius="12"
-                                               BackgroundColor="#00BB54"
-                                               Opacity=".6"
-                                               Margin="0,0,80,0"
-                                               IsVisible="{Binding Type3}">
+                                    </ViewCell>
 
-                                            <StackLayout HorizontalOptions="Fill">
-
-                                                <Label Text="{Binding Message}"
-                                                       TextColor="#FFFFFF"/>
-
-                                                <Button Text="ABRIR TERMO DE USO"
-                                                        TextColor="#FFFFFF"
-                                                        BorderWidth="2"
-                                                        BorderColor="#FFFFFF"
-                                                        CornerRadius="15"
-                                                        VerticalOptions="FillAndExpand"
-                                                        BackgroundColor="Transparent"
-                                                        Command="{Binding TermsCommand}"/>
-
-                                            </StackLayout>
-                                        </Frame>
-
-                                    </StackLayout>
-                                   </ViewCell>
                                 </DataTemplate>
 
                             </ListView.ItemTemplate>

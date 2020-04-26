@@ -35,7 +35,7 @@ namespace Collector.Views.Login
 
             }
 
-            var target = CreateAcounteViewModel._message1[CreateAcounteViewModel._message1.Count - 1];
+            var target = CreateAcounteViewModel.Message1[CreateAcounteViewModel.Message1.Count - 1];
             MessagesListView.ScrollTo(target, ScrollToPosition.End, false);
         }
 
@@ -47,7 +47,7 @@ namespace Collector.Views.Login
                 
             }
 
-            var target = CreateAcounteViewModel._message1[CreateAcounteViewModel._message1.Count - 1];
+            var target = CreateAcounteViewModel.Message1[CreateAcounteViewModel.Message1.Count - 1];
             MessagesListView.ScrollTo(target, ScrollToPosition.End, false);
         }
     }

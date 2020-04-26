@@ -7,20 +7,52 @@ namespace Collector.Services.Usuarios
 {
     public class MessageRegistrationService
     {
-        public async Task<List<MessageRegistrationModel>> InitialsMessages()
+        public async Task<MessageRegistrationModel> InitialsMessages1()
         {
+            await Task.Delay(1000);
 
-            return new  List<MessageRegistrationModel>
+            return new  MessageRegistrationModel
             {
-                new MessageRegistrationModel { Message ="Olá 1😄", Type1 = "true", Type2 = "false", Type3 = "false"},
-                new MessageRegistrationModel { Message ="Que bom ter você aqui, vamos criar sua conta?", Type1 = "true", Type2 = "false", Type3 = "false"},
-                new MessageRegistrationModel { Message ="Escreva seu nome completo, para registrarmos.", Type1 = "true", Type2 = "false", Type3 = "false"}
+                Message ="Olá! 😄",
+                Type1 = "true",
+                Type2 = "false",
+                Type3 = "false"
+            };
+              
+        }
+
+        public async Task<MessageRegistrationModel> InitialsMessages2()
+        {
+            await Task.Delay(2000);
+
+            return new MessageRegistrationModel
+            {
+                Message = "Que bom ter você aqui, vamos criar sua conta?",
+                Type1 = "true",
+                Type2 = "false",
+                Type3 = "false"
             };
 
         }
 
-        public MessageRegistrationModel MessageTerm()
+        public async Task<MessageRegistrationModel> InitialsMessages3()
         {
+            await Task.Delay(2000);
+
+            return new MessageRegistrationModel
+            {
+                Message = "Escreva seu nome completo, para registrarmos.",
+                Type1 = "true",
+                Type2 = "false",
+                Type3 = "false"
+            };
+
+        }
+
+        public async Task<MessageRegistrationModel> MessageTerm()
+        {
+            await Task.Delay(3000);
+
             return new MessageRegistrationModel()
             {
                 Message = "Para continuar você poderia ler e aceitar nossos termos de uso e politicas de privacidade?",
@@ -30,8 +62,9 @@ namespace Collector.Services.Usuarios
             };
         }
 
-        public MessageRegistrationModel ConfirmTerm()
+        public async Task<MessageRegistrationModel> ConfirmTerm()
         {
+
             return new MessageRegistrationModel()
             {
                 Message = "👍",
@@ -42,8 +75,10 @@ namespace Collector.Services.Usuarios
             };
         }
 
-        public MessageRegistrationModel ConfirmedTerm()
+        public async Task<MessageRegistrationModel> ConfirmedTerm()
         {
+            await Task.Delay(3000);
+
             return new MessageRegistrationModel()
             {
                 Message = "Agora escolha um nome ou apelido para realizar o login no nosso app",
@@ -54,8 +89,10 @@ namespace Collector.Services.Usuarios
             };
         }
 
-        public MessageRegistrationModel PasswordMessage()
+        public async Task<MessageRegistrationModel> PasswordMessage()
         {
+            await Task.Delay(3000);
+
             return new MessageRegistrationModel()
             {
                 Message = "Agora escolha uma senha",
@@ -66,8 +103,10 @@ namespace Collector.Services.Usuarios
             };
         }
 
-        public MessageRegistrationModel CepMessage()
+        public async Task<MessageRegistrationModel> CepMessage()
         {
+            await Task.Delay(3000);
+
             return new MessageRegistrationModel()
             {
                 Message = "Para localizarmos os collectors mais proximos de você precisamos do seu cep, você pode digitalo",

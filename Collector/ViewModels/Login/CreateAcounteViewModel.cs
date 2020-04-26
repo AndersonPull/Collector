@@ -2,25 +2,23 @@
 using System.Threading.Tasks;
 using System.Windows.Input;
 using Collector.Models.CreateAccount;
-using Collector.Models.Login;
-using Collector.Models.Usuarios;
 using Collector.Services.Navigation;
 using Collector.Services.Usuarios;
-using Collector.Views;
+using Collector.Views.Login;
 using DLToolkit.Forms.Controls;
+using Rg.Plugins.Popup.Services;
 using Xamarin.Forms;
 
 namespace Collector.ViewModels.Login
 {
     public class CreateAcounteViewModel : BaseVM
     {
-        INavigationService _serviceNavigation;
+         INavigationService _serviceNavigation;
+         MessageRegistrationService _service;
 
-        MessageRegistrationService _service;
+        public static FlowObservableCollection<MessageRegistrationModel> Message1 { get; set; }
 
-        public static FlowObservableCollection<MessageRegistrationModel> _message1 { get; set; }
-
-        public FlowObservableCollection<MessageRegistrationModel> _message { get; set; }
+        public FlowObservableCollection<MessageRegistrationModel> Message { get; set; }
 
 
         public CreateAcounteViewModel(INavigationService serviceNavigation)
@@ -28,30 +26,36 @@ namespace Collector.ViewModels.Login
 
             _serviceNavigation = serviceNavigation;
             _service = new MessageRegistrationService();
-            _message = new FlowObservableCollection<MessageRegistrationModel>();
-            _message1 = new FlowObservableCollection<MessageRegistrationModel>();
+            Message = new FlowObservableCollection<MessageRegistrationModel>();
+            Message1 = new FlowObservableCollection<MessageRegistrationModel>();
             _ = InitialMessage();
 
-            IsEntry = "true";
+            IsEntry = "false";
             IsButtonTerm = "false";
             IsButtonConfirm = "false";
 
-            _message.CollectionChanged += (sender, e) =>
+            Message.CollectionChanged += (sender, e) =>
             {
-                _message1 = _message;
+                Message1 = Message;
             };
         }
 
         private async Task InitialMessage()
         {
-            var Messages = await _service.InitialsMessages();
+            await ShowPopup();
 
-            foreach(var message in Messages)
-            {
-                message.Id = _message.Count;
-                _message.Add(message);
-            }
+            var message1 = await _service.InitialsMessages1();
+            Message.Add(message1);
+
+            var message2 = await _service.InitialsMessages2();
+            Message.Add(message2);
+
+            var message3 = await _service.InitialsMessages3();
+            Message.Add(message3);
+
             IsEntry = "true";
+
+            await RemovePopup();
         }
 
         public ICommand BackCommand
@@ -95,7 +99,7 @@ namespace Collector.ViewModels.Login
             {
                 return new Command(async () =>
                 {
-                    SendMessage(TextMenssage);
+                   await  SendMessage(TextMenssage);
                 });
             }
         }
@@ -105,9 +109,9 @@ namespace Collector.ViewModels.Login
 
             if (message != null)
             {
-                _message.Add(new MessageRegistrationModel()
+                Message.Add(new MessageRegistrationModel()
                 {
-                    Id = _message.Count,
+                    Id = Message.Count,
                     Message = message,
                     Type1 = "false",
                     Type2 = "true",
@@ -117,36 +121,42 @@ namespace Collector.ViewModels.Login
                 TextMenssage = null;
             }
 
-            switch (_message.Count)
+            switch (Message.Count)
             {
                 case 4:
-                    var termMessage = _service.MessageTerm();
-                    termMessage.Id = _message.Count;
-                    _message.Add(termMessage);
+                    await ShowPopup();
 
                     IsEntry = "false";
 
+                    var termMessage = await _service.MessageTerm();
+                    termMessage.Id = Message.Count;
+                    Message.Add(termMessage);
+
                     IsButtonTerm = "true";
+                    await RemovePopup();
                     break;
 
                 case 8:
-                    var passwordMessage = _service.PasswordMessage();
-                    passwordMessage.Id = _message.Count;
-                    _message.Add(passwordMessage);
+                    await ShowPopup();
+                    var passwordMessage = await _service.PasswordMessage();
+                    passwordMessage.Id = Message.Count;
+                    Message.Add(passwordMessage);
+                    await RemovePopup();
                     break;
 
                 case 10:
-                    
-                    var cepMessage = _service.CepMessage();
-                    cepMessage.Id = _message.Count;
-                    _message.Add(cepMessage);
-
+                    await ShowPopup();
+                    var cepMessage = await _service.CepMessage();
+                    cepMessage.Id = Message.Count;
+                    Message.Add(cepMessage);
+                    await RemovePopup();
                     break;
 
                 case 12:
-
+                    await ShowPopup();
                     IsEntry = "false";
                     IsButtonConfirm = "true";
+                    await RemovePopup();
                     break;
 
                 default:
@@ -161,26 +171,38 @@ namespace Collector.ViewModels.Login
             {
                 return new Command(async () =>
                 {
-                    AcceptTerm();
+                   await AcceptTerm();
                 });
             }
         }
 
-        private void AcceptTerm()
+        private async Task AcceptTerm()
         {
-            var ConfirmTermMessage = _service.ConfirmTerm();
-            ConfirmTermMessage.Id = _message.Count;
-            _message.Add(ConfirmTermMessage);
-
-
-            var ConfirmedTermMessage = _service.ConfirmedTerm();
-            ConfirmedTermMessage.Id = _message.Count;
-            _message.Add(ConfirmedTermMessage);
 
             IsButtonTerm = "false";
 
-            IsEntry = "true";
+            var ConfirmTermMessage = await _service.ConfirmTerm();
+            ConfirmTermMessage.Id = Message.Count;
+            Message.Add(ConfirmTermMessage);
 
+            await ShowPopup();
+            var ConfirmedTermMessage = await _service.ConfirmedTerm();
+            ConfirmedTermMessage.Id = Message.Count;
+            Message.Add(ConfirmedTermMessage);
+
+            IsEntry = "true";
+            await RemovePopup();
+
+        }
+
+        public async Task ShowPopup()
+        { 
+            await PopupNavigation.Instance.PushAsync(new PopUpLoadingMessageView());
+        }
+
+        public async Task RemovePopup()
+        {
+            await PopupNavigation.Instance.PopAsync();
         }
 
         private string textMenssage;
