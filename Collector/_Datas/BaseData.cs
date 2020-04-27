@@ -42,11 +42,6 @@ namespace Collector._Datas
             return _conexao.Table<UserModel>().ToList();
         }
 
-        public List<AddressModel> GetAllAdrress()
-        {
-            return _conexao.Table<AddressModel>().ToList();
-        }
-
         public void Update(UserModel user)
         {
             _conexao.Update(user);

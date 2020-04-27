@@ -1,8 +1,9 @@
-﻿using System;
-using System.Windows.Input;
+﻿using System.Windows.Input;
 using Collector._Datas;
 using Collector.Services.Navigation;
 using Collector.ViewModels.Home;
+using Collector.Views.PopUpsAlerts;
+using Rg.Plugins.Popup.Services;
 using Xamarin.Forms;
 
 namespace Collector.ViewModels.Login
@@ -36,7 +37,6 @@ namespace Collector.ViewModels.Login
                 return new Command(async () =>
                 {
                     var users = Data.GetAll();
-                    var address = Data.GetAllAdrress();
                     var user = Data.GetUser(entryNickName, entryPassword);
 
                     if (user != null)
@@ -45,7 +45,7 @@ namespace Collector.ViewModels.Login
                     }
                     else
                     {
-                        _ = Application.Current.MainPage.DisplayAlert("Collector", "Nenhuma conta foi encontrada", "ok");
+                        await PopupNavigation.Instance.PushAsync(new PopUpAlertView(), true);
                     }
                 });
             }
