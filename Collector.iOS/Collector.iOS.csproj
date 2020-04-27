@@ -205,6 +205,7 @@
     <BundleResource Include="Resources\ic_close.png" />
     <BundleResource Include="Resources\ic_edit.png" />
     <BundleResource Include="Resources\gif_points.gif" />
+    <BundleResource Include="Resources\Ic_pet_Alert.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Renderers\" />

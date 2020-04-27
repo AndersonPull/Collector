@@ -7,9 +7,12 @@ namespace Collector.Views.PopUpsAlerts
 {
     public partial class PopUpAlertView : PopupPage
     {
-        public PopUpAlertView()
+        public PopUpAlertView(string title, string message)
         {
             InitializeComponent();
+
+            Title.Text = title;
+            Message.Text = message;
         }
     }
 }

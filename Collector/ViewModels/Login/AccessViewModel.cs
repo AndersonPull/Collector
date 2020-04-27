@@ -45,7 +45,7 @@ namespace Collector.ViewModels.Login
                     }
                     else
                     {
-                        await PopupNavigation.Instance.PushAsync(new PopUpAlertView(), true);
+                        await PopupNavigation.Instance.PushAsync(new PopUpAlertView("login ou senha incorreto", "Verifique seus dados e tente novamente"), true);
                     }
                 });
             }
