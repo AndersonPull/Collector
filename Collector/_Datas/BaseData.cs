@@ -27,6 +27,11 @@ namespace Collector._Datas
             return _conexao.Table<UserModel>().Where(a => a.Id == id).FirstOrDefault();
         }
 
+        public UserModel GetUser(string nickName, string password)
+        {
+            return _conexao.Table<UserModel>().Where(a => a.NickName == nickName && a.Password == password).FirstOrDefault();
+        }
+
         public List<UserModel> GetCollectors()
         {
             return _conexao.Table<UserModel>().Where(a => a.IsCollector).ToList();
@@ -35,6 +40,11 @@ namespace Collector._Datas
         public List<UserModel> GetAll()
         {
             return _conexao.Table<UserModel>().ToList();
+        }
+
+        public List<AddressModel> GetAllAdrress()
+        {
+            return _conexao.Table<AddressModel>().ToList();
         }
 
         public void Update(UserModel user)

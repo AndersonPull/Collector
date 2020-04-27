@@ -42,7 +42,7 @@
     <Folder Include="Views\Home\Usuarios\" />
     <Folder Include="Views\Home\PopUpMateriais\" />
     <Folder Include="ViewModels\Home\PopUpMateriais\" />
-    <Folder Include="Models\Usuarios\" />
+    <Folder Include="Models\User\" />
     <Folder Include="Services\Usuarios\" />
     <Folder Include="Controls\CustomEntry\" />
     <Folder Include="Views\Home\QuemSomos\" />
@@ -52,6 +52,7 @@
     <Folder Include="Services\CreateAccount\" />
     <Folder Include="Models\CreateAccount\" />
     <Folder Include="_Datas\" />
+    <Folder Include="Views\PopUpsAlerts\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="AssemblyInfo.cs" />

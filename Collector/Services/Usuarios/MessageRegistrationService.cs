@@ -7,6 +7,11 @@ namespace Collector.Services.Usuarios
 {
     public class MessageRegistrationService
     {
+        public async Task<bool> AddressUser()
+        {
+            return true;
+        }
+
         public async Task<MessageRegistrationModel> InitialsMessages1()
         {
             await Task.Delay(1000);
@@ -74,7 +79,7 @@ namespace Collector.Services.Usuarios
 
         public async Task<MessageRegistrationModel> ConfirmedTerm()
         {
-            await Task.Delay(3000);
+            await Task.Delay(1000);
 
             return new MessageRegistrationModel()
             {
@@ -82,13 +87,12 @@ namespace Collector.Services.Usuarios
                 Type1 = "true",
                 Type2 = "false",
                 Type3 = "false",
-                EditButton = "false"
             };
         }
 
         public async Task<MessageRegistrationModel> PasswordMessage()
         {
-            await Task.Delay(3000);
+            await Task.Delay(1000);
 
             return new MessageRegistrationModel()
             {
@@ -96,13 +100,12 @@ namespace Collector.Services.Usuarios
                 Type1 = "true",
                 Type2 = "false",
                 Type3 = "false",
-                EditButton = "false"
             };
         }
 
         public async Task<MessageRegistrationModel> CepMessage()
         {
-            await Task.Delay(3000);
+            await Task.Delay(2000);
 
             return new MessageRegistrationModel()
             {
@@ -110,7 +113,19 @@ namespace Collector.Services.Usuarios
                 Type1 = "true",
                 Type2 = "false",
                 Type3 = "false",
-                EditButton = "false"
+            };
+        }
+
+        public async Task<MessageRegistrationModel> HomeNumberMessage()
+        {
+            await Task.Delay(1000);
+
+            return new MessageRegistrationModel()
+            {
+                Message = "para finalizarmos digite o nnumero da sua casa.",
+                Type1 = "true",
+                Type2 = "false",
+                Type3 = "false",
             };
         }
     }

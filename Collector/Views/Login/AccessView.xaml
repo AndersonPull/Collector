@@ -67,7 +67,8 @@
                                     <Label Text="{translator:Translate Email}"
                                            TextColor="#FFFFFF"/>
 
-                                    <CustomEntry:CustomEntry TextColor="#FFFFFF"
+                                    <CustomEntry:CustomEntry Text="{Binding EntryNickName}"
+                                                             TextColor="#FFFFFF"
                                                              FontSize="Large"
                                                              x:Name="EmailEntry"/>
                                 </StackLayout>
@@ -95,7 +96,8 @@
                                     <Label Text="{translator:Translate Password}"
                                            TextColor="#FFFFFF"/>
 
-                                     <CustomEntry:CustomEntry TextColor="#FFFFFF"
+                                     <CustomEntry:CustomEntry Text="{Binding EntryPassword}"
+                                                              TextColor="#FFFFFF"
                                                               IsPassword="True"
                                                               FontSize="Large"
                                                               x:Name="PasswordEntry"/>

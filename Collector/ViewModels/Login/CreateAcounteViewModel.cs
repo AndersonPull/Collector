@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Threading.Tasks;
 using System.Windows.Input;
+using Collector._Datas;
 using Collector.Models.CreateAccount;
+using Collector.Models.Usuarios;
 using Collector.Services.Navigation;
 using Collector.Services.Usuarios;
 using Collector.Views.Login;
@@ -20,6 +22,10 @@ namespace Collector.ViewModels.Login
 
         public FlowObservableCollection<MessageRegistrationModel> Message { get; set; }
 
+        private UserModel User;
+
+        private BaseData Data;
+
         public CreateAcounteViewModel(INavigationService serviceNavigation)
         {
 
@@ -27,11 +33,14 @@ namespace Collector.ViewModels.Login
             _service = new MessageRegistrationService();
             Message = new FlowObservableCollection<MessageRegistrationModel>();
             Message1 = new FlowObservableCollection<MessageRegistrationModel>();
-            _ = InitialMessage();
+            User = new UserModel();
+            Data = new BaseData();
 
             IsEntry = "false";
             IsButtonTerm = "false";
             IsButtonConfirm = "false";
+
+            _ = InitialMessage();
 
             Message.CollectionChanged += (sender, e) =>
             {
@@ -41,7 +50,7 @@ namespace Collector.ViewModels.Login
 
         private async Task InitialMessage()
         {
-            await ShowPopup();
+           // await ShowPopup();
 
             var message1 = await _service.InitialsMessages1();
             Message.Add(message1);
@@ -54,7 +63,7 @@ namespace Collector.ViewModels.Login
 
             IsEntry = "true";
 
-            await RemovePopup();
+          //  await RemovePopup();
         }
 
         public ICommand BackCommand
@@ -75,18 +84,6 @@ namespace Collector.ViewModels.Login
                 return new Command(async () =>
                 {
                     await _serviceNavigation.NavigateToAsync<TermsOfUseViewModel>();
-
-                });
-            }
-        }
-
-        public ICommand AcceptCommand
-        {
-            get
-            {
-                return new Command(async () =>
-                {
-                    await _serviceNavigation.NavigateToAsync<AccessViewModel>();
 
                 });
             }
@@ -123,38 +120,49 @@ namespace Collector.ViewModels.Login
             switch (Message.Count)
             {
                 case 4:
-                    await ShowPopup();
+                  //  await ShowPopup();
                     IsEntry = "false";
+                    User.Name = message;
                     var termMessage = await _service.MessageTerm();
                     termMessage.Id = Message.Count;
                     Message.Add(termMessage);
                     IsButtonTerm = "true";
-                    await RemovePopup();
+                 //   await RemovePopup();
                     break;
 
                 case 8:
-                    await ShowPopup();
+                    //  await ShowPopup();
+                    User.NickName = message;
                     var passwordMessage = await _service.PasswordMessage();
                     passwordMessage.Id = Message.Count;
                     Message.Add(passwordMessage);
-                    await RemovePopup();
+                  //  await RemovePopup();
                     break;
 
                 case 10:
-                    await ShowPopup();
+                    //    await ShowPopup();
+                    User.Password = message;
                     var cepMessage = await _service.CepMessage();
                     cepMessage.Id = Message.Count;
                     Message.Add(cepMessage);
-                    await RemovePopup();
+                //    await RemovePopup();
                     break;
 
                 case 12:
-                    await ShowPopup();
+                    //    await ShowPopup();
+                    User.Cep = message;
+                    var roadMessage = await _service.HomeNumberMessage();
+                    roadMessage.Id = Message.Count;
+                    Message.Add(roadMessage);
+                    //    await RemovePopup();
+                    break;
+                case 14:
+                    //    await ShowPopup();
+                    User.HouseNumber = message;
                     IsEntry = "false";
                     IsButtonConfirm = "true";
-                    await RemovePopup();
+                    //    await RemovePopup();
                     break;
-
                 default:
                     Console.WriteLine("Default case");
                     break;
@@ -176,18 +184,32 @@ namespace Collector.ViewModels.Login
         {
             IsButtonTerm = "false";
 
+            User.Term = true;
+
             var ConfirmTermMessage = await _service.ConfirmTerm();
             ConfirmTermMessage.Id = Message.Count;
             Message.Add(ConfirmTermMessage);
 
-            await ShowPopup();
+          //  await ShowPopup();
             var ConfirmedTermMessage = await _service.ConfirmedTerm();
             ConfirmedTermMessage.Id = Message.Count;
             Message.Add(ConfirmedTermMessage);
 
             IsEntry = "true";
-            await RemovePopup();
+          //  await RemovePopup();
 
+        }
+
+        public ICommand AcceptCommand
+        {
+            get
+            {
+                return new Command(async () =>
+                {
+                    Data.Save(User);
+                    await _serviceNavigation.NavigateToAsync<AccessViewModel>();
+                });
+            }
         }
 
         public async Task ShowPopup()

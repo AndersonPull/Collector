@@ -80,9 +80,6 @@
     <PackageReference Include="Xamarin.Forms.GoogleMaps">
       <Version>3.2.1</Version>
     </PackageReference>
-    <PackageReference Include="BottomNavigationBar">
-      <Version>1.4.0.2</Version>
-    </PackageReference>
     <PackageReference Include="Rg.Plugins.Popup">
       <Version>1.1.5.188</Version>
     </PackageReference>
