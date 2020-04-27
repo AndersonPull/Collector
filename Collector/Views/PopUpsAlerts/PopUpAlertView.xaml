@@ -22,7 +22,7 @@
     <StackLayout VerticalOptions="Center" 
                  HorizontalOptions="Center">
 
-        <Frame HeightRequest="460"
+        <Frame HeightRequest="400"
                WidthRequest="300"
                Padding="0"
                BorderColor="Transparent"
@@ -40,10 +40,34 @@
                              HorizontalOptions="FillAndExpand"
                              VerticalOptions="FillAndExpand">
 
-                    <Label Text="Teste"/>
+                    <StackLayout Margin="15"
+                             Spacing="15"
+                             HorizontalOptions="FillAndExpand"
+                             VerticalOptions="FillAndExpand">
+
+                        <Image Source="Ic_pet_Alert.png"
+                               VerticalOptions="Start"
+                               HorizontalOptions="CenterAndExpand"/>
+
+                        <Label TextColor="#171717"
+                               FontSize="Large"
+                               FontAttributes="Bold"
+                               VerticalOptions="CenterAndExpand"
+                               HorizontalOptions="CenterAndExpand"
+                               HorizontalTextAlignment="Center"
+                               x:Name="Title"/>
+
+                        <Label TextColor="#171717"
+                               FontSize="Medium"
+                               FontAttributes="None"
+                               VerticalOptions="CenterAndExpand"
+                               HorizontalOptions="CenterAndExpand"
+                               HorizontalTextAlignment="Center"
+                               x:Name="Message"/>
+
+                    </StackLayout>
 
                 </StackLayout>
-                
 
                 <StackLayout HeightRequest="50"
                              VerticalOptions="EndAndExpand"
@@ -51,12 +75,14 @@
                              BackgroundColor="#FFFFFF">
 
                     <Label Text="OK"
-                           FontSize="Medium"
+                           TextColor="#171717"
+                           FontSize="Large"
                            FontAttributes="Bold"
                            VerticalOptions="CenterAndExpand"
                            HorizontalOptions="CenterAndExpand"/>
 
-                </StackLayout>    
+                </StackLayout>
+                
             </StackLayout>
 
         </Frame>

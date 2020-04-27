@@ -81,7 +81,7 @@
       <Version>3.2.1</Version>
     </PackageReference>
     <PackageReference Include="Rg.Plugins.Popup">
-      <Version>1.1.5.188</Version>
+      <Version>2.0.0.2</Version>
     </PackageReference>
     <PackageReference Include="Microsoft.AppCenter.Push">
       <Version>2.1.1</Version>
@@ -319,6 +319,10 @@
       <Generator></Generator>
     </AndroidResource>
     <AndroidResource Include="Resources\drawable\gif_points.gif">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable\Ic_pet_Alert.png">
       <SubType></SubType>
       <Generator></Generator>
     </AndroidResource>
