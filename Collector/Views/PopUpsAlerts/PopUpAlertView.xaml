@@ -15,14 +15,14 @@
                                    DurationOut="200"
                                    EasingIn="SinOut"
                                    EasingOut="SinIn"
-                                   HasBackgroundAnimation="True"/>
+                                   HasBackgroundAnimation="True"  />
 
     </pages:PopupPage.Animation>
     
     <StackLayout VerticalOptions="Center" 
                  HorizontalOptions="Center">
 
-        <Frame HeightRequest="400"
+        <Frame HeightRequest="460"
                WidthRequest="300"
                Padding="0"
                BorderColor="Transparent"
@@ -37,31 +37,13 @@
                          VerticalOptions="FillAndExpand">
 
                 <StackLayout Margin="15"
-                             Spacing="15"
                              HorizontalOptions="FillAndExpand"
                              VerticalOptions="FillAndExpand">
 
-                    <Image Source="Ic_pet_Alert.png"
-                           VerticalOptions="Start"
-                           HorizontalOptions="CenterAndExpand"/>
-
-                    <Label TextColor="#171717"
-                           FontSize="Large"
-                           FontAttributes="Bold"
-                           VerticalOptions="CenterAndExpand"
-                           HorizontalOptions="CenterAndExpand"
-                           HorizontalTextAlignment="Center"
-                           x:Name="Title"/>
-
-                    <Label TextColor="#171717"
-                           FontSize="Medium"
-                           FontAttributes="None"
-                           VerticalOptions="CenterAndExpand"
-                           HorizontalOptions="CenterAndExpand"
-                           HorizontalTextAlignment="Center"
-                           x:Name="Message"/>
+                    <Label Text="Teste"/>
 
                 </StackLayout>
+                
 
                 <StackLayout HeightRequest="50"
                              VerticalOptions="EndAndExpand"
@@ -69,14 +51,12 @@
                              BackgroundColor="#FFFFFF">
 
                     <Label Text="OK"
-                           TextColor="#171717"
-                           FontSize="Large"
+                           FontSize="Medium"
                            FontAttributes="Bold"
                            VerticalOptions="CenterAndExpand"
                            HorizontalOptions="CenterAndExpand"/>
 
-                </StackLayout>
-                
+                </StackLayout>    
             </StackLayout>
 
         </Frame>
