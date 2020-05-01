@@ -36,7 +36,6 @@ namespace Collector.ViewModels.Login
             {
                 return new Command(async () =>
                 {
-                    var users = Data.GetAll();
                     var user = Data.GetUser(entryNickName, entryPassword);
 
                     if (user != null)

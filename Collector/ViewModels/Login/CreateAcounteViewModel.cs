@@ -36,7 +36,7 @@ namespace Collector.ViewModels.Login
             User = new UserModel();
             Data = new BaseData();
 
-            IsEntry = "false";
+            IsEntry = "true";
             IsButtonTerm = "false";
             IsButtonConfirm = "false";
 
@@ -150,7 +150,13 @@ namespace Collector.ViewModels.Login
 
                 case 12:
                     //    await ShowPopup();
-                    User.Cep = message;
+                    var address = await _service.GetAdrress(message);
+
+                    User.Cep = address.Cep;
+                    User.City = address.City;
+                    User.Uf = address.Uf;
+                    User.Road = address.Road;
+
                     var roadMessage = await _service.HomeNumberMessage();
                     roadMessage.Id = Message.Count;
                     Message.Add(roadMessage);

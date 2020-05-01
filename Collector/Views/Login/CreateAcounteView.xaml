@@ -9,11 +9,17 @@
 
     <ContentPage.Content>
 
+        
+
         <Grid>
 
             <Image Source="BGBanner.png"
-                    Aspect="AspectFill"/>
-            <StackLayout Margin="20">
+                   Aspect="AspectFill"/>
+
+            
+            <FlexLayout >
+
+            <StackLayout Margin="20" >
 
                 <StackLayout Margin="{OnPlatform Android=0, iOS='0,30,0,0'}">
 
@@ -24,15 +30,15 @@
                  
                 </StackLayout>
 
-                <StackLayout VerticalOptions="FillAndExpand">
+                <StackLayout VerticalOptions="Start">
 
-                    <StackLayout VerticalOptions="EndAndExpand"
+                    <StackLayout VerticalOptions="Start"
                                  Margin="0,0,0,20">
 
                         <ListView ItemsSource="{Binding Message}" 
                                   HasUnevenRows="True"
                                   BackgroundColor="Transparent"
-                                  VerticalOptions="End"
+                                  VerticalOptions="FillAndExpand"
                                   SeparatorVisibility="None"
                                   SelectionMode="None"
                                   x:Name="MessagesListView">
@@ -182,9 +188,9 @@
                 </StackLayout>
 
             </StackLayout>
-               
+            </FlexLayout>
         </Grid>
-            
+
     </ContentPage.Content>
 
 </ContentPage>
