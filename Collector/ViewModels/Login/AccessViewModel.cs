@@ -39,13 +39,9 @@ namespace Collector.ViewModels.Login
                     var user = Data.GetUser(entryNickName, entryPassword);
 
                     if (user != null)
-                    {
                         await _serviceNavigation.NavigateToAsync<MainTabbedPageViewModel>();
-                    }
                     else
-                    {
                         await PopupNavigation.Instance.PushAsync(new PopUpAlertView("login ou senha incorreto", "Verifique seus dados e tente novamente"), true);
-                    }
                 });
             }
         }

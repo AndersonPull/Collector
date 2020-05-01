@@ -9,8 +9,6 @@
 
     <ContentPage.Content>
 
-        
-
         <Grid>
 
             <Image Source="BGBanner.png"
@@ -40,7 +38,7 @@
                                   BackgroundColor="Transparent"
                                   VerticalOptions="FillAndExpand"
                                   SeparatorVisibility="None"
-                                  SelectionMode="None"
+                                  SelectionMode="Single"
                                   x:Name="MessagesListView">
 
                             <ListView.ItemTemplate>
@@ -62,6 +60,7 @@
 
                                                     <Label Text="{Binding Message}"
                                                             TextColor="#FFFFFF"/>
+
                                                 </StackLayout>
                                             </Frame>
 
@@ -112,7 +111,7 @@
                                                             CornerRadius="15"
                                                             VerticalOptions="FillAndExpand"
                                                             BackgroundColor="Transparent"
-                                                            Command="{Binding TermsCommand}"/>
+                                                            Command="{Binding Source={x:Reference MessagesListView}, Path=BindingContext.TermCommand}"/>
 
                                                 </StackLayout>
 

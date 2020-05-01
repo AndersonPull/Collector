@@ -77,7 +77,7 @@ namespace Collector.ViewModels.Login
             }
         }
 
-        public ICommand TermsCommand
+        public ICommand TermCommand
         {
             get
             {
