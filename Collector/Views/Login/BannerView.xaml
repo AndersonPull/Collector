@@ -193,10 +193,6 @@
                 </StackLayout>
              
             </StackLayout>
-
-            <!--<Image Source="BGBannerPrincipal.png"
-                   Aspect="AspectFill"
-                   x:Name="Splash"/>-->
             
         </Grid>
 

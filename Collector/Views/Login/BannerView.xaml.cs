@@ -10,9 +10,6 @@ namespace Collector.Views.Login
         {
             InitializeComponent();
 
-            //Splash.ScaleTo(6, 1000);
-            //Splash.FadeTo(0, 2000, Easing.SinInOut);
-
             Imagens.FadeTo(0, 0, Easing.SinInOut);
             icons1.FadeTo(0, 0, Easing.SinInOut);
             icons2.FadeTo(0, 0, Easing.SinInOut);
@@ -25,7 +22,7 @@ namespace Collector.Views.Login
 
             timer.Elapsed += OnTimedEvent1;
 
-            timer.AutoReset = true;
+            timer.AutoReset = false;
 
             timer.Enabled = true;
         }
@@ -53,7 +50,7 @@ namespace Collector.Views.Login
 
             timer.Elapsed += OnTimedEvent2;
 
-            timer.AutoReset = true;
+            timer.AutoReset = false;
 
             timer.Enabled = true;
         }

@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Threading.Tasks;
-using System.Timers;
 using Collector.ViewModels.Login;
 using Xamarin.Forms;
 
@@ -12,9 +10,14 @@ namespace Collector.Views.Login
         {
             InitializeComponent();
             NavigationPage.SetBackButtonTitle(this, "");
+
+            MessagesListView.ItemAppearing += (sender, e) =>
+            {
+                MessagesListView.ScrollTo(e.Item, ScrollToPosition.MakeVisible, false);
+            };
         }
 
-        void Send_Clicked(System.Object sender, System.EventArgs e)
+        void Send_Clicked(object sender, EventArgs e)
         {
             if (EntrySend.Placeholder == "Digite um apelido para o login...")
             {
@@ -36,19 +39,24 @@ namespace Collector.Views.Login
                 EntrySend.MaxLength = 8;
                 EntrySend.Keyboard = Keyboard.Numeric;
             }
+
+            //ScrollDown();
         }
 
-        void Term_Clicked(System.Object sender, System.EventArgs e)
+        void Term_ClickedAsync(object sender, EventArgs e)
         {
             if (EntrySend.Placeholder == "Digite seu nome...")
                 EntrySend.Placeholder = "Digite um apelido para o login...";
+
+           // ScrollDown();
         }
 
-        public async Task ScrollDown()
+        public void ScrollDown()
         {
             var target = CreateAcounteViewModel.Message1[CreateAcounteViewModel.Message1.Count - 1];
-            MessagesListView.ScrollTo(target, ScrollToPosition.End, false);
+            MessagesListView.ScrollTo(target, ScrollToPosition.End, true);
         }
+
 
     }
 }
