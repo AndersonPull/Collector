@@ -15,8 +15,11 @@ namespace Collector.ViewModels.Login
 {
     public class CreateAcounteViewModel : BaseVM
     {
-         INavigationService _serviceNavigation;
-         MessageRegistrationService _service;
+        INavigationService _serviceNavigation;
+
+        MessageRegistrationService _service;
+
+        PopUpLoadingMessageView loading;
 
         public static FlowObservableCollection<MessageRegistrationModel> Message1 { get; set; }
 
@@ -36,7 +39,7 @@ namespace Collector.ViewModels.Login
             User = new UserModel();
             Data = new BaseData();
 
-            IsEntry = "true";
+            IsEntry = "false";
             IsButtonTerm = "false";
             IsButtonConfirm = "false";
 
@@ -50,7 +53,8 @@ namespace Collector.ViewModels.Login
 
         private async Task InitialMessage()
         {
-           // await ShowPopup();
+            loading = new PopUpLoadingMessageView();
+            await PopupNavigation.Instance.PushAsync(loading);
 
             var message1 = await _service.InitialsMessages1();
             Message.Add(message1);
@@ -63,7 +67,7 @@ namespace Collector.ViewModels.Login
 
             IsEntry = "true";
 
-          //  await RemovePopup();
+            await loading.Close();
         }
 
         public ICommand BackCommand
@@ -120,36 +124,47 @@ namespace Collector.ViewModels.Login
             switch (Message.Count)
             {
                 case 4:
-                  //  await ShowPopup();
+                    loading = new PopUpLoadingMessageView();
+                    await PopupNavigation.Instance.PushAsync(loading);
+
                     IsEntry = "false";
                     User.Name = message;
                     var termMessage = await _service.MessageTerm();
                     termMessage.Id = Message.Count;
                     Message.Add(termMessage);
                     IsButtonTerm = "true";
-                 //   await RemovePopup();
+
+                    await loading.Close();
+
                     break;
 
                 case 8:
-                    //  await ShowPopup();
+                    loading = new PopUpLoadingMessageView();
+                    await PopupNavigation.Instance.PushAsync(loading);
+
                     User.NickName = message;
                     var passwordMessage = await _service.PasswordMessage();
                     passwordMessage.Id = Message.Count;
                     Message.Add(passwordMessage);
-                  //  await RemovePopup();
+                    await loading.Close();
                     break;
 
                 case 10:
-                    //    await ShowPopup();
+                    loading = new PopUpLoadingMessageView();
+                    await PopupNavigation.Instance.PushAsync(loading);
+
                     User.Password = message;
                     var cepMessage = await _service.CepMessage();
                     cepMessage.Id = Message.Count;
                     Message.Add(cepMessage);
-                //    await RemovePopup();
+
+                    await loading.Close();
                     break;
 
                 case 12:
-                    //    await ShowPopup();
+                    loading = new PopUpLoadingMessageView();
+                    await PopupNavigation.Instance.PushAsync(loading);
+
                     var address = await _service.GetAdrress(message);
 
                     User.Cep = address.Cep;
@@ -160,14 +175,18 @@ namespace Collector.ViewModels.Login
                     var roadMessage = await _service.HomeNumberMessage();
                     roadMessage.Id = Message.Count;
                     Message.Add(roadMessage);
-                    //    await RemovePopup();
+
+                    await loading.Close();
                     break;
                 case 14:
-                    //    await ShowPopup();
+                    loading = new PopUpLoadingMessageView();
+                    await PopupNavigation.Instance.PushAsync(loading);
+
                     User.HouseNumber = message;
                     IsEntry = "false";
                     IsButtonConfirm = "true";
-                    //    await RemovePopup();
+
+                    await loading.Close();
                     break;
                 default:
                     Console.WriteLine("Default case");
@@ -196,13 +215,15 @@ namespace Collector.ViewModels.Login
             ConfirmTermMessage.Id = Message.Count;
             Message.Add(ConfirmTermMessage);
 
-          //  await ShowPopup();
+            loading = new PopUpLoadingMessageView();
+            await PopupNavigation.Instance.PushAsync(loading);
+
             var ConfirmedTermMessage = await _service.ConfirmedTerm();
             ConfirmedTermMessage.Id = Message.Count;
             Message.Add(ConfirmedTermMessage);
 
             IsEntry = "true";
-          //  await RemovePopup();
+            await loading.Close();
 
         }
 
@@ -216,16 +237,6 @@ namespace Collector.ViewModels.Login
                     await _serviceNavigation.NavigateToAsync<AccessViewModel>();
                 });
             }
-        }
-
-        public async Task ShowPopup()
-        { 
-            await PopupNavigation.Instance.PushAsync(new PopUpLoadingMessageView());
-        }
-
-        public async Task RemovePopup()
-        {
-            await PopupNavigation.Instance.PopAsync();
         }
 
         private string textMenssage;

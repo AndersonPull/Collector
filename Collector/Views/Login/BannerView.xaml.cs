@@ -36,7 +36,7 @@ namespace Collector.Views.Login
 
             Text1.TranslateTo(-500, 0, 500, Easing.Linear);
 
-            Text2.TranslateTo(320, 0, 500, Easing.Linear);
+            Text2.TranslateTo(370, 0, 500, Easing.Linear);
 
             Text3.TranslateTo(70, 0, 500, Easing.Linear);
             Text3.FadeTo(0, 600, Easing.SinInOut);
@@ -65,13 +65,14 @@ namespace Collector.Views.Login
             Text2.TranslateTo(0, 0, 500, Easing.Linear);
             Text2.FadeTo(0, 400, Easing.SinInOut);
 
-            Text4.TranslateTo(0, 250, 500, Easing.Linear);
+            Text4.TranslateTo(0, 290, 500, Easing.Linear);
 
             Planet.TranslateTo(0, 350, 400, Easing.Linear);
             Planet.FadeTo(0, 600, Easing.SinInOut);
 
-            Imagens.TranslateTo(0, 560, 5000, Easing.Linear);
             Imagens.FadeTo(0, 300);
+            Imagens.TranslateTo(0, 560, 2000, Easing.Linear);
+            Imagens.ScaleTo(0, 500, Easing.Linear);
 
             Setas.TranslateTo(130, 0, 500,Easing.Linear);
 

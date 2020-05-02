@@ -82,7 +82,7 @@
 
                         <StackLayout Grid.Row="0"
                                      Grid.Column="1"
-                                     Margin="-500,15,0,0"
+                                     Margin="-550,15,0,0"
                                      x:Name="Text2">
 
                             <Label Text="{translator:Translate LimitedPlanetText1}"
