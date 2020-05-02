@@ -69,7 +69,7 @@
 
                 </StackLayout>
 
-                <StackLayout HeightRequest="50"
+                <StackLayout HeightRequest="60"
                              VerticalOptions="EndAndExpand"
                              HorizontalOptions="FillAndExpand"
                              BackgroundColor="#FFFFFF">
@@ -81,6 +81,10 @@
                            VerticalOptions="CenterAndExpand"
                            HorizontalOptions="CenterAndExpand"/>
 
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="Close"
+                                              NumberOfTapsRequired="1"/>
+                    </StackLayout.GestureRecognizers>
                 </StackLayout>
                 
             </StackLayout>

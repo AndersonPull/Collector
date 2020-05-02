@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using Rg.Plugins.Popup.Pages;
+using Rg.Plugins.Popup.Services;
 using Xamarin.Forms;
 
 namespace Collector.Views.PopUpsAlerts
@@ -12,6 +14,11 @@ namespace Collector.Views.PopUpsAlerts
             InitializeComponent();
             Title.Text = title;
             Message.Text = message;
+        }
+
+        void Close(System.Object sender, System.EventArgs e)
+        {
+             PopupNavigation.Instance.PopAsync();
         }
     }
 }
