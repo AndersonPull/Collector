@@ -23,9 +23,9 @@
 	<key>CFBundleDisplayName</key>
 	<string>Collector</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.Collector.Collector</string>
+	<string>com.Sm4ug.Collector</string>
 	<key>CFBundleVersion</key>
-	<string>1.0</string>
+	<string>1.0.0</string>
 	<key>CFBundleName</key>
 	<string>Collector</string>
 	<key>XSAppIconAssets</key>
@@ -38,5 +38,7 @@
 	<string>Assets.xcassets/LaunchImage.launchimage</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.0.0</string>
 </dict>
 </plist>

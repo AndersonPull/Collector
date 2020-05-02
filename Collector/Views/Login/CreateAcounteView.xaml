@@ -2,7 +2,6 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:CustomEntry="clr-namespace:Collector.Controls.CustomEntry"
-             xmlns:flv="clr-namespace:DLToolkit.Forms.Controls;assembly=DLToolkit.Forms.Controls.FlowListView"
              x:Class="Collector.Views.Login.CreateAcounteView"
              BackgroundColor="#EBEBEB"
              NavigationPage.HasNavigationBar="false">
@@ -19,39 +18,41 @@
                 <StackLayout Margin="{OnPlatform Android=0, iOS='0,30,0,0'}">
 
                     <ImageButton Source="ic_close.png"
-                                    HorizontalOptions="Start"
-                                    WidthRequest="20"
-                                    Command="{Binding BackCommand}"/>
+                                 HorizontalOptions="Start"
+                                 WidthRequest="20"
+                                 Command="{Binding BackCommand}"/>
                  
                 </StackLayout>
 
                 <StackLayout VerticalOptions="FillAndExpand">
 
                     <StackLayout VerticalOptions="FillAndExpand"
-                                    Margin="0,0,0,20">
+                                 Margin="0,0,0,20">
 
                         <ListView ItemsSource="{Binding Message}" 
-                                    HasUnevenRows="True"
-                                    BackgroundColor="Transparent"
-                                    VerticalOptions="FillAndExpand"
-                                    SeparatorVisibility="None"
-                                    SelectionMode="Single"
-                                    x:Name="MessagesListView">
+                                  HasUnevenRows="True"
+                                  BackgroundColor="Transparent"
+                                  VerticalOptions="FillAndExpand"
+                                  SeparatorVisibility="None"
+                                  SelectionMode="Single"
+                                  x:Name="MessagesListView">
 
                             <ListView.ItemTemplate>
 
                                 <DataTemplate>
+
                                     <ViewCell>
+
                                         <StackLayout Margin="0,10,0,0"
-                                                        BackgroundColor="Transparent">
+                                                     BackgroundColor="Transparent">
 
                                             <Frame HorizontalOptions="Start"
-                                                    HasShadow="False"
-                                                    CornerRadius="12"
-                                                    BackgroundColor="#00BB54"
-                                                    Opacity=".6"
-                                                    Margin="0,0,80,0"
-                                                    IsVisible="{Binding Type1}">
+                                                   HasShadow="False"
+                                                   CornerRadius="12"
+                                                   BackgroundColor="#00BB54"
+                                                   Opacity=".6"
+                                                   Margin="0,0,80,0"
+                                                   IsVisible="{Binding Type1}">
 
                                                 <StackLayout HorizontalOptions="Fill">
 
@@ -62,25 +63,25 @@
                                             </Frame>
 
                                             <StackLayout Orientation="Horizontal"
-                                                            HorizontalOptions="EndAndExpand"
-                                                            Margin="80,0,0,0"
-                                                            IsVisible="{Binding Type2}">
+                                                         HorizontalOptions="EndAndExpand"
+                                                         Margin="80,0,0,0"
+                                                         IsVisible="{Binding Type2}">
 
                                                 <ImageButton Source="ic_edit.png"
-                                                                WidthRequest="30"
-                                                                BackgroundColor="Transparent"
-                                                                IsVisible="{Binding EditButton}"/>
+                                                             WidthRequest="30"
+                                                             BackgroundColor="Transparent"
+                                                             IsVisible="{Binding EditButton}"/>
                                                  
                                                 <Frame HorizontalOptions="Start"
-                                                        HasShadow="False"
-                                                        CornerRadius="12"
-                                                        BackgroundColor="#FFFFFF">
+                                                       HasShadow="False"
+                                                       CornerRadius="12"
+                                                       BackgroundColor="#FFFFFF">
 
                                                     <StackLayout HorizontalOptions="Start">
 
                                                         <Label Text="{Binding Message}"
-                                                                TextColor="#0000000"
-                                                                FontAttributes="Bold"/>
+                                                               TextColor="#0000000"
+                                                               FontAttributes="Bold"/>
 
                                                     </StackLayout>
 
@@ -89,12 +90,12 @@
                                             </StackLayout>
 
                                             <Frame HorizontalOptions="Start"
-                                                    HasShadow="False"
-                                                    CornerRadius="12"
-                                                    BackgroundColor="#00BB54"
-                                                    Opacity=".6"
-                                                    Margin="0,0,80,0"
-                                                    IsVisible="{Binding Type3}">
+                                                   HasShadow="False"
+                                                   CornerRadius="12"
+                                                   BackgroundColor="#00BB54"
+                                                   Opacity=".6"
+                                                   Margin="0,0,80,0"
+                                                   IsVisible="{Binding Type3}">
 
                                                 <StackLayout HorizontalOptions="Fill">
 
@@ -127,36 +128,35 @@
                     </StackLayout>
 
                     <StackLayout VerticalOptions="End"
-                                    Margin="0,0,0,15">
+                                 Margin="0,0,0,15">
 
                         <Frame HorizontalOptions="FillAndExpand"
-                                VerticalOptions="FillAndExpand"
-                                HeightRequest="50"
-                                CornerRadius="25"
-                                HasShadow="False"
-                                BackgroundColor="#FFFFFF"
-                                Padding="0"
-                                IsVisible="{Binding IsEntry}">
+                               VerticalOptions="FillAndExpand"
+                               HeightRequest="50"
+                               CornerRadius="25"
+                               HasShadow="False"
+                               BackgroundColor="#FFFFFF"
+                               Padding="0"
+                               IsVisible="{Binding IsEntry}">
 
                             <StackLayout Orientation="Horizontal"
-                                            VerticalOptions="FillAndExpand"
-                                            Margin="5">
+                                         VerticalOptions="FillAndExpand"
+                                         Margin="5">
 
                                 <CustomEntry:CustomEntry Text="{Binding TextMenssage}"
-                                                            Placeholder="Digite seu nome..."
-                                                            IsPassword="{Binding IsPassword}"
-                                                            TextColor="#000000"
-                                                            Margin="10,0,0,0"
-                                                            FontSize="Large"
-                                                            VerticalOptions="CenterAndExpand"
-                                                            HorizontalOptions="FillAndExpand"
-                                                            x:Name="EntrySend"/>
+                                                         Placeholder="Digite seu nome..."
+                                                         IsPassword="{Binding IsPassword}"
+                                                         TextColor="#000000"
+                                                         Margin="10,0,0,0"
+                                                         FontSize="Large"
+                                                         VerticalOptions="CenterAndExpand"
+                                                         HorizontalOptions="FillAndExpand"
+                                                         x:Name="EntrySend"/>
 
                                 <ImageButton Source="ic_send.png"
-                                                BackgroundColor="Transparent"
-                                                Command="{Binding SendCommand}"
-                                                Clicked="Send_Clicked"
-                                                />
+                                             BackgroundColor="Transparent"
+                                             Command="{Binding SendCommand}"
+                                             Clicked="Send_Clicked"/>
 
                             </StackLayout>
 

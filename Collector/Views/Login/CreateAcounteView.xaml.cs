@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading.Tasks;
 using System.Timers;
 using Collector.ViewModels.Login;
 using Xamarin.Forms;
@@ -35,19 +36,19 @@ namespace Collector.Views.Login
                 EntrySend.MaxLength = 8;
                 EntrySend.Keyboard = Keyboard.Numeric;
             }
-
-            var target = CreateAcounteViewModel.Message1[CreateAcounteViewModel.Message1.Count - 1];
-            MessagesListView.ScrollTo(target, ScrollToPosition.End, false);
         }
 
         void Term_Clicked(System.Object sender, System.EventArgs e)
         {
             if (EntrySend.Placeholder == "Digite seu nome...")
                 EntrySend.Placeholder = "Digite um apelido para o login...";
+        }
 
+        public async Task ScrollDown()
+        {
             var target = CreateAcounteViewModel.Message1[CreateAcounteViewModel.Message1.Count - 1];
             MessagesListView.ScrollTo(target, ScrollToPosition.End, false);
         }
-        
+
     }
 }

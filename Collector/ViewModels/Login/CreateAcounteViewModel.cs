@@ -29,6 +29,8 @@ namespace Collector.ViewModels.Login
 
         private BaseData Data;
 
+        private CreateAcounteView Banner;
+
         public CreateAcounteViewModel(INavigationService serviceNavigation)
         {
 
@@ -38,6 +40,7 @@ namespace Collector.ViewModels.Login
             Message1 = new FlowObservableCollection<MessageRegistrationModel>();
             User = new UserModel();
             Data = new BaseData();
+            Banner = new CreateAcounteView();
 
             IsEntry = "false";
             IsButtonTerm = "false";
@@ -48,6 +51,8 @@ namespace Collector.ViewModels.Login
             Message.CollectionChanged += (sender, e) =>
             {
                 Message1 = Message;
+
+                Banner.ScrollDown();
             };
         }
 
