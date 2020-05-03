@@ -1,11 +1,10 @@
 ﻿using System;
 using System.Threading.Tasks;
 using System.Windows.Input;
-using Collector._Datas;
 using Collector.Models.CreateAccount;
 using Collector.Models.Usuarios;
+using Collector.Services.Login;
 using Collector.Services.Navigation;
-using Collector.Services.Usuarios;
 using Collector.Views.Login;
 using DLToolkit.Forms.Controls;
 using Rg.Plugins.Popup.Services;
@@ -16,31 +15,19 @@ namespace Collector.ViewModels.Login
     public class CreateAcounteViewModel : BaseVM
     {
         INavigationService _serviceNavigation;
-
-        MessageRegistrationService _service;
-
         PopUpLoadingMessageView loading;
-
         public static FlowObservableCollection<MessageRegistrationModel> Message1 { get; set; }
-
         public FlowObservableCollection<MessageRegistrationModel> Message { get; set; }
-
         private UserModel User;
-
-        private BaseData Data;
-
-        private CreateAcounteView Banner;
-
+        private CreateAccountService _service;
         public CreateAcounteViewModel(INavigationService serviceNavigation)
         {
 
             _serviceNavigation = serviceNavigation;
-            _service = new MessageRegistrationService();
+            _service = new CreateAccountService();
             Message = new FlowObservableCollection<MessageRegistrationModel>();
             Message1 = new FlowObservableCollection<MessageRegistrationModel>();
             User = new UserModel();
-            Data = new BaseData();
-            Banner = new CreateAcounteView();
 
             IsEntry = "false";
             IsButtonTerm = "false";
@@ -51,8 +38,6 @@ namespace Collector.ViewModels.Login
             Message.CollectionChanged += (sender, e) =>
             {
                 Message1 = Message;
-
-                Banner.ScrollDown();
             };
         }
 
@@ -238,10 +223,17 @@ namespace Collector.ViewModels.Login
             {
                 return new Command(async () =>
                 {
-                    Data.Insert(User);
-                    await _serviceNavigation.NavigateToAsync<AccessViewModel>();
+                    _ = SaveUSer();
                 });
             }
+        }
+
+        private async Task SaveUSer()
+        {
+            var save = await _service.SaveUser(User);
+
+            if (save)
+                await _serviceNavigation.NavigateToAsync<AccessViewModel>();
         }
 
         private string textMenssage;
@@ -255,6 +247,5 @@ namespace Collector.ViewModels.Login
 
         private string isButtonConfirm;
         public string IsButtonConfirm { get { return isButtonConfirm; } set { this.Set("IsButtonConfirm", ref isButtonConfirm, value); } }
-
     }
 }

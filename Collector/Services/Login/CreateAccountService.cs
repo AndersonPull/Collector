@@ -1,7 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
+using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
+using Collector._Datas;
 using Collector.Models.CreateAccount;
 using Collector.Models.Usuarios;
 using Collector.Views.PopUpsAlerts;
@@ -9,22 +10,50 @@ using Newtonsoft.Json;
 using Rg.Plugins.Popup.Services;
 using Xamarin.Forms;
 
-namespace Collector.Services.Usuarios
+namespace Collector.Services.Login
 {
-    public class MessageRegistrationService
+    public class CreateAccountService
     {
-        public async Task<bool> AddressUser()
+        BaseData Data;
+        public CreateAccountService()
         {
-            return true;
+            Data = new BaseData();
+        }
+
+        public async Task<bool> SaveUser(UserModel user)
+        {
+            try
+            {
+                var users = Data.GetList<UserModel>(true);
+
+                var ValidUser = users.Where(a => a.NickName == user.NickName).FirstOrDefault();
+
+                if (ValidUser == null)
+                {
+                    Data.Insert(user);
+                    return true;
+                }
+                else
+                {
+                    await PopupNavigation.Instance.PushAsync(new PopUpAlertView("NickName Não está disponivel", "escolha outro nickname para sua conta"), true);
+                    return false;
+                }
+
+            }
+            catch (Exception e)
+            {
+                await PopupNavigation.Instance.PushAsync(new PopUpAlertView("Algo de errado com a internet!", e.ToString()), true);
+            }
+            return false;
         }
 
         public async Task<MessageRegistrationModel> InitialsMessages1()
         {
             await Task.Delay(1000);
 
-            return new  MessageRegistrationModel
+            return new MessageRegistrationModel
             {
-                Message ="Olá! 😄",
+                Message = "Olá! 😄",
                 Type1 = "true",
                 Type2 = "false",
                 Type3 = "false"
@@ -143,8 +172,6 @@ namespace Collector.Services.Usuarios
 
                 using (HttpClient client = new HttpClient())
                 {
-                    string sContentType = "application/json";
-
                     var oTaskPostAsync = await client.GetAsync("https://viacep.com.br/ws/" + cep + "/json");
 
                     if (oTaskPostAsync.IsSuccessStatusCode)

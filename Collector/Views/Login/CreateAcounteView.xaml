@@ -169,7 +169,6 @@
                                 BackgroundColor="#00BB54"
                                 Command="{Binding AcceptTermCommand}"
                                 IsVisible="{Binding IsButtonTerm}"
-                                Clicked="Term_Clicked"
                                 x:Name="TermButton"/>
 
                         <Button Text="Todos dados estão corretos"

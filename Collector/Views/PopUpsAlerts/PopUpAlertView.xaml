@@ -46,6 +46,7 @@
                              VerticalOptions="FillAndExpand">
 
                         <Image Source="Ic_pet_Alert.png"
+                               WidthRequest="120"
                                VerticalOptions="Start"
                                HorizontalOptions="CenterAndExpand"/>
 
