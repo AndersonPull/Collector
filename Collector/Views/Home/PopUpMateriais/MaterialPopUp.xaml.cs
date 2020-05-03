@@ -15,7 +15,7 @@ namespace Collector.Views.Home.PopUpMateriais
             InitializeComponent();
 
             TituloPrincipal.Text = item.Texto;
-            Imagem.Source = item.Imagem;
+            Imagem.Source = item.IconGreen;
             Titulo.Text = item.Titulo;
             Descricao.Text = item.Descricao;
         }

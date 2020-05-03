@@ -17,7 +17,7 @@ namespace Collector.ViewModels.Home.PopUpMateriais
             if (navigationData is MateriaisModel)
             {
                 TituloPrincipal = ((MateriaisModel)navigationData).Texto;
-                Imagem = ((MateriaisModel)navigationData).Imagem;
+                Imagem = ((MateriaisModel)navigationData).IconGreen;
                 Titulo = ((MateriaisModel)navigationData).Titulo;
                 Descricao = ((MateriaisModel)navigationData).Descricao;
             }

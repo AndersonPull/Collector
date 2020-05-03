@@ -125,56 +125,109 @@
                                                       HasUnevenRows="false"
                                                       IsInNativeLayout="true"
                                                       FlowItemTappedCommand="{Binding ItemSelectedCommand}"
-                                                      FlowItemsSource="{Binding ItensMenu}">
+                                                      FlowItemsSource="{Binding ItensMenu}"
+                                                      x:Name="ListMaterial">
 
                                         <flv:FlowListView.FlowColumnTemplate>
 
                                             <DataTemplate>
 
-                                                <Frame BorderColor="#ffffff"
-                                                       BackgroundColor="#ffffff"
-                                                       HasShadow="False"
-                                                       Padding="0"
-                                                       Margin="5"
-                                                       WidthRequest="160"
-                                                       HeightRequest="90"
-                                                       CornerRadius="15">
+                                                <StackLayout>
 
-                                                    <StackLayout Margin="10"
-                                                                 HeightRequest="180">
+                                                    <Frame BackgroundColor="#00BB54"
+                                                           HasShadow="False"
+                                                           Padding="0"
+                                                           Margin="5"
+                                                           WidthRequest="160"
+                                                           HeightRequest="90"
+                                                           CornerRadius="15"
+                                                           IsVisible="{Binding Source={x:Reference ListMaterial}, Path=BindingContext.Selected}">
 
-                                                        <StackLayout Orientation="Horizontal"
-                                                                     VerticalOptions="FillAndExpand">
+                                                        <StackLayout Margin="10"
+                                                                     HeightRequest="180">
 
-                                                            <Image Source="{Binding Imagem}"
-                                                                   Aspect="AspectFit"
-                                                                   WidthRequest="60"
-                                                                   HeightRequest="60" />
+                                                            <StackLayout Orientation="Horizontal"
+                                                                         VerticalOptions="FillAndExpand">
 
-                                                            <Label Text="{Binding Texto}"
-                                                                   FontSize="14"
-                                                                   TextColor="#00BB54"
-                                                                   FontAttributes="Bold"
-                                                                   HorizontalOptions="CenterAndExpand"
-                                                                   HorizontalTextAlignment="Center"
-                                                                   Margin="0,10,0,0"/>
+                                                                <Image Source="{Binding IconWhite}"
+                                                                       Aspect="AspectFit"
+                                                                       WidthRequest="60"
+                                                                       HeightRequest="60" />
 
-                                                            <Button Text="+"
-                                                                    FontSize="Large"
-                                                                    FontAttributes="Bold"
-                                                                    WidthRequest="30"
-                                                                    HeightRequest="30" 
-                                                                    BackgroundColor="#00BB54"
-                                                                    VerticalOptions="End"
-                                                                    HorizontalOptions="End"
-                                                                    CornerRadius="15"
-                                                                    TextColor="#ffffff" Padding="0" />
+                                                                <Label Text="{Binding Texto}"
+                                                                       FontSize="14"
+                                                                       TextColor="#FFFFFF"
+                                                                       FontAttributes="Bold"
+                                                                       HorizontalOptions="CenterAndExpand"
+                                                                       HorizontalTextAlignment="Center"
+                                                                       Margin="0,10,0,0"/>
+
+                                                                <Button Text="-"
+                                                                        FontSize="Large"
+                                                                        FontAttributes="Bold"
+                                                                        WidthRequest="30"
+                                                                        HeightRequest="30" 
+                                                                        BackgroundColor="#FFFFFF"
+                                                                        VerticalOptions="End"
+                                                                        HorizontalOptions="End"
+                                                                        CornerRadius="15"
+                                                                        TextColor="#00BB54"
+                                                                        Padding="0" />
                                  
-                                                        </StackLayout>
+                                                            </StackLayout>
                            
-                                                    </StackLayout>
+                                                        </StackLayout>
                         
-                                                </Frame>
+                                                    </Frame>
+
+                                                    <Frame BorderColor="#ffffff"
+                                                           BackgroundColor="#ffffff"
+                                                           HasShadow="False"
+                                                           Padding="0"
+                                                           Margin="5"
+                                                           WidthRequest="160"
+                                                           HeightRequest="90"
+                                                           CornerRadius="15"
+                                                           IsVisible="{Binding Source={x:Reference ListMaterial}, Path=BindingContext.NoSelected}">
+
+                                                        <StackLayout Margin="10"
+                                                                     HeightRequest="180">
+
+                                                            <StackLayout Orientation="Horizontal"
+                                                                         VerticalOptions="FillAndExpand">
+
+                                                                <Image Source="{Binding IconGreen}"
+                                                                       Aspect="AspectFit"
+                                                                       WidthRequest="60"
+                                                                       HeightRequest="60" />
+
+                                                                <Label Text="{Binding Texto}"
+                                                                       FontSize="14"
+                                                                       TextColor="#00BB54"
+                                                                       FontAttributes="Bold"
+                                                                       HorizontalOptions="CenterAndExpand"
+                                                                       HorizontalTextAlignment="Center"
+                                                                       Margin="0,10,0,0"/>
+
+                                                                <Button Text="+"
+                                                                        FontSize="Large"
+                                                                        FontAttributes="Bold"
+                                                                        WidthRequest="30"
+                                                                        HeightRequest="30" 
+                                                                        BackgroundColor="#00BB54"
+                                                                        VerticalOptions="End"
+                                                                        HorizontalOptions="End"
+                                                                        CornerRadius="15"
+                                                                        TextColor="#ffffff"
+                                                                        Padding="0" />
+                                 
+                                                            </StackLayout>
+                           
+                                                        </StackLayout>
+                        
+                                                    </Frame>
+
+                                                </StackLayout>
 
                                             </DataTemplate>
 

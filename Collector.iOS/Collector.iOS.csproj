@@ -217,6 +217,18 @@
     <BundleResource Include="Resources\gif_points.gif" />
     <BundleResource Include="Resources\Ic_pet_Alert.png" />
     <BundleResource Include="Resources\img_Default.png" />
+    <BundleResource Include="Resources\ic_aluminioW.png" />
+    <BundleResource Include="Resources\ic_bateriaW.png" />
+    <BundleResource Include="Resources\ic_diversosW.png" />
+    <BundleResource Include="Resources\ic_eletronicosW.png" />
+    <BundleResource Include="Resources\ic_entulhoW.png" />
+    <BundleResource Include="Resources\ic_metalW.png" />
+    <BundleResource Include="Resources\ic_moveisW.png" />
+    <BundleResource Include="Resources\ic_oleoW.png" />
+    <BundleResource Include="Resources\ic_papelW.png" />
+    <BundleResource Include="Resources\ic_plasticoW.png" />
+    <BundleResource Include="Resources\ic_podasW.png" />
+    <BundleResource Include="Resources\ic_vidroW.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Renderers\" />

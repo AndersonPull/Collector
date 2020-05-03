@@ -15,9 +15,11 @@ namespace Collector.Models.Home
         public int IdUser { get; set; }
 
        [ManyToOne]
-        public UserModel user { get; set; }
+        public UserModel User { get; set; }
 
-        public string Imagem { get; set; }
+        public string IconGreen { get; set; }
+
+        public string IconWhite { get; set; }
 
         public string Texto { get; set; }
 
@@ -25,6 +27,6 @@ namespace Collector.Models.Home
 
         public string Descricao { get; set; }
 
-        public string IsAtived { get; set; }
+        public bool IsAtived { get; set; }
     }
 }
