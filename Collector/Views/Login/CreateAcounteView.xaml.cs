@@ -10,11 +10,6 @@ namespace Collector.Views.Login
         {
             InitializeComponent();
             NavigationPage.SetBackButtonTitle(this, "");
-
-            MessagesListView.ItemAppearing += (sender, e) =>
-            {
-                MessagesListView.ScrollTo(e.Item, ScrollToPosition.MakeVisible, false);
-            };
         }
 
         void Send_Clicked(object sender, EventArgs e)
@@ -40,7 +35,7 @@ namespace Collector.Views.Login
                 EntrySend.Keyboard = Keyboard.Numeric;
             }
 
-            //ScrollDown();
+            ScrollDown();
         }
 
         void Term_ClickedAsync(object sender, EventArgs e)
@@ -48,7 +43,7 @@ namespace Collector.Views.Login
             if (EntrySend.Placeholder == "Digite seu nome...")
                 EntrySend.Placeholder = "Digite um apelido para o login...";
 
-           // ScrollDown();
+            ScrollDown();
         }
 
         public void ScrollDown()
@@ -56,7 +51,5 @@ namespace Collector.Views.Login
             var target = CreateAcounteViewModel.Message1[CreateAcounteViewModel.Message1.Count - 1];
             MessagesListView.ScrollTo(target, ScrollToPosition.End, true);
         }
-
-
     }
 }

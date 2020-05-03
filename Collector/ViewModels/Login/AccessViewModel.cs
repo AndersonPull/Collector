@@ -36,12 +36,19 @@ namespace Collector.ViewModels.Login
             {
                 return new Command(async () =>
                 {
-                    var user = Data.GetUser(entryNickName, entryPassword);
-
-                    if (user != null)
-                        await _serviceNavigation.NavigateToAsync<MainTabbedPageViewModel>();
+                    if (!string.IsNullOrEmpty(entryNickName) && !string.IsNullOrEmpty(entryPassword))
+                    {
+                        var user = Data.GetUser(entryNickName, entryPassword);
+                        if (user != null)
+                        {
+                            App.GetUser = user;
+                            await _serviceNavigation.NavigateToAsync<MainTabbedPageViewModel>();
+                        }    
+                        else
+                            await PopupNavigation.Instance.PushAsync(new PopUpAlertView("login ou senha incorreto", "Verifique seus dados e tente novamente"), true);
+                    }
                     else
-                        await PopupNavigation.Instance.PushAsync(new PopUpAlertView("login ou senha incorreto", "Verifique seus dados e tente novamente"), true);
+                        await PopupNavigation.Instance.PushAsync(new PopUpAlertView("Campo Vazio", "Campos login e senha não podem ficar vazios"), true);
                 });
             }
         }
@@ -51,6 +58,5 @@ namespace Collector.ViewModels.Login
 
         private string entryPassword;
         public string EntryPassword { get { return entryPassword; } set { this.Set("EntryPassword", ref entryPassword, value); } }
-
     }
 }

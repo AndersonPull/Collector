@@ -152,6 +152,9 @@
     <PackageReference Include="sqlite-net-pcl">
       <Version>1.6.292</Version>
     </PackageReference>
+    <PackageReference Include="SQLiteNetExtensions">
+      <Version>2.1.0</Version>
+    </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
@@ -161,9 +164,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\ButomGoogle.png" />
-    <BundleResource Include="Resources\ButomFacebook.png" />
-    <BundleResource Include="Resources\Background.png" />
     <BundleResource Include="Resources\Logo.png" />
     <BundleResource Include="Resources\ic_materiais.png" />
     <BundleResource Include="Resources\ic_info.png" />
@@ -181,7 +181,6 @@
     <BundleResource Include="Resources\ic_eletronicos.png" />
     <BundleResource Include="Resources\ic_papel.png" />
     <BundleResource Include="Resources\ic_moveis.png" />
-    <BundleResource Include="Resources\fotoPerfil.png" />
     <BundleResource Include="Resources\ic_colabore.png" />
     <BundleResource Include="Resources\ic_vamos.png" />
     <BundleResource Include="Resources\ic_somos.png" />
@@ -214,6 +213,7 @@
     <BundleResource Include="Resources\ic_edit.png" />
     <BundleResource Include="Resources\gif_points.gif" />
     <BundleResource Include="Resources\Ic_pet_Alert.png" />
+    <BundleResource Include="Resources\img_Default.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Renderers\" />

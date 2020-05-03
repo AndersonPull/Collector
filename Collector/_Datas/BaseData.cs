@@ -1,12 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
+using Collector.Models.Home;
 using Collector.Models.Usuarios;
 using SQLite;
+using SQLiteNetExtensions.Extensions;
 using Xamarin.Forms;
 
 namespace Collector._Datas
 {
-    public class BaseData
+    public class BaseData 
     {
         protected SQLiteConnection _conexao;
         private string dbCollector = "Collector.db3";
@@ -15,11 +17,22 @@ namespace Collector._Datas
         {
             this._conexao = DependencyService.Get<ISQLite>().GetConnection(this.dbCollector);
             this._conexao.CreateTable<UserModel>();
+            this._conexao.CreateTable<MateriaisModel>();
         }
 
-        public void Save(UserModel user)
+        public void Save<T>(T model)
         {
-            _conexao.Insert(user);
+            _conexao.Insert(model);;
+        }
+
+        public void Update<T>(T model)
+        {
+            _conexao.Update(model);
+        }
+
+        public void Delete<T>(T model)
+        {
+            _conexao.Delete(model);
         }
 
         public UserModel GetById(int id)
@@ -40,16 +53,6 @@ namespace Collector._Datas
         public List<UserModel> GetAll()
         {
             return _conexao.Table<UserModel>().ToList();
-        }
-
-        public void Update(UserModel user)
-        {
-            _conexao.Update(user);
-        }
-
-        public void Delete(UserModel user)
-        {
-            _conexao.Delete(user);
         }
     }
 }

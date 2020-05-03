@@ -60,6 +60,7 @@
                                                             TextColor="#FFFFFF"/>
 
                                                 </StackLayout>
+
                                             </Frame>
 
                                             <StackLayout Orientation="Horizontal"

@@ -11,7 +11,7 @@ namespace Collector.Services.Home
         {
             return new List<MateriaisModel>
             {
-                new MateriaisModel { Id=1, Imagem="ic_papel.png", Texto= AppResources.PaperTitle, Titulo=AppResources.PaperSubTitle, Descricao=AppResources.PaperText },
+                new MateriaisModel { Id=1, Imagem="ic_papel.png", Texto= AppResources.PaperTitle, Titulo=AppResources.PaperSubTitle, Descricao=AppResources.PaperText},
                 new MateriaisModel { Id=2, Imagem="ic_aluminio.png", Texto=AppResources.AluminumTitle, Titulo=AppResources.AluminumSubTitle, Descricao=AppResources.AluminumText },
                 new MateriaisModel { Id=3, Imagem="ic_plastico.png" , Texto=AppResources.PlasticTitle, Titulo=AppResources.PlasticSubTitle, Descricao=AppResources.PlasticText },
                 new MateriaisModel { Id=4, Imagem="ic_oleo.png", Texto=AppResources.OilTitle, Titulo=AppResources.OilSubTitle, Descricao= AppResources.OilText  },

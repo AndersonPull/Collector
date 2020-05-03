@@ -21,9 +21,10 @@
                     <StackLayout Orientation="Horizontal"
                                  HorizontalOptions="FillAndExpand">
 
-                        <Frame BackgroundColor="Red"
+                        <Frame BackgroundColor="#A2A2A2"
                                HorizontalOptions="Start"
                                VerticalOptions="Start"
+                               BorderColor="AliceBlue"
                                WidthRequest="60"
                                HeightRequest="60"
                                HasShadow="False"
@@ -31,21 +32,21 @@
                                CornerRadius="30"
                                IsClippedToBounds="true">
 
-                            <Image Source="fotoPerfil.png"
-                                   WidthRequest="80"
-                                   HeightRequest="80"
-                                   Aspect="AspectFill" />
+                                <Image Source="{Binding User.Image}"
+                                       WidthRequest="80"
+                                       HeightRequest="80"
+                                       Aspect="AspectFill" />
 
                         </Frame>
 
                         <StackLayout Orientation="Vertical">
 
-                            <Label Text="Marcia Catadora"
+                            <Label Text="{Binding User.NickName}"
                                    TextColor="#ffffff"
                                    FontSize="Medium"
                                    FontAttributes="Bold"/>
 
-                            <Label Text="Marcia Silva Santos"
+                            <Label Text="{Binding User.Name}"
                                    TextColor="#ffffff"
                                    FontSize="Medium"
                                    FontAttributes="None"/>
@@ -57,7 +58,7 @@
                                        HeightRequest="5"
                                        Aspect="AspectFill"/>
 
-                                <Label Text="Osasco"
+                                <Label Text="{Binding User.City}"
                                        TextColor="#ffffff"
                                        FontSize="Micro"
                                        FontAttributes="None"/>
@@ -66,18 +67,36 @@
 
                         </StackLayout>
 
-                        <Button Text="{translator:Translate SingOut}"
-                                TextColor="#00BB54"
-                                Padding="0"
-                                BackgroundColor="#EBEBEB"
-                                WidthRequest="80"
-                                HeightRequest="30"
-                                CornerRadius="10"
-                                FontSize="Micro"
-                                FontAttributes="Bold"
-                                VerticalOptions="Start"
-                                HorizontalOptions="EndAndExpand"
-                                Command="{Binding SairCommand}"/>
+                        <StackLayout HorizontalOptions="EndAndExpand">
+
+                            <Button Text="Salvar"
+                                    TextColor="#00BB54"
+                                    Padding="0"
+                                    BackgroundColor="#EBEBEB"
+                                    WidthRequest="80"
+                                    HeightRequest="30"
+                                    CornerRadius="10"
+                                    FontSize="Micro"
+                                    FontAttributes="Bold"
+                                    VerticalOptions="Start"
+                                    HorizontalOptions="EndAndExpand"
+                                    Command="{Binding SaveEditCommand}"/>
+
+                            <Button Text="{translator:Translate SingOut}"
+                                    TextColor="#00BB54"
+                                    Padding="0"
+                                    BackgroundColor="#EBEBEB"
+                                    WidthRequest="80"
+                                    HeightRequest="30"
+                                    CornerRadius="10"
+                                    FontSize="Micro"
+                                    FontAttributes="Bold"
+                                    VerticalOptions="Start"
+                                    HorizontalOptions="EndAndExpand"
+                                    Command="{Binding SairCommand}"/>
+
+                        </StackLayout>
+                        
 
                     </StackLayout>
 
@@ -85,102 +104,130 @@
                                
             </StackLayout>
 
-            <ScrollView Margin="0,-40,0,0">
+            <ScrollView Margin="0,-40,0,0"
+                        VerticalOptions="FillAndExpand">
 
-                <StackLayout>
+                <StackLayout VerticalOptions="FillAndExpand">
 
-                    <StackLayout>
+                    <StackLayout IsVisible="{Binding User.IsCollector}">
 
-                        <ScrollView Orientation="Horizontal" >
+                        <StackLayout>
 
-                            <StackLayout WidthRequest="2600">
+                            <ScrollView Orientation="Horizontal" >
+
+                                <StackLayout WidthRequest="2600">
                     
-                                <flv:FlowListView RowHeight="130"
-                                                  FlowColumnCount="12"
-                                                  FlowColumnExpand="First"
-                                                  SeparatorVisibility="None"
-                                                  BackgroundColor="Transparent"
-                                                  HasUnevenRows="false"
-                                                  IsInNativeLayout="true"
-                                                  FlowItemTappedCommand="{Binding ItemSelectedCommand}"
-                                                  FlowItemsSource="{Binding ItensMenu}">
+                                    <flv:FlowListView RowHeight="130"
+                                                      FlowColumnCount="12"
+                                                      FlowColumnExpand="First"
+                                                      SeparatorVisibility="None"
+                                                      BackgroundColor="Transparent"
+                                                      HasUnevenRows="false"
+                                                      IsInNativeLayout="true"
+                                                      FlowItemTappedCommand="{Binding ItemSelectedCommand}"
+                                                      FlowItemsSource="{Binding ItensMenu}">
 
-                                    <flv:FlowListView.FlowColumnTemplate>
+                                        <flv:FlowListView.FlowColumnTemplate>
 
-                                        <DataTemplate>
+                                            <DataTemplate>
 
-                                            <Frame BorderColor="#ffffff"
-                                                   BackgroundColor="#ffffff"
-                                                   HasShadow="False"
-                                                   Padding="0"
-                                                   Margin="5"
-                                                   WidthRequest="160"
-                                                   HeightRequest="90"
-                                                   CornerRadius="15">
+                                                <Frame BorderColor="#ffffff"
+                                                       BackgroundColor="#ffffff"
+                                                       HasShadow="False"
+                                                       Padding="0"
+                                                       Margin="5"
+                                                       WidthRequest="160"
+                                                       HeightRequest="90"
+                                                       CornerRadius="15">
 
-                                                <StackLayout Margin="10"
-                                                             HeightRequest="180">
+                                                    <StackLayout Margin="10"
+                                                                 HeightRequest="180">
 
-                                                    <StackLayout Orientation="Horizontal"
-                                                                 VerticalOptions="FillAndExpand">
+                                                        <StackLayout Orientation="Horizontal"
+                                                                     VerticalOptions="FillAndExpand">
 
-                                                        <Image Source="{Binding Imagem}"
-                                                               Aspect="AspectFit"
-                                                               WidthRequest="60"
-                                                               HeightRequest="60" />
+                                                            <Image Source="{Binding Imagem}"
+                                                                   Aspect="AspectFit"
+                                                                   WidthRequest="60"
+                                                                   HeightRequest="60" />
 
-                                                        <Label Text="{Binding Texto}"
-                                                               FontSize="14"
-                                                               TextColor="#00BB54"
-                                                               FontAttributes="Bold"
-                                                               HorizontalOptions="CenterAndExpand"
-                                                               HorizontalTextAlignment="Center"
-                                                               Margin="0,10,0,0"/>
+                                                            <Label Text="{Binding Texto}"
+                                                                   FontSize="14"
+                                                                   TextColor="#00BB54"
+                                                                   FontAttributes="Bold"
+                                                                   HorizontalOptions="CenterAndExpand"
+                                                                   HorizontalTextAlignment="Center"
+                                                                   Margin="0,10,0,0"/>
 
-                                                        <Button Text="+"
-                                                                FontSize="Large"
-                                                                FontAttributes="Bold"
-                                                                WidthRequest="30"
-                                                                HeightRequest="30" 
-                                                                BackgroundColor="#00BB54"
-                                                                VerticalOptions="End"
-                                                                HorizontalOptions="End"
-                                                                CornerRadius="15"
-                                                                TextColor="#ffffff" Padding="0" />
+                                                            <Button Text="+"
+                                                                    FontSize="Large"
+                                                                    FontAttributes="Bold"
+                                                                    WidthRequest="30"
+                                                                    HeightRequest="30" 
+                                                                    BackgroundColor="#00BB54"
+                                                                    VerticalOptions="End"
+                                                                    HorizontalOptions="End"
+                                                                    CornerRadius="15"
+                                                                    TextColor="#ffffff" Padding="0" />
                                  
-                                                    </StackLayout>
+                                                        </StackLayout>
                            
-                                                </StackLayout>
+                                                    </StackLayout>
                         
-                                            </Frame>
+                                                </Frame>
 
-                                        </DataTemplate>
+                                            </DataTemplate>
 
-                                    </flv:FlowListView.FlowColumnTemplate>
+                                        </flv:FlowListView.FlowColumnTemplate>
 
-                                </flv:FlowListView>
+                                    </flv:FlowListView>
 
-                            </StackLayout>
+                                </StackLayout>
 
-                        </ScrollView>
+                            </ScrollView>
+
+                        </StackLayout>
+
+                        <StackLayout Margin="10">
+
+                            <Editor Text="{Binding User.Summary}"
+                                    Placeholder="{translator:Translate YourDescription}"
+                                    HeightRequest="120"
+                                    BackgroundColor="Transparent"/>
+
+                            <Editor Text="{Binding User.History}"
+                                    Placeholder="{translator:Translate YourStory}"
+                                    HeightRequest="120"
+                                    BackgroundColor="Transparent"/>
+
+                        </StackLayout>
 
                     </StackLayout>
 
-                    <StackLayout Margin="10">
+                    <StackLayout VerticalOptions="CenterAndExpand"
+                                 Margin="20"
+                                 IsVisible="{Binding ButtonCollector}">
 
-                        <Editor Placeholder="{translator:Translate YourDescription}"
-                                HeightRequest="120"
-                                BackgroundColor="Transparent"/>
-
-                        <Editor Placeholder="{translator:Translate YourStory}"
-                                HeightRequest="120"
-                                BackgroundColor="Transparent"/>
+                         <Button Text="Quero me tornar um collector"
+                                TextColor="#FFFFFF"
+                                FontAttributes="Bold"
+                                BackgroundColor="#00BB54"
+                                CornerRadius="5"
+                                WidthRequest="100"
+                                HeightRequest="45"
+                                HorizontalOptions="FillAndExpand"
+                                VerticalOptions="EndAndExpand"
+                                Padding="0"
+                                Margin="0,0,0,20"
+                                Command="{Binding IsCollector}"/>
 
                     </StackLayout>
 
-                    <ScrollView Orientation="Horizontal">
+                    <ScrollView Orientation="Horizontal"
+                                VerticalOptions="EndAndExpand">
 
                         <StackLayout Orientation="Horizontal"
+                                     VerticalOptions="End"
                                      HorizontalOptions="CenterAndExpand">
 
                             <Frame BackgroundColor="Transparent"

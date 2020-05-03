@@ -1,6 +1,9 @@
 ﻿using System;
+using System.Collections.Generic;
+using Collector.Models.Home;
 using Newtonsoft.Json;
 using SQLite;
+using SQLiteNetExtensions.Attributes;
 
 namespace Collector.Models.Usuarios
 {
@@ -55,5 +58,8 @@ namespace Collector.Models.Usuarios
 
         [JsonIgnore]
         public bool Term { get; set; }
+
+        [OneToMany(CascadeOperations = CascadeOperation.All)]
+        public List<MateriaisModel> CollectorItens { get; set; }
     }
 }

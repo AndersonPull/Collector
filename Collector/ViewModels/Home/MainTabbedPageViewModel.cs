@@ -1,4 +1,6 @@
-﻿using Collector.Services.Navigation;
+﻿using System.Threading.Tasks;
+using Collector.Models.Usuarios;
+using Collector.Services.Navigation;
 
 namespace Collector.ViewModels.Home
 {
