@@ -1,26 +1,28 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using Collector.Models.Home;
 using Collector.Models.Usuarios;
-using SQLite;
+using SQLite.Net;
 using SQLiteNetExtensions.Extensions;
 using Xamarin.Forms;
 
 namespace Collector._Datas
 {
-    public class BaseData 
+    public class BaseData : IDisposable
     {
         protected SQLiteConnection _conexao;
-        private string dbCollector = "Collector.db3";
 
         public BaseData()
         {
-            this._conexao = DependencyService.Get<ISQLite>().GetConnection(this.dbCollector);
+            var config = DependencyService.Get<ISQLite>();
+            this._conexao = new SQLiteConnection(config.Platform,
+                System.IO.Path.Combine(config.DirectoryDB, "Collector.db3"));
             this._conexao.CreateTable<UserModel>();
             this._conexao.CreateTable<MateriaisModel>();
         }
 
-        public void Save<T>(T model)
+        public void Insert<T>(T model)
         {
             _conexao.Insert(model);;
         }
@@ -35,24 +37,46 @@ namespace Collector._Datas
             _conexao.Delete(model);
         }
 
-        public UserModel GetById(int id)
+        public T First<T>(bool WithChildren) where T : class
         {
-            return _conexao.Table<UserModel>().Where(a => a.Id == id).FirstOrDefault();
+            if (WithChildren)
+            {
+                return _conexao.GetAllWithChildren<T>().FirstOrDefault();
+            }
+            else
+            {
+                return _conexao.Table<T>().FirstOrDefault();
+            }
         }
 
-        public UserModel GetUser(string nickName, string password)
+        public List<T> GetList<T>(bool WithChildren) where T : class
         {
-            return _conexao.Table<UserModel>().Where(a => a.NickName == nickName && a.Password == password).FirstOrDefault();
+            if (WithChildren)
+            {
+                return _conexao.GetAllWithChildren<T>().ToList();
+            }
+            else
+            {
+                return _conexao.Table<T>().ToList();
+            }
         }
 
-        public List<UserModel> GetCollectors()
+        public T Find<T>(int pk, bool WithChildren) where T : class
         {
-            return _conexao.Table<UserModel>().Where(a => a.IsCollector).ToList();
+            if (WithChildren)
+            {
+                return _conexao.GetAllWithChildren<T>()
+                                 .FirstOrDefault(m => m.GetHashCode() == pk);
+            }
+            else
+            {
+                return _conexao.Table<T>().FirstOrDefault(m => m.GetHashCode() == pk);
+            }
         }
 
-        public List<UserModel> GetAll()
+        public void Dispose()
         {
-            return _conexao.Table<UserModel>().ToList();
+            _conexao.Dispose();
         }
     }
 }

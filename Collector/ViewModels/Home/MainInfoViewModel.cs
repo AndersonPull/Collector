@@ -64,14 +64,9 @@ namespace Collector.ViewModels.Home
                 return new Command(async (value) =>
                 {
                     MateriaisModel Material = value as MateriaisModel;
+                    Material.IdUser = App.GetUser.Id;
 
-                    UserModel userId = new UserModel();
-                    userId = App.GetUser;
-
-                    Material.user = userId;
-                    App.GetUser.CollectorItens = new List<MateriaisModel>();
-                    App.GetUser.CollectorItens.Add(Material);
-                    Data.Update(Material);
+                    Data.Insert(Material);
 
                 });
             }

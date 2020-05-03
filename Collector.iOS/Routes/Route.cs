@@ -3,6 +3,7 @@ using System.IO;
 using Collector._Datas;
 using Collector.iOS.Routes;
 using SQLite;
+using SQLite.Net.Interop;
 using Xamarin.Forms;
 
 [assembly: Dependency(typeof(Route))]
@@ -10,11 +11,39 @@ namespace Collector.iOS.Routes
 {
     public class Route : ISQLite
     {
-        public SQLiteConnection GetConnection(string dbCollector)
+        string directoryDB;
+        ISQLitePlatform platform;
+
+        public string DirectoryDB
         {
-            var folder = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
-            var path = Path.Combine(folder, "..", "Library", dbCollector);
-            return new SQLiteConnection(path);
+            get
+            {
+                if (string.IsNullOrEmpty(directoryDB))
+                {
+                    var directory = System.Environment.GetFolderPath(
+                        Environment.SpecialFolder.Personal);
+                    directoryDB = System.IO.Path.Combine(
+                        directory,
+                        "..",
+                        "Library");
+                }
+
+                return directoryDB;
+            }
+        }
+
+        public ISQLitePlatform Platform
+        {
+            get
+            {
+                if (platform == null)
+                {
+                    platform =
+                        new SQLite.Net.Platform.XamarinIOS.SQLitePlatformIOS();
+                }
+
+                return platform;
+            }
         }
     }
 }

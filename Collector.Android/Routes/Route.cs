@@ -1,8 +1,6 @@
-﻿using System;
-using System.IO;
-using Collector._Datas;
+﻿using Collector._Datas;
 using Collector.Droid.Routes;
-using SQLite;
+using SQLite.Net.Interop;
 using Xamarin.Forms;
 
 [assembly: Dependency(typeof(Route))]
@@ -10,11 +8,35 @@ namespace Collector.Droid.Routes
 {
     public class Route : ISQLite
     {
-        public SQLiteConnection GetConnection(string dbCollector)
+        string directoryDB;
+        ISQLitePlatform platform;
+
+        public string DirectoryDB
         {
-            var documents = System.Environment.GetFolderPath(Environment.SpecialFolder.Personal);
-            var path = Path.Combine(documents, dbCollector);
-            return new SQLiteConnection(path);
+            get
+            {
+                if (string.IsNullOrEmpty(directoryDB))
+                {
+                    directoryDB = System.Environment.GetFolderPath(
+                        System.Environment.SpecialFolder.Personal);
+                }
+
+                return directoryDB;
+            }
+        }
+
+        public ISQLitePlatform Platform
+        {
+            get
+            {
+                if (platform == null)
+                {
+                    platform =
+                        new SQLite.Net.Platform.XamarinAndroid.SQLitePlatformAndroid();
+                }
+
+                return platform;
+            }
         }
     }
 }

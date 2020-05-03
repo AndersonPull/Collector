@@ -1,9 +1,11 @@
-﻿using SQLite;
+﻿using SQLite.Net.Interop;
 
 namespace Collector._Datas
 {
     public interface ISQLite
     {
-        SQLiteConnection GetConnection(string dbCollector);
+        string DirectoryDB { get; }
+
+        ISQLitePlatform Platform { get; }
     }
 }

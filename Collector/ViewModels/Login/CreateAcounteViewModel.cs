@@ -238,7 +238,7 @@ namespace Collector.ViewModels.Login
             {
                 return new Command(async () =>
                 {
-                    Data.Save(User);
+                    Data.Insert(User);
                     await _serviceNavigation.NavigateToAsync<AccessViewModel>();
                 });
             }

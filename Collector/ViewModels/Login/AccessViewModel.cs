@@ -1,5 +1,8 @@
 ﻿using System.Windows.Input;
 using Collector._Datas;
+using Collector.Models.Home;
+using Collector.Models.Usuarios;
+using Collector.Services.Login;
 using Collector.Services.Navigation;
 using Collector.ViewModels.Home;
 using Collector.Views.PopUpsAlerts;
@@ -11,12 +14,11 @@ namespace Collector.ViewModels.Login
     public class AccessViewModel : BaseVM
     {
         INavigationService _serviceNavigation;
-        BaseData Data;
-
+        AccessService _service;
         public AccessViewModel(INavigationService serviceNavigation)
         {
             _serviceNavigation = serviceNavigation;
-            Data = new BaseData();
+            _service = new AccessService();
         }
 
         public ICommand BackCommand
@@ -38,7 +40,8 @@ namespace Collector.ViewModels.Login
                 {
                     if (!string.IsNullOrEmpty(entryNickName) && !string.IsNullOrEmpty(entryPassword))
                     {
-                        var user = Data.GetUser(entryNickName, entryPassword);
+                        var user = await _service.GetUser(entryNickName, entryPassword);
+                        
                         if (user != null)
                         {
                             App.GetUser = user;

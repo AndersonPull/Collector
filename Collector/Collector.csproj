@@ -21,8 +21,9 @@
     <PackageReference Include="Rg.Plugins.Popup" Version="2.0.0.2" />
     <PackageReference Include="Microsoft.AppCenter.Push" Version="2.1.1" />
     <PackageReference Include="Plugin.Multilingual" Version="1.0.2" />
-    <PackageReference Include="sqlite-net-pcl" Version="1.6.292" />
-    <PackageReference Include="SQLiteNetExtensions" Version="2.1.0" />
+    <PackageReference Include="SQLiteNetExtensions" Version="1.3.0" />
+    <PackageReference Include="SQLite.Net-PCL" Version="3.1.1" />
+    <PackageReference Include="SQLite.Net.Core-PCL" Version="3.1.1" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />
@@ -54,6 +55,7 @@
     <Folder Include="Models\CreateAccount\" />
     <Folder Include="_Datas\" />
     <Folder Include="Views\PopUpsAlerts\" />
+    <Folder Include="Services\Login\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="AssemblyInfo.cs" />

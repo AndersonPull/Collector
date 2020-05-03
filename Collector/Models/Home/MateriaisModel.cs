@@ -1,6 +1,7 @@
 ﻿using System;
 using Collector.Models.Usuarios;
 using SQLite;
+using SQLite.Net.Attributes;
 using SQLiteNetExtensions.Attributes;
 
 namespace Collector.Models.Home

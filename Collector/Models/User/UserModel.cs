@@ -1,8 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using Collector.Models.Home;
 using Newtonsoft.Json;
-using SQLite;
+using SQLite.Net.Attributes;
 using SQLiteNetExtensions.Attributes;
 
 namespace Collector.Models.Usuarios
