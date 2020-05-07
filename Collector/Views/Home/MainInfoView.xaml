@@ -12,6 +12,7 @@
 
             <StackLayout>
 
+
                 <Image Source="BackgroundCatador.png"
                        Aspect="AspectFill" />
 
