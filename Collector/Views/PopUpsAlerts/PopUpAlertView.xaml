@@ -18,6 +18,7 @@
                                    HasBackgroundAnimation="True"  />
 
     </pages:PopupPage.Animation>
+
     
     <StackLayout VerticalOptions="Center" 
                  HorizontalOptions="Center">
