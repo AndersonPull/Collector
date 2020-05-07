@@ -10,6 +10,7 @@
 
         <StackLayout>
 
+
             <StackLayout>
 
                 <Image Source="BackgroundCatador.png"
