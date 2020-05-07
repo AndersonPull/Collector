@@ -83,9 +83,12 @@
                            HorizontalOptions="CenterAndExpand"/>
 
                     <StackLayout.GestureRecognizers>
+
                         <TapGestureRecognizer Tapped="Close"
                                               NumberOfTapsRequired="1"/>
+
                     </StackLayout.GestureRecognizers>
+
                 </StackLayout>
                 
             </StackLayout>
