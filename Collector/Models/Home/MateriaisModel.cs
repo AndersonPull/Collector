@@ -8,7 +8,7 @@ namespace Collector.Models.Home
 {
     public class MateriaisModel
     {
-        [PrimaryKey, AutoIncrement]
+        [PrimaryKey]
         public int Id { get; set; }
 
         [ForeignKey(typeof(UserModel))]
@@ -28,5 +28,7 @@ namespace Collector.Models.Home
         public string Descricao { get; set; }
 
         public bool IsAtived { get; set; }
+
+        public bool NoAtived { get; set; }
     }
 }

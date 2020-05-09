@@ -26,7 +26,7 @@ namespace Collector.Services.Login
             }
             catch(Exception e)
             {
-                await PopupNavigation.Instance.PushAsync(new PopUpAlertView("Algo de errado com a internet!",e.ToString()), true);
+                await PopupNavigation.Instance.PushAsync(new PopUpErrorView("Algo deu errado!",e.ToString()), true);
             }
 
             return null;

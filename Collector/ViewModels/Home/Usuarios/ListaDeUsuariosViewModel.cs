@@ -24,10 +24,12 @@ namespace Collector.ViewModels.Home.Usuarios
 
         public async Task CarregarListaUsuarios()
         {
-            var usuariosProximos = await _service.UsuariosProximos();
-            foreach (var usuario in usuariosProximos)
+            var users = await _service.UsuariosProximos();
+
+            foreach (var user in users)
             {
-                Usuarios.Add(usuario);
+                if(user.IsCollector)
+                    Usuarios.Add(user);
             }
         }
 

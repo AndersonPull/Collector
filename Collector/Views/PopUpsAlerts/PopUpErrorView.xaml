@@ -32,42 +32,43 @@
                HorizontalOptions="EndAndExpand"
                BackgroundColor="#BB0C00"
                VerticalOptions="Start">
-
+            
             <StackLayout HorizontalOptions="FillAndExpand"
                          VerticalOptions="FillAndExpand">
 
                 <StackLayout Margin="15"
                              HorizontalOptions="FillAndExpand"
                              VerticalOptions="FillAndExpand">
-
                     <StackLayout Margin="15"
-                             Spacing="15"
-                             HorizontalOptions="FillAndExpand"
-                             VerticalOptions="FillAndExpand">
+                                Spacing="15"
+                                HorizontalOptions="FillAndExpand"
+                                VerticalOptions="FillAndExpand">
 
                         <Image Source="ic_error.png"
-                               WidthRequest="120"
-                               VerticalOptions="Start"
-                               HorizontalOptions="CenterAndExpand"/>
+                                WidthRequest="120"
+                                VerticalOptions="Start"
+                                HorizontalOptions="CenterAndExpand"/>
+                        <ScrollView>
+                            <StackLayout>
+                                <Label TextColor="#171717"
+                                FontSize="Large"
+                                FontAttributes="Bold"
+                                VerticalOptions="CenterAndExpand"
+                                HorizontalOptions="CenterAndExpand"
+                                HorizontalTextAlignment="Center"
+                                x:Name="Title"/>
 
-                        <Label TextColor="#171717"
-                               FontSize="Large"
-                               FontAttributes="Bold"
-                               VerticalOptions="CenterAndExpand"
-                               HorizontalOptions="CenterAndExpand"
-                               HorizontalTextAlignment="Center"
-                               x:Name="Title"/>
-
-                        <Label TextColor="#171717"
-                               FontSize="Medium"
-                               FontAttributes="None"
-                               VerticalOptions="CenterAndExpand"
-                               HorizontalOptions="CenterAndExpand"
-                               HorizontalTextAlignment="Center"
-                               x:Name="Message"/>
-
+                            <Label TextColor="#171717"
+                                    FontSize="Medium"
+                                    FontAttributes="None"
+                                    VerticalOptions="CenterAndExpand"
+                                    HorizontalOptions="CenterAndExpand"
+                                    HorizontalTextAlignment="Center"
+                                    x:Name="Message"/>
+                            </StackLayout>
+                        </ScrollView>
+                            
                     </StackLayout>
-
                 </StackLayout>
 
                 <StackLayout HeightRequest="60"

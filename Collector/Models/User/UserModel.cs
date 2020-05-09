@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using Collector.Models.Home;
+using DLToolkit.Forms.Controls;
 using Newtonsoft.Json;
 using SQLite.Net.Attributes;
 using SQLiteNetExtensions.Attributes;
@@ -60,5 +61,6 @@ namespace Collector.Models.Usuarios
 
         [OneToMany(CascadeOperations = CascadeOperation.All)]
         public List<MateriaisModel> CollectorItens { get; set; }
+
     }
 }

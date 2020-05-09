@@ -40,38 +40,26 @@ namespace Collector._Datas
         public T First<T>(bool WithChildren) where T : class
         {
             if (WithChildren)
-            {
                 return _conexao.GetAllWithChildren<T>().FirstOrDefault();
-            }
             else
-            {
                 return _conexao.Table<T>().FirstOrDefault();
-            }
         }
 
         public List<T> GetList<T>(bool WithChildren) where T : class
         {
             if (WithChildren)
-            {
                 return _conexao.GetAllWithChildren<T>().ToList();
-            }
             else
-            {
                 return _conexao.Table<T>().ToList();
-            }
         }
 
         public T Find<T>(int pk, bool WithChildren) where T : class
         {
             if (WithChildren)
-            {
                 return _conexao.GetAllWithChildren<T>()
                                  .FirstOrDefault(m => m.GetHashCode() == pk);
-            }
             else
-            {
                 return _conexao.Table<T>().FirstOrDefault(m => m.GetHashCode() == pk);
-            }
         }
 
         public void Dispose()

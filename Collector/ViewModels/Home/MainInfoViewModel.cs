@@ -19,7 +19,9 @@ namespace Collector.ViewModels.Home
     {
         INavigationService _serviceNavigation;
         MenuService _service;
-        public FlowObservableCollection<MateriaisModel> ItensMenu { get; set; }
+        private FlowObservableCollection<MateriaisModel> Itens = null;
+        public FlowObservableCollection<MateriaisModel> ItensMenu { get { return Itens; } set { this.Set("ItensMenu", ref Itens, value); } }
+
         BaseData Data;
         public MainInfoViewModel(INavigationService serviceNavigation)
         {
@@ -44,24 +46,18 @@ namespace Collector.ViewModels.Home
         public void CarregarMenu()
         {
             var collection = _service.ItensMenu();
+
+            if (ItensMenu != null)
+                ItensMenu.Clear();
+
             foreach(var material in collection)
             {
                 var atived = App.GetUser.CollectorItens.Where(a => a.Id == material.Id).FirstOrDefault();
 
                 if (atived != null)
-                {
-                    selected = true;
-                    noSelected = false;
                     ItensMenu.Add(atived);
-                }
-
                 else
-                {
-                    selected = false;
-                    noSelected = true;
                     ItensMenu.Add(material);
-                }
-                    
             }
         }
 
@@ -83,10 +79,10 @@ namespace Collector.ViewModels.Home
                 return new Command(async (value) =>
                 {
                     MateriaisModel Material = value as MateriaisModel;
-                    Material.IdUser = App.GetUser.Id;
-
+                                        Material.IdUser = App.GetUser.Id;
+                    Material.IsAtived = true;
+                    Material.NoAtived = false;
                     Data.Insert(Material);
-
                 });
             }
         }
@@ -150,12 +146,6 @@ namespace Collector.ViewModels.Home
 
         private object user;
         public object User { get { return user; } set { this.Set("User", ref user, value); } }
-
-        private bool selected;
-        public bool Selected { get { return selected; } set { this.Set("Selected", ref selected, value); } }
-
-        private bool noSelected;
-        public bool NoSelected { get { return noSelected; } set { this.Set("NoSelected", ref noSelected, value); } }
 
         private bool buttonCollector;
         public bool ButtonCollector { get { return buttonCollector; } set { this.Set("ButtonCollector", ref buttonCollector, value); } }

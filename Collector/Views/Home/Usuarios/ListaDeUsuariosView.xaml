@@ -47,21 +47,28 @@
                                                  HorizontalOptions="FillAndExpand"
                                                  VerticalOptions="FillAndExpand">
 
-                                        <Frame HorizontalOptions="Start"
-                                               BackgroundColor="#018A3E"
-                                               VerticalOptions="Start"
-                                               WidthRequest="60"
-                                               HasShadow="False"
-                                               HeightRequest="60"
-                                               Padding="0"
-                                               CornerRadius="30"
-                                               IsClippedToBounds="true">
+                                        <StackLayout HorizontalOptions="FillAndExpand"
+                                                     VerticalOptions="Start"
+                                                     WidthRequest="140">
+
+                                            <Frame BackgroundColor="#018A3E"
+                                                   HorizontalOptions="Start"
+                                                   VerticalOptions="Start"
+                                                   WidthRequest="60"
+                                                   HeightRequest="60"
+                                                   HasShadow="False"
+                                                   Padding="0"
+                                                   CornerRadius="30"
+                                                   IsClippedToBounds="true">
 
                                             <Image Source="{Binding Image}"
                                                    WidthRequest="70"
                                                    HeightRequest="70"
                                                    Aspect="AspectFill"/>
-                                        </Frame>
+                                            </Frame>
+
+                                        </StackLayout>
+                                        
 
                                         <StackLayout Orientation="Vertical">
 
@@ -74,30 +81,33 @@
                                                    TextColor="#ffffff"
                                                    FontSize="Micro"
                                                    FontAttributes="None"/>
+                                            
+                                            <StackLayout  Margin="0,20,0,0"
+                                                          Orientation="Horizontal">
 
-                                            <FlexLayout Margin="0,20,0,0">
+                                                <flv:FlowListView FlowItemsSource="{Binding Source={x:Reference usuarios}, Path=BindingContext.CollectorItens}"
+                                                                    RowHeight="30"
+                                                                    FlowColumnCount="5"
+                                                                    FlowColumnExpand="None"
+                                                                    SeparatorVisibility="None"
+                                                                    BackgroundColor="Transparent"
+                                                                    HasUnevenRows="True"
+                                                                    IsInNativeLayout="False"
+                                                                    x:Name="ListMaterial">
 
-                                                <Image Source="carButton.png"
-                                                       WidthRequest="30"
-                                                       HeightRequest="30"
-                                                       Margin="2"/>
+                                                    <flv:FlowListView.FlowColumnTemplate >
+                                                        <DataTemplate>
+                                                            <StackLayout Spacing="15">
+                                                                    <Image Source="carButton.png"
+                                                                        WidthRequest="30"
+                                                                        HeightRequest="30"
+                                                                        Margin="2"/>
+                                                            </StackLayout>
+                                                        </DataTemplate>
+                                                    </flv:FlowListView.FlowColumnTemplate>
+                                                </flv:FlowListView>
 
-                                                <Image Source="carButton.png"
-                                                       WidthRequest="30"
-                                                       HeightRequest="30"
-                                                       Margin="2"/>
-
-                                                <Image Source="carButton.png"
-                                                       WidthRequest="30"
-                                                       HeightRequest="30"
-                                                       Margin="2"/>
-
-                                                <Image Source="carButton.png"
-                                                       WidthRequest="30"
-                                                       HeightRequest="30"
-                                                       Margin="2"/>
-
-                                            </FlexLayout>
+                                            </StackLayout>
 
                                         </StackLayout>
 
@@ -116,8 +126,8 @@
                                         </Image>
 
                                         <Image Source="carButton.png"
-                                               WidthRequest="50"
-                                               HeightRequest="50"/>
+                                               WidthRequest="40"
+                                               HeightRequest="40"/>
 
                                         <Label Text="1.6 Km"
                                                TextColor="#ffffff"
