@@ -6,6 +6,7 @@ using Collector.Models.Usuarios;
 using Collector.Services.Login;
 using Collector.Services.Navigation;
 using Collector.Views.Login;
+using Collector.Views.PopUpsAlerts;
 using DLToolkit.Forms.Controls;
 using Rg.Plugins.Popup.Services;
 using Xamarin.Forms;
@@ -233,7 +234,11 @@ namespace Collector.ViewModels.Login
             var save = await _service.SaveUser(User);
 
             if (save)
+            {
+                await PopupNavigation.Instance.PushAsync(new PopUpSuccessView("Conta criada", "use seu nickname e senha para logar!"), true);
                 await _serviceNavigation.NavigateToAsync<AccessViewModel>();
+            }
+                
         }
 
         private string textMenssage;

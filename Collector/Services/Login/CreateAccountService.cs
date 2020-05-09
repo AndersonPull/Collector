@@ -187,7 +187,7 @@ namespace Collector.Services.Login
             {
                 Device.BeginInvokeOnMainThread(async () =>
                 {
-                    await PopupNavigation.Instance.PushAsync(new PopUpAlertView("Algo de errado com a internet!", "Nao foi possivel conectar com o servidor."), true);
+                    await PopupNavigation.Instance.PushAsync(new PopUpErrorView("Algo de errado com a internet!", "Nao foi possivel conectar com o servidor."), true);
                 });
             }
 
@@ -195,14 +195,14 @@ namespace Collector.Services.Login
             {
                 Device.BeginInvokeOnMainThread(async () =>
                 {
-                    await PopupNavigation.Instance.PushAsync(new PopUpAlertView("Algo de errado com a internet!", "Nao foi possivel conectar com o servidor."), true);
+                    await PopupNavigation.Instance.PushAsync(new PopUpErrorView("Algo de errado com a internet!", "Nao foi possivel conectar com o servidor."), true);
                 });
             }
             catch (Exception ex)
             {
                 Device.BeginInvokeOnMainThread(async () =>
                 {
-                    await PopupNavigation.Instance.PushAsync(new PopUpAlertView("Algo de errado com a internet!", "Nao foi possivel conectar com o servidor."), true);
+                    await PopupNavigation.Instance.PushAsync(new PopUpErrorView("Algo de errado com a internet!", "Nao foi possivel conectar com o servidor."), true);
                 });
             }
 

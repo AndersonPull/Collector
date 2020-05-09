@@ -229,6 +229,8 @@
     <BundleResource Include="Resources\ic_plasticoW.png" />
     <BundleResource Include="Resources\ic_podasW.png" />
     <BundleResource Include="Resources\ic_vidroW.png" />
+    <BundleResource Include="Resources\ic_error.png" />
+    <BundleResource Include="Resources\ic_success.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Renderers\" />
