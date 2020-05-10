@@ -85,23 +85,25 @@
                                             <StackLayout  Margin="0,20,0,0"
                                                           Orientation="Horizontal">
 
-                                                <flv:FlowListView FlowItemsSource="{Binding Source={x:Reference usuarios}, Path=BindingContext.CollectorItens}"
-                                                                    RowHeight="30"
-                                                                    FlowColumnCount="5"
-                                                                    FlowColumnExpand="None"
-                                                                    SeparatorVisibility="None"
-                                                                    BackgroundColor="Transparent"
-                                                                    HasUnevenRows="True"
-                                                                    IsInNativeLayout="False"
-                                                                    x:Name="ListMaterial">
+                                                <flv:FlowListView FlowItemsSource="{Binding CollectorItemsView}"
+                                                                  RowHeight="30"
+                                                                  FlowColumnCount="5"
+                                                                  FlowColumnExpand="None"
+                                                                  SeparatorVisibility="None"
+                                                                  BackgroundColor="Transparent"
+                                                                  HasUnevenRows="True"
+                                                                  IsInNativeLayout="False"
+                                                                  x:Name="ListMaterial">
 
                                                     <flv:FlowListView.FlowColumnTemplate >
                                                         <DataTemplate>
                                                             <StackLayout Spacing="15">
-                                                                    <Image Source="carButton.png"
+
+                                                                    <Image Source="{Binding IconWhite}"
                                                                         WidthRequest="30"
                                                                         HeightRequest="30"
                                                                         Margin="2"/>
+
                                                             </StackLayout>
                                                         </DataTemplate>
                                                     </flv:FlowListView.FlowColumnTemplate>

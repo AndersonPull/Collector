@@ -62,5 +62,8 @@ namespace Collector.Models.Usuarios
         [OneToMany(CascadeOperations = CascadeOperation.All)]
         public List<MateriaisModel> CollectorItens { get; set; }
 
+        [Ignore]
+        public FlowObservableCollection<MateriaisModel> CollectorItemsView { get; set; } = new FlowObservableCollection<MateriaisModel>();
+
     }
 }

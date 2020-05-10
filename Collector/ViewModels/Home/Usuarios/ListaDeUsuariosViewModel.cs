@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Threading.Tasks;
 using System.Windows.Input;
+using Collector.Models.Home;
 using Collector.Models.Usuarios;
 using Collector.Services.Navigation;
 using Collector.Services.Usuarios;
@@ -26,10 +27,16 @@ namespace Collector.ViewModels.Home.Usuarios
         {
             var users = await _service.UsuariosProximos();
 
+
             foreach (var user in users)
             {
-                if(user.IsCollector)
+                if (user.IsCollector)
+                {
+                    user.CollectorItemsView.AddRange(user.CollectorItens);
                     Usuarios.Add(user);
+                }
+                    
+                    
             }
         }
 
