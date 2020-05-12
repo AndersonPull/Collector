@@ -19,8 +19,8 @@ namespace Collector.ViewModels.Home
     {
         INavigationService _serviceNavigation;
         MenuService _service;
-        private FlowObservableCollection<MateriaisModel> Itens = null;
-        public FlowObservableCollection<MateriaisModel> ItensMenu { get { return Itens; } set { this.Set("ItensMenu", ref Itens, value); } }
+        private FlowObservableCollection<MateriaisModel> itensMenu = null;
+        public FlowObservableCollection<MateriaisModel> ItensMenu { get { return itensMenu; } set { this.Set("ItensMenu", ref itensMenu, value); } }
 
         BaseData Data;
         public MainInfoViewModel(INavigationService serviceNavigation)
@@ -47,12 +47,15 @@ namespace Collector.ViewModels.Home
         {
             var collection = _service.ItensMenu();
 
-            if (ItensMenu != null)
+            if (ItensMenu.Count > 0)
                 ItensMenu.Clear();
 
             foreach(var material in collection)
             {
-                var atived = App.GetUser.CollectorItens.Where(a => a.Id == material.Id).FirstOrDefault();
+                var users = Data.GetList<UserModel>(true);
+                var user = users.Where(a => a.Id == App.GetUser.Id).FirstOrDefault();
+
+                var atived = user.CollectorItens.Where(a => a.Id == material.Id).FirstOrDefault();
 
                 if (atived != null)
                     ItensMenu.Add(atived);
@@ -79,10 +82,27 @@ namespace Collector.ViewModels.Home
                 return new Command(async (value) =>
                 {
                     MateriaisModel Material = value as MateriaisModel;
-                                        Material.IdUser = App.GetUser.Id;
-                    Material.IsAtived = true;
-                    Material.NoAtived = false;
-                    Data.Insert(Material);
+
+                    var Materiais = Data.GetList<MateriaisModel>(false);
+
+                    var material = Materiais.Where(a => a.Id == Material.Id &&
+                                                   a.IdUser ==App.GetUser.Id).FirstOrDefault();
+
+                    if (material == null)
+                    {
+                        Material.IdUser = App.GetUser.Id;
+                        Material.IsAtived = true;
+                        Material.NoAtived = false;
+                        Data.Insert(Material);
+                    }
+                    else
+                    {
+                        Data.Delete(Material);
+                    }
+
+                   
+
+                    CarregarMenu();
                 });
             }
         }
@@ -106,6 +126,7 @@ namespace Collector.ViewModels.Home
                 {
                     App.GetUser.IsCollector = true;
                     Data.Update(App.GetUser);
+                    await _serviceNavigation.NavigateToAsync<MainTabbedPageViewModel>();
                 });
             }
         }

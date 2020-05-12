@@ -1,7 +1,4 @@
 ﻿using System.Windows.Input;
-using Collector._Datas;
-using Collector.Models.Home;
-using Collector.Models.Usuarios;
 using Collector.Services.Login;
 using Collector.Services.Navigation;
 using Collector.ViewModels.Home;

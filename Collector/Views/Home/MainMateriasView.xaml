@@ -36,7 +36,7 @@
 
                                 <StackLayout>
 
-                                    <Image Source="{Binding Imagem}"
+                                    <Image Source="{Binding IconGreen}"
                                            Aspect="AspectFit"
                                            WidthRequest="60"
                                            HeightRequest="60" />
