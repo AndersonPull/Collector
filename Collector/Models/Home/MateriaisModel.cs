@@ -8,13 +8,15 @@ namespace Collector.Models.Home
 {
     public class MateriaisModel
     {
-        [PrimaryKey]
+        [PrimaryKey, AutoIncrement]
         public int Id { get; set; }
+
+        public int IdItem { get; set; }
 
         [ForeignKey(typeof(UserModel))]
         public int IdUser { get; set; }
 
-       [ManyToOne]
+        [ManyToOne]
         public UserModel User { get; set; }
 
         public string IconGreen { get; set; }

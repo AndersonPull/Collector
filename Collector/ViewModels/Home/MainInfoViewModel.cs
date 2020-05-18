@@ -55,7 +55,7 @@ namespace Collector.ViewModels.Home
                 var users = Data.GetList<UserModel>(true);
                 var user = users.Where(a => a.Id == App.GetUser.Id).FirstOrDefault();
 
-                var atived = user.CollectorItens.Where(a => a.Id == material.Id).FirstOrDefault();
+                var atived = user.CollectorItens.Where(a => a.IdItem == material.IdItem).FirstOrDefault();
 
                 if (atived != null)
                     ItensMenu.Add(atived);
@@ -85,7 +85,7 @@ namespace Collector.ViewModels.Home
 
                     var Materiais = Data.GetList<MateriaisModel>(false);
 
-                    var material = Materiais.Where(a => a.Id == Material.Id &&
+                    var material = Materiais.Where(a => a.IdItem == Material.IdItem &&
                                                    a.IdUser ==App.GetUser.Id).FirstOrDefault();
 
                     if (material == null)
