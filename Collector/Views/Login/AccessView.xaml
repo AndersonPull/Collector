@@ -124,7 +124,7 @@
                                    HorizontalOptions="EndAndExpand"/>
 
                         </StackLayout>
-
+                        
                         <Button Text="{translator:Translate Login}"
                                 TextColor="#FFFFFF"
                                 FontAttributes="Bold"

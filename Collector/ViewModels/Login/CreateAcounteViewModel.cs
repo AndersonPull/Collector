@@ -29,6 +29,7 @@ namespace Collector.ViewModels.Login
             Message = new FlowObservableCollection<MessageRegistrationModel>();
             Message1 = new FlowObservableCollection<MessageRegistrationModel>();
             User = new UserModel();
+            loading = new PopUpLoadingMessageView();
 
             IsEntry = "false";
             IsButtonTerm = "false";
@@ -44,7 +45,7 @@ namespace Collector.ViewModels.Login
 
         private async Task InitialMessage()
         {
-            loading = new PopUpLoadingMessageView();
+            
             await PopupNavigation.Instance.PushAsync(loading);
 
             var message1 = await _service.InitialsMessages1();
