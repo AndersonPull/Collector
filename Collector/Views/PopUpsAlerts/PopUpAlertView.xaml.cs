@@ -16,7 +16,7 @@ namespace Collector.Views.PopUpsAlerts
             Message.Text = message;
         }
 
-        void Close(System.Object sender, System.EventArgs e)
+        void Close(object sender, EventArgs args)
         {
              PopupNavigation.Instance.PopAsync();
         }

@@ -3,6 +3,7 @@ using Collector.Services.Login;
 using Collector.Services.Navigation;
 using Collector.ViewModels.Home;
 using Collector.Views.PopUpsAlerts;
+using Collector.Views.shared;
 using Rg.Plugins.Popup.Services;
 using Xamarin.Forms;
 
@@ -12,6 +13,7 @@ namespace Collector.ViewModels.Login
     {
         INavigationService _serviceNavigation;
         AccessService _service;
+        LoadingView Loading;
         public AccessViewModel(INavigationService serviceNavigation)
         {
             _serviceNavigation = serviceNavigation;
@@ -41,8 +43,13 @@ namespace Collector.ViewModels.Login
                         
                         if (user != null)
                         {
+                            Loading = new LoadingView();
+                            await PopupNavigation.Instance.PushAsync(Loading);
+
                             App.GetUser = user;
                             await _serviceNavigation.NavigateToAsync<MainTabbedPageViewModel>();
+
+                            await Loading.Close();
                         }    
                         else
                             await PopupNavigation.Instance.PushAsync(new PopUpAlertView("login ou senha incorreto", "Verifique seus dados e tente novamente"), true);

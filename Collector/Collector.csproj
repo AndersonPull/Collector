@@ -55,6 +55,7 @@
     <Folder Include="_Datas\" />
     <Folder Include="Views\PopUpsAlerts\" />
     <Folder Include="Services\Login\" />
+    <Folder Include="Views\shared\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="AssemblyInfo.cs" />
@@ -70,6 +71,7 @@
     <Compile Remove="Views\Home\Usuarios\DetalhesUsuarioView.cs" />
     <Compile Remove="Views\Home\Usuarios\DetalhesUsuarioView.xaml.cs" />
     <Compile Remove="_Translation\Resources.Designer.cs" />
+    <Compile Remove="Views\shared\TermsOfUseView.xaml.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Remove="MainPage.xaml" />
