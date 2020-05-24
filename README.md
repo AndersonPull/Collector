@@ -1,6 +1,7 @@
 <div style="text-align:center"><img src="./Collector.Android/Resources/drawable/LogoBanner.png" /></div>
 
 
+# Sobre o Projeto - Collectors ♻
 O projeto Collectors tem como objetivo ajudar e facilitar a reciclagem dos matérias, ligando as pessoas que geram os materiais recicláveis aos coletores(Collectors). Assim você recicla todos esses itens com o menor desperdício possível e ajuda o meio ambiente. também contribuindo com a renda dos  coletores(Collectors).
 
 ## Desenvolvedores
