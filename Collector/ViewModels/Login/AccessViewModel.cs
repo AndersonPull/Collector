@@ -18,6 +18,8 @@ namespace Collector.ViewModels.Login
         {
             _serviceNavigation = serviceNavigation;
             _service = new AccessService();
+            Loading = new LoadingView();
+
         }
 
         public ICommand BackCommand
@@ -43,7 +45,6 @@ namespace Collector.ViewModels.Login
                         
                         if (user != null)
                         {
-                            Loading = new LoadingView();
                             await PopupNavigation.Instance.PushAsync(Loading);
 
                             App.GetUser = user;
