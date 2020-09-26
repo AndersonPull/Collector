@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Foundation;
 using UIKit;
+using Xamarin;
 
 namespace Collector.iOS
 {
@@ -24,6 +25,7 @@ namespace Collector.iOS
             global::Xamarin.Forms.Forms.Init();
             Xamarin.FormsGoogleMaps.Init("AIzaSyDtdF0zxGRimUItAvXe8MB4SIxhXuXGHIU");
             Rg.Plugins.Popup.Popup.Init();
+            IQKeyboardManager.SharedManager.Enable = true;
             LoadApplication(new App());
             BuildStyles();
             return base.FinishedLaunching(app, options);
