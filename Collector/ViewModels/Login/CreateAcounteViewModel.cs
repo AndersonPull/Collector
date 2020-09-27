@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using Collector.Models.CreateAccount;
@@ -17,7 +18,6 @@ namespace Collector.ViewModels.Login
     {
         INavigationService _serviceNavigation;
         PopUpLoadingMessageView loading;
-        public static FlowObservableCollection<MessageRegistrationModel> Message1 { get; set; }
         public FlowObservableCollection<MessageRegistrationModel> Message { get; set; }
         private UserModel User;
         private CreateAccountService _service;
@@ -27,7 +27,6 @@ namespace Collector.ViewModels.Login
             _serviceNavigation = serviceNavigation;
             _service = new CreateAccountService();
             Message = new FlowObservableCollection<MessageRegistrationModel>();
-            Message1 = new FlowObservableCollection<MessageRegistrationModel>();
             User = new UserModel();
             loading = new PopUpLoadingMessageView();
 
@@ -39,7 +38,14 @@ namespace Collector.ViewModels.Login
 
             Message.CollectionChanged += (sender, e) =>
             {
-                Message1 = Message;
+                Page currentPage = Application.Current.MainPage.Navigation.NavigationStack.LastOrDefault();
+                ListView listView = currentPage.FindByName<ListView>("MessagesListView");
+                var target = Message[Message.Count - 1];
+
+                if (Device.RuntimePlatform == Device.iOS)
+                    listView.ScrollTo(target, ScrollToPosition.MakeVisible, true);
+                else if (Device.RuntimePlatform == Device.Android)
+                    listView.ScrollTo(target, ScrollToPosition.Start, true);
             };
         }
 
@@ -119,12 +125,13 @@ namespace Collector.ViewModels.Login
                     loading = new PopUpLoadingMessageView();
                     await PopupNavigation.Instance.PushAsync(loading);
 
-                    IsEntry = "false";
+                    IsEntryVisible = "false";
+                    IsButtonTerm = "true";
                     User.Name = message;
                     var termMessage = await _service.MessageTerm();
                     termMessage.Id = Message.Count;
                     Message.Add(termMessage);
-                    IsButtonTerm = "true";
+                    
 
                     await loading.Close();
 
@@ -200,7 +207,7 @@ namespace Collector.ViewModels.Login
         private async Task AcceptTerm()
         {
             IsButtonTerm = "false";
-
+            IsEntryVisible = "true";
             User.Term = true;
 
             var ConfirmTermMessage = await _service.ConfirmTerm();
@@ -214,39 +221,42 @@ namespace Collector.ViewModels.Login
             ConfirmedTermMessage.Id = Message.Count;
             Message.Add(ConfirmedTermMessage);
 
-            IsEntry = "true";
+            
             await loading.Close();
 
         }
 
-        public ICommand AcceptCommand
-        {
-            get
-            {
-                return new Command(async () =>
-                {
-                    _ = SaveUSer();
-                });
-            }
-        }
+        //public ICommand AcceptCommand
+        //{
+        //    get
+        //    {
+        //        return new Command(async () =>
+        //        {
+        //            SaveUSer().GetAwaiter();
+        //        });
+        //    }
+        //}
 
-        private async Task SaveUSer()
-        {
-            var save = await _service.SaveUser(User);
+        //private async Task SaveUSer()
+        //{
+        //    var save = await _service.SaveUser(User);
 
-            if (save)
-            {
-                await PopupNavigation.Instance.PushAsync(new PopUpSuccessView("Conta criada", "use seu nickname e senha para logar!"), true);
-                await _serviceNavigation.NavigateToAsync<AccessViewModel>();
-            }
+        //    if (save)
+        //    {
+        //        await PopupNavigation.Instance.PushAsync(new PopUpSuccessView("Conta criada", "use seu nickname e senha para logar!"), true);
+        //        await _serviceNavigation.NavigateToAsync<AccessViewModel>();
+        //    }
                 
-        }
+        //}
 
         private string textMenssage;
         public string TextMenssage { get { return textMenssage; } set { this.Set("TextMenssage", ref textMenssage, value); } }
 
         private string isEntry;
         public string IsEntry { get { return isEntry; } set { this.Set("IsEntry", ref isEntry, value); } }
+
+        private string isEntryVisible;
+        public string IsEntryVisible { get { return isEntryVisible; } set { this.Set("IsEntryVisible", ref isEntryVisible, value); } }
 
         private string isButtonTerm;
         public string IsButtonTerm { get { return isButtonTerm; } set { this.Set("IsButtonTerm", ref isButtonTerm, value); } }

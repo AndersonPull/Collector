@@ -138,7 +138,8 @@
                                HasShadow="False"
                                BackgroundColor="#FFFFFF"
                                Padding="0"
-                               IsVisible="{Binding IsEntry}">
+                               IsEnabled="{Binding IsEntry}"
+                               IsVisible="{Binding IsEntryVisible}">
 
                             <StackLayout Orientation="Horizontal"
                                          VerticalOptions="FillAndExpand"

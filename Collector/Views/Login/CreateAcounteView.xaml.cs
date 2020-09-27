@@ -39,14 +39,6 @@ namespace Collector.Views.Login
                 EntrySend.MaxLength = 8;
                 EntrySend.Keyboard = Keyboard.Numeric;
             }
-
-            ScrollDown();
-        }
-
-        public void ScrollDown()
-        {
-            var target = CreateAcounteViewModel.Message1[CreateAcounteViewModel.Message1.Count - 1];
-            MessagesListView.ScrollTo(target, ScrollToPosition.End, true);
         }
     }
 }
